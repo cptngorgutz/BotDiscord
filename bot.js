@@ -173,6 +173,17 @@ client.on('message', async msg =>  {
 	msg.channel.send("Lane 8 - Orange")	  		
 }
 
+client.on('message', message => {
+    if (message.content === '!addteam') {
+      let embed = new Discord.RichEmbed()
+      // Replace "message.member" with "message.author"
+    .setImage(message.author.avatarURL)
+    .setColor('#275BF0')
+      message.channel.send(embed)
+    }
+});
+	
+
 if (msg.content === '!delete all') {
 	msg.channel.bulkDelete(100)
 }
