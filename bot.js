@@ -180,6 +180,7 @@ client.on('message', message => {
     .setImage(message.author.avatarURL)
     .setColor('#275BF0')
       message.channel.send(embed)
+	  message.channel.send('testing texxt wnfkwnk')
     }
 });
 	
