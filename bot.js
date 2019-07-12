@@ -177,10 +177,7 @@ client.on('message', message => {
     if (message.content === '!addteam') {
       let embed = new Discord.RichEmbed()
       // Replace "message.member" with "message.author"
-    .setImage(message.author.avatarURL)
-    .setColor('#275BF0')
-      message.channel.send(embed)
-	  message.channel.send('testing texxt wnfkwnk')
+    message.member.user.tag('ok')
     }
 });
 	
