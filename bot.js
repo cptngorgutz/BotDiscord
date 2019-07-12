@@ -12,8 +12,8 @@ client.on('message', async msg =>  {
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.\n If you are out of teams or require assistance: \n Put an 💩 emoji on your lane.```');
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Ultimus6.png')] });
-	msg.channel.send("``` ╔═══════════════╗    ╔═══════════════╗    ╔═══════════════╗ \n ║ Strike Team 1 ║    ║ Strike Team 2 ║    ║ Strike Team 3 ║  \n ╚═══════════════╝    ╚═══════════════╝    ╚═══════════════╝ ```")
-    msg.channel.send("Lane 1 - Blue           Lane 1 - Blue        Lane 1 - Blue")
+	msg.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 1 ║  \n  ╚═══════════════╝ ```")
+    msg.channel.send("Lane 1 - Blue")
 	msg.channel.send({embed: {
 	color: 3447003,
 	description: "Mr Gadd            Random            Random2"
