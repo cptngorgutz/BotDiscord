@@ -177,7 +177,7 @@ client.on('message', async msg =>  {
 	var speak = message.content.split(" "); // Split the message into an array
 	speak.splice(0, 1); // Remove the first element of the array ("speak")
 	speak.join(" "); // Stitch together the array with a space as seperator	
-	bot.sendMessage(message, speak);
+	msg.channel.send(message, speak);
 };
 
 
