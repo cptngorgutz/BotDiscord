@@ -173,13 +173,11 @@ client.on('message', async msg =>  {
 	msg.channel.send("Lane 8 - Orange")	  		
 }
 
-   const PREFIX = "!";
-    bot.on('message', function(message) {
-        if(message.content[0] === PREFIX) {
-            let command = message.content.substring(message.content.indexOf(" ") + 1, message.content.length);
-            message.channel.send('Command + ' + command);
-        }
-    });
+	if (message.content.startsWith ("speak")) {
+	var speak1 = message.content.split(" ")[1]+ " " + message.content.split(" ")[2]+ " " + message.content.split(" ")[3]+ " " + message.content.split(" ")[4]+ " " + message.content.split(" ")[5];
+	var speak2 = speak1.replace("undefined","");
+	bot.sendMessage(message, speak2);
+};
 
 
 if (msg.content === '!delete all') {
