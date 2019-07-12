@@ -172,14 +172,6 @@ client.on('message', async msg =>  {
 	msg.channel.send("Lane 7 - Teal")
 	msg.channel.send("Lane 8 - Orange")	  		
 }
-
-client.on('message', message => {
-    if (message.content === '!addteam') {
-      let embed = new Discord.RichEmbed()
-      // Replace "message.member" with "message.author"
-    message.author.user.tag('ok')
-    }
-});
 	
 
 if (msg.content === '!delete all') {
