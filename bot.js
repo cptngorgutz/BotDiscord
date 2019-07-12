@@ -74,7 +74,10 @@ client.on('message', async msg =>  {
 	msg.channel.send("Lane 8 - Orange")	  		
 }
 
-	if (msg.content === '!raid alpha 4') {
+	if (msg.content === '!raid alpha 4')	
+	{
+		if (msg.channel.id === 'tb1-alpha') {
+        // Deal with command
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Alpha4.png')] });
@@ -105,6 +108,7 @@ client.on('message', async msg =>  {
 	msg.channel.send("Lane 6 - White")  
 	msg.channel.send("Lane 7 - Teal")
 	msg.channel.send("Lane 8 - Orange")	  		
+}
 }
 
 	if (msg.content === '!raid beta 4') {
@@ -172,14 +176,6 @@ client.on('message', async msg =>  {
 	msg.channel.send("Lane 7 - Teal")
 	msg.channel.send("Lane 8 - Orange")	  		
 }
-
-	if (message.content.startsWith ("speak")) {
-	var speak = message.content.split(" "); // Split the message into an array
-	speak.splice(0, 1); // Remove the first element of the array ("speak")
-	speak.join(" "); // Stitch together the array with a space as seperator	
-	msg.channel.send(message, speak);
-};
-
 
 if (msg.content === '!delete all') {
 	msg.channel.bulkDelete(100)
