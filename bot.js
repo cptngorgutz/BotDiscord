@@ -172,7 +172,15 @@ client.on('message', async msg =>  {
 	msg.channel.send("Lane 7 - Teal")
 	msg.channel.send("Lane 8 - Orange")	  		
 }
-	
+
+   const PREFIX = "!";
+    bot.on('message', function(message) {
+        if(message.content[0] === PREFIX) {
+            let command = message.content.substring(message.content.indexOf(" ") + 1, message.content.length);
+            message.channel.send('Command + ' + command);
+        }
+    });
+
 
 if (msg.content === '!delete all') {
 	msg.channel.bulkDelete(100)
