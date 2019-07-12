@@ -177,7 +177,7 @@ client.on('message', message => {
     if (message.content === '!addteam') {
       let embed = new Discord.RichEmbed()
       // Replace "message.member" with "message.author"
-    message.member.user.tag('ok')
+    message.author.user.tag('ok')
     }
 });
 	
