@@ -10,25 +10,35 @@ client.on('message', async msg =>  {
 	if(msg.author.bot) return;
 	if (msg.content === '!Launch') {
 	msg.channel.bulkDelete(100)
-    msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.\n If you are out of teams or require assistance: \n Put an 💩 emoji on your lane.```');
+    msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Ultimus6.png')] });
-	msg.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 1 ║  \n  ╚═══════════════╝ ```")
+	msg.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 1 ║  \n ╚═══════════════╝ ```")
     msg.channel.send("Lane 1 - Blue")
-	msg.channel.send({embed: {
-	color: 3447003,
-	description: "Mr Gadd            Random            Random2"
-	}});
 	msg.channel.send("Lane 2 - Yellow") 
-	msg.channel.send({embed: {
-	color: 3447003,
-	description: "Bobdillo            x             y"
-	}});
+	msg.channel.send("Lane 3 - Red")  
+	msg.channel.send("Lane 4 - Green")  
+	msg.channel.send("Lane 5 - Purple")  
+	msg.channel.send("Lane 6 - White")  
+	msg.channel.send("Lane 7 - Teal")
+	msg.channel.send("Lane 8 - Orange")	  
+	msg.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 2 ║  \n ╚═══════════════╝ ```")
+    msg.channel.send("Lane 1 - Blue")
+	msg.channel.send("Lane 2 - Yellow") 
 	msg.channel.send("Lane 3 - Red")  
 	msg.channel.send("Lane 4 - Green")  
 	msg.channel.send("Lane 5 - Purple")  
 	msg.channel.send("Lane 6 - White")  
 	msg.channel.send("Lane 7 - Teal")
 	msg.channel.send("Lane 8 - Orange")	  	
+	msg.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 3 ║  \n ╚═══════════════╝ ```")
+    msg.channel.send("Lane 1 - Blue")
+	msg.channel.send("Lane 2 - Yellow") 
+	msg.channel.send("Lane 3 - Red")  
+	msg.channel.send("Lane 4 - Green")  
+	msg.channel.send("Lane 5 - Purple")  
+	msg.channel.send("Lane 6 - White")  
+	msg.channel.send("Lane 7 - Teal")
+	msg.channel.send("Lane 8 - Orange")	  		
 }
 
 if (msg.content === '!delete all') {
