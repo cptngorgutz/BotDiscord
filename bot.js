@@ -174,9 +174,10 @@ client.on('message', async msg =>  {
 }
 
 	if (message.content.startsWith ("speak")) {
-	var speak1 = message.content.split(" ")[1]+ " " + message.content.split(" ")[2]+ " " + message.content.split(" ")[3]+ " " + message.content.split(" ")[4]+ " " + message.content.split(" ")[5];
-	var speak2 = speak1.replace("undefined","");
-	bot.sendMessage(message, speak2);
+	var speak = message.content.split(" "); // Split the message into an array
+	speak.splice(0, 1); // Remove the first element of the array ("speak")
+	speak.join(" "); // Stitch together the array with a space as seperator	
+	bot.sendMessage(message, speak);
 };
 
 
