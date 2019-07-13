@@ -183,4 +183,4 @@ if (msg.content === '!delete all') {
 }
 );
 
-client.login(process.env.BOT_TOKEN);
+client.login(config.token);
