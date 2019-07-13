@@ -76,7 +76,7 @@ client.on('message', async msg =>  {
 
 	if (msg.content === '!raid alpha 4')	
 	{
-		if (msg.channel.id === '597777446695338005' || msg.channel.id === '599312488495972372') {
+		if (msg.channel.id === '599420098490400768' || msg.channel.id === '599420244016103425') {
         // Deal with command
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
