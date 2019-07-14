@@ -177,6 +177,31 @@ client.on('message', async msg =>  {
 	msg.channel.send("Lane 8 - Orange")	  		
 }
 
+//EVENTS
+	if (msg.content === '!furyevent') {
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/furyevent.png')] });	
+}
+	if (msg.content === '!ironmanevent') {
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ironmanevent.png')] });	
+}
+
+	if (msg.content === '!magnetoevent') {
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/magnetoevent.png')] });	
+}
+
+	if (msg.content === '!shurievent') {
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/shurievent.png')] });
+}
+
+	if (msg.content === '!starlordevent') {
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/starlordevent.png')] });  		
+}
+
+//UNIQUE GEAR
+	if (msg.content === '!uniques') {
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ironmanevent.png')] });
+}
+
 if (msg.content === '!delete all') {
 	msg.channel.bulkDelete(100)
 }
