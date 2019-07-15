@@ -74,7 +74,7 @@ client.on('message', async msg =>  {
 	msg.channel.send("Lane 8 - Orange")	  		
 }
 
-	if (msg.content === '!raid alpha 4')	
+	if (msg.content === '!raid alpha 4' || msg.content === '!raid Alpha 4')	
 	{
 		if (msg.channel.id === '599420098490400768' || msg.channel.id === '599420244016103425') {
         // Deal with command
