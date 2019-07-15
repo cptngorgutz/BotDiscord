@@ -179,31 +179,38 @@ client.on('message', async msg =>  {
 
 //EVENTS
 	if (msg.content === '!furyevent') {
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/furyevent.png')] });	
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/furyevent.png')] });
+	msg.channel.bulkDelete(1)
 }
 	if (msg.content === '!ironmanevent') {
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ironmanevent.png')] });	
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ironmanevent.png')] });
+	msg.channel.bulkDelete(1)
 }
 
 	if (msg.content === '!magnetoevent') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/magnetoevent.png')] });	
+	msg.channel.bulkDelete(1)
 }
 
 	if (msg.content === '!shurievent') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/shurievent.png')] });
+	msg.channel.bulkDelete(1)
 }
 
 	if (msg.content === '!starlordevent') {
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/starlordevent.png')] });  		
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/starlordevent.png')] });  	
+	msg.channel.bulkDelete(1)
 }
 
 if (msg.content === '!phoenixevent') {
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/phoenixevent.png')] });  		
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/phoenixevent.png')] }); 
+	msg.channel.bulkDelete(1)
 }
 
 //UNIQUE GEAR
 	if (msg.content === '!uniques') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ironmanevent.png')] });
+	msg.channel.bulkDelete(1)
 }
 
 if (msg.content === '!delete all') {
