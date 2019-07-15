@@ -8,7 +8,9 @@ client.on('ready', () => {
 
 client.on('message', async msg =>  {
 	if(msg.author.bot) return;
-	if (msg.content === '!raid ultimus 6') {
+if (msg.content === '!raid ultimus 6' || msg.content === '!raid Ultimus 6')	{
+	if (msg.channel.id === '600378414897168386' || msg.channel.id === '600378610955714602') {
+//                           TB1 ULT 6 ROOM                             TB2 ULT 6 ROOM
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Ultimus6.png')] });
@@ -39,9 +41,11 @@ client.on('message', async msg =>  {
 	msg.channel.send("Lane 6 - White")  
 	msg.channel.send("Lane 7 - Teal")
 	msg.channel.send("Lane 8 - Orange")	  		
-}
+	}}
 
-	if (msg.content === '!raid ultimus 7') {
+	if (msg.content === '!raid ultimus 7' || msg.content === '!raid Ultimus 7')	{
+	if (msg.channel.id === '600378350619459624' || msg.channel.id === '600378580756594709') {
+//                           TB1 ULT 7 ROOM                             TB2 ULT 7 ROOM
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Ultimus7.png')] });
@@ -74,10 +78,9 @@ client.on('message', async msg =>  {
 	msg.channel.send("Lane 8 - Orange")	  		
 }
 
-	if (msg.content === '!raid alpha 4' || msg.content === '!raid Alpha 4')	
-	{
-		if (msg.channel.id === '599420098490400768' || msg.channel.id === '599420244016103425') {
-        // Deal with command
+	if (msg.content === '!raid alpha 4' || msg.content === '!raid Alpha 4')	{
+	if (msg.channel.id === '600378481913757706' || msg.channel.id === '600378635425284131') {
+//                           TB1 EVENT ROOM                             TB2 EVENT ROOM
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Alpha4.png')] });
@@ -111,7 +114,9 @@ client.on('message', async msg =>  {
 }
 }
 
-	if (msg.content === '!raid beta 4') {
+if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
+	if (msg.channel.id === '600378481913757706' || msg.channel.id === '600378635425284131') {
+//                           TB1 EVENT ROOM                             TB2 EVENT ROOM
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Beta4.png')] });
@@ -144,7 +149,9 @@ client.on('message', async msg =>  {
 	msg.channel.send("Lane 8 - Orange")	  		
 }
 
-	if (msg.content === '!raid gamma 4') {
+	if (msg.content === '!raid gamma 4' || msg.content === '!raid Gamma 4')	{
+	if (msg.channel.id === '600378481913757706' || msg.channel.id === '600378635425284131') {
+//                           TB1 EVENT ROOM                             TB2 EVENT ROOM
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Gamma4.png')] });
