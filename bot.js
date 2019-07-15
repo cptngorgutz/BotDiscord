@@ -197,6 +197,10 @@ client.on('message', async msg =>  {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/starlordevent.png')] });  		
 }
 
+if (msg.content === '!phoenixevent') {
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/phoenixevent.png')] });  		
+}
+
 //UNIQUE GEAR
 	if (msg.content === '!uniques') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ironmanevent.png')] });
