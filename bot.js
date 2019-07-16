@@ -217,7 +217,7 @@ if (msg.content === '!phoenixevent') {
 
 //UNIQUE GEAR
 	if (msg.content === '!uniques') {
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ironmanevent.png')] });
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/uniques.png')] });
 	msg.channel.bulkDelete(1)
 }
 
