@@ -223,7 +223,7 @@ if (msg.content === '!phoenixevent') {
 
 //Testing area
 if (msg.content === '!team')	{
-	msg.channel.send("``` ╔═══════════════╗        ╔═══════════════╗          ╔═══════════════╗\n ║ Strike Team 1 ║        ║ Strike Team 2 ║          ║ Strike Team 3 ║ \n ╚═══════════════╝        ╚═══════════════╝          ╚═══════════════╝ \n       User1         	     User2         	        User3 \n       User1         	     User2         	        User3 \n       User1         	     User2         	        User3 \n       User1         	     User2         	        User3 \n       User1         	     User2         	        User3 \n       User1         	     User2         	        User3 \n       User1         	     User2         	        User3 \n       User1         	     User2         	        User3```")
+	msg.channel.send("``` ╔═══════════════╗        ╔═══════════════╗          ╔═══════════════╗\n ║ Strike Team 1 ║        ║ Strike Team 2 ║          ║ Strike Team 3 ║ \n ╚═══════════════╝        ╚═══════════════╝          ╚═══════════════╝ \n       User1         	     User2         	        User3 \n       User1         	        User2         	              User3 \n       User1         	        User2         	              User3 \n       User1         	        User2         	              User3 \n       User1         	        User2         	              User3 \n       User1         	        User2         	              User3 \n       User1         	        User2         	              User3 \n       User1         	        User2         	              User3```")
 }
 
 
