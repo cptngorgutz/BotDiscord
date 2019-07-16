@@ -221,6 +221,14 @@ if (msg.content === '!phoenixevent') {
 	msg.channel.bulkDelete(1)
 }
 
+//Testing area
+if (msg.content === '!team')	{
+	msg.channel.send("``` ╔═══════════════╗         	╔═══════════════╗          ╔═══════════════╗\n ║ Strike Team 1 ║          ║ Strike Team 2 ║          ║ Strike Team 3 ║ \n ╚═══════════════╝          ╚═══════════════╝          ╚═══════════════╝ \n User1         	User2         	User3 \n User1         	User2         	User3 \n User1         	User2         	User3 \n User1         	User2         	User3 \n User1         	User2         	User3 \n User1         	User2         	User3 \n User1         	User2         	User3 \n User1         	User2         	User3```")
+}
+
+
+
+
 if (msg.content === '!delete all') {
 	msg.channel.bulkDelete(100)
 }
