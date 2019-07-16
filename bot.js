@@ -77,6 +77,7 @@ if (msg.content === '!raid ultimus 6' || msg.content === '!raid Ultimus 6')	{
 	msg.channel.send("Lane 7 - Teal")
 	msg.channel.send("Lane 8 - Orange")	  		
 }
+	}
 
 	if (msg.content === '!raid alpha 4' || msg.content === '!raid Alpha 4')	{
 	if (msg.channel.id === '600378481913757706' || msg.channel.id === '600378635425284131') {
@@ -147,7 +148,7 @@ if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
 	msg.channel.send("Lane 6 - White")  
 	msg.channel.send("Lane 7 - Teal")
 	msg.channel.send("Lane 8 - Orange")	  		
-}
+}}
 
 	if (msg.content === '!raid gamma 4' || msg.content === '!raid Gamma 4')	{
 	if (msg.channel.id === '600378481913757706' || msg.channel.id === '600378635425284131') {
@@ -182,8 +183,8 @@ if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
 	msg.channel.send("Lane 6 - White")  
 	msg.channel.send("Lane 7 - Teal")
 	msg.channel.send("Lane 8 - Orange")	  		
-}
-
+}}
+	
 //EVENTS
 	if (msg.content === '!furyevent') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/furyevent.png')] });
