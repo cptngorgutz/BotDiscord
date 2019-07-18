@@ -210,16 +210,22 @@ if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
 	msg.channel.bulkDelete(1)
 }
 
-if (msg.content === '!phoenixevent') {
+	if (msg.content === '!phoenixevent') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/phoenixevent.png')] }); 
 	msg.channel.bulkDelete(1)
 }
 
+//event requirements
+	if (msg.content === '!eventrequirements') {
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/eventrequirements.png')] });
+	msg.channel.bulkDelete(1)
+}
 //UNIQUE GEAR
 	if (msg.content === '!uniques') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/uniques.png')] });
 	msg.channel.bulkDelete(1)
 }
+
 
 //Testing area
 if (msg.content === '!team')	{
