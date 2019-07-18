@@ -227,8 +227,13 @@ if (msg.content === '!team')	{
 }
 
 
+//Helpful
 
-
+//Output commands
+if (msg.content === '!commands')	{
+	msg.channel.send("```List of commands \n Legendary Events: !+name+event (example !ironmanevent) \n Unique items: !uniques ```")
+}
+//Delete 100 messages
 if (msg.content === '!delete all') {
 	msg.channel.bulkDelete(100)
 }
