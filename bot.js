@@ -231,7 +231,8 @@ if (msg.content === '!team')	{
 
 //Output commands
 if (msg.content === '!commands')	{
-	msg.channel.send("**```List of commands** \n**Legendary Events:** !+name+event (example !ironmanevent) \n**Unique items:** !uniques ```")
+	msg.channel.send("```List of commands \n**Legendary Events:** !+name+event (example !ironmanevent) \n**Unique items:** !uniques```")
+	msg.fontcolor(#0099ff)
 }
 //Delete 100 messages
 if (msg.content === '!delete all') {
