@@ -237,9 +237,10 @@ if (msg.content === '!team')	{
 
 //Blitz Predictions 
 	if (msg.content === '!blitzprediction') {
+	if (msg.channel.id === '428968670908383242') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/blitzprediction.png')] });
 	msg.channel.bulkDelete(1)
-}
+	}}
 //Output commands
 if (msg.content === '!commands')	{
 	msg.channel.send("**__List of commands__** \n**Legendary Events:** !+name+event (example !ironmanevent) \n**Legendary Event Requirements:** !eventrequirements \n**Unique items:** !uniques")
