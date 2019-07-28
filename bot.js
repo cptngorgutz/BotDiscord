@@ -232,8 +232,19 @@ if (msg.content === '!team')	{
 	msg.channel.send("``` ╔═══════════════╗      ╔═══════════════╗      ╔═══════════════╗\n ║ Strike Team 1 ║      ║ Strike Team 2 ║      ║ Strike Team 3 ║ \n ╚═══════════════╝      ╚═══════════════╝      ╚═══════════════╝ \n       User1         	     User2         	     User3 \n       User4         	     User5         	     User6 \n       User7         	     User8         	     User9 \n       User10         	    User11        	     User12 \n       User13         	    User14        	     User15 \n       User16         	    User17        	     User18 \n       User19         	    User20        	     User21 \n       User22         	    User23         	    User24```")
 }
 
-
 //Helpful
+
+//------------------------------------------------//
+//Character Tiers
+//------------------------------------------------//
+	if (msg.content === '!ultrontiers') {
+	if (msg.channel.id === '499936109732691979') {
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ultrontiers.png')] });
+	msg.channel.bulkDelete(1)
+	}}
+
+
+
 
 //Blitz Predictions 
 	if (msg.content === '!blitzprediction') {
