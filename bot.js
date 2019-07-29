@@ -239,7 +239,7 @@ if (msg.content === '!team')	{
 //------------------------------------------------//
 	if (msg.content === '!ultrontiers') {
 	if (msg.channel.id === '499936109732691979') {
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ultrontiers.png')] });
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ULTRON.png')] });
 	msg.channel.bulkDelete(1)
 	}}
 
