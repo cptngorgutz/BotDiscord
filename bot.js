@@ -225,6 +225,11 @@ if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/uniques.png')] });
 	msg.channel.bulkDelete(1)
 }
+//rocket testing
+	if (msg.content === '!rocket' || msg.content === '!Rocket' || msg.content === '!raccoon' || msg.content === '!Raccoon' || msg.content === '!trashpanda' || msg.content === '!Trashpanda')	{
+	msg.channel.send("Coming Soon!")
+	msg.channel.bulkDelete(1)
+}}
 
 
 //Testing area
