@@ -254,7 +254,16 @@ if (msg.content === '!team')	{
 	msg.channel.bulkDelete(1)
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Magneto.png')] });
 	}
-
+	
+	if (msg.content === '!pyro') {
+	msg.channel.bulkDelete(1)
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Pyro.png')] });
+	}
+	
+	if (msg.content === '!mystique') {
+	msg.channel.bulkDelete(1)  
+	msg.channel.send("The Beyonder summons mystique, she will be availible soon.")  
+	}
 
 
 //Blitz Predictions 
