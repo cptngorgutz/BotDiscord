@@ -266,7 +266,7 @@ if (msg.content === '!team')	{
 	
 	if (msg.content === '!captainmarvel') {
 	msg.channel.bulkDelete(1)  
-	msg.channel.send("Fury: Carol, I need you. \n  Carol: Im busy helping the skrulls, ill be there soon.")  
+	msg.channel.send("Fury: Carol, I need you. \nCarol: Im busy helping the skrulls, ill be there soon. \nCoulson: Sir, we may have a problem. \nFury: Oh, Motherfu.....")  
 	}
 
 
