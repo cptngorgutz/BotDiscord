@@ -244,10 +244,11 @@ if (msg.content === '!team')	{
 //------------------------------------------------//
 //Character Tiers
 //------------------------------------------------//
-	if (msg.content === '!ultrontiers') {
+	if (msg.content === '!ultron') {
 	if (msg.channel.id === '499936109732691979') {
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ULTRON.png')] });
 	msg.channel.bulkDelete(1)
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Ultron.png')] });
+	
 	}}
 
 	if (msg.content === '!magneto') {
@@ -263,6 +264,11 @@ if (msg.content === '!team')	{
 	if (msg.content === '!mystique') {
 	msg.channel.bulkDelete(1)  
 	msg.channel.send("The Beyonder summons mystique, she will be availible soon.")  
+	}
+	
+	if (msg.content === '!captainmarvel') {
+	msg.channel.bulkDelete(1)  
+	msg.channel.send("Fury: Carol, I need you. \n  Carol: Im busy helping the skrulls, ill be there soon.")  
 	}
 
 
