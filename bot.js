@@ -245,11 +245,9 @@ if (msg.content === '!team')	{
 //Character Tiers
 //------------------------------------------------//
 	if (msg.content === '!ultron') {
-	if (msg.channel.id === '499936109732691979') {
 	msg.channel.bulkDelete(1)
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Ultron.png')] });
-	
-	}}
+	}
 
 	if (msg.content === '!magneto') {
 	msg.channel.bulkDelete(1)
