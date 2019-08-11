@@ -269,6 +269,10 @@ if (msg.content === '!team')	{
 	msg.channel.send("Fury: Carol, I need you. \nCarol: Im busy helping the skrulls, ill be there soon. \nCoulson: Sir, we may have a problem. \nFury: Oh, Motherfu.....")  
 	}
 
+	if (msg.content === '!aimassaulter') {
+	msg.channel.bulkDelete(1)  
+	msg.channel.send("Assaulter is not here right now, but he is ""Aiming"" to be as fast as possible.")
+	}
 
 //Blitz Predictions 
 	if (msg.content === '!blitzprediction') {
