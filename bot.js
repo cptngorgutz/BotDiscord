@@ -271,7 +271,7 @@ if (msg.content === '!team')	{
 
 	if (msg.content === '!aimassaulter') {
 	msg.channel.bulkDelete(1)  
-	msg.channel.send("Assaulter is not here right now, but he is \Aiming\ to be as fast as possible.")
+	msg.channel.send("Assaulter is not here right now, but he is" 'Aiming' "to be as fast as possible.")
 	}
 
 //Blitz Predictions 
