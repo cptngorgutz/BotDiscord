@@ -239,7 +239,7 @@ if (msg.content === '!team')	{
 //Character Tiers
 //------------------------------------------------//
 
-	if (msg.content === '!aimassaulter' || msg.content === '!Aimassaulter' || msg.content === '!aimassault' || msg.content === '!Aimassault' || msg.content === '!AimAssault' || msg.content === '!AimAssaulter')	{
+	if (msg.content === '!aimassaulter'){
 	msg.channel.bulkDelete(1)
 	msg.channel.send("Assaulter isnt here yet, but he's ""aiming"" :wink: to be here soon!")
 	}
