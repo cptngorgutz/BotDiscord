@@ -226,12 +226,6 @@ if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
 	msg.channel.bulkDelete(1)
 	}
 	
-	//rocket testing
-	if (msg.content === '!rocket' || msg.content === '!Rocket' || msg.content === '!raccoon' || msg.content === '!Raccoon' || msg.content === '!trashpanda' || msg.content === '!Trashpanda')	{
-	msg.channel.bulkDelete(1)
-	msg.channel.send("Coming Soon!")
-}
-
 
 //Testing area
 if (msg.content === '!team')	{
@@ -271,6 +265,11 @@ if (msg.content === '!team')	{
 	if (msg.content === '!captainmarvel') {
 	msg.channel.bulkDelete(1)  
 	msg.channel.send("Fury: Carol, I need you. \nCarol: Im busy helping the skrulls, ill be there soon. \nCoulson: Sir, we may have a problem. \nFury: Oh, Motherfu.....")  
+	}
+
+	if (msg.content === '!rocket' || msg.content === '!Rocket' || msg.content === '!raccoon' || msg.content === '!Raccoon' || msg.content === '!trashpanda' || msg.content === '!Trashpanda')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Rocket.png')] });
 	}
 
 	//AIM
