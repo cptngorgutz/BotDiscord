@@ -346,7 +346,7 @@ if (msg.content === '!team')	{
 	
 	if (msg.content === '!deadpool') {
 	msg.channel.bulkDelete(1)  
-	msg.channel.send("Deadpool unfortunately got lost in the disneyfox merger. \nWade: Freaking robots.., i am not lost. I'm play-fighting with Disney, these motherfairies can shove their PG rating up their butt.")
+	msg.channel.send("Deadpool unfortunately got lost in the disneyfox merger. \nWade: Freaking robots.., i am not lost. I'm play-fighting with Disney. \nThese motherfairies can shove their PG rating up their butt.")
 	}
 	
 	if (msg.content === '!doctorstrange') {
