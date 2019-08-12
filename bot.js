@@ -313,6 +313,46 @@ if (msg.content === '!team')	{
 	msg.channel.bulkDelete(1)  
 	msg.channel.send("Bullseye is currently busy plotting to attack Frank Castle, after he's done he'll be in contact.")
 	}
+	
+	if (msg.content === '!cable') {
+	msg.channel.bulkDelete(1)  
+	msg.channel.send("Cable is")
+	}
+	
+	if (msg.content === '!captainamerica') {
+	msg.channel.bulkDelete(1)  
+	msg.channel.send("Cap is having the dance of his life, please give it some time and have some respect.")
+	}
+	
+	if (msg.content === '!carnage') {
+	msg.channel.bulkDelete(1)  
+	msg.channel.send("carnage is ")
+	}
+	
+	if (msg.content === '!colossus') {
+	msg.channel.bulkDelete(1)  
+	msg.channel.send("colossus is ")
+	}
+
+	if (msg.content === '!crossbones') {
+	msg.channel.bulkDelete(1)  
+	msg.channel.send("crossbones is ")
+	}
+	
+	if (msg.content === '!daredevil') {
+	msg.channel.bulkDelete(1)  
+	msg.channel.send("Daredevil is currently grieving the loss of his Netflix show, give the man some time!")
+	}
+	
+	if (msg.content === '!deadpool') {
+	msg.channel.bulkDelete(1)  
+	msg.channel.send("Deadpool unfortunately got lost in the disneyfox merger. \nWade: Freaking robots.., i am not lost. I'm play-fighting with Disney, these motherfairies can shove their PG rating up their butt.")
+	}
+	
+	if (msg.content === '!doctorstrange') {
+	msg.channel.bulkDelete(1)  
+	msg.channel.send("doctorstrange is ")
+	}
 
 //Blitz Predictions 
 	if (msg.content === '!blitzprediction') {
