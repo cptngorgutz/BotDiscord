@@ -293,6 +293,26 @@ if (msg.content === '!team')	{
 	msg.channel.bulkDelete(1)  
 	msg.channel.send("Security is not here right now, but he is 'Aiming' to be as fast as possible.")
 	}
+	
+	if (msg.content === '!antman') {
+	msg.channel.bulkDelete(1)  
+	msg.channel.send("Antman is currently occupied in the quantum realm, he'll be able to assist you soon.")
+	}
+	
+	if (msg.content === '!blackpanther') {
+	msg.channel.bulkDelete(1)  
+	msg.channel.send("T'Challa is currently on an vibranium transportation mission, the king of Wakanda will be here soon.")
+	}
+	
+	if (msg.content === '!blackwidow') {
+	msg.channel.bulkDelete(1)  
+	msg.channel.send("Natasha is currently busy with filming, but she'll help you soon.")
+	}
+	
+	if (msg.content === '!bullseye') {
+	msg.channel.bulkDelete(1)  
+	msg.channel.send("Bullseye is currently busy plotting to attack Frank Castle, after he's done he'll be in contact.")
+	}
 
 //Blitz Predictions 
 	if (msg.content === '!blitzprediction') {
