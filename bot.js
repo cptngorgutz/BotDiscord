@@ -186,31 +186,31 @@ if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
 }}
 	
 //EVENTS
-	if (msg.content === '!furyevent') {
+	if (msg.content === '!event fury') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/furyevent.png')] });
 	msg.channel.bulkDelete(1)
 }
-	if (msg.content === '!ironmanevent') {
+	if (msg.content === '!event ironman') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ironmanevent.png')] });
 	msg.channel.bulkDelete(1)
 }
 
-	if (msg.content === '!magnetoevent') {
+	if (msg.content === '!event magneto') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/magnetoevent.png')] });	
 	msg.channel.bulkDelete(1)
 }
 
-	if (msg.content === '!shurievent') {
+	if (msg.content === '!event shuri') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/shurievent.png')] });
 	msg.channel.bulkDelete(1)
 }
 
-	if (msg.content === '!starlordevent') {
+	if (msg.content === '!event starlord') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/starlordevent.png')] });  	
 	msg.channel.bulkDelete(1)
 }
 
-	if (msg.content === '!phoenixevent') {
+	if (msg.content === '!event phoenix') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/phoenixevent.png')] }); 
 	msg.channel.bulkDelete(1)
 }
@@ -357,13 +357,16 @@ if (msg.content === '!team')	{
 //Blitz Predictions 
 	if (msg.content === '!blitzprediction') {
 	if (msg.channel.id === '428968670908383242') {
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/blitzprediction.png')] });
 	msg.channel.bulkDelete(1)
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/blitzprediction.png')] });
+	
 	}}
 //Output commands
 if (msg.content === '!commands')	{
-	msg.channel.send("**__List of commands__** \n**Legendary Events:** !+name+event (example !ironmanevent) \n**Legendary Event Requirements:** !eventrequirements \n**Unique items:** !uniques")
-}
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``!character``  Info sheet on chosen character (ex. !ultron) \n``!characterevent``  Lowest required team for chosen legendary event (ex. !starlordevent) \n``!legendaries``  Requirements for all legendary events \n``!uniques``  List of unique gear needed for all characters \n``!blitz``  Current blitz predictions")
+	}
+
 //Delete 100 messages
 if (msg.content === '!delete all') {
 	msg.channel.bulkDelete(100)
