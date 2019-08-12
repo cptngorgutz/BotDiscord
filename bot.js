@@ -364,7 +364,7 @@ if (msg.content === '!team')	{
 //Output commands
 if (msg.content === '!commands')	{
 	msg.channel.bulkDelete(1)
-	msg.channel.send("``!character``  Info sheet on chosen character (ex. !ultron) \n``!characterevent``  Lowest required team for chosen legendary event (ex. !starlordevent) \n``!legendaries``  Requirements for all legendary events \n``!uniques``  List of unique gear needed for all characters \n``!blitz``  Current blitz predictions")
+	msg.channel.send("__List Of Commands:__ \n``!character``  Info sheet on chosen character (ex. !ultron) \n``!characterevent``  Lowest required team for chosen legendary event (ex. !starlordevent) \n``!legendaries``  Requirements for all legendary events \n``!uniques``  List of unique gear needed for all characters \n``!blitz``  Current blitz predictions")
 	}
 
 //Delete 100 messages
