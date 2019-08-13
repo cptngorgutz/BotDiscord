@@ -369,12 +369,18 @@ if (msg.content === '!team')	{
 	}
 
 //Blitz Predictions 
-	if (msg.content === '!blitzprediction') {
-	if (msg.channel.id === '428968670908383242') {
+	if (msg.content === '!blitz') {
 	msg.channel.bulkDelete(1)
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/blitzprediction.png')] });
+	msg.channel.send("``Current Blitz Predictions``")
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Blitz/Blitz.png')] });
+	}
 	
-	}}
+	if (msg.content === '!lastblitz') {
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Previous Blitz Predictions``")
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Blitz/Lastblitz.png')] });
+	}
+	
 //Output commands
 if (msg.content === '!commands')	{
 	msg.channel.bulkDelete(1)
