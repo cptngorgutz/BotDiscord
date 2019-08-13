@@ -460,7 +460,7 @@ if (msg.content === '!commands')	{
 	
 	if (msg.content === '!node 16')	{
 	msg.channel.bulkDelete(1)
-	msg.channel.send("``Node 16 - Kill Order:`` \nTrooper, Spider-Man, Venom, Ultron, Pyro, Security, Merc LT \nThis node is really dependent on who you have. Ultron doesn’t summon his Healer minion until one character dies. If you’re using Magneto, take out Ultron first. If you can keep the Troopers, Spider-Man, and Venom (especially Venom) blinded, you’ll do well with this strategy. If you’re not using Magneto, though, focus on everyone else, and you’ll gradually get Ultron. Realistically, this isn’t a node that you’re going to one shot. It took me 5 tries. You’re going to fail, a lot, and that’s 100% alright. This is the End Game, and it’s hard for a reason. If you can keep Venom and the Troopers blinded enough to just cleanse the Spider-Man Defense Down, you’re on the right track. ")
+	msg.channel.send("``Node 16 - Kill Order:`` \nUltron, Trooper, Spider-Man, Venom, Pyro, Security, Merc LT \nThis node is really dependent on who you have. Ultron doesn’t summon his Healer minion until one character dies. Take out Ultron first. If you can keep the Troopers, Spider-Man, and Venom (especially Venom) blinded, you’ll do well with this strategy. Realistically, this isn’t a node that you’re going to one shot. If you can keep Venom and the Troopers blinded enough to just cleanse the Spider-Man Defense Down, you’re on the right track. ")
 	}
 
 //Delete 100 messages
