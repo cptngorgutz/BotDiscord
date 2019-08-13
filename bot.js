@@ -241,6 +241,11 @@ if (msg.content === '!team')	{
 	msg.channel.bulkDelete(1)
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Ultron.png')] });
 	}
+	
+	if (msg.content === '!phoenix') {
+	msg.channel.bulkDelete(1)
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Phoenix.png')] });
+	}
 
 	if (msg.content === '!magneto') {
 	msg.channel.bulkDelete(1)
