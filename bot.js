@@ -242,6 +242,11 @@ if (msg.content === '!team')	{
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Ultron.png')] });
 	}
 	
+	if (msg.content === '!juggernaut') {
+	msg.channel.bulkDelete(1)
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Juggernaut.png')] });
+	}
+	
 	if (msg.content === '!phoenix') {
 	msg.channel.bulkDelete(1)
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Phoenix.png')] });
@@ -374,6 +379,88 @@ if (msg.content === '!team')	{
 if (msg.content === '!commands')	{
 	msg.channel.bulkDelete(1)
 	msg.channel.send("``![characterName]``  Info sheet on chosen character (ex. !ultron) \n``!event [characterName]``  Lowest required team for chosen legendary event (ex. !event starlord) \n``!legendaries``  Requirements for all legendary events \n``!uniques``  List of unique gear needed for all characters \n``!blitz``  Current blitz predictions")
+	}
+	
+//DARK DIMENSION
+//Kill Order 
+	if (msg.content === '!node 1')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 1 - Kill Order:`` \nDr. Strange, Mordo, Spider-Man, Scarlet Witch, Korath, Iron Man, Elektra, Drax, Royal Guard")
+	}
+	
+	if (msg.content === '!node 2')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 2 - Kill Order:`` \nAnt Man, Spider-Man, Vision, Merc LT, Hand Sentry, Deadpool, Black Panther, Gamora, Captain America")
+	}
+	
+	if (msg.content === '!node 3')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 3 - Kill Order:`` \nOperative, Widow, Trooper, Quake, Fury, Captain America, Assault")
+	}
+	
+	if (msg.content === '!node 4')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 4 - Kill Order:`` \nAnt Man, Thor, Wasp, Hand Sentry, Starlord, Rocket, Luke Cage, Wolverine")
+	}
+	
+	if (msg.content === '!node 5')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 5 - Kill Order:`` \nOracle, Mordo, Korath, Jessica Jones, Noble, Reaper, Winter Soldier, Cyborg, Xbones")
+	}
+	
+	if (msg.content === '!node 6')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 6 - Kill Order:`` \nArcher, Iron Fist, Sentry, Elektra, Nobu, Assassin, Sorceress, Blademaster")
+	}
+	
+	if (msg.content === '!node 7')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 7 - Kill Order:`` \nSpider-Man, Deadpool, Loki, Hawkeye, Cable, Armored Guard")
+	}
+	
+	if (msg.content === '!node 8')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 8 - Kill Order:`` \nRocket, Gamora, Iron Man, Captain America, Yondu, Stitcher, Groot")
+	}
+	
+	if (msg.content === '!node 9')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 9 - Kill Order:`` \nOracle, Mordo, Korath, Winter Soldier, Reaper, Bullseye, Kingpin, Aim Security")
+	}
+	
+	if (msg.content === '!node 10')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 10 - Kill Order:`` \nAnt Man, Spider-Man, Deadpool, Daredevil, Hulk, Groot, Hydra Scientist, Xbones \nSpidey really makes this node difficult. You want to Blind Ant-Man and cleanse the Defense Down as soon as you can. The chain hitting from Deadpool and Daredevil are extremely punishing, but the last thing you want is to get Slow, on top of the other stuff. Don’t let these negative status effects sit. ")
+	}
+	
+	if (msg.content === '!node 11')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 11 - Kill Order:`` \nHydra Sniper, Red Skull, Boomer, Rifle Trooper, Stitcher, Yondu, Armored Guard")
+	}
+	
+	if (msg.content === '!node 12')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 12 - Kill Order:`` \nStrange, Quake, Operative, Starlord, Captain America, Cable, Winter Soldier, Sentry")
+	}
+	
+	if (msg.content === '!node 13')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 13 - Kill Order:`` \nStrange, Ms. Marvel, Spider-Man, Mordo, Venom, Gamora, Black Panther, Captain America, Cable, Drax \nThis is one of the harder nodes. Take Ms. Marvel out and Blind Strange, Spider-Man, and Venom, as much as you can, any time you see them. Those three specifically will give you the most trouble. ")
+	}
+	
+	if (msg.content === '!node 14')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 14 - Kill Order:`` \nMordo, Korath, Aim Assaulter, Starlord, Hawkeye, Punisher, Ronan, Drax \nYes, Aim Assaulter. There’s a lot of them, and Bleed is punishing. ")
+	}
+	
+	if (msg.content === '!node 15')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 15 - Kill Order:`` \nBlack Widow,  Hydra Sniper, Sentry, Merc Sniper, Hulk, Sorceress, Kingpin")
+	}
+	
+	if (msg.content === '!node 16')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Node 16 - Kill Order:`` \nTrooper, Spider-Man, Venom, Ultron, Pyro, Security, Merc LT \nThis node is really dependent on who you have. Ultron doesn’t summon his Healer minion until one character dies. If you’re using Magneto, take out Ultron first. If you can keep the Troopers, Spider-Man, and Venom (especially Venom) blinded, you’ll do well with this strategy. If you’re not using Magneto, though, focus on everyone else, and you’ll gradually get Ultron. Realistically, this isn’t a node that you’re going to one shot. It took me 5 tries. You’re going to fail, a lot, and that’s 100% alright. This is the End Game, and it’s hard for a reason. If you can keep Venom and the Troopers blinded enough to just cleanse the Spider-Man Defense Down, you’re on the right track. ")
 	}
 
 //Delete 100 messages
