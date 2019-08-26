@@ -378,7 +378,7 @@ if (msg.content === '!team')	{
     // The author of the last message wasn't a bot
   }
 	})}
-.catch(console.error);
+
 	
 	
 	if (msg.content === '!lastblitz') {
