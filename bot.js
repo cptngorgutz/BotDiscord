@@ -370,7 +370,7 @@ if (msg.content === '!team')	{
 
 //Blitz Predictions 
 	if (msg.content === '!!blitz2') {
-	let channel = bot.channels.get("474779020483887108");
+	let channel = bot.channels.get("606119830516400162");
 	channel.fetchMessages({ limit: 1 }).then(messages => {
   let lastMessage = messages.first();
   if (!lastMessage.author.bot) {
