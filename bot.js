@@ -371,10 +371,15 @@ if (msg.content === '!team')	{
 //Copy from channel
 	if (msg.content === '!copy') {
 	msg.channel.bulkDelete(1)
-	msg.channel.fetchMessage('615508168641871906')   //         //channel ID 606530225962221578
-    .then(message => console.log(message.content))
-    .catch(console.error);
-	}
+	let channel = bot.channels.get("606530225962221578");
+	channel.fetchMessages({ limit: 1 }).then(messages => {
+    let lastMessage = messages.first();
+	if (!lastMessage.author.bot) {
+    // The author of the last message wasn't a bot
+  }
+	})}
+.catch(console.error);
+	
 	
 	if (msg.content === '!lastblitz') {
 	msg.channel.bulkDelete(1)
