@@ -368,12 +368,12 @@ if (msg.content === '!team')	{
 	msg.channel.send("doctorstrange is ")
 	}
 
-//Blitz Predictions 
-	if (msg.content === '!blitz') {
+//Copy from channel
+	if (msg.content === '!copy') {
 	msg.channel.bulkDelete(1)
-	msg.channel.fetchMessage('606530225962221578')
-  .then(message => console.log(message.content))
-  .catch(console.error);
+	msg.channel.fetchMessage('615508168641871906')   //         //channel ID 606530225962221578
+    .then(message => console.log(message.content))
+    .catch(console.error);
 	}
 	
 	if (msg.content === '!lastblitz') {
