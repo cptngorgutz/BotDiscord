@@ -369,11 +369,25 @@ if (msg.content === '!team')	{
 	}
 
 //Blitz Predictions 
-	if (msg.content === '!blitz') {
-	msg.channel.bulkDelete(1)
-	msg.channel.send("``Current Blitz Predictions``")
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Blitz/Blitz.png')] });
-	}
+	if (message.content.startsWith("!blitz2")) {
+    let args = message.content.split(" "); //find every word of the message
+    if (args.length > 1) { //make sure that there is at least 1 argument, which should be the target channel's id
+      let target = message.guild.channels.find(599413567459950603 => 606530225962221578 == args[1]) || null; // find the targeted channel
+											//raid                     //images
+      if (target) { // make sure that the targeted channel exists, if it exists then fetch its last message
+        target
+          .fetchMessages({ limit: 1 })
+          .then(f =>
+            message.channel.send(
+              `Last message from <#${target.id}> is...\n> ${f.first().content}`
+            ) // send the last message to the initial channel
+          );
+      } else { //if target doesn't exist, send an error
+        message.channel.send("Target does not exist!");
+      }
+    }
+  }
+	
 	
 	if (msg.content === '!lastblitz') {
 	msg.channel.bulkDelete(1)
