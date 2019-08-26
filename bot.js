@@ -369,11 +369,20 @@ if (msg.content === '!team')	{
 	}
 
 //Blitz Predictions 
-	if (msg.content === '!blitz') {
-	msg.channel.bulkDelete(1)
-	msg.channel.send("``Current Blitz Predictions``")
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Blitz/Blitz.png')] });
-	}
+	client.on('!blitz2', message => {
+	// Check if the message was sent in the channel with the specified id.
+	if(message.channel.id === '474779020483887108'){
+    // Get the channel to fetch the message from.
+    const channelToCheck = message.mentions.channels.first()
+    // Fetch the last message from the mentioned channel.
+    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+    const lastMessage = messages.first()
+    console.log(lastMessage.content)
+    }).catch(err => {
+    console.error(err)
+    })
+  }
+})
 	
 	if (msg.content === '!lastblitz') {
 	msg.channel.bulkDelete(1)
