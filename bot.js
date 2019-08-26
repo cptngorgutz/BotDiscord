@@ -369,10 +369,13 @@ if (msg.content === '!team')	{
 	}
 
 //Copy last message from a channel 
-	if (msg.content === '!copy') {
-	let channel = bot.channels.get("606530225962221578");
-	channel.fetchMessages({ limit: 1 }).then(messages => {
-	})}
+    if (msg.content === '!copy') {
+    msg.channel.bulkDelete(1)
+    let channel = bot.channels.get("606530225962221578");
+    channel.fetchMessages({ limit: 1 }).then(messages => {
+	msg.channel.send()
+    })}
+
 
 	
 	
