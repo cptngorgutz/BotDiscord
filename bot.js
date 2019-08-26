@@ -369,7 +369,7 @@ if (msg.content === '!team')	{
 	}
 
 //Blitz Predictions 
-	client.on('!blitz2', message => {
+	if (msg.content === '!blitz2') {
 	// Check if the message was sent in the channel with the specified id.
 	if(message.channel.id === '474779020483887108'){
     // Fetch the last message from the mentioned channel.
