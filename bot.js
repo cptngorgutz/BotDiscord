@@ -374,6 +374,7 @@ if (msg.content === '!team')	{
 	msg.channel.fetchMessage('606530225962221578')
   .then(message => console.log(message.content))
   .catch(console.error);
+	}
 	
 	if (msg.content === '!lastblitz') {
 	msg.channel.bulkDelete(1)
