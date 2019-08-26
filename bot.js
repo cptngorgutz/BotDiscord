@@ -368,15 +368,12 @@ if (msg.content === '!team')	{
 	msg.channel.send("doctorstrange is ")
 	}
 
-//Copy from channel
+//Copy last message from channel
 	if (msg.content === '!copy') {
 	msg.channel.bulkDelete(1)
 	let channel = bot.channels.get("606530225962221578");
 	channel.fetchMessages({ limit: 1 }).then(messages => {
     let lastMessage = messages.first();
-	if (!lastMessage.author.bot) {
-    // The author of the last message wasn't a bot
-  }
 	})}
 
 	
