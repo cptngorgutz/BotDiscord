@@ -369,16 +369,12 @@ if (msg.content === '!team')	{
 	}
 
 //Blitz Predictions 
-	if (msg.content === '!!blitz2') {
-	let channel = bot.channels.get("606119830516400162");
-	channel.fetchMessages({ limit: 1 }).then(messages => {
-  let lastMessage = messages.first();
-  if (!lastMessage.author.bot) {
-    // The author of the last message wasn't a bot
-  }
-})
-	}
-.catch(console.error);
+if (msg.content === '!blitz2') {
+	msg.channel.bulkDelete(1)
+  channel.fetchMessage('606119830516400162')
+  .then(message => console.log(message.content))
+  .catch(console.error);
+}
 
 
 	if (msg.content === '!lastblitz') {
