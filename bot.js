@@ -369,18 +369,12 @@ if (msg.content === '!team')	{
 	}
 
 //Blitz Predictions 
-if (msg.content === '!blitz2') {
+	if (msg.content === '!blitz') {
 	msg.channel.bulkDelete(1)
-	msg.channel = bot.channels.get("606119830516400162");
-	msg.channel.fetchMessages({ limit: 1 }).then(messages => {
-  let lastMessage = messages.first();
-  }
-)}
-
-.catch(console.error);
-
-
-
+	msg.channel.send("``Current Blitz Predictions``")
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Blitz/Blitz.png')] });
+	}
+	
 	if (msg.content === '!lastblitz') {
 	msg.channel.bulkDelete(1)
 	msg.channel.send("``Previous Blitz Predictions``")
