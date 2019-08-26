@@ -369,16 +369,22 @@ if (msg.content === '!team')	{
 	}
 
 //Blitz Predictions 
-	if (msg.content === '!blitz2') {
-	// Check if the message was sent in the channel with the specified id.
-	if(message.channel.id === '474779020483887108'){
-    // Fetch the last message from the mentioned channel.
-    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
-    const lastMessage = messages.first()
-    console.log(lastMessage.content)
-    }).catch(err => {
-    console.error(err)
-    })
+	client.on('message', message => {
+  // Check if the message was sent in the channel with the specified id.
+  if(message.channel.id === '474779020483887108'){
+    if(message.content.startsWith('!blitz2')) {
+
+      // Get the channel to fetch the message from.
+      const channelToCheck = message.mentions.channels.first()
+
+      // Fetch the last message from the mentioned channel.
+      channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+        const lastMessage = messages.first()
+        console.log(lastMessage.content)
+      }).catch(err => {
+        console.error(err)
+      })
+    }
   }
 })
 	
