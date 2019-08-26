@@ -372,8 +372,6 @@ if (msg.content === '!team')	{
 	client.on('!blitz2', message => {
 	// Check if the message was sent in the channel with the specified id.
 	if(message.channel.id === '474779020483887108'){
-    // Get the channel to fetch the message from.
-    const channelToCheck = message.mentions.channels.first()
     // Fetch the last message from the mentioned channel.
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first()
