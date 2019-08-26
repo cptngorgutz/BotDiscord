@@ -373,7 +373,6 @@ if (msg.content === '!team')	{
 	msg.channel.bulkDelete(1)
 	let channel = bot.channels.get("606530225962221578");
 	channel.fetchMessages({ limit: 1 }).then(messages => {
-    let lastMessage = messages.first();
 	})}
 
 	
