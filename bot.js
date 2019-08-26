@@ -374,12 +374,9 @@ if (msg.content === '!blitz2') {
 	msg.channel = bot.channels.get("606119830516400162");
 	msg.channel.fetchMessages({ limit: 1 }).then(messages => {
   let lastMessage = messages.first();
-
-  if (!lastMessage.author.bot) {
-    // The author of the last message wasn't a bot
   }
-})
-}
+)}
+
 .catch(console.error);
 
 
