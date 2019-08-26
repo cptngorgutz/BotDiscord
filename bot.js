@@ -372,13 +372,12 @@ if (msg.content === '!team')	{
     if (msg.content === '!copy') {
     msg.channel.bulkDelete(1)
     let channel = bot.channels.get("606530225962221578");
-    channel.fetchMessages({ limit: 1 }).then(messages => {
-	msg.channel.send()
-    })}
+   channel.fetchMessages({ limit: 10 })
+  .then(messages => console.log(`Received ${messages.size} messages`))
+  .catch(console.error);
+	}
 
 
-	
-	
 	if (msg.content === '!lastblitz') {
 	msg.channel.bulkDelete(1)
 	msg.channel.send("``Previous Blitz Predictions``")
