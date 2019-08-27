@@ -368,16 +368,13 @@ if (msg.content === '!team')	{
 	msg.channel.send("doctorstrange is ")
 	}
 
-//Copy last message from a channel 
-    if (msg.content === '!copy') {
-    msg.channel.bulkDelete(1)
-    let channel = bot.channels.get("606530225962221578");
-   channel.fetchMessages({ limit: 10 })
-  .then(messages => console.log(`Received ${messages.size} messages`))
-  .catch(console.error);
+//Blitz Predictions 
+	if (msg.content === '!blitz') {
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``Current Blitz Predictions``")
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Blitz/Blitz.png')] });
 	}
-
-
+	
 	if (msg.content === '!lastblitz') {
 	msg.channel.bulkDelete(1)
 	msg.channel.send("``Previous Blitz Predictions``")
