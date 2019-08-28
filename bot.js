@@ -267,6 +267,11 @@ if (msg.content === '!team')	{
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Starlord.png')] });
 	}
 	
+	if (msg.content === '!minnerva') {
+	msg.channel.bulkDelete(1)
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/MinnErva.png')] });
+	}
+	
 	if (msg.content === '!mystique') {
 	msg.channel.bulkDelete(1)  
 	msg.channel.send("The Beyonder summons mystique, she will be availible soon.")  
