@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const embed = new Discord.RichEmbed() 
 // const config = require('./config.json');
 
 client.on('ready', () => {
@@ -243,19 +242,26 @@ if (msg.content === '!team')	{
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Ultron.png')] });
 	}
 	
-		if (msg.content === '!ultrontest') {
-		
-		.setTitle("Your title here.") 
-		.setURL("https://yagami.xyz/post-1/") 
-		.setAuthor("Author Name", "https://yagami.xyz/content/uploads/2018/11/discord-512-1.png","https://yagami.xyz") 
-		.setColor(0x00AE86) 
-		.setDescription("This is the main body of text, it can hold 2048 characters.") 
-		.setFooter("Footer text (max: 2048 characters)", "http://i.imgur.com/w1vhFSR.png") 
-		.setImage("http://i.imgur.com/yVpymuV.png") 
-		.setThumbnail("https://yagami.xyz/content/uploads/2018/11/discord-512-1.png") 
-		.setTimestamp() 
-		message.channel.send({embed})
-		}
+	if (msg.content === '!test command') {
+	// inside a command, event listener, etc.
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setTitle('Some title')
+	.setURL('https://discord.js.org/')
+	.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
+	.setDescription('Some description here')
+	.setThumbnail('https://i.imgur.com/wSTFkRM.png')
+	.addField('Regular field title', 'Some value here')
+	.addBlankField()
+	.addField('Inline field title', 'Some value here', true)
+	.addField('Inline field title', 'Some value here', true)
+	.addField('Inline field title', 'Some value here', true)
+	.setImage('https://i.imgur.com/wSTFkRM.png')
+	.setTimestamp()
+	.setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+
+	channel.send(exampleEmbed);
+}
 	
 	
 	
