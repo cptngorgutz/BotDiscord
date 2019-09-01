@@ -250,10 +250,6 @@ if (msg.content === '!team')	{
 	.setDescription('**Disintegration Beam • Level 7**')
 	.setThumbnail('https://i.imgur.com/MvOD9QI.png')
 	.addField('Attack primary target for 340% damage + steal 2 positive effects + clear Taunt.', '⠀')
-	.addBlankField()
-	.addField('Inline field title', 'Some value here', true)
-	.addField('Inline field title', 'Some value here', true)
-	.addField('Inline field title', 'Some value here', true)
 	msg.channel.send(exampleEmbed);
 }
 	
