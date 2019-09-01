@@ -252,6 +252,19 @@ if (msg.content === '!team')	{
 	.addField('Attack primary target for 340% damage + steal 2 positive effects + clear Taunt.', '⠀')
 	msg.channel.send(exampleEmbed);
 }
+
+if (msg.content === '!Ultron Basic Code') {
+	// inside a command, event listener, etc.
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setAuthor('Ultron', 'https://i.imgur.com/GMx4onc.png', 'https://msf.gg/characters/Ultron')
+	.setDescription('**Basic Ability:**')
+	.setThumbnail('https://i.imgur.com/MvOD9QI.png')
+	.addField(' Target = Crosshair Selection. Own Ability Damage +100% for next (Action).(Action) Attack each Target. (Then remove dead units from Target pool.)SKIP:(Action) 1 time(s) for each Target: Remove Taunt.Recipient = Self.(Action) 2 time(s) for each Target: Choose a new one of its Buffs (except Taunt): 50% chance to copy it to Recipient. For each successful copy, 0% chance to remove the original. (Reroll Recipient for each Target.) Process on-attack assists. Process Counterattacks.', '⠀')
+	.addField('Assist:', '  Target = Crosshair Selection. Own Ability Damage +61% for next (Action). Own Piercing +5% for next (Action).(Action) Attack each Target. (Then remove dead units from Target pool.) SKIP: (Action) 1 time(s) for each Target: Remove Taunt.', true)
+	.addField('Counter:', 'Target = Attacker. Own Ability Damage +61% for next (Action). Own Piercing +5% for next (Action). (Action) Attack each Target. (Then remove dead units from Target pool.) SKIP: (Action) 1 time(s) for each Target: Remove Taunt.', true)
+	msg.channel.send(exampleEmbed);
+}
 	
 	
 	
