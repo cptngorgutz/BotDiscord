@@ -242,7 +242,7 @@ if (msg.content === '!team')	{
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Ultron.png')] });
 	}
 	
-	if (msg.content === '!Ultron 7 Basic') {
+if (msg.content === '!Ultron Basic 7') {
 	// inside a command, event listener, etc.
 	msg.channel.bulkDelete(1)
 	const exampleEmbed = new Discord.RichEmbed()
@@ -253,7 +253,7 @@ if (msg.content === '!team')	{
 	.addField('Attack primary target for 340% damage + steal 2 positive effects + clear Taunt. \nLevel Required: 65', '⠀')
 	msg.channel.send(exampleEmbed);
 }
-if (msg.content === '!Ultron 6 Basic') {
+if (msg.content === '!Ultron Basic 6') {
 	// inside a command, event listener, etc.
 	msg.channel.bulkDelete(1)
 	const exampleEmbed = new Discord.RichEmbed()
@@ -264,7 +264,7 @@ if (msg.content === '!Ultron 6 Basic') {
 	.addField('Attack primary target for 270% damage + steal 2 positive effects + clear Taunt. \nLevel Required: 55', '⠀')
 	msg.channel.send(exampleEmbed);
 }
-if (msg.content === '!Ultron 5 Basic') {
+if (msg.content === '!Ultron Basic 5') {
 	// inside a command, event listener, etc.
 	msg.channel.bulkDelete(1)
 	const exampleEmbed = new Discord.RichEmbed()
@@ -275,7 +275,7 @@ if (msg.content === '!Ultron 5 Basic') {
 	.addField('Attack primary target for 230% damage + steal 2 positive effects + clear Taunt. \nLevel Required: 45', '⠀')
 	msg.channel.send(exampleEmbed);
 }
-if (msg.content === '!Ultron 4 Basic') {
+if (msg.content === '!Ultron Basic 4') {
 	// inside a command, event listener, etc.
 	msg.channel.bulkDelete(1)
 	const exampleEmbed = new Discord.RichEmbed()
@@ -286,7 +286,7 @@ if (msg.content === '!Ultron 4 Basic') {
 	.addField('Attack primary target for 230% damage + 75% chance to copy 2 positive effects. \nLevel Required: 35', '⠀')
 	msg.channel.send(exampleEmbed);
 }
-if (msg.content === '!Ultron 3 Basic') {
+if (msg.content === '!Ultron Basic 3') {
 	// inside a command, event listener, etc.
 	msg.channel.bulkDelete(1)
 	const exampleEmbed = new Discord.RichEmbed()
@@ -297,7 +297,7 @@ if (msg.content === '!Ultron 3 Basic') {
 	.addField('Attack primary target for 180% damage + 75% chance to copy 2 positive effects. \nLevel Required: 25', '⠀')
 	msg.channel.send(exampleEmbed);
 }
-if (msg.content === '!Ultron 2 Basic') {
+if (msg.content === '!Ultron Basic 2') {
 	// inside a command, event listener, etc.
 	msg.channel.bulkDelete(1)
 	const exampleEmbed = new Discord.RichEmbed()
@@ -308,7 +308,7 @@ if (msg.content === '!Ultron 2 Basic') {
 	.addField('Attack primary target for 140% damage + 50% chance to copy 2 positive effects. \nLevel Required: 15', '⠀')
 	msg.channel.send(exampleEmbed);
 }
-if (msg.content === '!Ultron 1 Basic') {
+if (msg.content === '!Ultron Basic 1') {
 	// inside a command, event listener, etc.
 	msg.channel.bulkDelete(1)
 	const exampleEmbed = new Discord.RichEmbed()
@@ -326,7 +326,7 @@ if (msg.content === '!Ultron 1 Basic') {
 	.setColor('#0099ff')
 	.setAuthor('Ultron', 'https://i.imgur.com/GMx4onc.png', 'https://msf.gg/characters/Ultron')
 	.setDescription('**Ultron Basic**')
-	.setThumbnail('https://i.imgur.com/MvOD9QI.png')
+	.setThumbnail('./Character Tiers/Ultron.png') //https://i.imgur.com/MvOD9QI.png
 	.addField('Basic Ability:', 'Target = Crosshair Selection. \nOwn Ability Damage +100% for next (Action).\n(Action) Attack each Target. (Then remove dead units from Target pool.) \nSKIP: \n(Action) 1 time(s) for each Target: Remove Taunt. \nRecipient = Self. \n(Action) 2 time(s) for each Target: Choose a new one of its Buffs (except Taunt): 50% chance to copy it to Recipient. For each successful copy, 0% chance to remove the original. \nProcess on-attack assists. \nProcess Counterattacks.')
 	.addField('Assist:', 'Target = Crosshair Selection. Own Ability Damage +61% for next (Action). Own Piercing +5% for next (Action). (Action) Attack each Target. (Then remove dead units from Target pool.) SKIP:  (Action) 1 time(s) for each Target: Remove Taunt. ', true)
 	.addField('Counter:', 'Target = Attacker. Own Ability Damage +61% for next (Action). Own Piercing +5% for next (Action). (Action) Attack each Target. (Then remove dead units from Target pool.) SKIP: (Action) 1 time(s) for each Target: Remove Taunt.', true)
