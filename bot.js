@@ -242,24 +242,18 @@ if (msg.content === '!team')	{
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Ultron.png')] });
 	}
 	
-	if (msg.content === '!test command') {
+	if (msg.content === '!Ultron 7 Basic') {
 	// inside a command, event listener, etc.
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setTitle('Some title')
-	.setURL('https://discord.js.org/')
-	.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
-	.setDescription('Some description here')
-	.setThumbnail('https://i.imgur.com/wSTFkRM.png')
-	.addField('Regular field title', 'Some value here')
+	.setAuthor('Ultron', 'https://imgur.com/a/wIoviW0', 'https://msf.gg/characters/Ultron')
+	.setDescription('Disnintegration Beam • Level 7')
+	.setThumbnail('https://imgur.com/a/tzfNEH0')
+	.addField('', 'Attack primary target for 340% damage + steal 2 positive effects + clear Taunt.')
 	.addBlankField()
 	.addField('Inline field title', 'Some value here', true)
 	.addField('Inline field title', 'Some value here', true)
 	.addField('Inline field title', 'Some value here', true)
-	.setImage('https://i.imgur.com/wSTFkRM.png')
-	.setTimestamp()
-	.setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
-
 	msg.channel.send(exampleEmbed);
 }
 	
