@@ -243,53 +243,16 @@ if (msg.content === '!team')	{
 	}
 	
 		if (msg.content === '!ultrontest') {
-	const embed = {
-  "title": "title ~~(did you know you can have markdown here too?)~~",
-  "description": "this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```",
-  "url": "https://discordapp.com",
-  "color": 8622335,
-  "timestamp": "2019-09-01T11:41:21.547Z",
-  "footer": {
-    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
-    "text": "footer text"
-  },
-  "thumbnail": {
-    "url": "https://cdn.discordapp.com/embed/avatars/0.png"
-  },
-  "image": {
-    "url": "https://cdn.discordapp.com/embed/avatars/0.png"
-  },
-  "author": {
-    "name": "Ultron",
-    "url": "https://discordapp.com",
-    "icon_url": "image"
-  },
-  "fields": [
-    {
-      "name": "🤔",
-      "value": "some of these properties have certain limits..."
-    },
-    {
-      "name": "😱",
-      "value": "try exceeding some of them!"
-    },
-    {
-      "name": "🙄",
-      "value": "an informative error should show up, and this view will remain as-is until all issues are fixed"
-    },
-    {
-      "name": "<:thonkang:219069250692841473>",
-      "value": "these last two",
-      "inline": true
-    },
-    {
-      "name": "<:thonkang:219069250692841473>",
-      "value": "are inline fields",
-      "inline": true
-    }
-  ]
-};
-channel.send({ embed });
+		const embed = new Discord.RichEmbed() 
+		.setTitle("Your title here.") 
+		.setURL("https://yagami.xyz/post-1/") 
+		.setAuthor("Author Name", "https://yagami.xyz/content/uploads/2018/11/discord-512-1.png","https://yagami.xyz") 
+		.setColor(0x00AE86) .setDescription("This is the main body of text, it can hold 2048 characters.") 
+		.setFooter("Footer text (max: 2048 characters)", "http://i.imgur.com/w1vhFSR.png") 
+		.setImage("http://i.imgur.com/yVpymuV.png") 
+		.setThumbnail("https://yagami.xyz/content/uploads/2018/11/discord-512-1.png") 
+		.setTimestamp() 
+		message.channel.send({embed})
 		}
 	
 	
