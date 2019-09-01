@@ -242,57 +242,55 @@ if (msg.content === '!team')	{
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Ultron.png')] });
 	}
 	
-	if (msg.content === '!ultron test') {
-	{
-  "embed": {
-    "title": "title ~~(did you know you can have markdown here too?)~~",
-    "description": "this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```",
+		if (msg.content === '!ultrontest') {
+	const embed = {
+  "title": "title ~~(did you know you can have markdown here too?)~~",
+  "description": "this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```",
+  "url": "https://discordapp.com",
+  "color": 8622335,
+  "timestamp": "2019-09-01T11:41:21.547Z",
+  "footer": {
+    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "text": "footer text"
+  },
+  "thumbnail": {
+    "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+  },
+  "image": {
+    "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+  },
+  "author": {
+    "name": "Ultron",
     "url": "https://discordapp.com",
-    "color": 8622335,
-    "timestamp": "2019-09-01T11:41:21.547Z",
-    "footer": {
-      "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
-      "text": "footer text"
+    "icon_url": "image"
+  },
+  "fields": [
+    {
+      "name": "🤔",
+      "value": "some of these properties have certain limits..."
     },
-    "thumbnail": {
-      "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+    {
+      "name": "😱",
+      "value": "try exceeding some of them!"
     },
-    "image": {
-      "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+    {
+      "name": "🙄",
+      "value": "an informative error should show up, and this view will remain as-is until all issues are fixed"
     },
-    "author": {
-      "name": "Ultron",
-      "url": "https://discordapp.com",
-      "icon_url": "image"
+    {
+      "name": "<:thonkang:219069250692841473>",
+      "value": "these last two",
+      "inline": true
     },
-    "fields": [
-      {
-        "name": "🤔",
-        "value": "some of these properties have certain limits..."
-      },
-      {
-        "name": "😱",
-        "value": "try exceeding some of them!"
-      },
-      {
-        "name": "🙄",
-        "value": "an informative error should show up, and this view will remain as-is until all issues are fixed"
-      },
-      {
-        "name": "<:thonkang:219069250692841473>",
-        "value": "these last two",
-        "inline": true
-      },
-      {
-        "name": "<:thonkang:219069250692841473>",
-        "value": "are inline fields",
-        "inline": true
-      }
-    ]
-  }
-}
-	}	
-	
+    {
+      "name": "<:thonkang:219069250692841473>",
+      "value": "are inline fields",
+      "inline": true
+    }
+  ]
+};
+channel.send({ embed });
+		}
 	
 	
 	
