@@ -249,7 +249,67 @@ if (msg.content === '!team')	{
 	.setAuthor('Ultron', 'https://i.imgur.com/GMx4onc.png', 'https://msf.gg/characters/Ultron')
 	.setDescription('**Disintegration Beam • Level 7**')
 	.setThumbnail('https://i.imgur.com/MvOD9QI.png')
-	.addField('Attack primary target for 340% damage + steal 2 positive effects + clear Taunt.', '⠀')
+	.addField('Attack primary target for 340% damage + steal 2 positive effects + clear Taunt. \nLevel Required: 65', '⠀')
+	msg.channel.send(exampleEmbed);
+}
+if (msg.content === '!Ultron 6 Basic') {
+	// inside a command, event listener, etc.
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setAuthor('Ultron', 'https://i.imgur.com/GMx4onc.png', 'https://msf.gg/characters/Ultron')
+	.setDescription('**Disintegration Beam • Level 7**')
+	.setThumbnail('https://i.imgur.com/MvOD9QI.png')
+	.addField('Attack primary target for 270% damage + steal 2 positive effects + clear Taunt. \nLevel Required: 55', '⠀')
+	msg.channel.send(exampleEmbed);
+}
+if (msg.content === '!Ultron 5 Basic') {
+	// inside a command, event listener, etc.
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setAuthor('Ultron', 'https://i.imgur.com/GMx4onc.png', 'https://msf.gg/characters/Ultron')
+	.setDescription('**Disintegration Beam • Level 7**')
+	.setThumbnail('https://i.imgur.com/MvOD9QI.png')
+	.addField('Attack primary target for 230% damage + steal 2 positive effects + clear Taunt. \nLevel Required: 45', '⠀')
+	msg.channel.send(exampleEmbed);
+}
+if (msg.content === '!Ultron 4 Basic') {
+	// inside a command, event listener, etc.
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setAuthor('Ultron', 'https://i.imgur.com/GMx4onc.png', 'https://msf.gg/characters/Ultron')
+	.setDescription('**Disintegration Beam • Level 7**')
+	.setThumbnail('https://i.imgur.com/MvOD9QI.png')
+	.addField('Attack primary target for 230% damage + 75% chance to copy 2 positive effects. \nLevel Required: 35', '⠀')
+	msg.channel.send(exampleEmbed);
+}
+if (msg.content === '!Ultron 3 Basic') {
+	// inside a command, event listener, etc.
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setAuthor('Ultron', 'https://i.imgur.com/GMx4onc.png', 'https://msf.gg/characters/Ultron')
+	.setDescription('**Disintegration Beam • Level 7**')
+	.setThumbnail('https://i.imgur.com/MvOD9QI.png')
+	.addField('Attack primary target for 180% damage + 75% chance to copy 2 positive effects. \nLevel Required: 25', '⠀')
+	msg.channel.send(exampleEmbed);
+}
+if (msg.content === '!Ultron 2 Basic') {
+	// inside a command, event listener, etc.
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setAuthor('Ultron', 'https://i.imgur.com/GMx4onc.png', 'https://msf.gg/characters/Ultron')
+	.setDescription('**Disintegration Beam • Level 7**')
+	.setThumbnail('https://i.imgur.com/MvOD9QI.png')
+	.addField('Attack primary target for 140% damage + 50% chance to copy 2 positive effects. \nLevel Required: 15', '⠀')
+	msg.channel.send(exampleEmbed);
+}
+if (msg.content === '!Ultron 1 Basic') {
+	// inside a command, event listener, etc.
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setAuthor('Ultron', 'https://i.imgur.com/GMx4onc.png', 'https://msf.gg/characters/Ultron')
+	.setDescription('**Disintegration Beam • Level 7**')
+	.setThumbnail('https://i.imgur.com/MvOD9QI.png')
+	.addField('Attack primary target for 100% damage + 50% chance to copy 2 positive effects. \nLevel Required: 1', '⠀')
 	msg.channel.send(exampleEmbed);
 }
 
