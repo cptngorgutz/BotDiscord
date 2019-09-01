@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const embed = new Discord.RichEmbed() 
 // const config = require('./config.json');
 
 client.on('ready', () => {
@@ -243,11 +244,12 @@ if (msg.content === '!team')	{
 	}
 	
 		if (msg.content === '!ultrontest') {
-		const embed = new Discord.RichEmbed() 
+		
 		.setTitle("Your title here.") 
 		.setURL("https://yagami.xyz/post-1/") 
 		.setAuthor("Author Name", "https://yagami.xyz/content/uploads/2018/11/discord-512-1.png","https://yagami.xyz") 
-		.setColor(0x00AE86) .setDescription("This is the main body of text, it can hold 2048 characters.") 
+		.setColor(0x00AE86) 
+		.setDescription("This is the main body of text, it can hold 2048 characters.") 
 		.setFooter("Footer text (max: 2048 characters)", "http://i.imgur.com/w1vhFSR.png") 
 		.setImage("http://i.imgur.com/yVpymuV.png") 
 		.setThumbnail("https://yagami.xyz/content/uploads/2018/11/discord-512-1.png") 
