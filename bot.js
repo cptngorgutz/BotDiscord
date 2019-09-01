@@ -249,7 +249,7 @@ if (msg.content === '!team')	{
 	.setAuthor('Ultron', 'https://imgur.com/a/wIoviW0', 'https://msf.gg/characters/Ultron')
 	.setDescription('Disnintegration Beam • Level 7')
 	.setThumbnail('https://imgur.com/a/tzfNEH0')
-	.addField('', 'Attack primary target for 340% damage + steal 2 positive effects + clear Taunt.')
+	.addField('test', 'Attack primary target for 340% damage + steal 2 positive effects + clear Taunt.')
 	.addBlankField()
 	.addField('Inline field title', 'Some value here', true)
 	.addField('Inline field title', 'Some value here', true)
