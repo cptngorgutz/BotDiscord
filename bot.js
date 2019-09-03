@@ -243,7 +243,7 @@ if (msg.content === '!team')	{
 	}
 	
 if (msg.content === '!Ultron Basic 7') {
-	msg.delete(1000);
+	msg.channel.bulkDelete(2)
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setAuthor('Ultron', 'https://i.imgur.com/GMx4onc.png', 'https://msf.gg/characters/Ultron')
