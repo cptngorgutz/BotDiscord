@@ -326,7 +326,7 @@ if (msg.content === '!Ultron Basic 1') {
 }
 
 	if (msg.content === '!Ultron Basic Code') {
-	// inside a command, event listener, etc.
+	msg.channel.bulkDelete(1)
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setAuthor('Ultron', 'https://i.imgur.com/GMx4onc.png', 'https://msf.gg/characters/Ultron')
