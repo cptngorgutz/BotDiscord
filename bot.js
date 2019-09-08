@@ -186,30 +186,30 @@ if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
 }}
 	
 //EVENTS
-	if (msg.content === '!event fury') {
+	if (msg.content === '!event fury' || msg.content === '!Event Fury' || msg.content === '!event Fury'|| msg.content === '!Event fury' msg.content === '!eventfury') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/furyevent.png')] });
 	msg.channel.bulkDelete(1)
 }
-	if (msg.content === '!event ironman') {
+	if (msg.content === '!event ironman' || msg.content === '!Event Ironman' || msg.content === '!event Ironman'|| msg.content === '!Event ironman' msg.content === '!eventironman') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ironmanevent.png')] });
 	msg.channel.bulkDelete(1)
 }
 
-	if (msg.content === '!event magneto') {
+	if (msg.content === '!event magneto' || msg.content === '!Event Magneto' || msg.content === '!event Magneto'|| msg.content === '!Event magneto' msg.content === '!eventmagneto') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/magnetoevent.png')] });	
 	msg.channel.bulkDelete(1)
 }
 
-	if (msg.content === '!event shuri') {
+	if (msg.content === '!event shuri' || msg.content === '!Event Shuri' || msg.content === '!event Shuri'|| msg.content === '!Event shuri' msg.content === '!eventshuri') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/shurievent.png')] });
 	msg.channel.bulkDelete(1)
 }
 
-	if (msg.content === '!event starlord') {
+	if (msg.content === '!event starlord' || msg.content === '!Event Starlord' || msg.content === '!event Starlord'|| msg.content === '!Event starlord' msg.content === '!eventstarlord') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/starlordevent.png')] });  	
 	msg.channel.bulkDelete(1)
 }
-//if (msg.content === '!rocket' || msg.content === '!Rocket' || msg.content === '!raccoon' ')	{
+
 	if (msg.content === '!event phoenix' || msg.content === '!Event Phoenix' || msg.content === '!event Phoenix'|| msg.content === '!Event phoenix') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/phoenixevent.png')] }); 
 	msg.channel.bulkDelete(1)
