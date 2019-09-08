@@ -209,8 +209,8 @@ if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/starlordevent.png')] });  	
 	msg.channel.bulkDelete(1)
 }
-
-	if (msg.content === '!event phoenix') {
+//if (msg.content === '!rocket' || msg.content === '!Rocket' || msg.content === '!raccoon' ')	{
+	if (msg.content === '!event phoenix' || msg.content === '!Event Phoenix' || msg.content === '!event Phoenix'|| msg.content === '!Event phoenix') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/phoenixevent.png')] }); 
 	msg.channel.bulkDelete(1)
 }
