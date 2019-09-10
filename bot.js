@@ -116,7 +116,7 @@ if (msg.content === '!raid ultimus 6' || msg.content === '!raid Ultimus 6')	{
 }
 
 if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
-	if (msg.channel.id === '605743097435127808' || msg.channel.id === '605745454759804948') {
+	if (msg.channel.id === '620794088828174337' || msg.channel.id === '620793457715445769') {
 //                           TB1 EVENT ROOM                             TB2 EVENT ROOM
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
