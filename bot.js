@@ -486,7 +486,7 @@ if (msg.content === '!Ultron Basic 1') {
 	
 	if (msg.content === '!blitz2') {
 	msg.channel.bulkDelete(1)
-	msg.channel.fetchMessage('620998744720146432')
+	channel.fetchMessage('620998744720146432')
 	.then(message => console.log(message.content))
 	.catch(console.error);
 }
