@@ -486,7 +486,7 @@ if (msg.content === '!Ultron Basic 1') {
 	
 	if (msg.content === '!blitz2') {
 	let channel = bot.channels.get("620998744720146432");
-	 message.channel.fetchMessages({limit: 1}) 
+	 msg.channel.fetchMessages({limit: 1}) 
     .then(message => console.log(message.content))
 	.catch(console.error);
 }
