@@ -481,7 +481,7 @@ if (msg.content === '!Ultron Basic 1') {
 	if (msg.content === '!blitz') {
 	msg.channel.bulkDelete(1)
 	msg.channel.send("``Current Blitz Predictions``")
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Blitz/Blitz.png')] });
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Blitz/EB74F7FE-BDB1-45E4-808B-36CD557F094D.png')] });
 	}
 	
 	if (msg.content === '!lastblitz') {
