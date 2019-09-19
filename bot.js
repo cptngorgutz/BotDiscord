@@ -223,6 +223,16 @@ if (msg.content === '!nevermisses') {
 	msg.channel.send(exampleEmbed);
 }
 
+if (msg.content === '!spideydance') {
+	msg.channel.bulkDelete(1)
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription('**When the camera keeps on rolling...**')
+	.attachFiles(['./Misc/spideygif.gif'])
+	.setImage('attachment://spideygif.gif')
+	msg.channel.send(exampleEmbed);
+}
+
 //EVENTS
 	if (msg.content === '!event fury') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/furyevent.png')] });
