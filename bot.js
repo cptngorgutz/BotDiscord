@@ -195,6 +195,16 @@ if (msg.content === '!sad') {
 	msg.channel.send(exampleEmbed);
 }
 
+if (msg.content === '!happy') {
+	msg.channel.bulkDelete(1)
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription('**Cap appreciates your luck**')
+	.attachFiles(['./Misc/happygif.gif'])
+	.setImage('attachment://happygif.gif')
+	msg.channel.send(exampleEmbed);
+}
+
 //EVENTS
 	if (msg.content === '!furyevent') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/furyevent.png')] });
