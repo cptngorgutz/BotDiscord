@@ -262,6 +262,11 @@ if (msg.content === '!happy') {
 	msg.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/Ultron.png')] });
 	}
 	
+	if (msg.content === '!ultron2') {
+	msg.channel.bulkDelete(1)
+	msg.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/Ultron.png')] });
+	}
+	
 	if (msg.content === '!juggernaut || msg.content === !Juggernaut') {
 	msg.channel.bulkDelete(1)
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Juggernaut.png')] });
