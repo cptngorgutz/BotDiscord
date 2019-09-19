@@ -190,8 +190,8 @@ if (msg.content === '!sad') {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription('**You made Cap cry with your bad luck**')
-	.attachFiles(['./Misc/sadcap.jpg'])
-	.setImage('attachment://sadcap.jpg')
+	.attachFiles(['./Misc/sadgif.gif'])
+	.setImage('attachment://sadgif.gif')
 	msg.channel.send(exampleEmbed);
 }
 
