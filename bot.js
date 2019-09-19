@@ -257,7 +257,7 @@ if (msg.content === '!happy') {
 //------------------------------------------------//
 //Character Tiers
 //------------------------------------------------//
-	if (msg.content === '!ultron || msg.content === !Ultron') {
+	if (msg.content === '!ultron' || msg.content === '!Ultron') {
 	msg.channel.bulkDelete(1)
 	msg.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/Ultron.png')] });
 	}
