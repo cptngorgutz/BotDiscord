@@ -213,6 +213,16 @@ if (msg.content === '!happy') {
 	msg.channel.send(exampleEmbed);
 }
 
+if (msg.content === '!nevermisses') {
+	msg.channel.bulkDelete(1)
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription('**You forgot one thing, he never misses**')
+	.attachFiles(['./Misc/nevermissgif.gif'])
+	.setImage('attachment://nevermissgif.gif')
+	msg.channel.send(exampleEmbed);
+}
+
 //EVENTS
 	if (msg.content === '!event fury') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/furyevent.png')] });
