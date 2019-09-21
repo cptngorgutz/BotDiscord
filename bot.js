@@ -192,7 +192,7 @@ if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Blitz/Blitz.png')] });
 	}
 	
-//Gear
+//MEMES----------------------------------------------------------------------------------------------------------
 if (msg.content === '!sad') {
 	msg.channel.bulkDelete(1)
 	const exampleEmbed = new Discord.RichEmbed()
@@ -232,6 +232,45 @@ if (msg.content === '!spideydance') {
 	.setImage('attachment://spideygif.gif')
 	msg.channel.send(exampleEmbed);
 }
+
+if (msg.content === '!dafuq') {
+	msg.channel.bulkDelete(1)
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription('?????????????????????')
+	.attachFiles(['./Misc/dafuq.gif'])
+	.setImage('attachment://dafuq.gif')
+	msg.channel.send(exampleEmbed);
+}
+if (msg.content === '!dafuq1') {
+	msg.channel.bulkDelete(1)
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription('?????????????????????')
+	.attachFiles(['./Misc/dafuq1.jpg'])
+	.setImage('attachment://dafuq1.jpg')
+	msg.channel.send(exampleEmbed);
+}
+if (msg.content === '!dafuq2') {
+	msg.channel.bulkDelete(1)
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription('?????????????????????')
+	.attachFiles(['./Misc/dafuq2.jpg'])
+	.setImage('attachment://dafuq2.jpg')
+	msg.channel.send(exampleEmbed);
+}
+if (msg.content === '!dafuq3') {
+	msg.channel.bulkDelete(1)
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription('?????????????????????')
+	.attachFiles(['./Misc/dafuq3.jpg'])
+	.setImage('attachment://dafuq3.jpg')
+	msg.channel.send(exampleEmbed);
+}
+
+//--------------------------------------------------------------------------------------------------------------
 
 //EVENTS
 	if (msg.content === '!event fury') {
