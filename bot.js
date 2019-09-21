@@ -292,27 +292,27 @@ if (msg.content === '!spideydance') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Juggernaut.png')] });
 	}
 	
-	if (msg.content === '!phoenix || msg.content === !Phoenix') {
+	if (msg.content === '!phoenix' || msg.content === '!Phoenix') {
 	msg.channel.bulkDelete(1)
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Phoenix.png')] });
 	}
 
-	if (msg.content === '!magneto || msg.content === !Magneto') {
+	if (msg.content === '!magneto' || msg.content === '!Magneto') {
 	msg.channel.bulkDelete(1)
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Magneto.png')] });
 	}
 	
-	if (msg.content === '!pyro || msg.content === !Pyro') {
+	if (msg.content === '!pyro' || msg.content === '!Pyro') {
 	msg.channel.bulkDelete(1)
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Pyro.png')] });
 	}
 	
-	if (msg.content === '!starlord || msg.content === !Starlord') {
+	if (msg.content === '!starlord' || msg.content === '!Starlord') {
 	msg.channel.bulkDelete(1)
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Starlord.png')] });
 	}
 	
-	if (msg.content === '!minnerva || msg.content === !Minnerva') {
+	if (msg.content === '!minnerva' || msg.content === '!Minnerva') {
 	msg.channel.bulkDelete(1)
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/MinnErva.png')] });
 	}
