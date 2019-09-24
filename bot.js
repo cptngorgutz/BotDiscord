@@ -185,6 +185,42 @@ if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
 	msg.channel.send("Lane 8 - Orange")	  		
 }}
 
+//Champions raid
+if (msg.content === '!raid champion 4' || msg.content === '!raid Champion 4')	{
+	if (msg.channel.id === '625873573340512296' || msg.channel.id === '625873443975462914') {
+//                           TB1 EVENT ROOM                             TB2 EVENT ROOM
+	msg.channel.bulkDelete(100)
+    msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Gamma4.png')] });
+	msg.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 1 ║  \n ╚═══════════════╝ ```")
+    msg.channel.send("Lane 1 - Blue")
+	msg.channel.send("Lane 2 - Yellow") 
+	msg.channel.send("Lane 3 - Red")  
+	msg.channel.send("Lane 4 - Green")  
+	msg.channel.send("Lane 5 - Purple")  
+	msg.channel.send("Lane 6 - White")  
+	msg.channel.send("Lane 7 - Teal")
+	msg.channel.send("Lane 8 - Orange")	  
+	msg.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 2 ║  \n ╚═══════════════╝ ```")
+    msg.channel.send("Lane 1 - Blue")
+	msg.channel.send("Lane 2 - Yellow") 
+	msg.channel.send("Lane 3 - Red")  
+	msg.channel.send("Lane 4 - Green")  
+	msg.channel.send("Lane 5 - Purple")  
+	msg.channel.send("Lane 6 - White")  
+	msg.channel.send("Lane 7 - Teal")
+	msg.channel.send("Lane 8 - Orange")	  	
+	msg.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 3 ║  \n ╚═══════════════╝ ```")
+    msg.channel.send("Lane 1 - Blue")
+	msg.channel.send("Lane 2 - Yellow") 
+	msg.channel.send("Lane 3 - Red")  
+	msg.channel.send("Lane 4 - Green")  
+	msg.channel.send("Lane 5 - Purple")  
+	msg.channel.send("Lane 6 - White")  
+	msg.channel.send("Lane 7 - Teal")
+	msg.channel.send("Lane 8 - Orange")	  		
+}}
+
 //Blitz Predictions 
 	if (msg.content === '!blitz') {
 	msg.channel.bulkDelete(1)
