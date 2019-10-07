@@ -7,10 +7,10 @@ const client = new Discord.Client();
 //});
 
 client.on('guildMemberAdd', member => {
-	console.log('testrole ' + member.user.username + ' has joined the server!')
-	var role = member.guild.roles.find('name', 'testrole');
-	member.addRole(role)
-});
+  console.log('User' + member.user.tag + 'has joined the server!');
+  var role = member.guild.roles.find('name', 'testrole');
+  member.addRole(role);
+}
 
 client.on('message', async msg =>  {
 	if(msg.author.bot) return;
