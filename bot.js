@@ -14,8 +14,8 @@ client.on('guildMemberAdd', function(member)
 	//BELOW
 	member.guild.channels.get('630828938863706122').send({embed: {
 	color: 3066993,
-	title: "**The Beyonders** Welcome Bot!",
-	description: "Welcome *" + member + " #" + member.id + member.displayAvatarURL + "* to **The Beyonders** discord server!",
+	title: "**The ** Welcome Bot!",
+	description: "Welcome *" + member + " #" + member.id + user.displayAvatarURL + "* to **The ** discord server!",
 	fields: [{
     name: "ABC",
     value: "ABC2"
