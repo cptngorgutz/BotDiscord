@@ -393,7 +393,7 @@ if (msg.content === '!dafuq3') {
 	}
 	
 	//ROLES?
-	bot.on('guildMemberAdd', member => {      
+	client.on('guildMemberAdd', member => {      
 	var role = member.guild.find((role) => { // long way
 	if (role.name == 'testrecruit') return true;
 	}});
