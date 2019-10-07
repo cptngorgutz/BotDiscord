@@ -396,8 +396,7 @@ if (msg.content === '!dafuq3') {
 	if(admins.includes(message.author.id)){
 	if (msg.content === '!delete 5') {
     msg.channel.bulkDelete(5)
-	else{
-	}}}
+	}}
 
 if (msg.content === '!delete 10') {
 	msg.channel.bulkDelete(10)
