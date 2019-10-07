@@ -19,7 +19,7 @@ client.on('guildMemberAdd', function(member)
 	author: "Member Joined",
 	thumbnail: { url: member.user.displayAvatarURL },
 	fields: [{
-    name: member.user.username,
+    name: member.user.discriminator,
     value: "ID# " + member.id + "",
 	}
 	],
