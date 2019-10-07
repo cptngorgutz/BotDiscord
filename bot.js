@@ -14,12 +14,12 @@ client.on('guildMemberAdd', function(member)
 	//BELOW
 	member.guild.channels.get('630828938863706122').send({embed: {
 	color: 3066993,
-	title: "**The Beyonders Logs! ** ",
-	description: member + "* has joined **The Beyonders ** discord server!",
+	title: "**MEMBER JOINED! ** ",
+	description: member + " has joined **The Beyonders ** discord server!",
 	author: "Member Joined",
 	thumbnail: { url: member.user.displayAvatarURL },
 	fields: [{
-    name: "ABC",
+    name: member.user.username,
     value: "ID# " + member.id + "",
 	}
 	],
