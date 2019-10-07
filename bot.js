@@ -392,7 +392,23 @@ if (msg.content === '!dafuq3') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/MinnErva.png')] });
 	}
 
-if (msg.content === '!delete all') {
+if (msg.content === '!delete 5') {
+	msg.channel.bulkDelete(5)
+}
+
+if (msg.content === '!delete 10') {
+	msg.channel.bulkDelete(10)
+}
+
+if (msg.content === '!delete 20') {
+	msg.channel.bulkDelete(20)
+}
+
+if (msg.content === '!delete 50') {
+	msg.channel.bulkDelete(50)
+}
+
+if (msg.content === '!delete 100') {
 	msg.channel.bulkDelete(100)
 }
 }
