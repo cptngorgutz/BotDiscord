@@ -6,22 +6,18 @@ const client = new Discord.Client();
 //    console.log(`Logged in as ${client.user.tag}!`);
 //});
 
-client.on('guildMemberAdd', function(member)
-{
-	let memberRole = member.guild.roles.find("name", "recruit");
-	member.addRole(memberRole);
- 	member.guild.channels.get('617707484626288672').send(`Welcome to The Beyonders! ${member}. \nOne of the captains will be with you shortly. \nWe hope you enjoy your stay here.`);
-	//BELOW LOGS ENTERING
-	msg.guild.channels.get('630828938863706122').send({embed: {
-	color: 3447003,
-	author: {
+client.on('guildMemberAdd', msg => { // Commands Go Inside The client.on('message', 
+msg => )
+msg.guild.channels.get('630828938863706122').send({embed: {
+color: 3447003,
+author: {
   name: client.user.username,
   icon_url: client.user.avatarURL
-	},
-	title: "Welcome To ()!",
-	url: "https://districtservices.net",
-	description: "@MEMBER",
-	fields: [{
+},
+title: "Welcome To ()!",
+url: "https://districtservices.net",
+description: "@MEMBER",
+fields: [{
     name: "Fields",
     value: "They can have different fields with small headlines."
   },
@@ -33,15 +29,15 @@ client.on('guildMemberAdd', function(member)
     name: "Markdown",
     value: "You can put all the *usual* **__Markdown__** inside of them."
   }
-	],
-	timestamp: new Date(),
-	footer: {
+],
+timestamp: new Date(),
+footer: {
   icon_url: client.user.avatarURL,
   text: "© Example"
-	}
+}
 
-	}}); 
-	});
+}}); 
+});
 
 
 //BELOW LOGS LEAVING
