@@ -11,9 +11,10 @@ client.on('guildMemberAdd', function(member)
 	let memberRole = member.guild.roles.find("name", "recruit");
 	member.addRole(memberRole);
  	member.guild.channels.get('617707484626288672').send(`Welcome to The Beyonders! ${member}. \nOne of the captains will be with you shortly. \nWe hope you enjoy your stay here.`);
-	member.guild.channels.get('630828938863706122').send('**' + member.user.username + '**, has joined the server!');
+	//BELOW LOGS ENTERING
+	member.guild.channels.get('630828938863706122').send('**' + member.user.username + member.user.id + '**, has joined the server!');
 });
-
+//BELOW LOGS LEAVING
 client.on('guildMemberRemove', member => {
 	member.guild.channels.get('630828938863706122').send('**' + member.user.username + '**, has left the server!');
 });
