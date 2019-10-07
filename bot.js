@@ -392,7 +392,24 @@ if (msg.content === '!dafuq3') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/MinnErva.png')] });
 	}
 	
-//delete lines
+	//ROLES?
+	bot.on('GuildMerberadd' , member => {
+    console.log('User' + member.user.username + 'Has Joined the server!')
+
+    var role = member.guild.role.find('name,' , 'user');
+    member.addrole(testrecruit)
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+///////////////////////////////////////////////////delete lines////////////////////////////////////////////////////
+//*****************************************************************************************************************
 //                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL 
 	const admins = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', ]
 	if(admins.includes(msg.author.id)){
