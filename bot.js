@@ -6,10 +6,10 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
-//client.on('guildMemberAdd', member => {      
-//	var role = member.guild.find((role) => { // long way
-//	if (role.name == 'testrecruit') return true;
-//}});
+bot.on('guildMemberAdd', member => {
+  var role = member.guild.roles.find('name', 'testrecruit');
+  member.addRole(role);
+});
 
 client.on('message', async msg =>  {
 	if(msg.author.bot) return;
