@@ -6,7 +6,7 @@ const client = new Discord.Client();
 //    console.log(`Logged in as ${client.user.tag}!`);
 //});
 
-bot.on('guildMemberAdd', member => {
+client.on('guildMemberAdd', member => {
 	console.log('User ' + member.user.username + ' has joined the server!')
 	var role = member.guild.roles.find('name', 'testrole');
 	member.addRole(role)
