@@ -392,12 +392,12 @@ if (msg.content === '!dafuq3') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/MinnErva.png')] });
 	}
 	
-//if(message.author.id !== "id" && message.author.id !== "id2") return;
-//unique z id 630726256798859274
+	const admins = [ '174307388754313857', '456', '789' ]
+	if(admins.includes(message.author.id)){
 	if (msg.content === '!delete 5') {
-	if(message.author.id !== "174307388754313857") return;
-	msg.channel.bulkDelete(5)
-}}
+    msg.channel.bulkDelete(5)
+	else{
+	}}}
 
 if (msg.content === '!delete 10') {
 	msg.channel.bulkDelete(10)
