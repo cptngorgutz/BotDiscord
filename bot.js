@@ -393,9 +393,11 @@ if (msg.content === '!dafuq3') {
 	}
 	
 	//ROLES?
-	client.on('guildMemberAdd', (guildMember) => {
-	guildMember.addRole(guildMember.guild.roles.find(role => role.name === "testrecruit"));
-	}
+	client.on('guildMemberAdd', member => {      
+	var role = member.guild.find((role) => { // long way
+	if (role.name == 'testrecruit') return true;
+	});
+
 	
 	
 	
