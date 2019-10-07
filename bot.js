@@ -10,6 +10,7 @@ client.on('guildMemberAdd', function(member)
 {
 	let memberRole = member.guild.roles.find("name", "recruit");
 	member.addRole(memberRole);
+	member.guild.channels.get('617707484626288672').send("Welcome abc ");
 });
 
 
