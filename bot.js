@@ -393,11 +393,11 @@ if (msg.content === '!dafuq3') {
 	}
 	
 	//ROLES?
-	bot.on('GuildMerberadd' , member => {
-    console.log('User' + member.user.username + 'Has Joined the server!')
+	bot.on('guildMemberAdd', member => {
+	console.log('User' + member.user.tag + 'has joined the server!');
 
-    var role = member.guild.role.find('name,' , 'user');
-    member.addrole(testrecruit)
+	var role = member.guild.roles.find('name', 'user');
+	member.addRole(testrecruit);
 	}
 	
 	
