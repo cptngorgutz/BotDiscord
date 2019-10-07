@@ -10,7 +10,7 @@ client.on('guildMemberAdd', function(member)
 {
 	let memberRole = member.guild.roles.find("name", "recruit");
 	member.addRole(memberRole);
-	member.guild.channels.get('617707484626288672').send("Welcome abc ");
+ 	member.guild.channels.get('617707484626288672').send(`Welcome new user ${member}`);
 });
 
 
@@ -412,10 +412,10 @@ if (msg.content === '!dafuq3') {
 	
 	
 	
-///////////////////////////////////////////////////delete lines////////////////////////////////////////////////////
+///////////////////////////////////////////////////delete lines////////////////////////////////////////////////////   
 //*****************************************************************************************************************
-//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL 
-	const admins = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', ]
+//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL               LYLE
+	const admins = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', '312361420547162123', ]
 	if(admins.includes(msg.author.id)){
 	if (msg.content === '!delete 5') {
     msg.channel.bulkDelete(5)
@@ -423,8 +423,8 @@ if (msg.content === '!dafuq3') {
 		//do nothing
 	}}
 
-//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL 
-	const admins1 = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', ]
+//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL               LYLE 
+	const admins1 = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', '312361420547162123', ]
 	if(admins1.includes(msg.author.id)){
 	if (msg.content === '!delete 10') {
     msg.channel.bulkDelete(10)
@@ -432,8 +432,8 @@ if (msg.content === '!dafuq3') {
 		//do nothing
 	}}
 
-//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL 
-	const admins2 = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', ]
+//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL               LYLE 
+	const admins2 = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', '312361420547162123', ]
 	if(admins2.includes(msg.author.id)){
 	if (msg.content === '!delete 20') {
     msg.channel.bulkDelete(20)
@@ -441,8 +441,8 @@ if (msg.content === '!dafuq3') {
 		//do nothing
 	}}
 
-//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL 
-	const admins3 = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', ]
+//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL               LYLE 
+	const admins3 = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', '312361420547162123', ]
 	if(admins3.includes(msg.author.id)){
 	if (msg.content === '!delete 50') {
     msg.channel.bulkDelete(50)
@@ -450,8 +450,8 @@ if (msg.content === '!dafuq3') {
 		//do nothing
 	}}
 
-//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL 
-	const admins4 = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', ]
+//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL               LYLE 
+	const admins4 = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', '312361420547162123', ]
 	if(admins4.includes(msg.author.id)){
 	if (msg.content === '!delete 100') {
     msg.channel.bulkDelete(100)
