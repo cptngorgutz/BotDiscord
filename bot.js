@@ -15,7 +15,8 @@ client.on('guildMemberAdd', function(member)
 	member.guild.channels.get('630828938863706122').send({embed: {
 	color: 3066993,
 	title: "**The ** Welcome Bot!",
-	description: "Welcome *" + member + " #" + member.id + member.user.displayAvatarURL + "* to **The ** discord server!",
+	description: "Welcome *" + member + " #" + member.id + "* to **The ** discord server!",
+	thumbnail: { url: member.user.displayAvatarURL }
 	fields: [{
     name: "ABC",
     value: "ABC2"
