@@ -27,13 +27,25 @@ client.on('guildMemberAdd', function(member)
 	footer: {
 	}
 	}}); });	
-		
-//		('**' + member.user.username + ' #' + member.user.id + '\n' + member.user.displayAvatarURL + '**, has joined the server!');
 
 //BELOW LOGS LEAVING
-client.on('guildMemberRemove', member => {
-	member.guild.channels.get('630828938863706122').send('**' + member.user.username + '**, has left the server!');
-});
+client.on('guildMemberRemove', function(member)
+{
+	member.guild.channels.get('630828938863706122').send({embed: {
+	color: 15158332,
+	title: "**MEMBER LEFT! ** ",
+	description: member + " has left **The Beyonders ** discord server!",
+	author: "Member Left",
+	thumbnail: { url: member.user.displayAvatarURL },
+	fields: [{
+    name: member.user.username + "#" + member.user.discriminator,   
+    value: "ID# " + member.id + "",
+	}
+	],
+	timestamp: new Date(),
+	footer: {
+	}
+	}}); });	
 
 client.on('message', async msg =>  {
 	if(msg.author.bot) return;
