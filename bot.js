@@ -6,30 +6,31 @@ const client = new Discord.Client();
 //    console.log(`Logged in as ${client.user.tag}!`);
 //});
 
-client.on('guildMemberAdd', member => {
-client.on('message', 
-
-
-var role = member.guild.roles.find('name', 'recruit'); // Variable to get channel ID
-member.addRole(role); // Adds the default role to members
-
-member.guild.channels.get('630828938863706122').send({embed: {
-color: 3447003,
-title: "**SERVER NAME** Welcome Bot!",
-url: "WEBSITE URL",
-description: "Welcome *" + member + "* to the **Server name** discord server!",
-fields: [{
+client.on('guildMemberAdd', function(member)
+{
+	let memberRole = member.guild.roles.find("name", "recruit");
+	member.addRole(memberRole);
+ 	member.guild.channels.get('617707484626288672').send(`Welcome to The Beyonders! ${member}. \nOne of the captains will be with you shortly. \nWe hope you enjoy your stay here.`);
+	//BELOW LOGS ENTERING
+	member.guild.channels.get('630828938863706122').send({embed: {
+	color: 3447003,
+	title: "**SERVER NAME** Welcome Bot!",
+	url: "WEBSITE URL",
+	description: "Welcome *" + member.user.username + "* to the **Server name** discord server!",
+	fields: [{
     name: "Information",
     value: "Some info on the server"
-  }
-],
-timestamp: new Date(),
-footer: {
-  icon_url: client.user.avatarURL,
-  text: "© NAME OF SERVER 2018 - 2019"
-}
-}}); });
-	
+	}
+	],
+	timestamp: new Date(),
+	footer: {
+	icon_url: client.user.avatarURL,
+	text: "© NAME OF SERVER 2018 - 2019"
+	}
+	}}); });	
+		
+//		('**' + member.user.username + ' #' + member.user.id + '\n' + member.user.displayAvatarURL + '**, has joined the server!');
+
 //BELOW LOGS LEAVING
 client.on('guildMemberRemove', member => {
 	member.guild.channels.get('630828938863706122').send('**' + member.user.username + '**, has left the server!');
