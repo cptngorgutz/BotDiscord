@@ -6,6 +6,11 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
+client.on('guildMemberAdd', member => {      
+	var role = member.guild.find((role) => { // long way
+	if (role.name == 'testrecruit') return true;
+}});
+
 client.on('message', async msg =>  {
 	if(msg.author.bot) return;
 if (msg.content === '!raid ultimus 6' || msg.content === '!raid Ultimus 6')	{
@@ -393,10 +398,7 @@ if (msg.content === '!dafuq3') {
 	}
 	
 	//ROLES?
-	client.on('guildMemberAdd', member => {      
-	var role = member.guild.find((role) => { // long way
-	if (role.name == 'testrecruit') return true;
-	}});
+	
 
 	
 	
