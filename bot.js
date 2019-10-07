@@ -6,8 +6,8 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
-bot.on('guildMemberAdd', member => {
-  var role = member.guild.roles.find('name', 'testrecruit');
+client.on('guildMemberAdd', member => {
+  var role = member.guild.roles.find('name', 'test1');
   member.addRole(role);
 });
 
