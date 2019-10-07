@@ -10,7 +10,7 @@ client.on('guildMemberAdd', function(member)
 {
 	let memberRole = member.guild.roles.find("name", "recruit");
 	member.addRole(memberRole);
- 	member.guild.channels.get('617707484626288672').send(`Welcome new user ${member}`);
+ 	member.guild.channels.get('617707484626288672').send(`Welcome to The Beyonders! ${member}. \nOne of the captains will be with you shortly. \nWe hope you enjoy your stay here.`);
 });
 
 
