@@ -17,7 +17,7 @@ member.guild.channels.get('630828938863706122').send({embed: {
 color: 3447003,
 title: "**SERVER NAME** Welcome Bot!",
 url: "WEBSITE URL",
-description: "Welcome *" + member.user.username + "* to the **Server name** discord server!",
+description: "Welcome *" + member + "* to the **Server name** discord server!",
 fields: [{
     name: "Information",
     value: "Some info on the server"
