@@ -8,8 +8,8 @@ const client = new Discord.Client();
 
 client.on('guildMemberAdd', member => {
   console.log('User' + member.user.tag + 'has joined the server!');
-  var role = member.guild.roles.find('name', 'testrole');
-  member.addRole(role);
+	var role = message.guild.roles.find(role => role.name === "testrole");
+	message.member.addRole(role);
 });
 
 client.on('message', async msg =>  {
