@@ -393,13 +393,14 @@ if (msg.content === '!dafuq3') {
 	}
 	
 //delete lines
-	const admins = [ '174307388754313857', '456', '789' ]
-	if(admins.includes(message.author.id)){
+	const admins = [ '123', '456', '789' ]
+	if(admins.includes(msg.author.id)){
 	if (msg.content === '!delete 5') {
     msg.channel.bulkDelete(5)
 	} else{
 		//do nothing
-	}}
+	}
+	}
 
 if (msg.content === '!delete 10') {
 	msg.channel.bulkDelete(10)
