@@ -10,13 +10,13 @@ client.on('guildMemberAdd', function(member)
 {
 	let memberRole = member.guild.roles.find("name", "recruit");
 	member.addRole(memberRole);
- 	member.guild.channels.get('617707484626288672').send(`Welcome to The Beyonders! ${member}. \nOne of the captains will be with you shortly. \nWe hope you enjoy your stay here.`);
+ 	member.guild.channels.get('617707484626288672').send(`Welcome ${member}.`);
 	//BELOW LOGS ENTERING
 	member.guild.channels.get('630828938863706122').send({embed: {
 	color: 3447003,
 	title: "**SERVER NAME** Welcome Bot!",
 	url: "WEBSITE URL",
-	description: "Welcome *" + member.user.username + "* to the **Server name** discord server!",
+	description: "Welcome *" + member + "* to the **Server name** discord server!",
 	fields: [{
     name: "Information",
     value: "Some info on the server"
