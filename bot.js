@@ -393,30 +393,51 @@ if (msg.content === '!dafuq3') {
 	}
 	
 //delete lines
-	const admins = [ '174307382296313857', '456', '789' ]
+//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL 
+	const admins = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', ]
 	if(admins.includes(msg.author.id)){
 	if (msg.content === '!delete 5') {
     msg.channel.bulkDelete(5)
 	} else{
 		//do nothing
-	}
-	}
+	}}
 
-if (msg.content === '!delete 10') {
-	msg.channel.bulkDelete(10)
-}
+//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL 
+	const admins = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', ]
+	if(admins.includes(msg.author.id)){
+	if (msg.content === '!delete 10') {
+    msg.channel.bulkDelete(10)
+	} else{
+		//do nothing
+	}}
 
-if (msg.content === '!delete 20') {
-	msg.channel.bulkDelete(20)
-}
+//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL 
+	const admins = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', ]
+	if(admins.includes(msg.author.id)){
+	if (msg.content === '!delete 20') {
+    msg.channel.bulkDelete(20)
+	} else{
+		//do nothing
+	}}
 
-if (msg.content === '!delete 50') {
-	msg.channel.bulkDelete(50)
-}
+//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL 
+	const admins = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', ]
+	if(admins.includes(msg.author.id)){
+	if (msg.content === '!delete 50') {
+    msg.channel.bulkDelete(50)
+	} else{
+		//do nothing
+	}}
 
-if (msg.content === '!delete 100') {
-	msg.channel.bulkDelete(100)
-}
+//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL 
+	const admins = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', ]
+	if(admins.includes(msg.author.id)){
+	if (msg.content === '!delete 100') {
+    msg.channel.bulkDelete(100)
+	} else{
+		//do nothing
+	}}
+
 }
 );
 
