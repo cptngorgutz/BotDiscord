@@ -392,10 +392,13 @@ if (msg.content === '!dafuq3') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/MinnErva.png')] });
 	}
 	
+//delete lines
 	const admins = [ '174307388754313857', '456', '789' ]
 	if(admins.includes(message.author.id)){
 	if (msg.content === '!delete 5') {
     msg.channel.bulkDelete(5)
+	} else{
+		//do nothing
 	}}
 
 if (msg.content === '!delete 10') {
