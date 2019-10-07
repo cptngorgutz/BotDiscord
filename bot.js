@@ -9,7 +9,7 @@ const client = new Discord.Client();
 client.on('guildMemberAdd', function(member)
 {
 	member.send("welcome to the server");
-	let memberRole = member.guild.roles.find("name", "testrole");
+	let memberRole = member.guild.roles.find("name", "recruit");
 	member.addRole(memberRole);
 });
 
