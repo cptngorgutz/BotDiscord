@@ -394,8 +394,8 @@ if (msg.content === '!dafuq3') {
 	
 //if(message.author.id !== "id" && message.author.id !== "id2") return;
 //unique z id 630726256798859274
-if (msg.content === '!delete 5') {
-if(msg.author.id === "174307388754313857"){
+	if (msg.content === '!delete 5') {
+	if(message.author.id !== "174307388754313857") return;
 	msg.channel.bulkDelete(5)
 }}
 
