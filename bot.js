@@ -6,10 +6,10 @@ const client = new Discord.Client();
 //    console.log(`Logged in as ${client.user.tag}!`);
 //});
 
-client.on("serverNewMember", function (server, user) {
-           mybot.addMemberToRole(user, server.roles.get("name", "testrole"), function (err) { if (err) console.log(err) })
+client.on('guildMemberAdd', member => {
+	var role = msg.guild.roles.find(role => role.name === "testrole");
+	msg.member.addRole(role);
 });
-
 
 client.on('message', async msg =>  {
 	if(msg.author.bot) return;
