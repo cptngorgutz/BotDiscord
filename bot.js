@@ -12,8 +12,38 @@ client.on('guildMemberAdd', function(member)
 	member.addRole(memberRole);
  	member.guild.channels.get('617707484626288672').send(`Welcome to The Beyonders! ${member}. \nOne of the captains will be with you shortly. \nWe hope you enjoy your stay here.`);
 	//BELOW LOGS ENTERING
-	member.guild.channels.get('630828938863706122').send('**' + member.user.username + ' #' + member.user.id + '\n' + member.user.displayAvatarURL + '**, has joined the server!');
-});
+	msg.guild.channels.get('630828938863706122').send({embed: {
+	color: 3447003,
+	author: {
+  name: client.user.username,
+  icon_url: client.user.avatarURL
+	},
+	title: "Welcome To ()!",
+	url: "https://districtservices.net",
+	description: "@MEMBER",
+	fields: [{
+    name: "Fields",
+    value: "They can have different fields with small headlines."
+  },
+  {
+    name: "Masked links",
+    value: "You can put [masked links](http://google.com) inside of rich embeds."
+  },
+  {
+    name: "Markdown",
+    value: "You can put all the *usual* **__Markdown__** inside of them."
+  }
+	],
+	timestamp: new Date(),
+	footer: {
+  icon_url: client.user.avatarURL,
+  text: "© Example"
+	}
+
+	}}); 
+	});
+
+
 //BELOW LOGS LEAVING
 client.on('guildMemberRemove', member => {
 	member.guild.channels.get('630828938863706122').send('**' + member.user.username + '**, has left the server!');
