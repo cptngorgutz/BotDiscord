@@ -16,7 +16,7 @@ client.on('guildMemberAdd', function(member)
 	color: 3447003,
 	title: "**The Beyonders** Welcome Bot!",
 	url: "WEBSITE URL",
-	description: "Welcome *" + member + "* to the **Server name** discord server!",
+	description: "Welcome *" + member.user.username + "* to the **Server name** discord server!",
 	fields: [{
     name: "Information",
     value: "Some info on the server"
