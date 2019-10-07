@@ -13,9 +13,10 @@ client.on('guildMemberAdd', function(member)
  	member.guild.channels.get('617707484626288672').send(`Welcome ${member}.`);
 	//BELOW
 	member.guild.channels.get('630828938863706122').send({embed: {
-	color: 3447003,
-	title: "**SERVER NAME** Welcome Bot!",
-	description: "Welcome *" + member + "* to the **Server name** discord server!",
+	color: 3066993,
+	title: "**The Beyonders** Welcome Bot!",
+	description: "Welcome *" + member + " #" + member.id "* to the **Server name** discord server!",
+	.setImage(member.displayAvatarURL)
 	fields: [{
     name: "Information",
     value: "Some info on the server"
@@ -23,8 +24,6 @@ client.on('guildMemberAdd', function(member)
 	],
 	timestamp: new Date(),
 	footer: {
-	icon_url: client.user.avatarURL,
-	text: "© NAME OF SERVER 2018 - 2019"
 	}
 	}}); });	
 		
