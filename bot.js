@@ -16,7 +16,7 @@ client.on('guildMemberAdd', function(member)
 	color: 3066993,
 	title: "**The ** Welcome Bot!",
 	description: "Welcome *" + member + " #" + member.id + "* to **The ** discord server!",
-	thumbnail: { url: member.user.displayAvatarURL }
+	thumbnail: { url: member.user.displayAvatarURL },
 	fields: [{
     name: "ABC",
     value: "ABC2"
