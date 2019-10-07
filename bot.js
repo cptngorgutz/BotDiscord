@@ -14,13 +14,13 @@ client.on('guildMemberAdd', function(member)
 	//BELOW
 	member.guild.channels.get('630828938863706122').send({embed: {
 	color: 3066993,
-	title: "**The ** Welcome Bot!",
-	description: "Welcome *" + member + " #" + member.id + "* to **The ** discord server!",
-	author: { url: member.user.displayAvatarURL },
+	title: "**The Beyonders Logs! ** ",
+	description: member + "* has joined **The Beyonders ** discord server!",
+	author: "Member Joined",
 	thumbnail: { url: member.user.displayAvatarURL },
 	fields: [{
     name: "ABC",
-    value: "ABC2"
+    value: "ID# " + member.id + "",
 	}
 	],
 	timestamp: new Date(),
