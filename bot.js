@@ -13,7 +13,7 @@ client.on('guildMemberAdd', function(member)
  	member.guild.channels.get('551566689620197376').send(`Welcome to The Beyonders! ${member}. \nOne of the captains will be with you shortly. \nWe hope you enjoy your stay here.`);
 	//NEW USERS JOIN
 	member.guild.channels.get('428968153800900608').send({embed: {
-	color: 2067276,
+	color: 0x00ff00, 
 	title: "**MEMBER JOINED! ** ",
 	description: member + " has joined **The Beyonders ** discord server!",
 	author: "Member Joined",
@@ -32,7 +32,7 @@ client.on('guildMemberAdd', function(member)
 client.on('guildMemberRemove', function(member)
 {
 	member.guild.channels.get('428968153800900608').send({embed: {
-	color: 10038562,
+	color: 0xff0000,
 	title: "**MEMBER LEFT! ** ",
 	description: member + " has left **The Beyonders ** discord server!",
 	author: "Member Left",
