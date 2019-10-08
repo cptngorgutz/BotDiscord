@@ -11,8 +11,8 @@ client.on('guildMemberAdd', function(member)
 	let memberRole = member.guild.roles.find("name", "recruit");
 	member.addRole(memberRole);
  	member.guild.channels.get('617707484626288672').send(`Welcome ${member}.`);
-	//BELOW
-	member.guild.channels.get('630828938863706122').send({embed: {
+	//NEW USERS JOIN
+	member.guild.channels.get('428968153800900608').send({embed: {
 	color: 3066993,
 	title: "**MEMBER JOINED! ** ",
 	description: member + " has joined **The Beyonders ** discord server!",
@@ -28,10 +28,10 @@ client.on('guildMemberAdd', function(member)
 	}
 	}}); });	
 
-//BELOW LOGS LEAVING
+//USERS LEAVING
 client.on('guildMemberRemove', function(member)
 {
-	member.guild.channels.get('630828938863706122').send({embed: {
+	member.guild.channels.get('428968153800900608').send({embed: {
 	color: 15158332,
 	title: "**MEMBER LEFT! ** ",
 	description: member + " has left **The Beyonders ** discord server!",
@@ -121,7 +121,7 @@ if (msg.content === '!raid ultimus 6' || msg.content === '!raid Ultimus 6')	{
 	}
 
 	if (msg.content === '!raid alpha 4' || msg.content === '!raid Alpha 4')	{
-	if (msg.channel.id === '618247946844110877' || msg.channel.id === '618243671317282818') {
+	if (msg.channel.id === '630927293837213720' || msg.channel.id === '630927142443548678') {
 //                           TB1 EVENT ROOM                             TB2 EVENT ROOM
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
