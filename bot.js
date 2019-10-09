@@ -35,7 +35,7 @@ client.on('message', message =>  {
 	let recruitRole = message.member.guild.roles.find(role => role.name === "recruit2")
 	let member = message.mentions.members.first();
 	if (message.content === '!recruit')	{
-	member.addRole(recruitRole).catch(console.error);
+	member.addRole(recruitRole);
 	}
 });
 
