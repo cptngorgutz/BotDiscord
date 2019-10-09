@@ -43,9 +43,9 @@ if(message.content.startsWith('!removerole')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.mentions.roles.first();
 userToModify.removeRole(roleToAdd).catch(console.error);
-}
 } else{
 		//do nothing
+}
 }});
 //*****************************************************************************************************//
 //**********************************SELF ASSIGNED ROLES***********************************************//
