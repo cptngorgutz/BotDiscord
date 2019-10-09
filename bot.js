@@ -442,11 +442,10 @@ if (msg.content === '!dafuq3') {
 	// 'message' is the message that triggered the command
 	
 client.on('message', msg => {
-    const allowedRole = msg.guild.roles.find(role => role.name === 'Streamer'); // isn't used
-    const gRole = msg.guild.roles.find(role => role.name === 'recruit');
-    const member = msg.mentions.members.first();
+    let newRole = member.guild.roles.find("name", "recruit");
+//    const member = msg.mentions.members.first();
     if (msg.content === '!addRole') {
-        member.addRole(gRole);
+        member.addRole(newRole);
 }
 });
 
