@@ -53,8 +53,8 @@ userToModify.removeRole(roleToAdd).catch(console.error);
 }
 
 if(message.content.startsWith('!addTB1')) {
-let userToModify = message.mentions.members.first();
-let roleToAdd = member.guild.roles.find("name", "TB1");
+let userToModify = message.member;
+let roleToAdd = message.mentions.roles.first();
 userToModify.addRole(roleToAdd).catch(console.error);
 }
 
