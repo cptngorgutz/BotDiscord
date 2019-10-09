@@ -44,7 +44,7 @@ client.on('message', message =>  {
 if (message.content === '!recruit2')	{
 let role = message.guild.roles.get('631573129570942996');
 let member = message.mentions.members.first();
-member.addRole(role);
+member.addRole(role)
   .then(memberAdded => { // Optional
     message.channel.send(`Added role ${role.name} to ${member.displayName}`);
   })
