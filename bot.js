@@ -29,7 +29,8 @@ client.on('guildMemberAdd', function(member)
 	}})
 });	 
 	
-client.on('message', message => {
+
+client.on('message', async messagesg =>  {
 	const member = message.mentions.users.first();
 	let recruitRole = member.guild.roles.find("name", "recruit2");
 	if (message.content === '!recruit')	{
