@@ -31,7 +31,7 @@ client.on('guildMemberAdd', function(member)
 	
 //	const member = message.mentions.members.first();
 //	message.guild.fetchMember(message.author)
-client.on('message', async message =>  {
+client.on('message', message =>  {
 	const member = message.guild.fetchMember(message.mentions.users.first())
 	const member2 = await guild.fetchmember(User);
 	let recruitRole = message.member.guild.roles.find(role => role.name === "recruit2")
