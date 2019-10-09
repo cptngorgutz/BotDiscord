@@ -29,18 +29,11 @@ client.on('guildMemberAdd', function(member)
 	}})
 });	 
 	
-//	const member = message.mentions.members.first();
-//	message.guild.fetchMember(message.author)
-
-//client.on('message', message =>  {
-//	if (message.content === '!recruit')	{
-//	let memberRole = member.guild.roles.find("name", "recruit2");
-//	let member = message.mentions.members.first();
-//	member.addRole(memberRole);
-//	}
-//});
-
+//*************************************************THIS IS FOR ADMIN ONLY ROLES**********************//
 client.on('message', (message) => {
+//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL               LYLE
+const adminsreal = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '297448131698753538', '344950903910170655', '205608603074297866', '330052499442499585', '312361420547162123', ]
+if(adminsreal.includes(msg.author.id)){
 if(message.content.startsWith('!addrole')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.mentions.roles.first();
@@ -51,13 +44,34 @@ let userToModify = message.mentions.members.first();
 let roleToAdd = message.mentions.roles.first();
 userToModify.removeRole(roleToAdd).catch(console.error);
 }
-//works
-if(message.content.startsWith('!TB1')) {
+} else{
+		//do nothing
+}});
+//*****************************************************************************************************//
+//**********************************SELF ASSIGNED ROLES***********************************************//
+client.on('message', (message) => {
+if(message.content.startsWith('!join TB1')) {
 let userToModify = message.member;
 let roleToAdd = message.guild.roles.get("428986352546349057");
 userToModify.addRole(roleToAdd).catch(console.error);
+message.channel.bulkDelete(1)
 }
 
+if(message.content.startsWith('!leave TB1')) {
+let userToModify = message.member;
+let roleToAdd = message.guild.roles.get("428986352546349057");
+userToModify.removeRole(roleToAdd).catch(console.error);
+message.channel.bulkDelete(1)
+}
+
+
+
+
+
+
+
+
+//everything above is useful
 });
 
 
