@@ -440,15 +440,15 @@ if (msg.content === '!dafuq3') {
 	//member.addRole(myRole);
 	//}
 	// 'message' is the message that triggered the command
-if (command == 'addrole') {
-  let members = message.mentions.members,
-    roles = message.mentions.roles;
-
-  if (!members.size) return message.reply("You didn't mention any member!");
-  if (!roles.size) return message.reply("You didn't mention any role!");
-
-  members.forEach(member => member.addRoles(roles, `Command issued by ${message.author.tag}`));
+	
+client.on('message', message => {
+    const allowedRole = message.guild.roles.find(role => role.name === 'Streamer'); // isn't used
+    const gRole = message.guild.roles.find(role => role.name === 'recruit');
+    const member = message.mentions.members.first();
+    if (message.content === '!addRole') {
+        member.addRole(gRole);
 }
+});
 
 
 	
