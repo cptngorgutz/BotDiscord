@@ -52,8 +52,7 @@ let roleToAdd = message.mentions.roles.first();
 userToModify.removeRole(roleToAdd).catch(console.error);
 }
 //works
-//if(message.content.startsWith('!addrole TB1')) {
-if (message.content === '!addrole TB1') {
+if(message.content.startsWith('!TB1')) {
 let userToModify = message.member;
 let roleToAdd = message.guild.roles.get("428986352546349057");
 userToModify.addRole(roleToAdd).catch(console.error);
