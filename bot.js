@@ -31,12 +31,23 @@ client.on('guildMemberAdd', function(member)
 	
 //	const member = message.mentions.members.first();
 //	message.guild.fetchMember(message.author)
-client.on('message', message =>  {
-	if (message.content === '!recruit')	{
-	let memberRole = member.guild.roles.find("name", "recruit2");
-	let member = message.mentions.members.first();
-	member.addRole(memberRole);
-	}
+
+//client.on('message', message =>  {
+//	if (message.content === '!recruit')	{
+//	let memberRole = member.guild.roles.find("name", "recruit2");
+//	let member = message.mentions.members.first();
+//	member.addRole(memberRole);
+//	}
+//});
+
+
+client.on('message', message => {
+    const allowedRole = message.guild.roles.find(role => role.name === 'recruit'); // isn't used
+    const gRole = message.guild.roles.find(role => role.name === 'recruit2');
+    const member = message.mentions.members.first();
+    if (message.content === 'addRole') {
+        member.addRole(gRole);
+    }
 });
 
 
