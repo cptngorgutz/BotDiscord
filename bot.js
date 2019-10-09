@@ -434,13 +434,23 @@ if (msg.content === '!dafuq3') {
 	}
 	
 	//ROLES?
-	if (msg.content === '!addrole') {
-	let myRole = member.guild.roles.find("name", "recruit");
-	let member = message.mentions.members.first();
-	member.addRole(myRole).catch(console.error);
-	}
+	//if (msg.content === '!addrole') {
+	//let myRole = member.guild.roles.find("name", "recruit");
+	//let member = message.mentions.members.first();
+	//member.addRole(myRole);
+	//}
+	// 'message' is the message that triggered the command
+if (command == 'addrole') {
+  let members = message.mentions.members,
+    roles = message.mentions.roles;
 
-	
+  if (!members.size) return message.reply("You didn't mention any member!");
+  if (!roles.size) return message.reply("You didn't mention any role!");
+
+  members.forEach(member => member.addRoles(roles, `Command issued by ${message.author.tag}`));
+}
+
+
 	
 	
 	
