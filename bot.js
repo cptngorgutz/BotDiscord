@@ -40,11 +40,11 @@ client.on('guildMemberAdd', function(member)
 //	}
 //});
 
-client.on('message', message =>  {
+client.on('message', function(member2)
 if (message.content === '!recruit2')	{
 let role = message.guild.roles.get('631573129570942996');
-let member = message.mentions.members.first();
-member.addRole(role);
+let member2 = message.mentions.members.first();
+member2.addRole(role);
 message.channel.send(`Added role ${role.name} to ${member.displayName}`);
 }});
 
