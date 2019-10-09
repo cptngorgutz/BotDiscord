@@ -434,21 +434,13 @@ if (msg.content === '!dafuq3') {
 	}
 	
 	//ROLES?
-	//if (msg.content === '!addrole') {
-	//let myRole = member.guild.roles.find("name", "recruit");
-	//let member = message.mentions.members.first();
-	//member.addRole(myRole);
-	//}
-	// 'message' is the message that triggered the command
-	
-client.on('message', msg => {
-    let newRole = member.guild.roles.find("name", "recruit");
-//    const member = msg.mentions.members.first();
-    if (msg.content === '!addRole') {
-        member.addRole(newRole);
-}
-});
-
+client.on('message', function(member2)
+{
+	if (msg.content === '!addRole') {
+	member2 = msg.mentions.members.first();
+	let recruitRole = member2.guild.roles.find("name", "recruit");
+	member2.addRole(recruitRole);
+	});
 
 	
 	
