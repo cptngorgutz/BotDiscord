@@ -32,16 +32,16 @@ client.on('guildMemberAdd', function(member)
 //	const member = message.mentions.members.first();
 //	message.guild.fetchMember(message.author)
 client.on('message', async message =>  {
+{
 	const member = message.guild.fetchMember(message.mentions.users.first())
     await guild.fetchmember(User);
 	let recruitRole = message.member.guild.roles.find(role => role.name === "recruit2")
 	if (message.content === '!recruit')	{
 	member.addRole(recruitRole);
 	}
-	catch (err) {
-    // do something with err
-	}
-});
+} catch (e) {
+	console.error(e);
+}});
 
 	
 
