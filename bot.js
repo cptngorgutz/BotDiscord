@@ -38,6 +38,9 @@ client.on('message', async message =>  {
 	if (message.content === '!recruit')	{
 	member.addRole(recruitRole);
 	}
+	catch (err) {
+    // do something with err
+	}
 });
 
 	
