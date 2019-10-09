@@ -40,7 +40,13 @@ client.on('guildMemberAdd', function(member)
 //	}
 //});
 
-
+client.on('message', (message) => {
+if(message.content.startsWith('!addrole')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.mentions.roles.first();
+userToModify.addRole(roleToAdd).catch(console.error);
+}
+});
 
 
 	
