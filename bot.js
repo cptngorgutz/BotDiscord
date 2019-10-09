@@ -32,7 +32,7 @@ client.on('guildMemberAdd', function(member)
 	let recruitRole = member.guild.roles.find("name", "recruit");
 	mention = msg.mentions.users.first();
 	member.addRole(recruitRole);
-	});	 
+}});	 
 	
 	
 
