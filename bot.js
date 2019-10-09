@@ -33,17 +33,13 @@ client.on('guildMemberAdd', function(member)
 client.on('message', async message =>  {
 //	const member = message.mentions.members.first();
 //	message.guild.fetchMember(message.author)
-	let member = message.guild.member(message.mentions.users.first())
+	const member = message.guild.member(message.mentions.users.first())
 	let recruitRole = member.guild.roles.find("name", "recruit2");
 	if (message.content === '!recruit')	{
 	member.addRole(recruitRole);
 	}
 });
-//what you want to fix the member <--> user thing is message.mentions.members
-//however this will only work if the mentioned member is cached, 
-//if it's not you'll indeed need to use the mentioned user and fetch the member via Guild#fetchMember from message.guild	
-	
-	
+
 	
 
 //USERS LEAVING
