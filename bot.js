@@ -32,7 +32,7 @@ client.on('guildMemberAdd', function(member)
 //*************************************************THIS IS FOR ADMIN ONLY ROLES**********************//
 client.on('message', (message) => {
 const admin = [ '174307382296313857', '456', '789', '101112', '131415', '161718', '1920021', '222324', '252627', '282930', ]
-if(admin.includes(msg.author.id)){	
+if(admin.includes(message.author.id)){	
 if(message.content.startsWith('!addrole')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.mentions.roles.first();
