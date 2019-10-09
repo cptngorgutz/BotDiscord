@@ -434,13 +434,7 @@ if (msg.content === '!dafuq3') {
 	}
 	
 	//ROLES?
-client.on('message', function(member2)
-{
-	if (msg.content === '!addRole') {
-	member2 = msg.mentions.members.first();
-	let recruitRole = member2.guild.roles.find("name", "recruit");
-	member2.addRole(recruitRole);
-	});
+
 
 	
 	
