@@ -30,7 +30,7 @@ client.on('guildMemberAdd', function(member)
 });	 
 	
 client.on('message', message => {
-	let member = message.mentions.users.first();
+	const member = message.mentions.users.first();
 	let recruitRole = member.guild.roles.find("name", "recruit2");
 	if (messsge.content === '!recruit')	{
 	member.addRole(recruitRole);
