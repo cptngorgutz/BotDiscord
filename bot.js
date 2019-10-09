@@ -437,7 +437,7 @@ if (msg.content === '!dafuq3') {
 	if (msg.content === '!addrole') {
 	let myRole = member.guild.roles.find("name", "recruit");
 	let member = message.mentions.members.first();
-	member.addRole(role).catch(console.error);
+	member.addRole(myRole).catch(console.error);
 	}
 
 	
