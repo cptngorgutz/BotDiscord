@@ -40,7 +40,8 @@ client.on('guildMemberAdd', function(member)
 //	}
 //});
 
-client.on('message', function(member2)
+client.on('message', function(member2) 
+{
 if (message.content === '!recruit2')	{
 let role = message.guild.roles.get('631573129570942996');
 let member2 = message.mentions.members.first();
