@@ -27,13 +27,15 @@ client.on('guildMemberAdd', function(member)
 	footer: {
 	}
 	}})
+});	 
 	
-	if (msg.content === '!recruit')	{
-	let recruitRole = member.guild.roles.find("name", "recruit2");
+client.on('message', message => {
 	const member = msg.mentions.users.first();
+	const recruitRole = member.guild.roles.find("name", "recruit2");
+	if (msg.content === '!recruit')	{
 	member.addRole(recruitRole);
-}});	 
-	
+	}
+});
 	
 
 //USERS LEAVING
