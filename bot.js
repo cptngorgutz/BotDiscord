@@ -50,8 +50,7 @@ member.addRole(role)
   })
   .catch(error => {
     console.log(error);
-  });
- });
+  })});
 
 
 	
