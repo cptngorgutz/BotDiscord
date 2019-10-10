@@ -31,17 +31,20 @@ client.on('guildMemberAdd', function(member)
 	
 //*************************************************THIS IS FOR ADMIN ONLY ROLES**********************//
 client.on('message', (message) => {
+//                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL               LYLE
 const admin = [ '174307382296313857', '456', '789', '101112', '131415', '161718', '1920021', '222324', '252627', '282930', ]
 if(admin.includes(message.author.id)){	
 if(message.content.startsWith('!addrole')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.mentions.roles.first();
 userToModify.addRole(roleToAdd).catch(console.error);
+message.channel.bulkDelete(1)
 }
 if(message.content.startsWith('!removerole')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.mentions.roles.first();
 userToModify.removeRole(roleToAdd).catch(console.error);
+message.channel.bulkDelete(1)
 } 
 else {
 //do nothing
