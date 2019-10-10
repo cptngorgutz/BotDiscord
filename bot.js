@@ -36,7 +36,7 @@ const admin = [ '174307382296313857', '456', '789', '101112', '131415', '161718'
 if(admin.includes(message.author.id)){	
 if(message.content.startsWith('!addTB1')) {
 let userToModify = message.mentions.members.first();
-let roleToAdd = member.guild.roles.find("name", "TB1");
+let roleToAdd = message.guild.roles.get("428986352546349057");
 userToModify.addRole(roleToAdd).catch(console.error);
 message.channel.bulkDelete(1)
 }
