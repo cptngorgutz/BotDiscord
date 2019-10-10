@@ -141,16 +141,16 @@ else {
 //*****************************************************************************************************//
 //**********************************SELF ASSIGNED ROLES***********************************************//
 client.on('message', (message) => {
-if(message.content.startsWith('!join TB1')) {
+if(message.content.startsWith('!join spoilers')) {
 let userToModify = message.member;
-let roleToAdd = message.guild.roles.get("428986352546349057");
+let roleToAdd = message.guild.roles.get("554379014433669131");
 userToModify.addRole(roleToAdd).catch(console.error);
 message.channel.bulkDelete(1)
 }
 
-if(message.content.startsWith('!leave TB1')) {
+if(message.content.startsWith('!leave spoilers')) {
 let userToModify = message.member;
-let roleToAdd = message.guild.roles.get("428986352546349057");
+let roleToAdd = message.guild.roles.get("554379014433669131");
 userToModify.removeRole(roleToAdd).catch(console.error);
 message.channel.bulkDelete(1)
 }
