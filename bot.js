@@ -34,9 +34,9 @@ client.on('message', (message) => {
 //                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL               LYLE
 const admin = [ '174307382296313857', '456', '789', '101112', '131415', '161718', '1920021', '222324', '252627', '282930', ]
 if(admin.includes(message.author.id)){	
-if(message.content.startsWith('!addrole')) {
+if(message.content.startsWith('!addTB1')) {
 let userToModify = message.mentions.members.first();
-let roleToAdd = message.mentions.roles.first();
+let roleToAdd = member.guild.roles.find("name", "TB1");
 userToModify.addRole(roleToAdd).catch(console.error);
 message.channel.bulkDelete(1)
 }
