@@ -54,7 +54,7 @@ else {
 //*****************************************************************************************************//
 //*******************************************TB2 RECRUITMENT*******************************************//
 //*****************************************************************************************************//
-client.on("message", function(member1){
+client.on("guildMemberUpdate", function(Member){
 //                    GADD                   BOB                   SIREN              CLEAVELANDS              RAIN                 VAYGRANT               BUSTA
 const admin = [ '174307382296313857', '212232190358978560', '297448131698753538', '344950903910170655', '416730768388390912', '159953251691790336', '354421064815607808', ]
 if(admin.includes(message.author.id)){
@@ -64,15 +64,15 @@ let roleToAdd = message.guild.roles.get("476045239719821324");
 userToModify.addRole(roleToAdd).catch(console.error);
 message.channel.bulkDelete(1)
 //NEW USERS JOIN
-	member1.guild.channels.get('632156781472120833').send({embed: {
+	member.guild.channels.get('632156781472120833').send({embed: {
 	color: 0x00ff00, 
 	title: "**RECRUIT ROLE ADDED! ** ",
-	description: member1 + " has been given the RECRUIT role by" + message.author.name,
+	description: member + " has been given the RECRUIT role by" + message.author.name,
 	author: "role added",
-	thumbnail: { url: member1.user.displayAvatarURL },
+	thumbnail: { url: member.user.displayAvatarURL },
 	fields: [{
-    name: member1.user.username + "#" + member1.user.discriminator,   
-    value: "ID# " + member1.id + "",
+    name: member.user.username + "#" + member.user.discriminator,   
+    value: "ID# " + member.id + "",
 	}
 	],
 	timestamp: new Date(),
