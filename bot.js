@@ -67,7 +67,7 @@ message.channel.bulkDelete(1)
 	member.guild.channels.get('632156781472120833').send({embed: {
 	color: 0x00ff00, 
 	title: "**RECRUIT ROLE ADDED! ** ",
-	description: member + " has been given the RECRUIT role by" + message.author.name,
+	description: member + " has been given the RECRUIT role by",
 	author: "role added",
 	thumbnail: { url: member.user.displayAvatarURL },
 	fields: [{
