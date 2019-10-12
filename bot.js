@@ -59,6 +59,7 @@ client.on('message', (message) => {
 const admin = [ '174307382296313857', '212232190358978560', '297448131698753538', '344950903910170655', '416730768388390912', '159953251691790336', '354421064815607808', ]
 console.log('reaches the if statement');
 if(admin.includes(message.author.id)){
+console.log('1st if statement works');
 if(message.content.startsWith('!add recruit')) {
 console.log('if statement works');
 let userToModify = message.mentions.members.first();
