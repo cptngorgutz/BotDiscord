@@ -63,7 +63,24 @@ let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("476045239719821324");
 userToModify.addRole(roleToAdd).catch(console.error);
 message.channel.bulkDelete(1)
+//NEW USERS JOIN
+	member.guild.channels.get('632156781472120833').send({embed: {
+	color: 0x00ff00, 
+	title: "**RECRUIT ROLE ADDED! ** ",
+	description: member + " has been given the RECRUIT role by" + message.author,
+	author: "role added",
+	thumbnail: { url: member.user.displayAvatarURL },
+	fields: [{
+    name: member.user.username + "#" + member.user.discriminator,   
+    value: "ID# " + member.id + "",
+	}
+	],
+	timestamp: new Date(),
+	footer: {
+	}
+	}})
 }
+
 if(message.content.startsWith('!remove recruit')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("476045239719821324"); 
