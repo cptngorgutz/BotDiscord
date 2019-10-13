@@ -62,7 +62,7 @@ if(message.content.startsWith('!add recruit')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("476045239719821324");
 userToModify.addRole(roleToAdd).catch(console.error);
-member.guild.channels.get('632156781472120833').send('RECRUIT Role was given by' + user.author.name + 'to' + member);
+message.guild.channels.find(channel => channel.name === "leader-logs").send('RECRUIT Role was given by' + user.author.name + 'to' + 'member');
 message.channel.bulkDelete(1)
 
 }
