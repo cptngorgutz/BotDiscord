@@ -62,7 +62,7 @@ if(message.content.startsWith('!add recruit')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("476045239719821324");
 userToModify.addRole(roleToAdd).catch(console.error);
-message.guild.channels.find("name", "leader-logs").sendMessage("RECRUIT Role was given by " + message.author.username + " to " + userToModify );
+message.guild.channels.find("name", "leader-logs").sendMessage("RECRUIT Role was given by " + message.author + " to " + userToModify );
 message.channel.bulkDelete(1)
 }
 if(message.content.startsWith('!remove recruit')) {
