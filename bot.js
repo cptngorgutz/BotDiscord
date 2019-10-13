@@ -57,32 +57,13 @@ else {
 client.on('message', (message) => {
 //                    GADD                   BOB                   SIREN              CLEAVELANDS              RAIN                 VAYGRANT               BUSTA
 const admin = [ '174307382296313857', '212232190358978560', '297448131698753538', '344950903910170655', '416730768388390912', '159953251691790336', '354421064815607808', ]
-console.log('reaches the if statement');
 if(admin.includes(message.author.id)){
 if(message.content.startsWith('!add recruit')) {
-console.log('if statement works');
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("476045239719821324");
 userToModify.addRole(roleToAdd).catch(console.error);
 message.channel.bulkDelete(1)
-//Send to logs
-	guild.channels.get('632156781472120833').send({embed: {
-	color: 0x00ff00, 
-	title: "**RECRUIT ROLE ADDED! ** ",
-	description: member + " has been given the RECRUIT role by",
-	author: "role added",
-	thumbnail: { url: member.user.displayAvatarURL },
-	fields: [{
-    name: member.user.username + "#" + member.user.discriminator,   
-    value: "ID# " + member.id + "",
-	}
-	],
-	timestamp: new Date(),
-	footer: {
-	}
-	}})
 }
-
 if(message.content.startsWith('!remove recruit')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("476045239719821324"); 
