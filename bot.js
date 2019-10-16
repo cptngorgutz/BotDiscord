@@ -66,14 +66,14 @@ if(message.content.startsWith('!add tb1recruit')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("575668741770182677");
 userToModify.addRole(roleToAdd).catch(console.error);
-message.guild.channels.find("name", "leader-logs").sendMessage("tb1recruit Role was GIVEN by " + userToModify + " by " + message.author);
+message.guild.channels.find("name", "leader-logs").sendMessage("tb1recruit Role was GIVEN to " + userToModify + " by " + message.author);
 message.channel.bulkDelete(1)
 }
 if(message.content.startsWith('!remove tb1recruit')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("575668741770182677"); 
 userToModify.removeRole(roleToAdd).catch(console.error);
-message.guild.channels.find("name", "leader-logs").sendMessage("tb1recruit Role was REMOVED by " + userToModify + " by " + message.author);
+message.guild.channels.find("name", "leader-logs").sendMessage("tb1recruit Role was REMOVED from " + userToModify + " by " + message.author);
 message.channel.bulkDelete(1)
 } 
 //************************************************************************************************************************************
