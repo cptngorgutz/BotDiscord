@@ -276,7 +276,7 @@ client.on('guildMemberRemove', function(member)
 client.on('message', async msg =>  {
 	if(msg.author.bot) return;
 if (msg.content === '!raid ultimus 6' || msg.content === '!raid Ultimus 6')	{
-	if (msg.channel.id === '600378414897168386' || msg.channel.id === '600378610955714602') {
+	if (msg.channel.id === '600378414897168386' || msg.channel.id === '635982614053912627') {
 //                           TB1 ULT 6 ROOM                             TB2 ULT 6 ROOM
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
@@ -383,7 +383,7 @@ if (msg.content === '!raid ultimus 6' || msg.content === '!raid Ultimus 6')	{
 }
 
 if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
-	if (msg.channel.id === '620794088828174337' || msg.channel.id === '620793457715445769') {
+	if (msg.channel.id === '635982341701107761' || msg.channel.id === '635981718142058506') {
 //                           TB1 EVENT ROOM                             TB2 EVENT ROOM
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
