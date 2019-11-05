@@ -454,7 +454,7 @@ if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
 
 //Champions raid
 if (msg.content === '!raid champion 4' || msg.content === '!raid Champion 4')	{
-	if (msg.channel.id === '625873573340512296' || msg.channel.id === '625873443975462914') {
+	if (msg.channel.id === '641065837335281710' || msg.channel.id === '641065258861068306') {
 //                           TB1 EVENT ROOM                             TB2 EVENT ROOM
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
