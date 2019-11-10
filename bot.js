@@ -605,6 +605,11 @@ if (msg.content === '!dafuq3') {
 	msg.channel.bulkDelete(1)
 }
 
+	if (msg.content === '!event iw' || '!event invisiblewoman' || '!event invisible woman' || '!event suestorm' || '!event sue storm') {
+	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/invisibleevent.png')] }); 
+	msg.channel.bulkDelete(1)
+}
+
 //event requirements
 	if (msg.content === '!eventrequirements') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/eventrequirements.png')] });
