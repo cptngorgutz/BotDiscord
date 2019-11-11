@@ -689,11 +689,11 @@ if (msg.content === '!dafuq3') {
 	.setAuthor('The Beyonder', 'https://i.imgur.com/KIfYXR4.jpg', 'https://msf.gg/characters/Ultron')
 	.setDescription('**Commands List**')
 	.setThumbnail('https://i.imgur.com/KIfYXR4.jpg') //./Character Tiers/Ultron.png 
-	.addField('``![characterName]``', 'Info sheet on chosen character (ex. !ultron)')
-	.addField('\n``!event [characterName]``', 'Lowest required team for chosen legendary event (ex. !event starlord)', true)
-	.addField('\n``!legendaries``', 'Requirements for all legendary events', true)
-	.addField('\n``!uniques``', ' List of unique gear needed for all characters', true)
-	.addField('\n``!blitz``', 'Current blitz predictions', true)
+	.addField('``![characterName]``', 'Info sheet on chosen character (ex. !ultron) \n ')
+	.addField('``!event [characterName]``', 'Lowest required team for chosen legendary event (ex. !event starlord) \n ', true)
+	.addField('``!legendaries``', 'Requirements for all legendary events \n ', true)
+	.addField('``!uniques``', ' List of unique gear needed for all characters \n ', true)
+	.addField('``!blitz``', 'Current blitz predictions \n ', true)
 	msg.channel.send(testing);
 }
 	
