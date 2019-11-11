@@ -695,7 +695,7 @@ if (msg.content === '!commands2') {
 	.setDescription('**Commands List**')
 	.attachFiles(['./Misc/UltronBasic.png'])
 	.setThumbnail('attachment://UltronBasic.png')
-	.addField('``![characterName]``  Info sheet on chosen character (ex. !ultron) \n``!event [characterName]``  Lowest required team for chosen legendary event (ex. !event starlord) \n``!legendaries``  Requirements for all legendary events \n``!uniques``  List of unique gear needed for all characters 	\n``!blitz``  Current blitz predictions', '⠀')
+	.addField('![characterName]  Info sheet on chosen character (ex. !ultron) \n!event [characterName]  Lowest required team for chosen legendary event (ex. !event starlord) \n!legendaries  Requirements for all legendary events \n!uniques  List of unique gear needed for all characters 	\n!blitz  Current blitz predictions', '⠀')
 	msg.channel.send(exampleEmbed);
 }
 	
