@@ -711,15 +711,15 @@ message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
         const reaction = collected.first();
 
         if (reaction.emoji.name === '👍') {
-            message.reply('you reacted with a thumbs up.');
+            message.send('you reacted with a thumbs up.');
         }
         else {
-            message.reply('you reacted with a thumbs down.');
+            message.send('you reacted with a thumbs down.');
         }
     })
     .catch(collected => {
         console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-        message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
+        message.send('you didn\'t react with neither a thumbs up, nor a thumbs down.');
     });
 }});
 	
