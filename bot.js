@@ -687,6 +687,18 @@ if (msg.content === '!commands')	{
 	msg.channel.send("``![characterName]``  Info sheet on chosen character (ex. !ultron) \n``!event [characterName]``  Lowest required team for chosen legendary event (ex. !event starlord) \n``!legendaries``  Requirements for all legendary events \n``!uniques``  List of unique gear needed for all characters \n``!blitz``  Current blitz predictions")
 	}
 	
+if (msg.content === '!commands2') {
+	msg.channel.bulkDelete(1)
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setAuthor('Ultron', 'https://i.imgur.com/GMx4onc.png', 'https://msf.gg/characters/Ultron')
+	.setDescription('**Disintegration Beam • Level 7**')
+	.attachFiles(['./Misc/UltronBasic.png'])
+	.setThumbnail('attachment://UltronBasic.png')
+	.addField('Attack primary target for 340% damage + steal 2 positive effects + clear Taunt. \nLevel Required: 65', '⠀')
+	msg.channel.send(exampleEmbed);
+}
+	
 	
 	
 	
