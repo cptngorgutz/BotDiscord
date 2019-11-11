@@ -693,7 +693,6 @@ if (msg.content === '!dafuq3') {
 	.addField('``!event [characterName]``', 'Lowest required team for chosen legendary event (ex. !event starlord) \n ', true)
 	.addField('``!legendaries``', 'Requirements for all legendary events \n ', true)
 	.addField('``!uniques``', ' List of unique gear needed for all characters \n ', true)
-	.addField('``!blitz``', 'Current blitz predictions \n ', true)
 	msg.channel.send(testing);
 }
 	
