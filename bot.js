@@ -626,7 +626,7 @@ if (msg.content === '!dafuq3') {
 }
 
 //event requirements
-	if (msg.content === '!eventrequirements') {
+	if (msg.content === '!events') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/eventrequirements.png')] });
 	msg.channel.bulkDelete(1)
 }
@@ -691,7 +691,7 @@ if (msg.content === '!dafuq3') {
 	.setThumbnail('https://i.imgur.com/KIfYXR4.jpg') //./Character Tiers/Ultron.png 
 	.addField('``![characterName]``', 'Info sheet on chosen character (ex. !ultron) \n ')
 	.addField('``!event [characterName]``', 'Lowest required team for chosen legendary event (ex. !event starlord) \n ', true)
-	.addField('``!legendaries``', 'Requirements for all legendary events \n ', true)
+	.addField('``!events``', 'Requirements for all legendary events \n ', true)
 	.addField('``!uniques``', ' List of unique gear needed for all characters \n ', true)
 	msg.channel.send(testing);
 }
