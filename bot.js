@@ -698,15 +698,29 @@ if (msg.content === '!dafuq3') {
 	
 	
 //recruit reacts?
-client.on('messageReactionAdd', (messageReaction, user) => {
-if(user.bot)  return;
-const { message, emoji } = messageReaction;
-if (reaction.emoji.name === '😄') {
-if(message.id === "643560144340385793") {
-// code to run when that emoji is reacted on specified message
-message.channel.send("well done, you smiled.")	  
-  }
- } 
+client.on('message', message => {
+	if (message.content === '!react-await') {
+		message.react('👍').then(() => message.react('👎'));
+
+		const filter = (reaction, user) => {
+			return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
+		};
+
+		message.awaitReactions(filter, { maxMatches: 1, time: 60000, errors: ['time'] })
+			.then(collected => {
+				const reaction = collected.first();
+
+				if (reaction.emoji.name === '👍') {
+					message.reply('you reacted with a thumbs up.');
+				} else {
+					message.reply('you reacted with a thumbs down.');
+				}
+			})
+			.catch(collected => {
+				console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
+				message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
+			});
+	}
 });
 	
 ///////////////////////////////////////////////////delete lines////////////////////////////////////////////////////   
