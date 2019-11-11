@@ -701,10 +701,10 @@ if (msg.content === '!dafuq3') {
 client.on('messageReactionAdd', (messageReaction, user) => {
 if(user.bot)  return;
 const { message, emoji } = messageReaction;
-if(emoji.name === "😄") {
+if (reaction.emoji.name === '😄') {
 if(message.id === "643560144340385793") {
 // code to run when that emoji is reacted on specified message
-	message.channel.send("well done, you smiled.")	  
+message.channel.send("well done, you smiled.")	  
   }
  } 
 });
