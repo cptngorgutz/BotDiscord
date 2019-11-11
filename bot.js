@@ -682,11 +682,6 @@ if (msg.content === '!dafuq3') {
 /////////////
 	
 //Output commands
-if (msg.content === '!commands')	{
-	msg.channel.bulkDelete(1)
-	msg.channel.send("``![characterName]``  Info sheet on chosen character (ex. !ultron) \n``!event [characterName]``  Lowest required team for chosen legendary event (ex. !event starlord) \n``!legendaries``  Requirements for all legendary events \n``!uniques``  List of unique gear needed for all characters \n``!blitz``  Current blitz predictions")
-	}
-	
 	if (msg.content === '!commands2') {
 	// inside a command, event listener, etc.
 	const testing = new Discord.RichEmbed()
@@ -694,9 +689,11 @@ if (msg.content === '!commands')	{
 	.setAuthor('The Beyonder', 'https://i.imgur.com/KIfYXR4.jpg', 'https://msf.gg/characters/Ultron')
 	.setDescription('**Commands List**')
 	.setThumbnail('https://i.imgur.com/KIfYXR4.jpg') //./Character Tiers/Ultron.png 
-	.addField('``![characterName]``', 'Info sheet on chosen character (ex. !ultron) \nOwn Ability Damage +100% for next (Action).\n(Action) Attack each Target. (Then remove dead units from Target pool.) \nSKIP: \n(Action) 1 time(s) for each Target: Remove Taunt. \nRecipient = Self. \n(Action) 2 time(s) for each Target: Choose a new one of its Buffs (except Taunt): 50% chance to copy it to Recipient. For each successful copy, 0% chance to remove the original. \nProcess on-attack assists. \nProcess Counterattacks.')
-	.addField('Assist:', 'Target = Crosshair Selection. Own Ability Damage +61% for next (Action). Own Piercing +5% for next (Action). (Action) Attack each Target. (Then remove dead units from Target pool.) SKIP:  (Action) 1 time(s) for each Target: Remove Taunt. ', true)
-	.addField('Counter:', 'Target = Attacker. Own Ability Damage +61% for next (Action). Own Piercing +5% for next (Action). (Action) Attack each Target. (Then remove dead units from Target pool.) SKIP: (Action) 1 time(s) for each Target: Remove Taunt.', true)
+	.addField('``![characterName]``', 'Info sheet on chosen character (ex. !ultron)')
+	.addField('\n``!event [characterName]``', 'Lowest required team for chosen legendary event (ex. !event starlord)', true)
+	.addField('\n``!legendaries``', 'Requirements for all legendary events', true)
+	.addField('\n``!uniques``', ' List of unique gear needed for all characters', true)
+	.addField('\n``!blitz``', 'Current blitz predictions', true)
 	msg.channel.send(testing);
 }
 	
