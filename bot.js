@@ -10,7 +10,7 @@ client.on('guildMemberAdd', function(member)
 {
 	let memberRole = member.guild.roles.find("name", "recruit");
 	member.addRole(memberRole);
- 	member.guild.channels.get('551566689620197376').send(`Welcome to The Beyonders! ${member}. \nOne of the captains will be with you shortly. \nWe hope you enjoy your stay here.`);
+ 	member.guild.channels.get('551566689620197376').send(`Welcome to The Beyonders! ${member}. \nOne of the captains will be with you shortly. \nWe hope you enjoy your stay here. \nPlease post a profile picture in the #profile-images channel. Thankyou.`);
 	//NEW USERS JOIN
 	member.guild.channels.get('428968153800900608').send({embed: {
 	color: 0x00ff00, 
@@ -119,6 +119,22 @@ userToModify.removeRole(roleToAdd).catch(console.error);
 message.guild.channels.find("name", "leader-logs").sendMessage("TB1team3 Role was REMOVED from " + userToModify + " by " + message.author);
 message.channel.bulkDelete(1)
 } 
+//GIVE TB3
+if(message.content.startsWith('!add TB3')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("643130277161336875");
+userToModify.addRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("TB3 cptn Role was GIVEN to " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+}
+if(message.content.startsWith('!remove TB3')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("643130277161336875");
+userToModify.removeRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("TB3 cptn Role was REMOVED from " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+} 
+
 
 else {
 //do nothing
@@ -276,8 +292,8 @@ client.on('guildMemberRemove', function(member)
 client.on('message', async msg =>  {
 	if(msg.author.bot) return;
 if (msg.content === '!raid ultimus 6' || msg.content === '!raid Ultimus 6')	{
-	if (msg.channel.id === '600378414897168386' || msg.channel.id === '635982614053912627') {
-//                           TB1 ULT 6 ROOM                             TB2 ULT 6 ROOM
+	if (msg.channel.id === '600378414897168386' || msg.channel.id === '635982614053912627' || msg.channel.id === '643229492650704973') {
+//                           TB1 ULT 6 ROOM                             TB2 ULT 6 ROOM                              TB3 ULT 6 ROOM 
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Ultimus6.png')] });
@@ -311,8 +327,8 @@ if (msg.content === '!raid ultimus 6' || msg.content === '!raid Ultimus 6')	{
 	}}
 
 	if (msg.content === '!raid ultimus 7' || msg.content === '!raid Ultimus 7')	{
-	if (msg.channel.id === '634155222490415104' || msg.channel.id === '634155347736526848') {
-//                           TB1 ULT 7 ROOM                             TB2 ULT 7 ROOM
+	if (msg.channel.id === '634155222490415104' || msg.channel.id === '634155347736526848' || msg.channel.id === '000000000000000000') {
+//                           TB1 ULT 7 ROOM                             TB2 ULT 7 ROOM                              TB3 ULT 7 ROOM
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Ultimus7.png')] });
@@ -347,8 +363,8 @@ if (msg.content === '!raid ultimus 6' || msg.content === '!raid Ultimus 6')	{
 	}
 
 	if (msg.content === '!raid alpha 4' || msg.content === '!raid Alpha 4')	{
-	if (msg.channel.id === '630927293837213720' || msg.channel.id === '630927142443548678') {
-//                           TB1 EVENT ROOM                             TB2 EVENT ROOM
+	if (msg.channel.id === '630927293837213720' || msg.channel.id === '630927142443548678' || msg.channel.id === '00000000000000000') {
+//                           TB1 EVENT ROOM                             TB2 EVENT ROOM                              TB3 EVENT ROOM
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Alpha4.png')] });
@@ -383,8 +399,8 @@ if (msg.content === '!raid ultimus 6' || msg.content === '!raid Ultimus 6')	{
 }
 
 if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
-	if (msg.channel.id === '635982341701107761' || msg.channel.id === '635981718142058506') {
-//                           TB1 EVENT ROOM                             TB2 EVENT ROOM
+	if (msg.channel.id === '635982341701107761' || msg.channel.id === '635981718142058506' || msg.channel.id === '00000000000000000') {
+//                           TB1 EVENT ROOM                             TB2 EVENT ROOM                              TB3 EVENT ROOM
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Beta4.png')] });
@@ -418,8 +434,8 @@ if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
 }}
 
 	if (msg.content === '!raid gamma 4' || msg.content === '!raid Gamma 4')	{
-	if (msg.channel.id === '610454201058983956' || msg.channel.id === '610454143907397642') {
-//                           TB1 EVENT ROOM                             TB2 EVENT ROOM
+	if (msg.channel.id === '610454201058983956' || msg.channel.id === '610454143907397642' || msg.channel.id === '641065258861068306') {
+//                           TB1 EVENT ROOM                             TB2 EVENT ROOM                              TB3 EVENT ROOM 
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Gamma4.png')] });
@@ -454,8 +470,8 @@ if (msg.content === '!raid beta 4' || msg.content === '!raid Beta 4')	{
 
 //Champions raid
 if (msg.content === '!raid champion 4' || msg.content === '!raid Champion 4')	{
-	if (msg.channel.id === '641065837335281710' || msg.channel.id === '641065258861068306') {
-//                           TB1 EVENT ROOM                             TB2 EVENT ROOM
+	if (msg.channel.id === '641065837335281710' || msg.channel.id === '641065258861068306' || msg.channel.id === '000000000000000000') {
+//                           TB1 EVENT ROOM                             TB2 EVENT ROOM                               TB3 EVENT ROOM
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Gamma4.png')] });
@@ -663,13 +679,13 @@ if (msg.content === '!dafuq3') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/MinnErva.png')] });
 	}
 	
-	//ROLES?   recruit ID 630754404664082465
-
-
+/////////////
 	
-	
-	
-	
+//Output commands
+if (msg.content === '!commands')	{
+	msg.channel.bulkDelete(1)
+	msg.channel.send("``![characterName]``  Info sheet on chosen character (ex. !ultron) \n``!event [characterName]``  Lowest required team for chosen legendary event (ex. !event starlord) \n``!legendaries``  Requirements for all legendary events \n``!uniques``  List of unique gear needed for all characters \n``!blitz``  Current blitz predictions")
+	}
 	
 	
 	
