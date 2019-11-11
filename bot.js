@@ -698,33 +698,22 @@ if (msg.content === '!dafuq3') {
 	
 	
 //recruit reacts?
-client.on('message', message => {
-	if (message.content === '!react-await') {
-message.react('👍').then(() => message.react('👎'));
-message.channel.send("If you are here... do react 1, or react 2..");
 
-const filter = (reaction, user) => {
-    return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
-};
 
-message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
-    .then(collected => {
-        const reaction = collected.first();
 
-        if (reaction.emoji.name === '👍') {
-            message.reply('you reacted with a thumbs up.');
-			let memRole = member.guild.roles.find("name", "TB1");
-			member.addRole(memRole);
-        }
-        else {
-            message.reply('you reacted with a thumbs down.');
-        }
-    })
-    .catch(collected => {
-        console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-        message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
-    });
-}});
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 ///////////////////////////////////////////////////delete lines////////////////////////////////////////////////////   
 //*****************************************************************************************************************
