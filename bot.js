@@ -698,40 +698,34 @@ if (msg.content === '!dafuq3') {
 	
 	
 //recruit reacts?
-let channel_id = "643559519443615804"; 
-let message_id = "643608256912031775";
 
-client.on("ready", (reaction, user) => {
-client.channels.get(channel_id).fetchMessage(message_id).then(m => {
-        console.log("Cached reaction message.");
-    }).catch(e => {
-    console.error("Error loading message.");
-    console.error(e);
-    });
-	
-client.on("messageReactionAdd", (reaction, user) => {
-    if(reaction.emoji.name === ":ribbon:" && reaction.message.id === message_id) 
-        {
-            guild.fetchMember(user) // fetch the user that reacted
-                .then((member) => 
-                {
-                    let role = (member.guild.roles.find(role => role.name === "TB1"));
-                    member.addRole(role)
-                    .then(() => 
-                    {
-                        console.log(`Added the role to ${member.displayName}`);
-                    }
-                    );
-                });
-        }
-});
-});
+	client.on('raw', event => {
+		console.log(event);
+		const eventName = event.t;
+		if(eventName === 'MESSAGE_REACTION_ADD')
+		{
+			if(event.d.message_id === '643608256912031775')
+			{
+				console.log("correct message.");
+				var reactionChannel = client.channels.get(event.d.channel_id);
+				if(reactionChannel.messages.has(event.d.message_id))
+					return;
+				else {
+					reactionChannel.fetchMessage(event.d.message_id)
+					.then(msg => {
+						console.log(msg);
+				}}
+				.catch(err => console.log(err));
+				
+				}
+			}
+			
+		}
+	});
 
-
-
-
-
-
+	client.on('messageReactionAdd', (messageReaction, user) => {
+	console.log(user.username + " reacted.");
+	});
 
 
 
