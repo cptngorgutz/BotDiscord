@@ -699,7 +699,7 @@ if (msg.content === '!dafuq3') {
 	
 //recruit reacts?
 client.on('message', message => {
-	if (message.content === '!test') {
+	if (message.content === '!react-await') {
 		message.react('👍').then(() => message.react('👎'));
 
 		const filter = (reaction, user) => {
@@ -712,8 +712,6 @@ client.on('message', message => {
 
 				if (reaction.emoji.name === '👍') {
 					message.reply('you reacted with a thumbs up.');
-					let membrole = member.guild.roles.find("name", "TB1");
-					member.addRole(membrole);
 				} else {
 					message.reply('you reacted with a thumbs down.');
 				}
@@ -724,6 +722,7 @@ client.on('message', message => {
 			});
 	}
 });
+
 
 
 ///////////////////////////////////////////////////delete lines////////////////////////////////////////////////////   
