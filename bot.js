@@ -6,29 +6,26 @@ const client = new Discord.Client();
 //    console.log(`Logged in as ${client.user.tag}!`);
 //});
 
-client.on('guildMemberAdd', function(member)
-{
-	let memberRole = member.guild.roles.find("name", "recruit");
-	member.addRole(memberRole);
- //	member.guild.channels.get('551566689620197376').send(`Welcome to The Beyonders! ${member}. \nOne of the captains will be with you shortly. \nWe hope you enjoy your stay here. \nPlease post a profile picture in the #profile-images channel. Thankyou.`);
-	//NEW USERS JOIN
-	member.guild.channels.get('428968153800900608').send({embed: {
-	color: 0x00ff00, 
-	title: "**MEMBER JOINED! ** ",
-	description: member + " has joined **The Beyonders ** discord server!",
-	author: "Member Joined",
-	thumbnail: { url: member.user.displayAvatarURL },
-	fields: [{
-    name: member.user.username + "#" + member.user.discriminator,   
-    value: "ID# " + member.id + "",
-	}
-	],
-	timestamp: new Date(),
-	footer: {
-	}
-	}})
-});	 
-	
+ 
+client.on('guildMemberAdd', async member => {
+  let msg = await member.send(`Hi ${member} welcome to the server Test`);
+  await msg.react('✅');
+  await msg.react('❎');
+
+  msg.awaitReactions(r => ['✅', '❎'].includes(r.emoji.name), {max: 1})
+    .then(collected => {
+      let r = collected.first();
+
+      if (r.emoji.name == '✅') 
+        member.addRole(member.guild.roles.find("name", "TB1"))
+          .then(() => { console.log(`Added ${member.user.username} (${member.id}).`); })
+          .catch(console.error);
+      else if (r.emoji.name == '❎') member.kick("You got rejected.");
+
+      r.remove(r.users.last())
+    });
+});
+
 //*************************************************THIS IS FOR LEADERS**********************//
 client.on('message', (message) => {
 //                        GADD                     BOB                    RAIN                VAYGRANT               BUSTA                SIREN                CLEAVELANDS           GMONKEY                  AZRYEL               LYLE
@@ -698,25 +695,8 @@ if (msg.content === '!dafuq3') {
 	
 	
 //recruit reacts?
-client.on('guildMemberAdd', member => {
-  member.guild.channels.get('643559519443615804').send(embed).then(async embedMessage => {
-    await embedMessage.react('✔️');
-    await embedMessage.react('❌');
-  });
 
-  client.on('messageReactionAdd', async (reaction, user) => {
-    if (reaction.emoji.name === "✔️") {
-        const guildMember = reaction.message.guild.members.get(user.id);
-        if (!guildMember) throw 'Couldn\'t get guildMember!'
 
-        const roleToAssign = reaction.message.guild.roles.find(r => r.name === 'TB1')
-        if (!roleToAssign) throw 'Couldn\'t get roleToAssign!'
-
-        await guildMember.addRole(roleToAssign)
-    } else if (reaction.emoji.name === "❌")
-        reaction.message.channel.send('Tell user to react to the correct emote');
-  });
-});
 
 
 
