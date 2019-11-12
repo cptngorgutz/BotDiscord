@@ -706,7 +706,7 @@ if (message.content === '!roles2') {
     sentMessage.react(":ribbon:")
     sentMessage.react(":laughing:")
   });
-});
+}});
 
 
 ///////////////////////////////////////////////////delete lines////////////////////////////////////////////////////   
