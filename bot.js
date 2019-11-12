@@ -713,7 +713,9 @@ if (msg.content === '!dafuq3') {
 				else {
 					reactionChannel.fetchMessage(event.d.message_id)
 					.then(msg => {
-						console.log(msg);
+						var msgReaction = msg.reactions.get(event.d.emoji.name + "i" + event.d.emoji.id);
+						var user = client.users.get(event.d.user_id);
+						client.emit('messageReactionAdd', msgReaction, user);
 				})
 				.catch(err => console.log(err));
 				
@@ -724,7 +726,20 @@ if (msg.content === '!dafuq3') {
 	});
 
 	client.on('messageReactionAdd', (messageReaction, user) => {
-	console.log(user.username + " reacted.");
+	var roleName = message.Reaction.emoji.name;
+	var role = messageReaction.message.guild.roles.find(role => role.name.toLowerCase() ===
+	roleName.toLowerCase());
+	
+	if (role)
+	{
+		var member = messageReaction.message.guild.members.find(member => member.id === user.id);
+		if(member)
+		{
+			member.addRole(role.id);
+			console.log("success.");
+		}
+	}
+	
 	});
 
 
