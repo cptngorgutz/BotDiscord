@@ -705,7 +705,7 @@ client.on('messageReactionAdd', (reaction, user) => {
     sentMessage.react(":ribbon:")
     sentMessage.react(":smile:")
     sentMessage.react(":laughing:")
-  });
+})}});
 
 
  
