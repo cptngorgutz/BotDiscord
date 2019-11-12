@@ -712,9 +712,8 @@ message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 
 		if (reaction.emoji.name === '👍') {
 			message.reply('you reacted with a thumbs up.');
-			let userToModify = message.mentions.members.first();
-			let roleToAdd = message.guild.roles.get("643593239550754827");
-			userToModify.addRole(roleToAdd).catch(console.error);
+			let thumbup = member.guild.roles.find("name", "TB1");
+			member.addRole(thumbup);
 		} else {
 			message.reply('you reacted with a thumbs down.');
 		}
