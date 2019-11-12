@@ -698,14 +698,24 @@ if (msg.content === '!dafuq3') {
 	
 	
 //recruit reacts?
-client.on('messageReactionAdd', (reaction, user) => {
-  if (message.channel.id === '643559519443615804') {
-    if (reaction.emoji.name === "reminder_ribbon") {
-      const guildMember = reaction.message.guild.members.get(user.id);
-      const rol = reaction.message.guild.roles.get('643593239550754827');
-      guildMember.addRole(rol);
-    }
-  }
+client.on('guildMemberAdd', member => {
+  member.guild.channels.get('643559519443615804').send(embed).then(async embedMessage => {
+    await embedMessage.react('✔️');
+    await embedMessage.react('❌');
+  });
+
+  client.on('messageReactionAdd', async (reaction, user) => {
+    if (reaction.emoji.name === "✔️") {
+        const guildMember = reaction.message.guild.members.get(user.id);
+        if (!guildMember) throw 'Couldn\'t get guildMember!'
+
+        const roleToAssign = reaction.message.guild.roles.find(r => r.name === 'TB1')
+        if (!roleToAssign) throw 'Couldn\'t get roleToAssign!'
+
+        await guildMember.addRole(roleToAssign)
+    } else if (reaction.emoji.name === "❌")
+        reaction.message.channel.send('Tell user to react to the correct emote');
+  });
 });
 
 
