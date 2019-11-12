@@ -699,28 +699,14 @@ if (msg.content === '!dafuq3') {
 	
 //recruit reacts?
 client.on('messageReactionAdd', (reaction, user) => {
-		message.channel.send(":apple:")
-		message.react('👍').then(() => message.react('👎'));
-
-		const filter = (reaction, user) => {
-			return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
-		};
-
-		message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
-			.then(collected => {
-				const reaction = collected.first();
-
-				if (reaction.emoji.name === '👍') {
-					message.reply('you reacted with a thumbs up.');
-				} else {
-					message.reply('you reacted with a thumbs down.');
-				}
-			})
-			.catch(collected => {
-				console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-				message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
-			});
-	});
+  if (message.channel.id === '643559519443615804') {
+    if (reaction.emoji.name === "reminder_ribbon") {
+      const guildMember = reaction.message.guild.members.get(user.id);
+      const rol = reaction.message.guild.roles.get('643593239550754827');
+      guildMember.addRole(rol);
+    }
+  }
+});
 
 
 
