@@ -714,7 +714,7 @@ message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 			message.reply('you reacted with a thumbs up.');
 			let userToModify = message.mentions.members.first();
 			let roleToAdd = message.guild.roles.get("643593239550754827");
-			.addRole(roleToAdd).catch(console.error);
+			userToModify.addRole(roleToAdd).catch(console.error);
 		} else {
 			message.reply('you reacted with a thumbs down.');
 		}
