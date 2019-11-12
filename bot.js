@@ -698,9 +698,9 @@ if (msg.content === '!dafuq3') {
 	
 	
 //recruit reacts?
-client.on('messageReactionAdd', (reaction, user) => {
-	if (msg.content === '!xyz') {
+client.on('message', message => {
 	if (message.channel.id === '643559519443615804') {
+	if (msg.content === '!xyz') {
 	message.react('🎗').then(() => message.react('🎀'));
     if (reaction.emoji.name === "reminder_ribbon") {
       const guildMember = reaction.message.guild.members.get(user.id);
