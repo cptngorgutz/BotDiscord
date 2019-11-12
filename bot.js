@@ -698,16 +698,44 @@ if (msg.content === '!dafuq3') {
 	
 	
 //recruit reacts?
-client.on('message', message => {
-	if (message.channel.id === '643559519443615804') {
-	if (msg.content === '!xyz') {
-	message.react('🎗').then(() => message.react('🎀'));
-    if (reaction.emoji.name === "reminder_ribbon") {
-      const guildMember = reaction.message.guild.members.get(user.id);
-      const role = reaction.message.guild.roles.get('643593239550754827');
-      guildMember.addRole(role);
-    }
-}}});
+let channel_id = "643559519443615804"; 
+let message_id = "643608256912031775";
+
+client.on("ready", (reaction, user) => {
+client.channels.get(channel_id).fetchMessage(message_id).then(m => {
+        console.log("Cached reaction message.");
+    }).catch(e => {
+    console.error("Error loading message.");
+    console.error(e);
+    });
+	
+client.on("messageReactionAdd", (reaction, user) => {
+    if(reaction.emoji.id == "🎀" && reaction.message.id === message_id) 
+        {
+            guild.fetchMember(user) // fetch the user that reacted
+                .then((member) => 
+                {
+                    let role = (member.guild.roles.find(role => role.name === "TB1"));
+                    member.addRole(role)
+                    .then(() => 
+                    {
+                        console.log(`Added the role to ${member.displayName}`);
+                    }
+                    );
+                });
+        }
+});
+});
+
+
+
+
+
+
+
+
+
+
 
 
 
