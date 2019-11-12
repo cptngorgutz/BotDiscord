@@ -714,7 +714,7 @@ if (msg.content === '!dafuq3') {
 					reactionChannel.fetchMessage(event.d.message_id)
 					.then(msg => {
 						console.log(msg);
-				}}
+				})
 				.catch(err => console.log(err));
 				
 				}
