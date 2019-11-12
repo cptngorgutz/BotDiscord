@@ -699,7 +699,7 @@ if (msg.content === '!dafuq3') {
 	
 //recruit reacts?
 client.on('messageReactionAdd', (reaction, user) => {
-	if (message.content === '!react-await') {
+		message.channel.send(":apple:")
 		message.react('👍').then(() => message.react('👎'));
 
 		const filter = (reaction, user) => {
