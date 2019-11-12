@@ -698,17 +698,16 @@ if (msg.content === '!dafuq3') {
 	
 	
 //recruit reacts?
-
-
-
-
-
-
-
-
-
-
-
+client.on('messageReactionAdd', (reaction, user) => {
+	if (msg.content === '!xyz') {
+	if (message.channel.id === '643559519443615804') {
+	message.react('🎗').then(() => message.react('🎀'));
+    if (reaction.emoji.name === "reminder_ribbon") {
+      const guildMember = reaction.message.guild.members.get(user.id);
+      const role = reaction.message.guild.roles.get('643593239550754827');
+      guildMember.addRole(role);
+    }
+}}});
 
 
 
