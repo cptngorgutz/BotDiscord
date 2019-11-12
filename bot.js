@@ -717,10 +717,8 @@ message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 	})
 	.catch(collected => {
 		message.reply('you reacted with neither a thumbs up, nor a thumbs down.');
-})}});
-
- 
-
+});
+}
 
 
 
