@@ -710,7 +710,7 @@ client.channels.get(channel_id).fetchMessage(message_id).then(m => {
     });
 	
 client.on("messageReactionAdd", (reaction, user) => {
-    if(reaction.emoji.id == "🎀" && reaction.message.id === message_id) 
+    if(reaction.emoji.name === ":ribbon:" && reaction.message.id === message_id) 
         {
             guild.fetchMember(user) // fetch the user that reacted
                 .then((member) => 
