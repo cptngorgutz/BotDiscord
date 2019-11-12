@@ -699,28 +699,31 @@ if (msg.content === '!dafuq3') {
 	
 //recruit reacts?
 client.on('message', message => {
-if (message.content === '!test') {
-message.react('👍').then(() => message.react('👎'));
+	if (message.content === '!test') {
+		message.react('👍').then(() => message.react('👎'));
 
-const filter = (reaction, user) => {
-	return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
-};
+		const filter = (reaction, user) => {
+			return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
+		};
 
-message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
-	.then(collected => {
-		const reaction = collected.first();
+		message.awaitReactions(filter, { maxMatches: 1, time: 60000, errors: ['time'] })
+			.then(collected => {
+				const reaction = collected.first();
 
-		if (reaction.emoji.name === '👍') {
-			let thumbup = member.guild.roles.find("name", "TB1");
-			member.addRole(thumbup);
-		} else {
-			message.reply('you reacted with a thumbs down.');
-		}
-	})
-	.catch(collected => {
-		message.reply('you reacted with neither a thumbs up, nor a thumbs down.');
-	});
-}});
+				if (reaction.emoji.name === '👍') {
+					message.reply('you reacted with a thumbs up.');
+					let membrole = member.guild.roles.find("name", "TB1");
+					member.addRole(membrole);
+				} else {
+					message.reply('you reacted with a thumbs down.');
+				}
+			})
+			.catch(collected => {
+				console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
+				message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
+			});
+	}
+});
 
 
 ///////////////////////////////////////////////////delete lines////////////////////////////////////////////////////   
