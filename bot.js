@@ -265,26 +265,6 @@ message.channel.bulkDelete(1)
 });
 
 
-	
-
-//USERS LEAVING
-client.on('guildMemberRemove', function(member)
-{
-	member.guild.channels.get('428968153800900608').send({embed: {
-	color: 0xff0000,
-	title: "**MEMBER LEFT! ** ",
-	description: member + " has left **The Beyonders ** discord server!",
-	author: "Member Left",
-	thumbnail: { url: member.user.displayAvatarURL },
-	fields: [{
-    name: member.user.username + "#" + member.user.discriminator,   
-    value: "ID# " + member.id + "",
-	}
-	],
-	timestamp: new Date(),
-	footer: {
-	}
-	}}); });	
 
 client.on('message', async msg =>  {
 	if(msg.author.bot) return;
