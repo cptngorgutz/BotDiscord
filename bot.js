@@ -698,55 +698,89 @@ if (msg.content === '!dafuq3') {
 	
 	
 //recruit reacts?
+client.on('messageReactionAdd', async (reaction, user) => {
+    
+    let applyRole = async () => {
+        let emojiName = reaction.emoji.name;
+        let role = reaction.message.guild.roles.find(role => role.name.toLowerCase() === emojiName.toLowerCase());
+        let member = reaction.message.guild.members.find(member => member.id === user.id);
+        try {
+            if(role && member) {
+                console.log("Role and member found.");
+                await member.roles.add(role);
+                console.log("Done.");
+            }
+        }
+        catch(err) {
+            console.log(err);
+        }
+    }
+    if(reaction.message.partial)
+    {
+        try {
+            let msg = await reaction.message.fetch(); 
+            console.log(msg.id);
+            if(msg.id === '643608256912031775')
+            {
+                console.log("Cached")
+                applyRole();
+            }
+        }
+        catch(err) {
+            console.log(err);
+        }
+    }
+    else 
+    {
+        console.log("Not a partial.");
+        if(reaction.message.id === '643608256912031775') {
+            console.log(true);
+            applyRole();
+        }
+    }
+});
 
-	client.on('raw', event => {
-		console.log(event);
-		const eventName = event.t;
-		if(eventName === 'MESSAGE_REACTION_ADD')
-		{
-			if(event.d.message_id === '643608256912031775')
-			{
-				console.log("correct message.");
-				var reactionChannel = client.channels.get(event.d.channel_id);
-				if(reactionChannel.messages.has(event.d.message_id))
-					return;
-				else {
-					reactionChannel.fetchMessage(event.d.message_id)
-					.then(msg => {
-						var msgReaction = msg.reactions.get(event.d.emoji.name + "i" + event.d.emoji.id);
-						var user = client.users.get(event.d.user_id);
-						client.emit('messageReactionAdd', msgReaction, user);
-				})
-				.catch(err => console.log(err));
-				
-				}
-			}
-			
-		}
-	});
-
-	client.on('messageReactionAdd', (messageReaction, user) => {
-	var roleName = message.Reaction.emoji.name;
-	var role = messageReaction.message.guild.roles.find(role => role.name.toLowerCase() ===
-	roleName.toLowerCase());
+client.on('messageReactionRemove', async (reaction, user) => {
+    let removeRole = async () => {
+        let emojiName = reaction.emoji.name;
+        let role = reaction.message.guild.roles.find(role => role.name.toLowerCase() === emojiName.toLowerCase());
+        let member = reaction.message.guild.members.find(member => member.id === user.id);
+        try {
+            if(role && member) {
+                console.log("Role and member found.");
+                await member.roles.remove(role);
+                console.log("Done.");
+            }
+        }
+        catch(err) {
+            console.log(err);
+        }
+    }
+    if(reaction.message.partial)
+    {
+        try {
+            let msg = await reaction.message.fetch(); 
+            console.log(msg.id);
+            if(msg.id === '643608256912031775')
+            {
+                console.log("Cached")
+                removeRole();
+            }
+        }
+        catch(err) {
+            console.log(err);
+        }
+    }
+    else 
+    {
+        console.log("Not a partial.");
+        if(reaction.message.id === '643608256912031775') {
+            console.log(true);
+            removeRole();
+        }
+    }
+})
 	
-	if (role)
-	{
-		var member = messageReaction.message.guild.members.find(member => member.id === user.id);
-		if(member)
-		{
-			member.addRole(role.id);
-			console.log("success.");
-		}
-	}
-	
-	});
-
-
-
-
-
-
 
 
 
