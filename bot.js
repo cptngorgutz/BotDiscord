@@ -699,13 +699,13 @@ if (msg.content === '!dafuq3') {
 	
 //recruit reacts?
 client.on('message', message => {
-if (command == "role2")
+if (message.content === '!test') {
   message.channel.send("Click on :emoji1: to get role1, :emoji2: to get role2 and :emoji3: to get role3.")
   .then(sentMessage => {
     sentMessage.react(":emoji1:")
     sentMessage.react(":emoji2:")
     sentMessage.react(":emoji3:")
-  });
+})};
 });
 
 
