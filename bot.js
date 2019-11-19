@@ -140,6 +140,25 @@ message.channel.bulkDelete(1)
 message.channel.send("@everyone Ultimus 6 Launched")  
 }
 
+if(message.content.startsWith('!ult7')) {
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Ultimus 7 Launched")  
+}
+
+if(message.content.startsWith('!alpha4')) {
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Alpha 4 Launched")  
+}
+
+if(message.content.startsWith('!beta4')) {
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Beta 4 Launched")  
+}
+
+if(message.content.startsWith('!gamma4')) {
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Gamma 4 Launched")  
+}
 
 else {
 //do nothing
