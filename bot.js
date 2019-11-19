@@ -134,6 +134,11 @@ userToModify.removeRole(roleToAdd).catch(console.error);
 message.guild.channels.find("name", "leader-logs").sendMessage("TB3 cptn Role was REMOVED from " + userToModify + " by " + message.author);
 message.channel.bulkDelete(1)
 } 
+//launch raids
+if(message.content.startsWith('!ult6')) {
+msg.channel.bulkDelete(1)
+msg.channel.send("@everyone Ultimus 6 Launched")  
+}
 
 
 else {
