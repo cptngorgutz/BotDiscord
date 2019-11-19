@@ -136,8 +136,8 @@ message.channel.bulkDelete(1)
 } 
 //launch raids
 if(message.content.startsWith('!ult6')) {
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Ultimus 6 Launched")  
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Ultimus 6 Launched")  
 }
 
 
