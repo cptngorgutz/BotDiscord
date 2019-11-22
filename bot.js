@@ -161,161 +161,161 @@ message.channel.send("@everyone Gamma 4 Launched")
 }
 
 //WAR COMMANDS
-if (msg.content === '!fd1 l' || msg.content === '!FD1 L' || msg.content === '!fd1 L' || msg.content === '!FD1 l')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Flight Deck 1 - Left Side")  
+if (message.content === '!fd1 l' || message.content === '!FD1 L' || message.content === '!fd1 L' || message.content === '!FD1 l')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Flight Deck 1 - Left Side")  
 }
-if (msg.content === '!fd1 r' || msg.content === '!FD1 R' || msg.content === '!fd1 R' || msg.content === '!FD1 r')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Flight Deck 1 - Right Side")  
+if (message.content === '!fd1 r' || message.content === '!FD1 R' || message.content === '!fd1 R' || message.content === '!FD1 r')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Flight Deck 1 - Right Side")  
 }
-if (msg.content === '!fd1 f' || msg.content === '!FD1 F' || msg.content === '!fd1 F' || msg.content === '!FD1 f')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Flight Deck 1 - Full Clear")  
+if (message.content === '!fd1 f' || message.content === '!FD1 F' || message.content === '!fd1 F' || message.content === '!FD1 f')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Flight Deck 1 - Full Clear")  
 }
-if (msg.content === '!fd2 l' || msg.content === '!FD2 L' || msg.content === '!fd2 L' || msg.content === '!FD2 l')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Flight Deck 2 - Left Side")  
+if (message.content === '!fd2 l' || message.content === '!FD2 L' || message.content === '!fd2 L' || message.content === '!FD2 l')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Flight Deck 2 - Left Side")  
 }
-if (msg.content === '!fd2 r' || msg.content === '!FD2 R' || msg.content === '!fd2 R' || msg.content === '!FD2 r')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Flight Deck 2 - Right Side")  
+if (message.content === '!fd2 r' || message.content === '!FD2 R' || message.content === '!fd2 R' || message.content === '!FD2 r')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Flight Deck 2 - Right Side")  
 }
-if (msg.content === '!fd2 f' || msg.content === '!FD2 F' || msg.content === '!fd2 F' || msg.content === '!FD2 f')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Flight Deck 2 - Full Clear")  
+if (message.content === '!fd2 f' || message.content === '!FD2 F' || message.content === '!fd2 F' || message.content === '!FD2 f')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Flight Deck 2 - Full Clear")  
 }
-if (msg.content === '!fd3 l' || msg.content === '!FD3 L' || msg.content === '!fd3 L' || msg.content === '!FD3 l')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Flight Deck 3 - Left Side")  
+if (message.content === '!fd3 l' || message.content === '!FD3 L' || message.content === '!fd3 L' || message.content === '!FD3 l')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Flight Deck 3 - Left Side")  
 }
-if (msg.content === '!fd3 r' || msg.content === '!FD3 R' || msg.content === '!fd3 R' || msg.content === '!FD3 r')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Flight Deck 3 - Right Side")  
+if (message.content === '!fd3 r' || message.content === '!FD3 R' || message.content === '!fd3 R' || message.content === '!FD3 r')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Flight Deck 3 - Right Side")  
 }
-if (msg.content === '!fd3 f' || msg.content === '!FD3 F' || msg.content === '!fd3 F' || msg.content === '!FD3 f')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Flight Deck 3 - Full Clear")  
-}
-
-if (msg.content === '!han l' || msg.content === '!HAN L' || msg.content === '!han L' || msg.content === '!HAN l')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Hangar - Left Side")  
-}
-if (msg.content === '!han r' || msg.content === '!HAN R' || msg.content === '!han R' || msg.content === '!HAN r')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Hangar - Right Side")  
-}
-if (msg.content === '!han f' || msg.content === '!HAN F' || msg.content === '!han F' || msg.content === '!HAN f')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Hangar - Full Clear")  
+if (message.content === '!fd3 f' || message.content === '!FD3 F' || message.content === '!fd3 F' || message.content === '!FD3 f')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Flight Deck 3 - Full Clear")  
 }
 
-if (msg.content === '!eng l' || msg.content === '!ENG L' || msg.content === '!eng L' || msg.content === '!ENG l')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Engineering - Left Side")  
+if (message.content === '!han l' || message.content === '!HAN L' || message.content === '!han L' || message.content === '!HAN l')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Hangar - Left Side")  
 }
-if (msg.content === '!eng r' || msg.content === '!ENG R' || msg.content === '!eng R' || msg.content === '!ENG r')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Engineering - Right Side")  
+if (message.content === '!han r' || message.content === '!HAN R' || message.content === '!han R' || message.content === '!HAN r')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Hangar - Right Side")  
 }
-if (msg.content === '!eng f' || msg.content === '!ENG F' || msg.content === '!eng F' || msg.content === '!ENG f')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Engineering - Full Clear")  
-}
-
-if (msg.content === '!bar l' || msg.content === '!BAR L' || msg.content === '!bar L' || msg.content === '!BAR l')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Barracks - Left Side")  
-}
-if (msg.content === '!bar r' || msg.content === '!BAR R' || msg.content === '!bar R' || msg.content === '!BAR r')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Barracks - Right Side")  
-}
-if (msg.content === '!bar f' || msg.content === '!BAR F' || msg.content === '!bar F' || msg.content === '!BAR f')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Barracks - Full Clear")  
+if (message.content === '!han f' || message.content === '!HAN F' || message.content === '!han F' || message.content === '!HAN f')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Hangar - Full Clear")  
 }
 
-if (msg.content === '!rea l' || msg.content === '!REA L' || msg.content === '!rea L' || msg.content === '!REA l')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Reactor - Left Side")  
+if (message.content === '!eng l' || message.content === '!ENG L' || message.content === '!eng L' || message.content === '!ENG l')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Engineering - Left Side")  
 }
-if (msg.content === '!rea r' || msg.content === '!REA R' || msg.content === '!rea R' || msg.content === '!REA r')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Reactor - Right Side")  
+if (message.content === '!eng r' || message.content === '!ENG R' || message.content === '!eng R' || message.content === '!ENG r')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Engineering - Right Side")  
 }
-if (msg.content === '!rea f' || msg.content === '!REA F' || msg.content === '!rea F' || msg.content === '!REA f')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Reactor - Full Clear")  
+if (message.content === '!eng f' || message.content === '!ENG F' || message.content === '!eng F' || message.content === '!ENG f')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Engineering - Full Clear")  
 }
 
+if (message.content === '!bar l' || message.content === '!BAR L' || message.content === '!bar L' || message.content === '!BAR l')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Barracks - Left Side")  
+}
+if (message.content === '!bar r' || message.content === '!BAR R' || message.content === '!bar R' || message.content === '!BAR r')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Barracks - Right Side")  
+}
+if (message.content === '!bar f' || message.content === '!BAR F' || message.content === '!bar F' || message.content === '!BAR f')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Barracks - Full Clear")  
+}
 
-if (msg.content === '!arm l' || msg.content === '!ARM L' || msg.content === '!arm L' || msg.content === '!ARM l')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Armory - Left Side")  
+if (message.content === '!rea l' || message.content === '!REA L' || message.content === '!rea L' || message.content === '!REA l')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Reactor - Left Side")  
 }
-if (msg.content === '!arm r' || msg.content === '!ARM R' || msg.content === '!arm R' || msg.content === '!ARM r')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Armory - Right Side")  
+if (message.content === '!rea r' || message.content === '!REA R' || message.content === '!rea R' || message.content === '!REA r')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Reactor - Right Side")  
 }
-if (msg.content === '!arm f' || msg.content === '!ARM F' || msg.content === '!arm F' || msg.content === '!ARM f')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Armory - Full Clear")  
+if (message.content === '!rea f' || message.content === '!REA F' || message.content === '!rea F' || message.content === '!REA f')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Reactor - Full Clear")  
 }
 
 
-if (msg.content === '!bri l' || msg.content === '!BRI L' || msg.content === '!bri L' || msg.content === '!BRI l')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Bridge - Left Side")  
+if (message.content === '!arm l' || message.content === '!ARM L' || message.content === '!arm L' || message.content === '!ARM l')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Armory - Left Side")  
 }
-if (msg.content === '!bri r' || msg.content === '!BRI R' || msg.content === '!bri R' || msg.content === '!BRI r')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Bridge - Right Side")  
+if (message.content === '!arm r' || message.content === '!ARM R' || message.content === '!arm R' || message.content === '!ARM r')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Armory - Right Side")  
 }
-if (msg.content === '!bri f' || msg.content === '!BRI F' || msg.content === '!bri F' || msg.content === '!BRI f')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Bridge - Full Clear")  
-}
-
-if (msg.content === '!car l' || msg.content === '!CAR L' || msg.content === '!car L' || msg.content === '!CAR l')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Cargo - Left Side")  
-}
-if (msg.content === '!car r' || msg.content === '!CAR R' || msg.content === '!car R' || msg.content === '!CAR r')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Cargo - Right Side")  
-}
-if (msg.content === '!car f' || msg.content === '!CAR F' || msg.content === '!car F' || msg.content === '!CAR f')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Cargo - Full Clear")  
-}
-
-if (msg.content === '!sec l' || msg.content === '!SEC L' || msg.content === '!sec L' || msg.content === '!SEC l')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Security - Left Side")  
-}
-if (msg.content === '!sec r' || msg.content === '!SEC R' || msg.content === '!sec R' || msg.content === '!SEC r')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Security - Right Side")  
-}
-if (msg.content === '!sec f' || msg.content === '!SEC F' || msg.content === '!sec F' || msg.content === '!SEC f')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Security - Full Clear")  
+if (message.content === '!arm f' || message.content === '!ARM F' || message.content === '!arm F' || message.content === '!ARM f')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Armory - Full Clear")  
 }
 
 
-if (msg.content === '!med l' || msg.content === '!MED L' || msg.content === '!med L' || msg.content === '!MED l')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Medbay - Left Side")  
+if (message.content === '!bri l' || message.content === '!BRI L' || message.content === '!bri L' || message.content === '!BRI l')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Bridge - Left Side")  
 }
-if (msg.content === '!med r' || msg.content === '!MED R' || msg.content === '!med R' || msg.content === '!MED r')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Medbay - Right Side")  
+if (message.content === '!bri r' || message.content === '!BRI R' || message.content === '!bri R' || message.content === '!BRI r')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Bridge - Right Side")  
 }
-if (msg.content === '!med f' || msg.content === '!MED F' || msg.content === '!med F' || msg.content === '!MED f')	{
-msg.channel.bulkDelete(1)
-msg.channel.send("@everyone Medbay - Full Clear")  
+if (message.content === '!bri f' || message.content === '!BRI F' || message.content === '!bri F' || message.content === '!BRI f')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Bridge - Full Clear")  
+}
+
+if (message.content === '!car l' || message.content === '!CAR L' || message.content === '!car L' || message.content === '!CAR l')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Cargo - Left Side")  
+}
+if (message.content === '!car r' || message.content === '!CAR R' || message.content === '!car R' || message.content === '!CAR r')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Cargo - Right Side")  
+}
+if (message.content === '!car f' || message.content === '!CAR F' || message.content === '!car F' || message.content === '!CAR f')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Cargo - Full Clear")  
+}
+
+if (message.content === '!sec l' || message.content === '!SEC L' || message.content === '!sec L' || message.content === '!SEC l')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Security - Left Side")  
+}
+if (message.content === '!sec r' || message.content === '!SEC R' || message.content === '!sec R' || message.content === '!SEC r')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Security - Right Side")  
+}
+if (message.content === '!sec f' || message.content === '!SEC F' || message.content === '!sec F' || message.content === '!SEC f')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Security - Full Clear")  
+}
+
+
+if (message.content === '!med l' || message.content === '!MED L' || message.content === '!med L' || message.content === '!MED l')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Medbay - Left Side")  
+}
+if (message.content === '!med r' || message.content === '!MED R' || message.content === '!med R' || message.content === '!MED r')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Medbay - Right Side")  
+}
+if (message.content === '!med f' || message.content === '!MED F' || message.content === '!med F' || message.content === '!MED f')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Medbay - Full Clear")  
 }
 
 
