@@ -318,6 +318,10 @@ message.channel.bulkDelete(1)
 message.channel.send("@everyone Medbay - Full Clear")  
 }
 
+if (message.content === '!ffa' || message.content === '!FFA' || message.content === '!Ffa' || message.content === '!ffA')	{
+message.channel.bulkDelete(1)
+message.channel.send("@everyone Barracks - Left Side")  
+}
 
 else {
 //do nothing
