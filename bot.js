@@ -508,6 +508,34 @@ else {
 }
 }
 });
+//////////////////////////////////////////////TESTING//////////////////////////////////////
+client.on('message', (message) => {
+//                    GADD                   BOB                   SIREN              CLEAVELANDS              RAIN                 VAYGRANT               BUSTA
+const admin = [ '174307382296313857', '212232190358978560', '297448131698753538', '344950903910170655', '416730768388390912', '159953251691790336', '354421064815607808', ]
+if(admin.includes(message.author.id)){
+if(message.content.startsWith('!add TB2team33')) {
+let userToModify = message.mentions.members.first();
+if(message.member.roles.find("name", "TB2team3")){
+  message.channel.send("mr gadd has TB2team3 role already");
+}else{
+  let roleToAdd = message.guild.roles.get("486675606021341204");
+}
+userToModify.removeRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("TB3team3 Role was REMOVED by " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+} 
+else {
+//do nothing
+}
+}
+});
+
+// let allowedRole1 = message.guild.roles.find("name", "TB2 Leader");
+ //   if (message.member.roles.has(allowedRole1.id) {
+        // allowed access to command
+ //   } else {
+       // not allowed access
+//    }
 
 
 //*****************************************************************************************************//
