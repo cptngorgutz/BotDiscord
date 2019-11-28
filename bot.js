@@ -515,14 +515,14 @@ const admin = [ '174307382296313857', '212232190358978560', '297448131698753538'
 if(admin.includes(message.author.id)){
 if(message.content.startsWith('!add TB2team33')) {
 let userToModify = message.mentions.members.first();
-if(message.member.roles.find("name", "TB2team3")){
-  message.channel.send("mr gadd has TB2team3 role already");
+if(message.members.roles.find("name", "TB2team3")){
+  message.channel.send("" + userToModify + " has TB2team3 role already");
 }else{
   let roleToAdd = message.guild.roles.get("486675606021341204");
+  userToModify.removeRole(roleToAdd).catch(console.error);
+  message.guild.channels.find("name", "leader-logs").sendMessage("TB3team3 Role was Added to " + userToModify + " by " + message.author);
+  message.channel.bulkDelete(1)
 }
-userToModify.removeRole(roleToAdd).catch(console.error);
-message.guild.channels.find("name", "leader-logs").sendMessage("TB3team3 Role was REMOVED by " + userToModify + " by " + message.author);
-message.channel.bulkDelete(1)
 } 
 else {
 //do nothing
