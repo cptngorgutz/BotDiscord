@@ -29,7 +29,7 @@ client.on('guildMemberAdd', function(member)
 	}})
 });	 
 	
-//*************************************************THIS IS FOR LEADERS**********************//
+//**********************TB1 ROLES***************************THIS IS FOR LEADERS**********************//
 client.on('message', (message) => {
 //                        GADD               BOB                   RAIN                VAYGRANT               BUSTA               CLEAVELANDS              AZYREL           LYLE
 const admin = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '344950903910170655', '330052499442499585', '222324', '252627', '282930', ]
@@ -329,7 +329,7 @@ else {
 }
 });
 //*****************************************************************************************************//
-//*******************************************TB2 RECRUITMENT*******************************************//
+//*******************************************TB2 ROLES*******************************************//
 //*****************************************************************************************************//
 client.on('message', (message) => {
 //                    GADD                   BOB                   SIREN              CLEAVELANDS              RAIN                 VAYGRANT               BUSTA
@@ -425,6 +425,104 @@ else {
 }
 });
 
+
+//*****************************************************************************************************//
+//*******************************************TB3 ROLES*******************************************//
+//*****************************************************************************************************//
+client.on('message', (message) => {
+//                    GADD                   BOB                   SIREN              CLEAVELANDS              RAIN                 VAYGRANT               BUSTA
+const admin = [ '174307382296313857', '212232190358978560', '297448131698753538', '344950903910170655', '416730768388390912', '159953251691790336', '354421064815607808', ]
+if(admin.includes(message.author.id)){
+if(message.content.startsWith('!add recruit')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("476045239719821324");
+userToModify.addRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("RECRUIT Role was GIVEN to " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+}
+if(message.content.startsWith('!remove recruit')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("476045239719821324"); 
+userToModify.removeRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("RECRUIT Role was REMOVED from " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+} 
+
+if(message.content.startsWith('!add tb3recruit')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("575668979008405504");
+userToModify.addRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("tb2recruit Role was GIVEN by " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+}
+if(message.content.startsWith('!remove tb3recruit')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("643128934187139072"); 
+userToModify.removeRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("tb3recruit Role was REMOVED by " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+} //**************************************************************************//	
+if(message.content.startsWith('!add TB3')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("643129087283560448");
+userToModify.addRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("TB3 Role was GIVEN to " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+}
+if(message.content.startsWith('!remove TB3')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("643129087283560448"); 
+userToModify.removeRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("TB3 Role was REMOVED from " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+} //**************************************************************************//	
+if(message.content.startsWith('!add TB3team1')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("643129349926682635");
+userToModify.addRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("TB3team1 Role was GIVEN by " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+}
+if(message.content.startsWith('!remove TB3team1')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("643129349926682635"); 
+userToModify.removeRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("TB3team1 Role was REMOVED by " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+}//********************************************************************************//
+if(message.content.startsWith('!add TB3team2')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("643129351549878295");
+userToModify.addRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("TB3team2 Role was GIVEN by " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+}
+if(message.content.startsWith('!remove TB3team2')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("643129351549878295");
+userToModify.removeRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("TB3team2 Role was REMOVED by " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+} //******************************************************************************//
+if(message.content.startsWith('!add TB3team3')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("643129353873391657");
+userToModify.addRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("TB3team3 Role was GIVEN by " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+}
+if(message.content.startsWith('!remove TB3team3')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("643129353873391657");
+userToModify.removeRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("TB3team3 Role was REMOVED by " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+} //****************************************************************************//
+else {
+//do nothing
+}
+}
+});
 
 
 //*****************************************************************************************************//
