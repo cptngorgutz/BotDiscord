@@ -119,21 +119,6 @@ userToModify.removeRole(roleToAdd).catch(console.error);
 message.guild.channels.find("name", "leader-logs").sendMessage("TB1team3 Role was REMOVED from " + userToModify + " by " + message.author);
 message.channel.bulkDelete(1)
 } 
-//GIVE TB3
-if(message.content.startsWith('!add TB3')) {
-let userToModify = message.mentions.members.first();
-let roleToAdd = message.guild.roles.get("643130277161336875");
-userToModify.addRole(roleToAdd).catch(console.error);
-message.guild.channels.find("name", "leader-logs").sendMessage("TB3 cptn Role was GIVEN to " + userToModify + " by " + message.author);
-message.channel.bulkDelete(1)
-}
-if(message.content.startsWith('!remove TB3')) {
-let userToModify = message.mentions.members.first();
-let roleToAdd = message.guild.roles.get("643130277161336875");
-userToModify.removeRole(roleToAdd).catch(console.error);
-message.guild.channels.find("name", "leader-logs").sendMessage("TB3 cptn Role was REMOVED from " + userToModify + " by " + message.author);
-message.channel.bulkDelete(1)
-} 
 //launch raids
 if(message.content.startsWith('!u6')) {
 message.channel.bulkDelete(1)
