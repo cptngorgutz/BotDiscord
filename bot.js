@@ -513,9 +513,9 @@ client.on('message', (message) => {
 //                    GADD                   BOB                   SIREN              CLEAVELANDS              RAIN                 VAYGRANT               BUSTA
 const admin = [ '174307382296313857', '212232190358978560', '297448131698753538', '344950903910170655', '416730768388390912', '159953251691790336', '354421064815607808', ]
 if(admin.includes(message.author.id)){
-let TB2team1 = message.guild.roles.find("name", "TB2team1");
-let TB2team2 = message.guild.roles.find("name", "TB2team2");
-let TB2team3 = message.guild.roles.find("name", "TB2team3");
+let TB2team1 = message.guild.roles.get("486675509166735371");
+let TB2team2 = message.guild.roles.get("486675593522446346");
+let TB2team3 = message.guild.roles.get("486675606021341204");
 let MENTIONED = message.mentions.members.first();
 if(message.content.startsWith('!add TB2team33')) {
 if(message.member.roles.has(TB2team1.id) || message.member.roles.has(TB2team2.id)) {
