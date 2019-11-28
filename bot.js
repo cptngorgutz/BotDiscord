@@ -525,7 +525,7 @@ MENTIONED.addRole(TB2TEAM3ROLE).catch(console.error);
 }
 }}
 else{
-message.channel.send("This user does not have roles for teams 1&2.");
+//message.channel.send("This user does not have roles for teams 1&2.");
 }}); 
 
 
