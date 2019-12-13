@@ -31,8 +31,8 @@ client.on('guildMemberAdd', function(member)
 	
 //**********************TB1 ROLES***************************THIS IS FOR LEADERS**********************//
 client.on('message', (message) => {
-//                        GADD               BOB                   RAIN                VAYGRANT               BUSTA               CLEAVELANDS              AZYREL           LYLE
-const admin = [ '174307382296313857', '212232190358978560', '416730768388390912', '159953251691790336', '354421064815607808', '344950903910170655', '330052499442499585', '222324', '252627', '282930', ]
+//                        GADD               BOB                   RAIN                  SIREN              VAYGRANT               BUSTA               CLEAVELANDS              AZYREL           LYLE
+const admin = [ '174307382296313857', '212232190358978560', '416730768388390912', '297448131698753538', '159953251691790336', '354421064815607808', '344950903910170655', '330052499442499585', '222324', '252627', '282930', ]
 if(admin.includes(message.author.id)){	
 if(message.content.startsWith('!add TB1')) {
 let userToModify = message.mentions.members.first();
