@@ -357,7 +357,7 @@ client.on('guildMemberRemove', function(member)
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-} else{
+	}} else{
 	console.log("I am performing as usual TB1 alpha 4 //here");
 }
 // TB1 EVENT ROOM #2
@@ -399,7 +399,7 @@ if (message.channel.id === '656230665221701682') {
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+}}
 else{
 	console.log("I am performing as usual TB1 alpha 4 //here");
 }
@@ -447,7 +447,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual tb2 beta 4 //here");
 }
@@ -490,7 +490,7 @@ if (message.channel.id === '656230665221701682') {
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+}}
 else{
 	console.log("I am performing as usual tb2 beta 4 //here");
 }
@@ -538,7 +538,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000).catch();;
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual TB1 gamma 4 //here");
 }
@@ -581,7 +581,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual TB1 gamma 4 //here");
 }
@@ -627,7 +627,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual TB1 ult 7 //here");
 }
@@ -678,7 +678,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual TB2 alpha 4 //here");
 }
@@ -721,7 +721,7 @@ if (message.channel.id === '656216714723459116') {
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+}}
 else{
 	console.log("I am performing as usual TB2 alpha 4 //here");
 }
@@ -769,7 +769,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual TB2 beta 4 //here");
 }
@@ -812,7 +812,7 @@ if (message.channel.id === '656216714723459116') {
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+}}
 else{
 	console.log("I am performing as usual TB2 beta 4 //here");
 }
@@ -860,7 +860,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual TB2 gamma 4 //here");
 }
@@ -903,7 +903,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual TB2 gamma 4 //here");
 }
@@ -949,7 +949,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000).catch(err => console.log(err));;
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual TB2 ult 6 //here");
 }
@@ -994,7 +994,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual TB2 ult 7 //here");
 }
@@ -1044,7 +1044,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual TB3 alpha 4 //here");
 }
@@ -1087,7 +1087,7 @@ if (message.channel.id === '656232345371672577') {
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+})
 else{
 	console.log("I am performing as usual TB3 alpha 4 //here");
 }
@@ -1135,7 +1135,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual TB3 beta 4 //here");
 }
@@ -1178,7 +1178,7 @@ if (message.channel.id === '656232345371672577') {
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+}}
 else{
 	console.log("I am performing as usual TB3 beta 4 //here");
 }
@@ -1226,7 +1226,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual TB3 gamma 4 //here");
 }
@@ -1269,7 +1269,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual TB3 gamma 4 //here");
 }
@@ -1315,7 +1315,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual TB3 ult 6 //here");
 }
@@ -1361,15 +1361,11 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}
+	}}
 else{
 	console.log("I am performing as usual TB3 ult 7 //here");
 }
 }
-
-
-
-
 
 	}
 });
