@@ -39,56 +39,57 @@ if(message.content.startsWith('!add recruit')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("476045239719821324");
 userToModify.addRole(roleToAdd).catch(console.error);
-message.guild.channels.find("name", "leader-logs").send("RECRUIT Role was GIVEN to " + userToModify + " by " + message.author);
+message.guild.channels.find(c => c.name === 'leader-logs').send("RECRUIT Role was GIVEN to " + userToModify + " by " + message.author);
 message.channel.bulkDelete(1)
 }
+// .find(c => c.name === 'logs')
 if(message.content.startsWith('!remove recruit')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("476045239719821324"); 
 userToModify.removeRole(roleToAdd).catch(console.error);
-message.guild.channels.find("name", "leader-logs").send("RECRUIT Role was REMOVED from " + userToModify + " by " + message.author);
+message.guild.channels.find(c => c.name === 'leader-logs').send("RECRUIT Role was REMOVED from " + userToModify + " by " + message.author);
 message.channel.bulkDelete(1)
 } 
 if(message.content.startsWith('!add tb1recruit')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("575668741770182677");
 userToModify.addRole(roleToAdd).catch(console.error);
-message.guild.channels.find("name", "leader-logs").send("tb1recruit Role was GIVEN to " + userToModify + " by " + message.author);
+message.guild.channels.find(c => c.name === 'leader-logs').send("tb1recruit Role was GIVEN to " + userToModify + " by " + message.author);
 message.channel.bulkDelete(1)
 }
 if(message.content.startsWith('!remove tb1recruit')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("575668741770182677"); 
 userToModify.removeRole(roleToAdd).catch(console.error);
-message.guild.channels.find("name", "leader-logs").send("tb1recruit Role was REMOVED from " + userToModify + " by " + message.author);
+message.guild.channels.find(c => c.name === 'leader-logs').send("tb1recruit Role was REMOVED from " + userToModify + " by " + message.author);
 message.channel.bulkDelete(1)
 } 
 if(message.content.startsWith('!add tb2recruit')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("575668979008405504");
 userToModify.addRole(roleToAdd).catch(console.error);
-message.guild.channels.find("name", "leader-logs").send("tb2recruit Role was GIVEN by " + userToModify + " by " + message.author);
+message.guild.channels.find(c => c.name === 'leader-logs').send("tb2recruit Role was GIVEN by " + userToModify + " by " + message.author);
 message.channel.bulkDelete(1)
 }
 if(message.content.startsWith('!remove tb2recruit')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("575668979008405504"); 
 userToModify.removeRole(roleToAdd).catch(console.error);
-message.guild.channels.find("name", "leader-logs").send("tb2recruit Role was REMOVED by " + userToModify + " by " + message.author);
+message.guild.channels.find(c => c.name === 'leader-logs').send("tb2recruit Role was REMOVED by " + userToModify + " by " + message.author);
 message.channel.bulkDelete(1)
 } 
 if(message.content.startsWith('!add tb3recruit')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("575668979008405504");
 userToModify.addRole(roleToAdd).catch(console.error);
-message.guild.channels.find("name", "leader-logs").send("tb2recruit Role was GIVEN by " + userToModify + " by " + message.author);
+message.guild.channels.find(c => c.name === 'leader-logs').send("tb2recruit Role was GIVEN by " + userToModify + " by " + message.author);
 message.channel.bulkDelete(1)
 }
 if(message.content.startsWith('!remove tb3recruit')) {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("643128934187139072"); 
 userToModify.removeRole(roleToAdd).catch(console.error);
-message.guild.channels.find("name", "leader-logs").send("tb3recruit Role was REMOVED by " + userToModify + " by " + message.author);
+message.guild.channels.find(c => c.name === 'leader-logs').send("tb3recruit Role was REMOVED by " + userToModify + " by " + message.author);
 message.channel.bulkDelete(1)
 }
 //launch raids
