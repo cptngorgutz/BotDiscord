@@ -253,7 +253,7 @@ client.on('guildMemberRemove', function(member)
 	client.on('message', (message) => { //hereboy2
 	if(message.author.bot) return;
 	if (message.content === '!refresh' || message.content === '!Refresh')	{
-                           TB1 ULT 6 ROOM                             TB2 ULT 6 ROOM                              TB3 ULT 6 ROOM 
+//                           TB1 ULT 6 ROOM                             TB2 ULT 6 ROOM                              TB3 ULT 6 ROOM 
 	message.channel.bulkDelete(1)
 	if (message.channel.id === '428969477246550027' || message.channel.id === '655932627584286720' || message.channel.id === '655556582930776075') {
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
