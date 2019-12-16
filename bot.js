@@ -34,6 +34,63 @@ client.on('message', (message) => {
 //                        GADD               BOB                   RAIN                  SIREN              VAYGRANT               BUSTA               CLEAVELANDS              AZYREL                  LYLE                DAMIAN                WES SNIPES             RADA353
 const admin = [ '174307382296313857', '212232190358978560', '416730768388390912', '297448131698753538', '159953251691790336', '354421064815607808', '344950903910170655', '330052499442499585', '312361420547162123', '593958506885808129', '434740962389131274', '475479797313699841', ]
 if(admin.includes(message.author.id)){	
+//give roles
+if(message.content.startsWith('!add recruit')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("476045239719821324");
+userToModify.addRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("RECRUIT Role was GIVEN to " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+}
+if(message.content.startsWith('!remove recruit')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("476045239719821324"); 
+userToModify.removeRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("RECRUIT Role was REMOVED from " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+} 
+if(message.content.startsWith('!add tb1recruit')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("575668741770182677");
+userToModify.addRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("tb1recruit Role was GIVEN to " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+}
+if(message.content.startsWith('!remove tb1recruit')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("575668741770182677"); 
+userToModify.removeRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("tb1recruit Role was REMOVED from " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+} 
+if(message.content.startsWith('!add tb2recruit')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("575668979008405504");
+userToModify.addRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("tb2recruit Role was GIVEN by " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+}
+if(message.content.startsWith('!remove tb2recruit')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("575668979008405504"); 
+userToModify.removeRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("tb2recruit Role was REMOVED by " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+} 
+if(message.content.startsWith('!add tb3recruit')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("575668979008405504");
+userToModify.addRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("tb2recruit Role was GIVEN by " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+}
+if(message.content.startsWith('!remove tb3recruit')) {
+let userToModify = message.mentions.members.first();
+let roleToAdd = message.guild.roles.get("643128934187139072"); 
+userToModify.removeRole(roleToAdd).catch(console.error);
+message.guild.channels.find("name", "leader-logs").sendMessage("tb3recruit Role was REMOVED by " + userToModify + " by " + message.author);
+message.channel.bulkDelete(1)
+}
 //launch raids
 if(message.content.startsWith('!u6')) {
 message.channel.bulkDelete(1)
