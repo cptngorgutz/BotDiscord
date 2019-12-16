@@ -250,48 +250,48 @@ client.on('guildMemberRemove', function(member)
 	}}); });	
 
 ///ADDED NEW FOR RAIDS
-	client.on('message', (message) => { //hereboy2
-	if(message.author.bot) return;
-	if (message.content === '!refresh' || message.content === '!Refresh')	{
+//	client.on('message', (message) => { //hereboy2
+//	if(message.author.bot) return;
+//	if (message.content === '!refresh' || message.content === '!Refresh')	{
 //                           TB1 ULT 6 ROOM                             TB2 ULT 6 ROOM                              TB3 ULT 6 ROOM 
-	message.channel.bulkDelete(1)
-	if (message.channel.id === '428969477246550027' || message.channel.id === '655932627584286720' || message.channel.id === '655556582930776075') {
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
-	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
-	message.delete(480000).catch(err => console.log(err));
-	};
-	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch(err => console.log(err));
-	};
-	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch(err => console.log(err));
-	};
-	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch(err => console.log(err));
-	};
-	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch(err => console.log(err));
-	};
-	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch(err => console.log(err));
-	};
-	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch(err => console.log(err));
-	};
-	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch(err => console.log(err));
-	};
-	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch(err => console.log(err));
-	};
-	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid ultimus 6'));
-	};
+//	message.channel.bulkDelete(1)
+//	if (message.channel.id === '428969477246550027' || message.channel.id === '655932627584286720' || message.channel.id === '655556582930776075') {
+//	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+//	collected.forEach(message => {
+//	if (message.content.includes('╔'))  {
+//	message.delete(480000).catch(err => console.log(err));
+//	};
+//	if (message.content.includes('Lane 1 '))  {
+//	message.delete(420000).catch(err => console.log(err));
+//	};
+//	if (message.content.includes('Lane 2 '))  {
+//	message.delete(360000).catch(err => console.log(err));
+//	};
+//	if (message.content.includes('Lane 3 '))  {
+//	message.delete(320000).catch(err => console.log(err));
+//	};
+//	if (message.content.includes('Lane 4 '))  {
+//	message.delete(240000).catch(err => console.log(err));
+//	};
+//	if (message.content.includes('Lane 5 '))  {
+//	message.delete(180000).catch(err => console.log(err));
+//	};
+//	if (message.content.includes('Lane 6 '))  {
+//	message.delete(120000).catch(err => console.log(err));
+//	};
+//	if (message.content.includes('Lane 7 '))  {
+//	message.delete(60000).catch(err => console.log(err));
+//	};
+//	if (message.content.includes('Lane 8 '))  {
+//	message.delete(30000).catch(err => console.log(err));
+//	};
+//	if (message.content.includes('To claim a lane:'))  {												   
+//	message.delete(510000).then(() => message.channel.send('!raid ultimus 6'));
+//	};
 	
-	if (message.attachments.size > 0) message.delete(5000);
-	  })});
-}}});
+//	if (message.attachments.size > 0) message.delete(5000);
+//	  })});
+//}}});
 
 client.on('message', async msg =>  { 
 if (msg.content === '!raid ultimus 6' || msg.content === '!raid Ultimus 6')	{
