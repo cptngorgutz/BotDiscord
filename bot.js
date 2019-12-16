@@ -319,7 +319,6 @@ client.on('guildMemberRemove', function(member)
 //***********************************TB1 ALPHA 4 HERE****************************
 //***************************************************************************
 	if (message.content === '!refresh alpha 4' || message.content === '!Refresh alpha 4' || message.content === '!Refresh Alpha 4' || message.content === '!refresh Alpha 4'){
-	message.channel.bulkDelete(1)
 // TB2 EVENT ROOM #1
 	if (message.channel.id === '656230420265828363') {
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
