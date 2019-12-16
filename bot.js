@@ -401,6 +401,7 @@ client.on('guildMemberRemove', function(member)
 //                           TB1 ULT 6 ROOM                             TB2 ULT 6 ROOM                              TB3 ULT 6 ROOM 
 	message.channel.bulkDelete(1)
 	if (message.channel.id === '428969477246550027' || message.channel.id === '655932627584286720' || message.channel.id === '655556582930776075') {
+	message.guild.channels.find(c => ['tb2-raid-alpha', 'tb2-raid-beta', 'tb2-raid-gamma'].includes(c.name)).setName('awaiting-rename');
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -428,7 +429,7 @@ client.on('guildMemberRemove', function(member)
 	message.delete(60000).catch(err => console.log(err));
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch(err => console.log(err));
+	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-alpha");
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid alpha 4'));
@@ -443,10 +444,11 @@ client.on('guildMemberRemove', function(member)
 //                           TB1 ULT 6 ROOM                             TB2 ULT 6 ROOM                              TB3 ULT 6 ROOM 
 	message.channel.bulkDelete(1)
 	if (message.channel.id === '428969477246550027' || message.channel.id === '655932627584286720' || message.channel.id === '655556582930776075') {
+	message.guild.channels.find(c => ['tb2-raid-alpha', 'tb2-raid-beta', 'tb2-raid-gamma'].includes(c.name)).setName('awaiting-rename');
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch(err => console.log(err));
+	message.delete(480000).then(() => message.guild.channels.find(c => c.name === 'bot-testing2').setName("TB2-RAID-BETA");
 	};
 	if (message.content.includes('Lane 1 '))  {
 	message.delete(420000).catch(err => console.log(err));
@@ -470,14 +472,14 @@ client.on('guildMemberRemove', function(member)
 	message.delete(60000).catch(err => console.log(err));
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch(err => console.log(err));
+	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-beta");
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid beta 4'));
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-}}
+}} 
 
 //***********************************GAMMA 4 HERE****************************
 //*****************************************************************************
@@ -485,6 +487,7 @@ client.on('guildMemberRemove', function(member)
 //                           TB1 ULT 6 ROOM                             TB2 ULT 6 ROOM                              TB3 ULT 6 ROOM 
 	message.channel.bulkDelete(1)
 	if (message.channel.id === '428969477246550027' || message.channel.id === '655932627584286720' || message.channel.id === '655556582930776075') {
+	message.guild.channels.find(c => ['tb2-raid-alpha', 'tb2-raid-beta', 'tb2-raid-gamma'].includes(c.name)).setName('awaiting-rename');
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -512,7 +515,7 @@ client.on('guildMemberRemove', function(member)
 	message.delete(60000).catch(err => console.log(err));
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch(err => console.log(err));
+	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-gamma");
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
