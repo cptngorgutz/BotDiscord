@@ -898,9 +898,9 @@ if (message.channel.id === '656216714723459116') {
 	message.delete(30000).catch(err => console.log(err));
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid ultimus 6'));
+	message.delete(510000).then(() => message.channel.send('!raid ultimus 6')).catch(err => console.log(err));;
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete(5000).catch(err => console.log(err));;
 	  })});
 }}
 //***********************************TB2 ULIMTUS 7 ****************************
