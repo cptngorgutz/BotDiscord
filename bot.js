@@ -577,37 +577,37 @@ client.on('guildMemberRemove', function(member)
 	if (message.content === '!refresh' || message.content === '!Refresh')	{
 //                           TB1 ULT 6 ROOM                             TB2 ULT 6 ROOM                              TB3 ULT 6 ROOM 
 	message.channel.bulkDelete(1)
-	if (message.channel.id === '428969477246550027' || message.channel.id === '617707484626288672' || message.channel.id === '655556582930776075') {
+	if (message.channel.id === '428969477246550027' || message.channel.id === '655932627584286720' || message.channel.id === '655556582930776075') {
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('oh'))  {
+	if (message.content.includes('a  '))  {
 	message.delete(480000).catch(err => console.log(err));
 	};
-	if (message.content.includes('can'))  {
+	if (message.content.includes('b '))  {
 	message.delete(420000).catch(err => console.log(err));
 	};
-	if (message.content.includes('I did'))  {
+	if (message.content.includes('c '))  {
 	message.delete(360000).catch(err => console.log(err));
 	};
-	if (message.content.includes('NEed'))  {
+	if (message.content.includes('d '))  {
 	message.delete(320000).catch(err => console.log(err));
 	};
-	if (message.content.includes('Oooh!!!'))  {
+	if (message.content.includes('e '))  {
 	message.delete(240000).catch(err => console.log(err));
 	};
-	if (message.content.includes('hahah'))  {
+	if (message.content.includes('f '))  {
 	message.delete(180000).catch(err => console.log(err));
 	};
-	if (message.content.includes('#RonanForPresident'))  {
+	if (message.content.includes('g '))  {
 	message.delete(120000).catch(err => console.log(err));
 	};
-	if (message.content.includes('#AVoteForRonanIsAVoteForTheFuture'))  {
+	if (message.content.includes('h '))  {
 	message.delete(60000).catch(err => console.log(err));
 	};
-	if (message.content.includes('Yeah.'))  {
+	if (message.content.includes('i '))  {
 	message.delete(30000).catch(err => console.log(err));
 	};
-	if (message.content.includes('Is HE'))  {												   
+	if (message.content.includes('j '))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid ultimus 6'));
 	};
 	  })});
@@ -615,7 +615,7 @@ client.on('guildMemberRemove', function(member)
 
 client.on('message', async msg =>  { 
 if (msg.content === '!raid ultimus 6' || msg.content === '!raid Ultimus 6')	{
-	if (msg.channel.id === '600378414897168386' || msg.channel.id === '635982614053912627' || msg.channel.id === '643229492650704973' || msg.channel.id === '428969477246550027') {
+	if (msg.channel.id === '600378414897168386' || msg.channel.id === '655932627584286720' || msg.channel.id === '643229492650704973' || msg.channel.id === '428969477246550027') {
 //                           TB1 ULT 6 ROOM                             TB2 ULT 6 ROOM                              TB3 ULT 6 ROOM                            TB PUBLIC ARCHIVE
 	msg.channel.bulkDelete(100)
     msg.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
