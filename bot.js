@@ -357,6 +357,8 @@ client.on('guildMemberRemove', function(member)
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
+} else{
+	console.log("error at else tb2 ult 6 //here)";
 }
 // TB2 EVENT ROOM #2
 if (message.channel.id === '656230665221701682') {
