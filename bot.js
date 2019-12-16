@@ -866,7 +866,6 @@ if (message.channel.id === '656216714723459116') {
 //*****************************************************************************
 //TB2 UL6 ROOM
 	if (message.content === '!refresh ultimus 6' || message.content === '!Refresh ultimus 6' || message.content === '!Refresh Ultimus 6' || message.content === '!refresh Ultimus 6'){
-	message.channel.bulkDelete(1)
 	if (message.channel.id === '656244057244303361'){
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
