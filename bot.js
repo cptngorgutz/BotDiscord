@@ -318,9 +318,9 @@ client.on('guildMemberRemove', function(member)
 //***************************TB1 EVENT REFRESH ROOMS 1-2*******************//
 //***********************************TB1 ALPHA 4 HERE****************************
 //***************************************************************************
+	if (message.channel.id === '656230420265828363') {
 	if (message.content === '!refresh alpha 4' || message.content === '!Refresh alpha 4' || message.content === '!Refresh Alpha 4' || message.content === '!refresh Alpha 4'){
 // TB1 EVENT ROOM #1
-	if (message.channel.id === '656230420265828363') {
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
@@ -405,10 +405,10 @@ else{
 
 //***********************************TB1 BETA 4 HERE****************************
 //*****************************************************************************
+	if (message.channel.id === '656230420265828363') {
 	if (message.content === '!refresh beta 4' || message.content === '!Refresh beta 4' || message.content === '!Refresh Beta 4' || message.content === '!refresh Beta 4'){
 //TB1 EVENT ROOM #1
 	message.channel.bulkDelete(1)
-	if (message.channel.id === '656230420265828363') {
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
@@ -494,11 +494,11 @@ else{
 
 //***********************************TB1 GAMMA 4 HERE****************************
 //*****************************************************************************
+	if (message.channel.id === '656230420265828363') {
 	if (message.content === '!refresh gamma 4' || message.content === '!Refresh gamma 4' || message.content === '!Refresh Gamma 4' || message.content === '!refresh Gamma 4'){
 // TB1 EVENT ROOM #1
 	message.channel.bulkDelete(1)
-	if (message.channel.id === '656230420265828363') {
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch();
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -526,12 +526,12 @@ else{
 	message.delete(60000).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-gamma"));
+	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-gamma")).catch();;
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
+	message.delete(510000).then(() => message.channel.send('!raid gamma 4')).catch();;
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete(5000).catch();;
 	  })});
 }
 else{
@@ -582,10 +582,10 @@ else{
 
 //***********************************TB1 ULIMTUS 7 ****************************
 //*****************************************************************************
+	if (message.channel.id === '634155222490415104') {		
 	if (message.content === '!refresh ultimus 7' || message.content === '!Refresh ultimus 7' || message.content === '!Refresh Ultimus 7' || message.content === '!refresh Ultimus 7'){
 //TB1 U7 ROOM
 	message.channel.bulkDelete(1)
-	if (message.channel.id === '634155222490415104') {
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -632,9 +632,9 @@ else{
 //***************************TB2 EVENT REFRESH ROOMS 1-2*******************//
 //***********************************ALPHA 4 HERE****************************
 //***************************************************************************
+	if (message.channel.id === '656207417033359371') {
 	if (message.content === '!refresh alpha 4' || message.content === '!Refresh alpha 4' || message.content === '!Refresh Alpha 4' || message.content === '!refresh Alpha 4'){
 // TB2 EVENT ROOM #1
-	if (message.channel.id === '656207417033359371') {
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
@@ -720,9 +720,9 @@ else{
 
 //***********************************BETA 4 HERE****************************
 //*****************************************************************************
+	if (message.channel.id === '656207417033359371') {
 	if (message.content === '!refresh beta 4' || message.content === '!Refresh beta 4' || message.content === '!Refresh Beta 4' || message.content === '!refresh Beta 4'){
 //TB2 EVENT ROOM #1
-	if (message.channel.id === '656207417033359371') {
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
@@ -808,9 +808,9 @@ else{
 
 //***********************************GAMMA 4 HERE****************************
 //*****************************************************************************
+	if (message.channel.id === '656207417033359371') {
 	if (message.content === '!refresh gamma 4' || message.content === '!Refresh gamma 4' || message.content === '!Refresh Gamma 4' || message.content === '!refresh Gamma 4'){
 // TB2 EVENT ROOM #1
-	if (message.channel.id === '656207417033359371') {
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
@@ -896,8 +896,8 @@ else{
 //***********************************TB2 ULIMTUS 6 ****************************
 //*****************************************************************************
 //TB2 UL6 ROOM
-	if (message.content === '!refresh ultimus 6' || message.content === '!Refresh ultimus 6' || message.content === '!Refresh Ultimus 6' || message.content === '!refresh Ultimus 6'){
 	if (message.channel.id === '656244057244303361'){
+	if (message.content === '!refresh ultimus 6' || message.content === '!Refresh ultimus 6' || message.content === '!Refresh Ultimus 6' || message.content === '!refresh Ultimus 6'){
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -939,9 +939,9 @@ else{
 }
 //***********************************TB2 ULIMTUS 7 ****************************
 //*****************************************************************************
+	if (message.channel.id === '634155347736526848') {
 	if (message.content === '!refresh ultimus 7' || message.content === '!Refresh ultimus 7' || message.content === '!Refresh Ultimus 7' || message.content === '!refresh Ultimus 7'){
 //TB1 U7 ROOM
-	if (message.channel.id === '634155347736526848') {
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -987,10 +987,10 @@ else{
 //***************************TB3 EVENT REFRESH ROOMS 1-2*******************//
 //***********************************TB3 ALPHA 4 HERE****************************
 //***************************************************************************
+	if (message.channel.id === '656232194137784333') {
 	if (message.content === '!refresh alpha 4' || message.content === '!Refresh alpha 4' || message.content === '!Refresh Alpha 4' || message.content === '!refresh Alpha 4'){
 	message.channel.bulkDelete(1)
 // TB3 EVENT ROOM #1
-	if (message.channel.id === '656232194137784333') {
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
@@ -1076,10 +1076,10 @@ else{
 
 //***********************************TB3 BETA 4 HERE****************************
 //*****************************************************************************
+	if (message.channel.id === '656232194137784333') {
 	if (message.content === '!refresh beta 4' || message.content === '!Refresh beta 4' || message.content === '!Refresh Beta 4' || message.content === '!refresh Beta 4'){
 //TB3 EVENT ROOM #1
 	message.channel.bulkDelete(1)
-	if (message.channel.id === '656232194137784333') {
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
@@ -1165,10 +1165,10 @@ else{
 
 //***********************************TB3 GAMMA 4 HERE****************************
 //*****************************************************************************
+	if (message.channel.id === '656232194137784333') {
 	if (message.content === '!refresh gamma 4' || message.content === '!Refresh gamma 4' || message.content === '!Refresh Gamma 4' || message.content === '!refresh Gamma 4'){
 // TB3 EVENT ROOM #1
 	message.channel.bulkDelete(1)
-	if (message.channel.id === '656232194137784333') {
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
@@ -1254,9 +1254,9 @@ else{
 //***********************************TB3 ULIMTUS 6 ****************************
 //*****************************************************************************
 //TB3 UL6 ROOM
+	if (message.channel.id === '643229492650704973'){
 	if (message.content === '!refresh ultimus 6' || message.content === '!Refresh ultimus 6' || message.content === '!Refresh Ultimus 6' || message.content === '!refresh Ultimus 6'){
 	message.channel.bulkDelete(1)
-	if (message.channel.id === '643229492650704973'){
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1299,10 +1299,10 @@ else{
 
 //***********************************TB3 ULIMTUS 7 ****************************
 //*****************************************************************************
+	if (message.channel.id === '646322699869880340') {
 	if (message.content === '!refresh ultimus 7' || message.content === '!Refresh ultimus 7' || message.content === '!Refresh Ultimus 7' || message.content === '!refresh Ultimus 7'){
 //TB1 U7 ROOM
 	message.channel.bulkDelete(1)
-	if (message.channel.id === '646322699869880340') {
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
