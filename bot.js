@@ -402,7 +402,7 @@ client.on('guildMemberRemove', function(member)
 	message.channel.bulkDelete(1)
 	if (message.channel.id === '428969477246550027' || message.channel.id === '655932627584286720' || message.channel.id === '655556582930776075') {
 	message.guild.channels.find(c => ['tb2-raid-alpha', 'tb2-raid-beta', 'tb2-raid-gamma'].includes(c.name)).setName('awaiting-rename').catch(console.error);
-	message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-alpha")).catch(console.error);
+	message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-alpha").catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
