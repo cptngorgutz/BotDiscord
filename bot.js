@@ -580,34 +580,34 @@ client.on('guildMemberRemove', function(member)
 	if (message.channel.id === '428969477246550027' || message.channel.id === '617707484626288672' || message.channel.id === '655556582930776075') {
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('shards'))  {
+	if (message.content.includes('oh'))  {
 	message.delete(480000).catch(err => console.log(err));
 	};
-	if (message.content.includes('#Ronan '))  {
+	if (message.content.includes('can'))  {
 	message.delete(420000).catch(err => console.log(err));
 	};
-	if (message.content.includes('#AVoteFor '))  {
+	if (message.content.includes('I did'))  {
 	message.delete(360000).catch(err => console.log(err));
 	};
-	if (message.content.includes('So '))  {
+	if (message.content.includes('NEed'))  {
 	message.delete(320000).catch(err => console.log(err));
 	};
-	if (message.content.includes('Decent '))  {
+	if (message.content.includes('Oooh!!!'))  {
 	message.delete(240000).catch(err => console.log(err));
 	};
-	if (message.content.includes('You '))  {
+	if (message.content.includes('hahah'))  {
 	message.delete(180000).catch(err => console.log(err));
 	};
-	if (message.content.includes('We '))  {
+	if (message.content.includes('#RonanForPresident'))  {
 	message.delete(120000).catch(err => console.log(err));
 	};
-	if (message.content.includes('R.I.P '))  {
+	if (message.content.includes('#AVoteForRonanIsAVoteForTheFuture'))  {
 	message.delete(60000).catch(err => console.log(err));
 	};
-	if (message.content.includes('Found '))  {
+	if (message.content.includes('Yeah.'))  {
 	message.delete(30000).catch(err => console.log(err));
 	};
-	if (message.content.includes('To claim a lane:'))  {												   
+	if (message.content.includes('Is HE'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid ultimus 6'));
 	};
 	  })});
