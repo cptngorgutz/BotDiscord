@@ -432,7 +432,7 @@ if (message.channel.id === '656230665221701682') {
 	message.delete(60000).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-beta"));
+	message.delete(30000).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid beta 4'));
@@ -472,7 +472,7 @@ if (message.channel.id === '656230665221701682') {
 	message.delete(60000).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-beta"));
+	message.delete(30000).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid beta 4'));
@@ -514,7 +514,7 @@ if (message.channel.id === '656230665221701682') {
 	message.delete(60000).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-gamma")).catch();;
+	message.delete(30000).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid gamma 4')).catch();;
@@ -554,7 +554,7 @@ if (message.channel.id === '656230665221701682') {
 	message.delete(60000).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-gamma"));
+	message.delete(30000).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
@@ -724,7 +724,7 @@ if (message.channel.id === '656216714723459116') {
 	message.delete(60000).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-beta"));
+	message.delete(30000).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid beta 4'));
@@ -764,7 +764,7 @@ if (message.channel.id === '656216714723459116') {
 	message.delete(60000).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-beta"));
+	message.delete(30000).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid beta 4'));
@@ -807,7 +807,7 @@ if (message.channel.id === '656216714723459116') {
 	message.delete(60000).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-gamma"));
+	message.delete(30000).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
@@ -847,7 +847,7 @@ if (message.channel.id === '656216714723459116') {
 	message.delete(60000).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-gamma"));
+	message.delete(30000).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
@@ -1058,7 +1058,7 @@ if (message.channel.id === '656232345371672577') {
 	message.delete(60000).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-beta"));
+	message.delete(30000).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid beta 4'));
@@ -1098,7 +1098,7 @@ if (message.channel.id === '656232345371672577') {
 	message.delete(60000).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-beta"));
+	message.delete(30000).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid beta 4'));
@@ -1140,7 +1140,7 @@ if (message.channel.id === '656232345371672577') {
 	message.delete(60000).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-gamma"));
+	message.delete(30000).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
@@ -1180,7 +1180,7 @@ if (message.channel.id === '656232345371672577') {
 	message.delete(60000).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("tb2-raid-gamma"));
+	message.delete(30000).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
 	message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
