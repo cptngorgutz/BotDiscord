@@ -356,10 +356,8 @@ client.on('guildMemberRemove', function(member)
 	message.delete(510000).then(() => message.channel.send('!raid alpha 4'));
 	};
 	if (message.attachments.size > 0) message.delete(5000);
-	  })})
- else{
-	console.log("I am performing as usual TB1 alpha 4 //here");
-	}}}
+	  })});
+}}
 // TB1 EVENT ROOM #2
 if (message.channel.id === '656230665221701682') {
 	if (message.content === '!refresh alpha 4' || message.content === '!Refresh alpha 4' || message.content === '!Refresh Alpha 4' || message.content === '!refresh Alpha 4'){
