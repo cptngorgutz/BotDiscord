@@ -397,9 +397,7 @@ if (message.channel.id === '656230665221701682') {
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
- else{
-	console.log("I am performing as usual TB1 alpha 4 //here");
-}}}
+}}
 //***********************************TB1 BETA 4 HERE****************************
 //*****************************************************************************
 	if (message.channel.id === '656230420265828363') {
@@ -441,9 +439,7 @@ if (message.channel.id === '656230665221701682') {
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual tb2 beta 4 //here");
-	}}}
+	}}
 // TB1 EVENT ROOM #2
 if (message.channel.id === '656230665221701682') {
 	if (message.content === '!refresh beta 4' || message.content === '!Refresh beta 4' || message.content === '!Refresh Beta 4' || message.content === '!refresh Beta 4'){
@@ -483,9 +479,7 @@ if (message.channel.id === '656230665221701682') {
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
- else{
-	console.log("I am performing as usual tb2 beta 4 //here");
-}}}
+}}
  //***********************************TB1 GAMMA 4 HERE****************************
 //*****************************************************************************
 	if (message.channel.id === '656230420265828363') {
@@ -527,9 +521,7 @@ if (message.channel.id === '656230665221701682') {
 	};
 	if (message.attachments.size > 0) message.delete(5000).catch();;
 	  })});
-else{
-	console.log("I am performing as usual TB1 gamma 4 //here");
-	}}}
+}}
 //TB1 EVENT ROOM #2
 	if (message.channel.id === '656230665221701682') {
 	if (message.content === '!refresh gamma 4' || message.content === '!Refresh gamma 4' || message.content === '!Refresh Gamma 4' || message.content === '!refresh Gamma 4'){
@@ -569,9 +561,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB1 gamma 4 //here");
-}}}
+}}
 //***********************************TB1 ULIMTUS 7 ****************************
 //*****************************************************************************
 	if (message.channel.id === '634155222490415104') {		
@@ -612,9 +602,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB1 ult 7 //here");
-}}}
+}}
 
 
 //##############################################################################################################################################################################
@@ -661,9 +649,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB2 alpha 4 //here");
-}}}
+}}
 // TB2 EVENT ROOM #2
 if (message.channel.id === '656216714723459116') {
 	if (message.content === '!refresh alpha 4' || message.content === '!Refresh alpha 4' || message.content === '!Refresh Alpha 4' || message.content === '!refresh Alpha 4'){
@@ -703,9 +689,7 @@ if (message.channel.id === '656216714723459116') {
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB2 alpha 4 //here");
-}}}
+}}
 //***********************************BETA 4 HERE****************************
 //*****************************************************************************
 	if (message.channel.id === '656207417033359371') {
@@ -747,9 +731,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB2 beta 4 //here");
-}}}
+}}
 // TB2 EVENT ROOM #2
 if (message.channel.id === '656216714723459116') {
 	if (message.content === '!refresh beta 4' || message.content === '!Refresh beta 4' || message.content === '!Refresh Beta 4' || message.content === '!refresh Beta 4'){
@@ -789,9 +771,7 @@ if (message.channel.id === '656216714723459116') {
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB2 beta 4 //here");
-}}}
+}}
 
 //***********************************GAMMA 4 HERE****************************
 //*****************************************************************************
@@ -834,9 +814,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB2 gamma 4 //here");
-}}}
+}}
 //TB2 EVENT ROOM #2
 	if (message.channel.id === '656216714723459116') {
 	if (message.content === '!refresh gamma 4' || message.content === '!Refresh gamma 4' || message.content === '!Refresh Gamma 4' || message.content === '!refresh Gamma 4'){
@@ -876,9 +854,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB2 gamma 4 //here");
-}}}
+}}
 //***********************************TB2 ULIMTUS 6 ****************************
 //*****************************************************************************
 //TB2 UL6 ROOM
@@ -919,9 +895,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000).catch(err => console.log(err));;
 	  })});
-else{
-	console.log("I am performing as usual TB2 ult 6 //here");
-}}}
+}}
 //***********************************TB2 ULIMTUS 7 ****************************
 //*****************************************************************************
 	if (message.channel.id === '634155347736526848') {
@@ -962,9 +936,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB2 ult 7 //here");
-}}}
+}}
 
 
 //##############################################################################################################################################################################
@@ -1011,9 +983,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB3 alpha 4 //here");
-}}}
+}}
 // TB3 EVENT ROOM #2
 if (message.channel.id === '656232345371672577') {
 	if (message.content === '!refresh alpha 4' || message.content === '!Refresh alpha 4' || message.content === '!Refresh Alpha 4' || message.content === '!refresh Alpha 4'){
@@ -1053,9 +1023,7 @@ if (message.channel.id === '656232345371672577') {
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB3 alpha 4 //here");
-}}}
+}}
 //***********************************TB3 BETA 4 HERE****************************
 //*****************************************************************************
 	if (message.channel.id === '656232194137784333') {
@@ -1097,9 +1065,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB3 beta 4 //here");
-}}}
+}}
 // TB3 EVENT ROOM #2
 if (message.channel.id === '656232345371672577') {
 	if (message.content === '!refresh beta 4' || message.content === '!Refresh beta 4' || message.content === '!Refresh Beta 4' || message.content === '!refresh Beta 4'){
@@ -1139,9 +1105,7 @@ if (message.channel.id === '656232345371672577') {
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB3 beta 4 //here");
-}}}
+}}
 //***********************************TB3 GAMMA 4 HERE****************************
 //*****************************************************************************
 	if (message.channel.id === '656232194137784333') {
@@ -1183,9 +1147,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB3 gamma 4 //here");
-}}}
+}}
 //TB3 EVENT ROOM #2
 	if (message.channel.id === '656232345371672577') {
 	if (message.content === '!refresh gamma 4' || message.content === '!Refresh gamma 4' || message.content === '!Refresh Gamma 4' || message.content === '!refresh Gamma 4'){
@@ -1225,9 +1187,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB3 gamma 4 //here");
-}}}
+}}
 //***********************************TB3 ULIMTUS 6 ****************************
 //*****************************************************************************
 //TB3 UL6 ROOM
@@ -1268,9 +1228,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB3 ult 6 //here");
-}}}
+}}
 //***********************************TB3 ULIMTUS 7 ****************************
 //*****************************************************************************
 	if (message.channel.id === '646322699869880340') {
@@ -1311,9 +1269,7 @@ else{
 	};
 	if (message.attachments.size > 0) message.delete(5000);
 	  })});
-else{
-	console.log("I am performing as usual TB3 ult 7 //here");
-}}}
+}}
 }
 
 });
