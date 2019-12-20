@@ -29,21 +29,7 @@ client.on('guildMemberAdd', function(member)
 	}})
 });	 
 	
-//*****************************************************************************************************//
-//**********************************SELF ASSIGNED ROLES***********************************************//
-client.on('message', (message) => {
-if(message.content.startsWith('!join notifications')){
-message.channel.bulkDelete(1)
-const notify = message.guild.roles.find(r => r.name === "Notifications");
-if(message.member.roles.has(notify.id)) {
-message.author.removeRole(notify).catch(console.error);
-message.channel.send("" + message.author + "Removed from Notifications")
-} else {
-	message.author.addRole(notify).catch(console.error);
-	message.channel.send("" + message.author + "Added to Notifications")
-}
-}});
-	
+
 	
 //**********************TB1 ROLES***************************THIS IS FOR LEADERS**********************//
 client.on('message', (message) => {
