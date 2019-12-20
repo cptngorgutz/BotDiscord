@@ -36,11 +36,11 @@ if(message.content.startsWith('?notifications')){
 message.channel.bulkDelete(1)
 const notify = message.guild.roles.find(r => r.name === "notifications");
 if(message.member.roles.has(notify.id)) {
-message.guild.channels.find(c => c.name === 'notifications').send(5000)("" + message.author + " Removed from Notifications");
+message.guild.channels.find(c => c.name === 'notifications').send("" + message.author + " Removed from Notifications");
 message.member.removeRole(notify).catch(console.error);
 } else {
 message.member.addRole(notify).catch(console.error);
-message.guild.channels.find(c => c.name === 'notifications').send(5000)("" + message.author + " Added To Notifications");
+message.guild.channels.find(c => c.name === 'notifications').send("" + message.author + " Added To Notifications");
 }
 }});
 
