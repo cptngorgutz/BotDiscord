@@ -35,11 +35,11 @@ client.on('message', (message) => {
 if(message.content.startsWith('!join notifications')){
 message.channel.bulkDelete(1)
 const notify = message.guild.roles.find(r => r.name === "Notifications");
-if(message.author.roles.has(notify.id)) {
-author.removeRole(notify).catch(console.error);
+if(message.member.roles.has(notify.id)) {
+member.removeRole(notify).catch(console.error);
 message.channel.send("" + message.author + "Removed from Notifications")
 } else {
-	author.addRole(notify).catch(console.error);
+	member.addRole(notify).catch(console.error);
 	message.channel.send("" + message.author + "Added to Notifications")
 }
 }});
