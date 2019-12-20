@@ -32,7 +32,7 @@ client.on('guildMemberAdd', function(member)
 //*****************************************************************************************************//
 //**********************************SELF ASSIGNED ROLES***********************************************//
 client.on('message', (message) => {
-if(message.content.startsWith('!join notifications')){
+if(message.content.startsWith('?notifications')){
 message.channel.bulkDelete(1)
 const notify = message.guild.roles.find(r => r.name === "Notifications");
 if(message.member.roles.has(notify.id)) {
