@@ -33,6 +33,7 @@ client.on('guildMemberAdd', function(member)
 //**********************************SELF ASSIGNED ROLES***********************************************//
 client.on('message', (message) => {
 if(message.content.startsWith('!join notifications')){
+message.channel.bulkDelete(1)
 const notify = message.guild.roles.find(r => r.name === "Notifications");
 if(message.author.roles.has(notify.id)) {
 author.removeRole(notify).catch(console.error);
