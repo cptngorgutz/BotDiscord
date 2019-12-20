@@ -29,6 +29,21 @@ client.on('guildMemberAdd', function(member)
 	}})
 });	 
 	
+//*****************************************************************************************************//
+//**********************************SELF ASSIGNED ROLES***********************************************//
+client.on('message', (message) => {
+if(message.content.startsWith('!join notifications')){
+const notify = message.guild.roles.find(r => r.name === "Notifications");
+if(message.author.roles.has(notify.id)) {
+author.removeRole(notify).catch(console.error);
+message.channel.send("" + message.author + "Removed from Notifications")
+} else {
+	author.addRole(notify).catch(console.error);
+	message.channel.send("" + message.author + "Added to Notifications")
+}
+}});
+	
+	
 //**********************TB1 ROLES***************************THIS IS FOR LEADERS**********************//
 client.on('message', (message) => {
 //                        GADD               BOB                   RAIN                  SIREN              VAYGRANT               BUSTA               CLEAVELANDS              AZYREL                  LYLE                DAMIAN                WES SNIPES             RADA353
