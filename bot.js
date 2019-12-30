@@ -29,6 +29,27 @@ client.on('guildMemberAdd', function(member)
 	}})
 });	 
 
+//@@@@@@@@@@@@@@@@@@@@@@@@@@BLITZ PREDICTIONS@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+client.on('message', message => {
+
+  // Check if the message was sent in the channel with the specified id.
+  if(message.channel.id === '428968670908383242'){
+    if(message.content.startsWith('!blitz')) {
+
+      // Get the channel to fetch the message from.
+      const channelToCheck = message.guild.channels.get('661209488996696104')
+
+      // Fetch the last message from the mentioned channel.
+    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+    const lastMessage = messages.first()
+	message.channel.send(lastMessage.content)
+    }).catch(err => {
+    console.error(err)
+    })
+    }
+  }
+});
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 //*****************************************************************************************************//
 //**********************************SELF ASSIGNED ROLES***********************************************//
 client.on('message', (message) => {
@@ -43,9 +64,6 @@ message.member.addRole(notify).catch(console.error);
 message.channel.send("" + message.author + " Joined Notifications");
 }
 }});
-
-	
-	
 
 	
 //**********************TB1 ROLES***************************THIS IS FOR LEADERS**********************//
