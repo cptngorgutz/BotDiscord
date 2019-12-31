@@ -37,7 +37,7 @@ client.on('message', message => {
     if(message.content.startsWith('!blitz')) {
 
       // Get the channel to fetch the message from.
-      const channelToCheck = message.guild.channels.get('661209488996696104')
+      const channelToCheck = <client>.channels.get('661209488996696104')
 
       // Fetch the last message from the mentioned channel.
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
