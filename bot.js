@@ -33,11 +33,11 @@ client.on('guildMemberAdd', function(member)
 client.on('message', message => {
 
   // Check if the message was sent in the channel with the specified id.
-  if(message.channel.id === '428968670908383242'){
+  if(message.channel.id === '661209488996696104'){
     if(message.content.startsWith('!blitz')) {
-	message.channel.bulkDelete(1)
+
       // Get the channel to fetch the message from.
-      const channelToCheck = message.guild.channels.get('661209488996696104')
+      const channelToCheck = message.guild.channels.get('599409850031669267')
 
       // Fetch the last message from the mentioned channel.
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
