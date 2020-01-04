@@ -29,7 +29,7 @@ client.on('guildMemberAdd', function(member)
 	}})
 });	 
 
-//@@@@@@@@@@@@@@@@@@@@@@@@@@BLITZ PREDICTIONS@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//blitz predictions
 client.on('message', message => {
 
   // Check if the message was sent in the channel with the specified id.
@@ -49,7 +49,23 @@ client.on('message', message => {
     }
   }
 });
-//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//get uniques
+client.on('message', message => {
+if(message.content.startsWith('!uniques')) {
+
+      // Get the channel to fetch the message from.
+      const channelToCheck = client.channels.get('662690786755870741')
+
+      // Fetch the last message from the mentioned channel.
+    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+    const lastMessage = messages.first()
+	message.channel.send(lastMessage.content)
+    }).catch(err => {
+    console.error(err)
+    })
+    }
+});
+
 //*****************************************************************************************************//
 //**********************************SELF ASSIGNED ROLES***********************************************//
 client.on('message', (message) => {
@@ -1611,10 +1627,10 @@ if (msg.content === '!dafuq3') {
 	msg.channel.bulkDelete(1)
 }
 //UNIQUE GEAR
-	if (msg.content === '!uniques') {
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/uniques.png')] });
-	msg.channel.bulkDelete(1)
-	}
+//	if (msg.content === '!uniques') {
+//	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/uniques.png')] });
+//	msg.channel.bulkDelete(1)
+//	}
 	
 //------------------------------------------------//
 //Character Tiers
