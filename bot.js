@@ -35,14 +35,13 @@ client.on('message', message => {
   // Check if the message was sent in the channel with the specified id.
   if(message.channel.id === '428968670908383242'){
     if(message.content.startsWith('!blitz')) {
-
-      // Get the channel to fetch the message from.
-      const channelToCheck = client.channels.get('661209488996696104')
-
-      // Fetch the last message from the mentioned channel.
+    const channelToCheck = client.channels.get('661209488996696104')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
-    const lastMessage = messages.first()
-	message.channel.send(lastMessage.content)
+    const lastMessage = messages.first().attachments.first()
+	const Attachment = require('discord.js').Attachment;
+	const attachment = new Attachment(lastMessage.url)
+	message.channel.send(attachment);
+	//message.channel.send(lastMessage.url)
     }).catch(err => {
     console.error(err)
     })
@@ -50,20 +49,19 @@ client.on('message', message => {
   }
 });
 
-//Orb blitz predictions
+//orb blitz predictions
 client.on('message', message => {
 
   // Check if the message was sent in the channel with the specified id.
   if(message.channel.id === '428968670908383242'){
     if(message.content.startsWith('!blitz2')) {
-
-      // Get the channel to fetch the message from.
-      const channelToCheck = client.channels.get('663349888633012224')
-
-      // Fetch the last message from the mentioned channel.
+    const channelToCheck = client.channels.get('663349888633012224')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
-    const lastMessage = messages.first()
-	message.channel.send(lastMessage.content)
+    const lastMessage = messages.first().attachments.first()
+	const Attachment = require('discord.js').Attachment;
+	const attachment = new Attachment(lastMessage.url)
+	message.channel.send(attachment);
+	//message.channel.send(lastMessage.url)
     }).catch(err => {
     console.error(err)
     })
@@ -74,15 +72,13 @@ client.on('message', message => {
 
 //get uniques
 client.on('message', message => {
-if(message.content.startsWith('!uniques')) {
-
-      // Get the channel to fetch the message from.
-      const channelToCheck = client.channels.get('662690786755870741')
-
-      // Fetch the last message from the mentioned channel.
+    if(message.content.startsWith('!uniques')) {
+    const channelToCheck = client.channels.get('662690786755870741')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
-    const lastMessage = messages.first()
-	message.channel.send(lastMessage.content)
+    const lastMessage = messages.first().attachments.first()
+	const Attachment = require('discord.js').Attachment;
+	const attachment = new Attachment(lastMessage.url)
+	message.channel.send(attachment);
     }).catch(err => {
     console.error(err)
     })
