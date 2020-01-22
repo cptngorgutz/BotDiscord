@@ -1765,4 +1765,46 @@ if (msg.content === '!dafuq3') {
 }
 );
 
+
+
+//AWAY NOTES
+client.on("message", async message => {
+if(message.content.startsWith('!away')) {
+const awaynoteschannel = client.channels.get('600465818014449674')
+const messages1 = await message.channel.fetchMessages({ limit: 1 });
+const embed = new Discord.RichEmbed()
+const Text = messages1.first().content;
+
+const TEXT = new Discord.RichEmbed()
+.setColor('#0099ff')
+.setDescription(Text.content)
+
+const TB1 = message.guild.roles.find(role => role.name === 'TB1');
+const TB2 = message.guild.roles.find(role => role.name === 'TB2');
+const TB3 = message.guild.roles.find(role => role.name === 'TB3');
+message.channel.bulkDelete(1)
+if (message.member.roles.find(role => role.name === 'TB1')) {
+embed.setColor('#0099ff')
+embed.setDescription("**The Beyonders \n**"  + message.author + " " + Text)
+embed.setTimestamp()
+awaynoteschannel.send(embed);
+message.channel.send("Away-note Received.");
+}
+if (message.member.roles.find(role => role.name === 'TB2')) {
+embed.setColor('#0099ff')
+embed.setDescription("**The Beyonders II \n**" + message.author + " " + Text)
+embed.setTimestamp()
+awaynoteschannel.send(embed);
+message.channel.send("Away-note Received.");
+}
+if (message.member.roles.find(role => role.name === 'TB3')) {
+embed.setColor('#0099ff')
+embed.setDescription("**The Beyonders III \n**" + message.author + " " + Text)
+embed.setTimestamp()
+awaynoteschannel.send(embed);
+message.channel.send("Away-note Received.");
+}
+
+}
+});
 client.login(process.env.TOKEN);
