@@ -1809,7 +1809,7 @@ message.channel.send("Away-note Received.");
 });
 
 //COMMANDS
-client.on("message", message {
+client.on('message', message => {	
 if (message.content === '!commands') {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
