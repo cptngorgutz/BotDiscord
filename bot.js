@@ -1807,4 +1807,18 @@ message.channel.send("Away-note Received.");
 
 }
 });
+
+//COMMANDS
+client.on("message", message {
+if (message.content === '!commands') {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("**Commands List** \n \n**Add away note** \n!away [Text] (Removes away message and informs captains of your circumstances) \n \n**Uniques** \n!uniques (Infographic showing uniques list) \n \n**Blitz Predictions** \n!blitz (Shows current blitz predictions, !blitz2 for orb assault blitz) \n \n**Legendary Events** \n!event [legendary name e.g shuri] \n \n**Character Infographic** \n![charactername] ")
+	.setThumbnail('https://i.imgur.com/M2II5ei.png') 
+	message.channel.send(exampleEmbed);
+}
+});
+
+
+
 client.login(process.env.TOKEN);
