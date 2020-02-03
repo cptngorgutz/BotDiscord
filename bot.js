@@ -1532,7 +1532,7 @@ if (msg.content === '!vaystfu') {
 	msg.channel.bulkDelete(1)
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setThumbnail('https://i.imgur.com/tVcDb5u.gif') 
+	.setImage('https://i.imgur.com/tVcDb5u.gif') 
 	msg.channel.send(exampleEmbed);
 }
 
