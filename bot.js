@@ -1651,22 +1651,22 @@ if(command === 'event') {
 if(fury === "fury"){
 message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/furyevent.png')] });
 }
-if(ironman === 'ironman'){
+if(ironman === "ironman"){
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ironmanevent.png')] });
 }
-if(magneto === 'magneto'){
+if(magneto === "magneto"){
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/magnetoevent.png')] });	
 }
-if(shuri === 'shuri'){
+if(shuri === "shuri"){
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/shurievent.png')] });
 }
-if(starlord === 'starlord'){
+if(starlord === "starlord"){
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/starlordevent.png')] });  	
 }
-if(phoenix === 'phoenix'){
+if(phoenix === "phoenix"){
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/phoenixevent.png')] }); 
 }
-if(iw === "iw" || iw === 'invisiblewoman' || iw === 'invisiblewoman' || iw === 'suestorm'){
+if(iw === "iw" || iw === "invisiblewoman" || iw === "invisiblewoman" || iw === "suestorm"){
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/invisibleevent.png')] }); 
 }
 }
