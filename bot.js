@@ -1632,8 +1632,10 @@ if (msg.content === '!dafuq3') {
 }
 
 //--------------------------------------------------------------------------------------------------------------
+});
 
 //EVENTS
+client.on("message", message => {
 const args = message.content.toLowerCase().slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
 let fury = args[0]; 
@@ -1680,8 +1682,11 @@ if(iw === "iw" || iw === 'invisiblewoman' || iw === 'invisiblewoman' || iw === '
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/invisibleevent.png')] }); 
 	msg.channel.bulkDelete(1)
 }
+}
+});
 
 //event requirements
+client.on('message', async msg =>  {
 	if (msg.content === '!events') {
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/eventrequirements.png')] });
 	msg.channel.bulkDelete(1)
