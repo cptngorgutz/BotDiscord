@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-// const config = require('./config.json');
+const config = require('./config.json');
 
 //client.on('ready', () => {
 //    console.log(`Logged in as ${client.user.tag}!`);
@@ -1634,35 +1634,49 @@ if (msg.content === '!dafuq3') {
 //--------------------------------------------------------------------------------------------------------------
 
 //EVENTS
-	if (msg.content === '!event fury') {
+const args = message.content.toLowerCase().slice(config.prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
+let fury = args[0]; 
+let ironman = args[0]; 
+let magneto = args[0]; 
+let shuri = args[0];  
+let starlord = args[0]; 
+let phoenix = args[0]; 
+let iw = args[0];
+
+if(command === 'event') {
+
+if(fury === 'fury'){
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/furyevent.png')] });
 	msg.channel.bulkDelete(1)
 }
-	if (msg.content === '!event ironman') {
+
+if(ironman === 'ironman'){
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ironmanevent.png')] });
 	msg.channel.bulkDelete(1)
 }
 
-	if (msg.content === '!event magneto') {
+if(magneto === 'magneto'){
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/magnetoevent.png')] });	
 	msg.channel.bulkDelete(1)
 }
 
-	if (msg.content === '!event shuri') {
+if(shuri === 'shuri'){
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/shurievent.png')] });
 	msg.channel.bulkDelete(1)
 }
 
-	if (msg.content === '!event starlord') {
+if(starlord === 'starlord'){
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/starlordevent.png')] });  	
 	msg.channel.bulkDelete(1)
 }
 
-	if (msg.content === '!event phoenix') {
+if(phoenix === 'phoenix'){
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/phoenixevent.png')] }); 
 	msg.channel.bulkDelete(1)
 }
-	if (msg.content === '!event iw' || msg.content === '!event invisiblewoman' || msg.content === '!event invisible woman' || msg.content === '!event suestorm' || msg.content === '!event sue storm') {
+
+if(iw === "iw" || iw === 'invisiblewoman' || iw === 'invisiblewoman' || iw === 'suestorm'){
 	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/invisibleevent.png')] }); 
 	msg.channel.bulkDelete(1)
 }
