@@ -1638,49 +1638,36 @@ if (msg.content === '!dafuq3') {
 client.on("message", message => {
 const args = message.content.toLowerCase().slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
-let fury = args[1]; 
-let ironman = args[1]; 
-let magneto = args[1]; 
-let shuri = args[1];  
-let starlord = args[1]; 
-let phoenix = args[1]; 
-let iw = args[1];
+let fury = args[0]; 
+let ironman = args[0]; 
+let magneto = args[0]; 
+let shuri = args[0];  
+let starlord = args[0]; 
+let phoenix = args[0]; 
+let iw = args[0];
 
+//EVERY CHARACTER
 if(command === 'event') {
-
-if(fury === 'fury'){
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/furyevent.png')] });
-	msg.channel.bulkDelete(1)
+if(fury === "fury"){
+message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/furyevent.png')] });
 }
-
 if(ironman === 'ironman'){
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ironmanevent.png')] });
-	msg.channel.bulkDelete(1)
+	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/ironmanevent.png')] });
 }
-
 if(magneto === 'magneto'){
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/magnetoevent.png')] });	
-	msg.channel.bulkDelete(1)
+	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/magnetoevent.png')] });	
 }
-
 if(shuri === 'shuri'){
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/shurievent.png')] });
-	msg.channel.bulkDelete(1)
+	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/shurievent.png')] });
 }
-
 if(starlord === 'starlord'){
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/starlordevent.png')] });  	
-	msg.channel.bulkDelete(1)
+	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/starlordevent.png')] });  	
 }
-
 if(phoenix === 'phoenix'){
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/phoenixevent.png')] }); 
-	msg.channel.bulkDelete(1)
+	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/phoenixevent.png')] }); 
 }
-
 if(iw === "iw" || iw === 'invisiblewoman' || iw === 'invisiblewoman' || iw === 'suestorm'){
-	msg.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/invisibleevent.png')] }); 
-	msg.channel.bulkDelete(1)
+	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/invisibleevent.png')] }); 
 }
 }
 });
