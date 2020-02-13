@@ -1638,13 +1638,13 @@ if (msg.content === '!dafuq3') {
 client.on("message", message => {
 const args = message.content.toLowerCase().slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
-let fury = args[0]; 
-let ironman = args[0]; 
-let magneto = args[0]; 
-let shuri = args[0];  
-let starlord = args[0]; 
-let phoenix = args[0]; 
-let iw = args[0];
+let fury = args[1]; 
+let ironman = args[1]; 
+let magneto = args[1]; 
+let shuri = args[1];  
+let starlord = args[1]; 
+let phoenix = args[1]; 
+let iw = args[1];
 
 if(command === 'event') {
 
