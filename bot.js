@@ -29,13 +29,14 @@ client.on('guildMemberAdd', function(member)
 	}})
 });	 
 
-//blitz predictions
-client.on('message', message => {
 
-  // Check if the message was sent in the channel with the specified id.
-  if(message.channel.id === '428968670908383242'){
-    if(message.content.startsWith('!blitz')) {
-    const channelToCheck = client.channels.get('599409850031669267')
+//BLITZ PREDICTIONS & UNIQUES (FINISHED)
+client.on("message", message => {
+const args = message.content.toLowerCase().slice(config.prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
+if(command === 'blitz') {
+if(message.channel.id === '428968670908383242'){
+	const channelToCheck = client.channels.get('599409850031669267')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
@@ -45,16 +46,10 @@ client.on('message', message => {
     }).catch(err => {
     console.error(err)
     })
-    }
-  }
-});
-
-//orb blitz predictions
-client.on('message', message => {
-
-  // Check if the message was sent in the channel with the specified id.
-  if(message.channel.id === '428968670908383242'){
-    if(message.content.startsWith('!blitz2')) {
+}
+}
+if(command === 'blitz2') {
+if(message.channel.id === '428968670908383242'){
     const channelToCheck = client.channels.get('663350094309097472')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
@@ -65,14 +60,9 @@ client.on('message', message => {
     }).catch(err => {
     console.error(err)
     })
-    }
-  }
-});
-
-
-//get uniques
-client.on('message', message => {
-    if(message.content.startsWith('!uniques')) {
+}
+}
+if(command === 'uniques') {
     const channelToCheck = client.channels.get('662765504041058320')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
@@ -82,8 +72,9 @@ client.on('message', message => {
     }).catch(err => {
     console.error(err)
     })
-    }
+}
 });
+
 
 //*****************************************************************************************************//
 //**********************************SELF ASSIGNED ROLES***********************************************//
