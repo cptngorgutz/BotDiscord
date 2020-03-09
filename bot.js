@@ -127,14 +127,14 @@ userToModify.removeRole(roleToAdd).catch(console.error);
 message.guild.channels.find(c => c.name === 'leader-logs').send("tb1recruit Role was REMOVED from " + userToModify + " by " + message.author);
 message.channel.bulkDelete(1)
 } 
-if(message.content === '!add tb2recruit') {
+if (message.content === '!add tb2recruit') {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("575668979008405504");
 userToModify.addRole(roleToAdd).catch(console.error);
 message.guild.channels.find(c => c.name === 'leader-logs').send("tb2recruit Role was GIVEN by " + userToModify + " by " + message.author);
 message.channel.bulkDelete(1)
 }
-if(message.content === '!remove tb2recruit') {
+if (message.content === '!remove tb2recruit') {
 let userToModify = message.mentions.members.first();
 let roleToAdd = message.guild.roles.get("575668979008405504"); 
 userToModify.removeRole(roleToAdd).catch(console.error);
