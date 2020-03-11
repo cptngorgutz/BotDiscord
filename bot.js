@@ -1836,7 +1836,7 @@ const command = args.shift().toLowerCase();
 if (message.content === '!admincommands') {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("**Admin Commands List** \n \n**----------------RAID----------------** \n**!u6/u7/a4/b4/g4 (Only works in raid chat)** \nPings@ everyone [chosenraid] launched \n \n**!raid ultimus 6/7 or !raid alpha/beta/gamma 4**\n(Only works in claim channels) \nSends new claims for [chosenraid] \n\n**!refresh alpha/beta/gamma 4** \n(Only works in event/greek channels) \nSlowly deletes old claims and sends out new raid claims for [chosenraid] (takes approx 8 minutes)")
+	.setDescription("**Admin Commands List** \n \n**RAIDS:* \n**!u6/u7/a4/b4/g4** \n(Only works in raid chat) \nPings@ everyone \n[chosenraid] launched \n \n**!raid** \n**ultimus 6/7 or** \n**alpha/beta/gamma 4**\n(Only works in claim channels) \nSends new claims for [chosenraid] \n\n**!refresh** \n**alpha/beta/gamma 4** \n(Only works in event/greek channels) \nSlowly deletes old claims and sends out new raid claims for [chosenraid] (takes approx 8 minutes)")
 	.setThumbnail('https://i.imgur.com/9eCZztr.png') 
 	message.channel.send(exampleEmbed);
 }
