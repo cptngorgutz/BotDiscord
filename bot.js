@@ -8,7 +8,7 @@ const config = require('./config.json');
 
 client.on('guildMemberAdd', function(member)
 {
-	let memberRole = member.guild.roles.find("name", "recruit");
+	let memberRole = member.guild.roles.find(role => role.name === 'recruit');
 	member.addRole(memberRole);
  	member.guild.channels.get('551566689620197376').send(`Welcome to The Beyonders! ${member}. \nOne of the captains will be with you shortly. \nWe hope you enjoy your stay here. \nPlease post a profile picture in the <#630780029013458954> channel. Thankyou.`);
 	//NEW USERS JOIN
@@ -92,291 +92,386 @@ message.channel.send("" + message.author + " Joined Notifications");
 }});
 
 	
-//**********************TB1 ROLES***************************THIS IS FOR LEADERS**********************//
+//*********************************THIS IS FOR LEADERS**********************//
 client.on('message', (message) => {
-//                        GADD               BOB                   RAIN                  SIREN              VAYGRANT               BUSTA               CLEAVELANDS              AZYREL                  LYLE                DAMIAN                WES SNIPES             RADA353
-const admin = [ '174307382296313857', '212232190358978560', '416730768388390912', '297448131698753538', '159953251691790336', '354421064815607808', '344950903910170655', '330052499442499585', '312361420547162123', '593958506885808129', '434740962389131274', '475479797313699841', ]
-if(admin.includes(message.author.id)){	
-//give roles
-if(message.content.startsWith('!add recruit')) {
-let userToModify = message.mentions.members.first();
-let roleToAdd = message.guild.roles.get("476045239719821324");
-userToModify.addRole(roleToAdd).catch(console.error);
-message.guild.channels.find(c => c.name === 'leader-logs').send("RECRUIT Role was GIVEN to " + userToModify + " by " + message.author);
-message.channel.bulkDelete(1)
-}
-// .find(c => c.name === 'logs')
-if(message.content.startsWith('!remove recruit')) {
-let userToModify = message.mentions.members.first();
-let roleToAdd = message.guild.roles.get("476045239719821324"); 
-userToModify.removeRole(roleToAdd).catch(console.error);
-message.guild.channels.find(c => c.name === 'leader-logs').send("RECRUIT Role was REMOVED from " + userToModify + " by " + message.author);
-message.channel.bulkDelete(1)
-} 
-if(message.content.startsWith('!add tb1recruit')) {
-let userToModify = message.mentions.members.first();
-let roleToAdd = message.guild.roles.get("575668741770182677");
-userToModify.addRole(roleToAdd).catch(console.error);
-message.guild.channels.find(c => c.name === 'leader-logs').send("tb1recruit Role was GIVEN to " + userToModify + " by " + message.author);
-message.channel.bulkDelete(1)
-}
-if(message.content.startsWith('!remove tb1recruit')) {
-let userToModify = message.mentions.members.first();
-let roleToAdd = message.guild.roles.get("575668741770182677"); 
-userToModify.removeRole(roleToAdd).catch(console.error);
-message.guild.channels.find(c => c.name === 'leader-logs').send("tb1recruit Role was REMOVED from " + userToModify + " by " + message.author);
-message.channel.bulkDelete(1)
-} 
-if (message.content === '!add tb2recruit') {
-let userToModify = message.mentions.members.first();
-let roleToAdd = message.guild.roles.get("575668979008405504");
-userToModify.addRole(roleToAdd).catch(console.error);
-message.guild.channels.find(c => c.name === 'leader-logs').send("tb2recruit Role was GIVEN by " + userToModify + " by " + message.author);
-message.channel.bulkDelete(1)
-}
-if (message.content === '!remove tb2recruit') {
-let userToModify = message.mentions.members.first();
-let roleToAdd = message.guild.roles.get("575668979008405504"); 
-userToModify.removeRole(roleToAdd).catch(console.error);
-message.guild.channels.find(c => c.name === 'leader-logs').send("tb2recruit Role was REMOVED by " + userToModify + " by " + message.author);
-message.channel.bulkDelete(1)
-}
-if(message.content.startsWith('!add tb2recruiter')) {
-let userToModify = message.mentions.members.first();
-let roleToAdd = message.guild.roles.get("580453859650961408");
-userToModify.addRole(roleToAdd).catch(console.error);
-message.guild.channels.find(c => c.name === 'leader-logs').send("tb2recruiter Role was GIVEN to " + userToModify + " by " + message.author);
-message.channel.bulkDelete(1)
-}
-if(message.content.startsWith('!remove tb2recruiter')) {
-let userToModify = message.mentions.members.first();
-let roleToAdd = message.guild.roles.get("580453859650961408");
-userToModify.removeRole(roleToAdd).catch(console.error);
-message.guild.channels.find(c => c.name === 'leader-logs').send("tb2recruiter Role was REMOVED from " + userToModify + " by " + message.author);
-message.channel.bulkDelete(1)
-}
-if(message.content.startsWith('!add tb3recruit')) {
-let userToModify = message.mentions.members.first();
-let roleToAdd = message.guild.roles.get("575668979008405504");
-userToModify.addRole(roleToAdd).catch(console.error);
-message.guild.channels.find(c => c.name === 'leader-logs').send("tb2recruit Role was GIVEN by " + userToModify + " by " + message.author);
-message.channel.bulkDelete(1)
-}
-if(message.content.startsWith('!remove tb3recruit')) {
-let userToModify = message.mentions.members.first();
-let roleToAdd = message.guild.roles.get("643128934187139072"); 
-userToModify.removeRole(roleToAdd).catch(console.error);
-message.guild.channels.find(c => c.name === 'leader-logs').send("tb3recruit Role was REMOVED by " + userToModify + " by " + message.author);
-message.channel.bulkDelete(1)
-}
-if(message.content.startsWith('!add tb3recruiter')) {
-let userToModify = message.mentions.members.first();
-let roleToAdd = message.guild.roles.get("643176503542022212");
-userToModify.addRole(roleToAdd).catch(console.error);
-message.guild.channels.find(c => c.name === 'leader-logs').send("tb3recruiter Role was GIVEN to " + userToModify + " by " + message.author);
-message.channel.bulkDelete(1)
-}
-if(message.content.startsWith('!remove tb3recruiter')) {
-let userToModify = message.mentions.members.first();
-let roleToAdd = message.guild.roles.get("643176503542022212");
-userToModify.removeRole(roleToAdd).catch(console.error);
-message.guild.channels.find(c => c.name === 'leader-logs').send("tb3recruiter Role was REMOVED from " + userToModify + " by " + message.author);
-message.channel.bulkDelete(1)
-}
+const args = message.content.toLowerCase().slice(config.prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
+const TB1captains = message.guild.roles.find(role => role.name === 'TB1 Captain');
+const TB2captains = message.guild.roles.find(role => role.name === 'TB2 Captain');
+const TB3captains = message.guild.roles.find(role => role.name === 'TB3 Captain');
 
-//launch raids
-if(message.content.startsWith('!u6')) {
+//RAID LAUNCHES                   //RAID CHANNELS&TESTING 
+if (message.channel.id === '429231250600099850' || message.channel.id === '462365472248299521' || message.channel.id === '643140903300497408' || message.channel.id === '606119830516400162') { 
+if(command === 'u6') {
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
-message.channel.send("@everyone Ultimus 6 Launched")  
+message.channel.send("@everyone Ultimus 6 Launched")
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-
-if(message.content.startsWith('!u7')) {
+}
+if(command === 'u7') {
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Ultimus 7 Launched")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-
-if(message.content.startsWith('!a4')) {
+}
+if(command === 'a4') {
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Alpha 4 Launched")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-
-if(message.content.startsWith('!b4')) {
+}
+if(command === 'b4') {
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Beta 4 Launched")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-
-if(message.content.startsWith('!g4')) {
+}
+if(command === 'g4') {
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Gamma 4 Launched")  
+} else {
+message.channel.send("You dont have permission to use this command.")
+}
+}
 }
 
 //WAR COMMANDS
-if (message.content === '!fd1 l' || message.content === '!FD1 L' || message.content === '!fd1 L' || message.content === '!FD1 l')	{
+if (message.channel.id === '666305824813219870' || message.channel.id === '617707484626288672' || message.channel.id === '661221254958940220' || message.channel.id === '606119830516400162') { //WAR CHANNEL & test room 
+let l = args[0];
+let r = args[0];
+let f = args[0];
+let ffa = args[0]; 
+if(command === 'fd1') {
+if(l === "l"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 1 - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!fd1 r' || message.content === '!FD1 R' || message.content === '!fd1 R' || message.content === '!FD1 r')	{
+}
+if(r === "r"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 1 - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!fd1 f' || message.content === '!FD1 F' || message.content === '!fd1 F' || message.content === '!FD1 f')	{
+}
+if(f === "f"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 1 - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!fd2 l' || message.content === '!FD2 L' || message.content === '!fd2 L' || message.content === '!FD2 l')	{
+}
+}
+if(command === 'fd2') {
+if(l === "l"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 2 - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!fd2 r' || message.content === '!FD2 R' || message.content === '!fd2 R' || message.content === '!FD2 r')	{
+}
+if(r === "r"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 2 - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!fd2 f' || message.content === '!FD2 F' || message.content === '!fd2 F' || message.content === '!FD2 f')	{
+}
+if(f === "f"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 2 - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!fd3 l' || message.content === '!FD3 L' || message.content === '!fd3 L' || message.content === '!FD3 l')	{
+}
+}
+if(command === 'fd3') {
+if(l === "l"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 3 - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!fd3 r' || message.content === '!FD3 R' || message.content === '!fd3 R' || message.content === '!FD3 r')	{
+}
+if(r === "r"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 3 - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!fd3 f' || message.content === '!FD3 F' || message.content === '!fd3 F' || message.content === '!FD3 f')	{
+}
+if(f === "f"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 3 - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-
-if (message.content === '!han l' || message.content === '!HAN L' || message.content === '!han L' || message.content === '!HAN l')	{
+}
+}
+if(command === 'han') {
+if(l === "l"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Hangar - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!han r' || message.content === '!HAN R' || message.content === '!han R' || message.content === '!HAN r')	{
+}
+if(r === "r"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Hangar - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!han f' || message.content === '!HAN F' || message.content === '!han F' || message.content === '!HAN f')	{
+}
+if(f === "f"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Hangar - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-
-if (message.content === '!eng l' || message.content === '!ENG L' || message.content === '!eng L' || message.content === '!ENG l')	{
+}
+}
+if(command === 'eng') {
+if(l === "l"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Engineering - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!eng r' || message.content === '!ENG R' || message.content === '!eng R' || message.content === '!ENG r')	{
+}
+if(r === "r"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Engineering - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!eng f' || message.content === '!ENG F' || message.content === '!eng F' || message.content === '!ENG f')	{
+}
+if(f === "f"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Engineering - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-
-if (message.content === '!bar l' || message.content === '!BAR L' || message.content === '!bar L' || message.content === '!BAR l')	{
+}
+}
+if(command === 'bar') {
+if(l === "l"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Barracks - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!bar r' || message.content === '!BAR R' || message.content === '!bar R' || message.content === '!BAR r')	{
+}
+if(r === "r"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Barracks - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!bar f' || message.content === '!BAR F' || message.content === '!bar F' || message.content === '!BAR f')	{
+}
+if(f === "f"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Barracks - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-
-if (message.content === '!rea l' || message.content === '!REA L' || message.content === '!rea L' || message.content === '!REA l')	{
+}
+}
+if(command === 'rea') {
+if(l === "l"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Reactor - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!rea r' || message.content === '!REA R' || message.content === '!rea R' || message.content === '!REA r')	{
+}
+if(r === "r"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {  
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Reactor - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!rea f' || message.content === '!REA F' || message.content === '!rea F' || message.content === '!REA f')	{
+}
+if(f === "f"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Reactor - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-
-
-if (message.content === '!arm l' || message.content === '!ARM L' || message.content === '!arm L' || message.content === '!ARM l')	{
+}
+}
+if(command === 'arm') {
+if(l === "l"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Armory - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!arm r' || message.content === '!ARM R' || message.content === '!arm R' || message.content === '!ARM r')	{
+}
+if(r === "r"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Armory - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!arm f' || message.content === '!ARM F' || message.content === '!arm F' || message.content === '!ARM f')	{
+}
+if(f === "f"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Armory - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-
-
-if (message.content === '!bri l' || message.content === '!BRI L' || message.content === '!bri L' || message.content === '!BRI l')	{
+}
+}
+if(command === 'bri') {
+if(l === "l"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Bridge - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!bri r' || message.content === '!BRI R' || message.content === '!bri R' || message.content === '!BRI r')	{
+}
+if(r === "r"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Bridge - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!bri f' || message.content === '!BRI F' || message.content === '!bri F' || message.content === '!BRI f')	{
+}
+if(f === "f"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {  
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Bridge - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-
-if (message.content === '!car l' || message.content === '!CAR L' || message.content === '!car L' || message.content === '!CAR l')	{
+}
+}
+if(command === 'car') {
+if(l === "l"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Cargo - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!car r' || message.content === '!CAR R' || message.content === '!car R' || message.content === '!CAR r')	{
+}
+if(r === "r"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Cargo - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!car f' || message.content === '!CAR F' || message.content === '!car F' || message.content === '!CAR f')	{
+}
+if(f === "f"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Cargo - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-
-if (message.content === '!sec l' || message.content === '!SEC L' || message.content === '!sec L' || message.content === '!SEC l')	{
+}
+}
+if(command === 'sec') {
+if(l === "l"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Security - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!sec r' || message.content === '!SEC R' || message.content === '!sec R' || message.content === '!SEC r')	{
+}
+if(r === "r"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Security - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!sec f' || message.content === '!SEC F' || message.content === '!sec F' || message.content === '!SEC f')	{
+}
+if(f === "f"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Security - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-
-
-if (message.content === '!med l' || message.content === '!MED L' || message.content === '!med L' || message.content === '!MED l')	{
+}
+}
+if(command === 'med') {
+if(l === "l"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Medbay - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!med r' || message.content === '!MED R' || message.content === '!med R' || message.content === '!MED r')	{
+}
+if(r === "r"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Medbay - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-if (message.content === '!med f' || message.content === '!MED F' || message.content === '!med F' || message.content === '!MED f')	{
+}
+if(f === "f"){
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Medbay - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
-
-if (message.content === '!ffa' || message.content === '!FFA' || message.content === '!Ffa' || message.content === '!ffA')	{
+}
+}
+if(command === 'ffa') {
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
-message.channel.send("@everyone - Free For All")  
+message.channel.send("@everyone Free For All")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
+}
+}//IF USER IS IN WAR CHANNELS
 
-else {
-//do nothing
-}
-}
 });
 //*****************************************************************************************************//
 
@@ -1734,22 +1829,21 @@ client.on('message', async msg =>  {
 	
 /////////////
 	
-//Output commands
-	if (msg.content === '!commands2') {
-	// inside a command, event listener, etc.
-	const testing = new Discord.RichEmbed()
+//COMMANDS LIST
+client.on('message', message => {
+const args = message.content.toLowerCase().slice(config.prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
+if(command === 'admincommands') {
+	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setAuthor('The Beyonder', 'https://i.imgur.com/KIfYXR4.jpg', 'https://msf.gg/characters/Ultron')
-	.setDescription('**Commands List**')
-	.setThumbnail('https://i.imgur.com/KIfYXR4.jpg') //./Character Tiers/Ultron.png 
-	.addField('``![characterName]``', 'Info sheet on chosen character (ex. !ultron) \n ')
-	.addField('``!event [characterName]``', 'Lowest required team for chosen legendary event (ex. !event starlord) \n ', true)
-	.addField('``!events``', 'Requirements for all legendary events \n ', true)
-	.addField('``!uniques``', ' List of unique gear needed for all characters \n ', true)
-	msg.channel.send(testing);
+	.setDescription("**Admin Commands List** \n \n**RAIDS:** \n**!u6/u7/a4/b4/g4** \n(Only works in raid chat) \nPings @ everyone \n[chosenraid] launched \n \n**!raid** \n**ultimus 6/7 or** \n**alpha/beta/gamma 4**\n(Only works in claim channels) \nSends new claims for [chosenraid] \n\n**!refresh** \n**alpha/beta/gamma 4** \n(Only works in event/greek channels) \nSlowly deletes old claims and sends out new raid claims for [chosenraid] (takes approx 8 minutes)")
+	.setThumbnail('https://i.imgur.com/9eCZztr.png') 
+	message.channel.send(exampleEmbed);
 }
-	
-	
+});
+
+
+
 	
 	
 	
@@ -1848,7 +1942,7 @@ message.channel.send("Away-note Received.");
 
 //COMMANDS
 client.on('message', message => {	
-if (message.content === '!commands') {
+if (message.content === '!utorjgn') {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("**Commands List** \n \n**Add away note                     ** ```!away``` *[reason for being away]* \n*(Removes away message for privacy and informs captains of your circumstances)* \n \n**Uniques                        ** ```!uniques``` *(Infographic showing uniques list)* \n \n**Blitz Predictions                ** ```!blitz``` *(Shows current blitz predictions, !blitz2 for orb assault blitz)* \n \n**Legendary Events                        ** ```!event``` *[legendary name e.g shuri]* \n \n**Character Infographic                         ** ```![charactername]``` ")
