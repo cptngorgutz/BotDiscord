@@ -178,7 +178,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 if(command === 'fd2') {
 if(l === "l"){
-if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 2 - Left Side")  
 } else {
