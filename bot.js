@@ -106,30 +106,40 @@ if(command === 'u6') {
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Ultimus 6 Launched")
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(command === 'u7') {
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Ultimus 7 Launched")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(command === 'a4') {
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Alpha 4 Launched")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(command === 'b4') {
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Beta 4 Launched")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(command === 'g4') {
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Gamma 4 Launched")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 }
@@ -145,18 +155,24 @@ if(l === "l"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 1 - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(r === "r"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 1 - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(f === "f"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 1 - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 }
@@ -165,18 +181,24 @@ if(l === "l"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 2 - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(r === "r"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 2 - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(f === "f"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 2 - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 }
@@ -185,18 +207,24 @@ if(l === "l"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 3 - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(r === "r"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 3 - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(f === "f"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Flight Deck 3 - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 }
@@ -205,18 +233,24 @@ if(l === "l"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Hangar - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(r === "r"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Hangar - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(f === "f"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Hangar - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 }
@@ -225,18 +259,24 @@ if(l === "l"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Engineering - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(r === "r"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Engineering - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(f === "f"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Engineering - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 }
@@ -245,18 +285,24 @@ if(l === "l"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Barracks - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(r === "r"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Barracks - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(f === "f"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Barracks - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 }
@@ -265,18 +311,24 @@ if(l === "l"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Reactor - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(r === "r"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {  
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Reactor - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(f === "f"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Reactor - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 }
@@ -285,18 +337,24 @@ if(l === "l"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Armory - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(r === "r"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Armory - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(f === "f"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Armory - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 }
@@ -305,18 +363,24 @@ if(l === "l"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Bridge - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(r === "r"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Bridge - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(f === "f"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {  
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Bridge - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 }
@@ -325,18 +389,24 @@ if(l === "l"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Cargo - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(r === "r"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Cargo - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(f === "f"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Cargo - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 }
@@ -345,18 +415,24 @@ if(l === "l"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Security - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(r === "r"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Security - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(f === "f"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Security - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 }
@@ -365,18 +441,24 @@ if(l === "l"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Medbay - Left Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(r === "r"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Medbay - Right Side")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 if(f === "f"){
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Medbay - Full Clear")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 }
@@ -384,6 +466,8 @@ if(command === 'ffa') {
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {   
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Free For All")  
+} else {
+message.channel.send("You dont have permission to use this command.")
 }
 }
 }//IF USER IS IN WAR CHANNELS
