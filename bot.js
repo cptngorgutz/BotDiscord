@@ -1829,22 +1829,29 @@ client.on('message', async msg =>  {
 	
 /////////////
 	
-//Output commands
-	if (msg.content === '!commands2') {
-	// inside a command, event listener, etc.
-	const testing = new Discord.RichEmbed()
+//COMMANDS LIST
+const args = message.content.toLowerCase().slice(config.prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
+client.on('message', message => {	
+if (message.content === '!admincommands') {
+	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setAuthor('The Beyonder', 'https://i.imgur.com/KIfYXR4.jpg', 'https://msf.gg/characters/Ultron')
-	.setDescription('**Commands List**')
-	.setThumbnail('https://i.imgur.com/KIfYXR4.jpg') //./Character Tiers/Ultron.png 
-	.addField('``![characterName]``', 'Info sheet on chosen character (ex. !ultron) \n ')
-	.addField('``!event [characterName]``', 'Lowest required team for chosen legendary event (ex. !event starlord) \n ', true)
-	.addField('``!events``', 'Requirements for all legendary events \n ', true)
-	.addField('``!uniques``', ' List of unique gear needed for all characters \n ', true)
-	msg.channel.send(testing);
+	.setDescription("**Admin Commands List** \n \n**----------------RAID----------------** \n**!u6/u7/a4/b4/g4 (Only works in raid chat)** \nSends @everyone [chosenraid] launched \n**!raid ultimus 6/7 or !raid alpha/beta/gamma 4 (Only works in claim channels)** \nSends new claims for [chosenraid] \n!refresh alpha/beta/gamma 4 (Only works in event/greek channels) \nSlowly deletes old claims and sends out new raid claims for [chosenraid] (takes approx 8 minutes)")
+	.setThumbnail('https://i.imgur.com/9eCZztr.png') 
+	message.channel.send(exampleEmbed);
 }
-	
-	
+});
+client.on('message', message => {	
+if (message.content === '!basiccommands') {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("**Basic Commands List** \n \n**!away** \nSends away note to captains \n[!away travelling for 2 days] \n(It will remove your message for privacy and inform captains of your circumstances) \n \n**!uniques** \nSends an infographic of uniques tied to characters. \n \n**!blitz** \nShows current blitz predictions, (!blitz2 for orb assault blitz) \n \n**!event [charactername]** \nSends an infographic of lowest reported requirements to beat the legendary event 5/6/7* \n \n**![charactername]** \nSends an infographic of required gear levels for the character GearTier 10/11/12 + 1-13 + T4 recommendations \n \n**-------------CHARACTERS-------------** \n**![charactername] basic** \nSends characters basic information \n**![charactername] special** \nSends characters special information \n**![charactername] ultimate** \nSends characters ultimate information \n**![charactername] passive** \nSends characters passive information \n**![charactername] speed** \nSends characters speed \n**![charactername] unlock** \n Sends characters unlock/farming location \n**![charactername] trait** \nSends characters traits \n**![charactername] kit** \nSends characters full kit \n \n**---------------WAR---------------** \n **!counter [teamname]** \nSends an infographic of war counters \nexample:[!counter aim] \n \n** !counter [teamname+info]** \nSends a detailed guide including text,youtube videos, and winning matchups. \n \n**!submit counter aim** \nSends your text&image to be reviewed by captains. If approved they will be added to the counter infographics. \n**(Image + command must be sent in the same message)** \n \n")
+	.setThumbnail('https://i.imgur.com/9eCZztr.png') 
+	message.channel.send(exampleEmbed);
+}
+});
+
+
 	
 	
 	
