@@ -1901,8 +1901,8 @@ if (message.channel.id === '673261006918516741' || message.channel.id === '60611
 if (args[0] === "counter"){	
 }
 if (args[1] === "aim"){	
-const CheckImage = client.channels.get('666305824813219870')
-const CheckText = client.channels.get('666305824813219870')
+const CheckImage = client.channels.get('606119830516400162')
+const CheckText = client.channels.get('606119830516400162')
 const AimSubmission = client.channels.get('666370149766529054')
 const messages1 = await CheckText.fetchMessages({ limit: 2 });
 const messages2 = await CheckImage.fetchMessages({ limit: 2 });
@@ -1927,8 +1927,8 @@ embed.setImage(Image.url)
 AimSubmission.send(embed);
 CheckText.send("War Counter Submission Received.");
 } else if (args[1] === "asgardians"){
-const CheckImage = client.channels.get('666305824813219870')
-const CheckText = client.channels.get('666305824813219870')
+const CheckImage = client.channels.get('606119830516400162')
+const CheckText = client.channels.get('606119830516400162')
 const AsgardianSubmission = client.channels.get('666384999246725150')
 const messages1 = await CheckText.fetchMessages({ limit: 2 });
 const messages2 = await CheckImage.fetchMessages({ limit: 2 });
@@ -1953,8 +1953,8 @@ embed.setImage(Image.url)
 AsgardianSubmission.send(embed);
 CheckText.send("War Counter Submission Received.");
 } else if (args[1] === "brawlers"){
-const CheckImage = client.channels.get('666305824813219870')
-const CheckText = client.channels.get('666305824813219870')
+const CheckImage = client.channels.get('606119830516400162')
+const CheckText = client.channels.get('606119830516400162')
 const BrawlerSubmission = client.channels.get('666385224174927873')
 const messages1 = await CheckText.fetchMessages({ limit: 2 });
 const messages2 = await CheckImage.fetchMessages({ limit: 2 });
@@ -1979,8 +1979,8 @@ embed.setImage(Image.url)
 BrawlerSubmission.send(embed);
 CheckText.send("War Counter Submission Received.");
 } else if (args[1] === "shield"){
-const CheckImage = client.channels.get('666305824813219870')
-const CheckText = client.channels.get('666305824813219870')
+const CheckImage = client.channels.get('606119830516400162')
+const CheckText = client.channels.get('606119830516400162')
 const ShieldSubmission = client.channels.get('666385470514790440')
 const messages1 = await CheckText.fetchMessages({ limit: 2 });
 const messages2 = await CheckImage.fetchMessages({ limit: 2 });
@@ -2005,8 +2005,8 @@ embed.setImage(Image.url)
 ShieldSubmission.send(embed);
 CheckText.send("War Counter Submission Received.");
 } else if (args[1] === "s6"){	
-const CheckImage = client.channels.get('666305824813219870')
-const CheckText = client.channels.get('666305824813219870')
+const CheckImage = client.channels.get('606119830516400162')
+const CheckText = client.channels.get('606119830516400162')
 const S6Submission = client.channels.get('666385715566739467')
 const messages1 = await CheckText.fetchMessages({ limit: 2 });
 const messages2 = await CheckImage.fetchMessages({ limit: 2 });
