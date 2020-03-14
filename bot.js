@@ -329,7 +329,7 @@ message.channel.send("You dont have permission to use this command.")
 
 
 //LEGENDARY EVENTS
-if(command === 'event'|| command === 'events' || command === 'legendary' || command === 'legendaries') {
+if(command === 'event'|| command === 'events' || command === 'legendary' || command === 'legendaries' || command === 'events' && args[0] === "list") {
 if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && args[1] === "boltagon" || args[0] === "black" && args[1] === "bolt"){
 	const channelToCheck = client.channels.get('688002560640155712')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
@@ -413,7 +413,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
 } else {
 const eventEmbed = new Discord.RichEmbed()
 .setColor('#0099ff')
-.setDescription("**Legendary Events:** \n**!event name** or\n **!legendary charactername** \n \n**Availible characters:** \nFury\nIron Man,\nMagneto,\nShuri,\nStarlord,\nPhoenix,\nInvisible Woman")
+.setDescription("**Legendary Events:** \n**!event name** or\n **!legendary charactername** \n \n**Availible characters:** \nBlack Bolt,\nFury,\nIron Man,\nMagneto,\nPhoenix,\nShuri,\nStarlord,\nInvisible Woman")
 .setThumbnail('https://i.imgur.com/9eCZztr.png') 
 message.channel.send(eventEmbed);
 }
