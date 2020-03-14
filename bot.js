@@ -1713,8 +1713,8 @@ let shield = args[1];
 let s6 = args[1];
 
  //bot spam channel
-if(command === 'counter') {
-if (message.channel.id === '666305824813219870' || message.channel.id === '617707484626288672' || message.channel.id === '661221254958940220') {
+if(command === 'counter') { //123 bot room & bot testing
+if (message.channel.id === '560885677475102740' || message.channel.id === '562757850477101063' || message.channel.id === '643140704624967694' || message.channel.id === '673261006918516741' || message.channel.id === '606119830516400162') {
 if(args[0] == "aim"){
 const aimcounterimage = client.channels.get('666332891730673668')
 aimcounterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -1900,12 +1900,12 @@ message.channel.send(embed);
 message.channel.send("Please use a valid team phrase, such as aim,asgardians,brawlers,shield, or s6.").catch(console.error);	
 }
 } else {
-message.channel.send("Sorry, this doesn't work here. Head to <#666305824813219870> or <#665215273778937876> and try again.").catch(console.error);
+message.channel.send("Sorry, this doesn't work here. Head to <#673261006918516741> or your war chat channel and try again.").catch(console.error);
 }
 }
 
-if(command === 'submit') {
-if (message.channel.id === '666305824813219870' || message.channel.id === '617707484626288672' || message.channel.id === '661221254958940220') {
+if(command === 'submit') { //botroom or bottesting
+if (message.channel.id === '673261006918516741' || message.channel.id === '606119830516400162') {
 if (args[0] === "counter"){	
 }
 if (args[1] === "aim"){	
@@ -2042,7 +2042,7 @@ CheckText.send("War Counter Submission Received.");
 message.channel.send("Please use a valid phrase, such as !submit counter aim,asgardians,brawlers,shield, or s6.").catch(console.error);	
 }
 } else {//channel ID
-message.channel.send("Sorry, this doesn't work here. Head to <#666305824813219870> and try again.").catch(console.error);
+message.channel.send("Sorry, this doesn't work here. Head to <#673261006918516741> and try again.").catch(console.error);
 }
 }//submit
 
