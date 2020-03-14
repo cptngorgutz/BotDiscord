@@ -104,7 +104,7 @@ let args = message.content.toLowerCase().slice(config.prefix.length).trim().spli
 	let Embed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setTitle("Initiate Poll")
-	.setDescription("!poll1 to launch a 1 responce poll 👍 \n!poll2 to launch a 2 responce poll 👍,👎 \n!poll3 to launch a 3 responce poll 1️⃣,2️⃣,3️⃣\n!poll4 to launch a 4 responce poll 1️⃣,2️⃣,3️⃣,4️⃣");	
+	.setDescription("**POLL:** \n**!poll** \nexample:poll2 @ everyone thumbs up if we should abc, thumbs down if you disagree. \n!poll1 to launch a 1 responce poll 👍 \n!poll2 to launch a 2 responce poll 👍,👎 \n!poll3 to launch a 3 responce poll 1️⃣,2️⃣,3️⃣\n!poll4 to launch a 4 responce poll 1️⃣,2️⃣,3️⃣,4️⃣");	
 	message.channel.send(Embed);
 }
 });
