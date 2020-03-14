@@ -232,7 +232,7 @@ message.channel.send("You dont have permission to use this command.")
 if(command === 'commands') {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("**Commands List** \n \n**Add away note                     ** ```!away``` *[reason for being away]* \n*(Removes away message for privacy and informs captains of your circumstances)* \n \n**Uniques                        ** ```!uniques``` *(Infographic showing uniques list)* \n \n**Blitz Predictions                ** ```!blitz``` *(Shows current blitz predictions, !blitz2 for orb assault blitz)* \n \n**Legendary Events                        ** ```!event``` *[legendary name e.g shuri]* \n \n**Character Infographic                         ** ```![charactername]``` ")
+	.setDescription("**Commands List** \n \n**Add away note**\n**!away (reason for being away)** \n*(Removes away message for privacy and informs captains of your circumstances)* \n \n**Uniques** \n**!uniques** \n(Infographic showing uniques list) \n \n**Blitz Predictions** \n**!blitz** \n(Shows current blitz predictions, !blitz2 for orb assault blitz) \n \n**Legendary Events** \n**!event** \n[legendary name e.g shuri]* \n \n**Character Infographic** \n**![charactername]** \nProvides an infographic of gear needed for chosen character.")
 	message.channel.send(exampleEmbed);
 }
 if(command === "purge") { //PURGE MESSAGES
