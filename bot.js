@@ -222,7 +222,7 @@ const TB3captains = message.guild.roles.find(role => role.name === 'TB3 Captain'
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("**Admin Commands List** \n \n**RAIDS:** \n**!u6/u7/a4/b4/g4** \n(Only works in raid chat) \nPings @ everyone \n[chosenraid] launched \n \n**!raid** \n**ultimus 6/7 or** \n**alpha/beta/gamma 4**\n(Only works in claim channels) \nSends new claims for [chosenraid] \n\n**!refresh** \n**alpha/beta/gamma 4** \n(Only works in event/greek channels) \nSlowly deletes old claims and sends out new raid claims for [chosenraid] (takes approx 8 minutes) \n \n**PURGE MESSAGES:** \n**!purge #** \n# being number of lines to delete. \n \n**GIVING ROLES:** \n**!give rolename @mentioned user**\nexample, !give tb1 @username. Current addable roles, tb1,tb2,tb3.")
+	.setDescription("**Admin Commands List** \n \n**RAIDS:** \n**!u6/u7/a4/b4/g4** \n(Only works in raid chat) \nPings @ everyone \n[chosenraid] launched \n \n**!raid** \n**ultimus 6/7 or** \n**alpha/beta/gamma 4**\n(Only works in claim channels) \nSends new claims for [chosenraid] \n\n**!refresh** \n**alpha/beta/gamma 4** \n(Only works in event/greek channels) \nSlowly deletes old claims and sends out new raid claims for [chosenraid] (takes approx 8 minutes) \n \n**PURGE MESSAGES:** \n**!purge #** \n# being number of lines to delete. \n \n**GIVING ROLES:** \n**!give rolename @mentioned user**\nexample, !give tb1 @username. Current addable roles, tb1,tb2,tb3. \n(command will remove recruit role automatically)")
 	.setThumbnail('https://i.imgur.com/9eCZztr.png') 
 	message.channel.send(exampleEmbed);
 } else {
@@ -232,7 +232,7 @@ message.channel.send("You dont have permission to use this command.")
 if(command === 'commands') {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("**Commands List** \n \n**Add away note**\n**!away (reason for being away)** \n*(Removes away message for privacy and informs captains of your circumstances)* \n \n**Uniques** \n**!uniques** \n(Infographic showing uniques list) \n \n**Blitz Predictions** \n**!blitz** \n(Shows current blitz predictions, !blitz2 for orb assault blitz) \n \n**Legendary Events** \n**!event** \n[legendary name e.g shuri]* \n \n**Character Infographic** \n**![charactername]** \nProvides an infographic of gear needed for chosen character.")
+	.setDescription("**Commands List** \n \n**Add away note**\n**!away (reason for being away)** \n*(Removes away message for privacy and informs captains of your circumstances)* \n \n**Uniques** \n**!uniques** \n(Infographic showing uniques list) \n \n**Blitz Predictions** \n**!blitz** \n(Shows current blitz predictions, !blitz2 for orb assault blitz) \n \n**Legendary Events** \n**!event** \nDisplays a list of legendary events with commands* \n \n**Character Infographic** \n**![charactername]** \nProvides an infographic of gear needed for chosen character.")
 	message.channel.send(exampleEmbed);
 }
 if(command === "purge") { //PURGE MESSAGES
@@ -350,7 +350,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     }).catch(err => {
     console.error(err)
     })
-} else if(args[0] === "ironman" || args[0] === "iron" && args[1] === "man"){
+} else if(args[0] === "ironman" || args[0] === "iron" && args[1] === "man" || args[0] === "im"){
 	const channelToCheck = client.channels.get('688002514792349797')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
@@ -360,7 +360,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     }).catch(err => {
     console.error(err)
     })
-} else if(args[0] === "magneto"){
+} else if(args[0] === "magneto" || args[0] === "mag"){
 	const channelToCheck = client.channels.get('688002528792674352')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
@@ -380,7 +380,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     }).catch(err => {
     console.error(err)
     })
-} else if(args[0] === "starlord" || args[0] === "star" && args[1] === "lord"){
+} else if(args[0] === "starlord" || args[0] === "star" && args[1] === "lord" || args[0] === "sl"){
 	const channelToCheck = client.channels.get('688002652612853799')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
@@ -390,7 +390,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     }).catch(err => {
     console.error(err)
     })
-} else if(args[0] === "phoenix"){
+} else if(args[0] === "phoenix" || args[0] === "ph"){
 	const channelToCheck = client.channels.get('688002661244600331')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
@@ -413,7 +413,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
 } else {
 const eventEmbed = new Discord.RichEmbed()
 .setColor('#0099ff')
-.setDescription("**Legendary Events:** \n**!event charactername** or **!legendary charactername** \n \n**Availible characters:** \nFury\nIron Man,\nMagneto,\nShuri,\nStarlord,\nPhoenix,\nInvisible Woman")
+.setDescription("**Legendary Events:** \n**!event name** or\n **!legendary charactername** \n \n**Availible characters:** \nFury\nIron Man,\nMagneto,\nShuri,\nStarlord,\nPhoenix,\nInvisible Woman")
 .setThumbnail('https://i.imgur.com/9eCZztr.png') 
 message.channel.send(eventEmbed);
 }
