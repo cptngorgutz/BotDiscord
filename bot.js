@@ -1704,13 +1704,6 @@ message.channel.send("You do not have permission to use this command.")
 client.on("message", async message => {
 const args = message.content.toLowerCase().slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
-//Submit war counters below
-let counter = args[0]; 
-let aim = args[1];
-let asgardians = args[1];
-let brawlers = args[1];
-let shield = args[1];
-let s6 = args[1];
 
 if(command === 'counter') { //123 or bottesting
 if (message.channel.id === '560885677475102740' || message.channel.id === '562757850477101063' || message.channel.id === '643140704624967694' || message.channel.id === '606119830516400162') {
