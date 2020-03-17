@@ -543,6 +543,7 @@ const command = args.shift().toLowerCase();
 const TB1captains = message.guild.roles.find(role => role.name === 'TB1 Captain');
 const TB2captains = message.guild.roles.find(role => role.name === 'TB2 Captain');
 const TB3captains = message.guild.roles.find(role => role.name === 'TB3 Captain');
+const BEYONDER = message.guild.roles.find(role => role.name === 'The Beyonder');
 
 //RAID LAUNCHES                   //RAID CHANNELS&TESTING 
 if (message.channel.id === '429231250600099850' || message.channel.id === '462365472248299521' || message.channel.id === '643140903300497408' || message.channel.id === '606119830516400162') { 
@@ -799,7 +800,7 @@ message.channel.send("You dont have permission to use this command.")
 
 //RAID REFRESH GREEK/ULTIMUS 6 & 7
 if(command === 'refresh') {
-if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {	
+if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 if(args[0] === "alpha" && args[1] === "4"){
 if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 	message.channel.bulkDelete(1)
