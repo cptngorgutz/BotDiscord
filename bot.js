@@ -2159,6 +2159,58 @@ embed.setDescription(Text)
 embed.setImage(Image.url)
 BrawlerSubmission.send(embed);
 CheckText.send("War Counter Submission Received.");
+} else if (args[1] === "hydra"){
+const CheckImage = client.channels.get('673261006918516741')
+const CheckText = client.channels.get('673261006918516741')
+const HydraSubmission = client.channels.get('698224300372787221')
+const messages1 = await CheckText.fetchMessages({ limit: 2 });
+const messages2 = await CheckImage.fetchMessages({ limit: 2 });
+
+const embed = new Discord.RichEmbed()
+const Text = messages1.first().content;
+const Image = messages2.first().attachments.first()
+const Attachment = require('discord.js').Attachment;
+const attachment = new Attachment(Image.url)
+
+const TEXT = new Discord.RichEmbed()
+.setColor('#0099ff')
+.setDescription(Text.content)
+
+const ATTACHMENT = new Discord.RichEmbed()
+.setColor('#0099ff')
+.setImage(Image.url)
+
+embed.setColor('#0099ff')
+embed.setDescription(Text)
+embed.setImage(Image.url)
+HydraSubmission.send(embed);
+CheckText.send("War Counter Submission Received.");
+} else if (args[1] === "marauders"){
+const CheckImage = client.channels.get('673261006918516741')
+const CheckText = client.channels.get('673261006918516741')
+const MaraudersSubmission = client.channels.get('698224764564799489')
+const messages1 = await CheckText.fetchMessages({ limit: 2 });
+const messages2 = await CheckImage.fetchMessages({ limit: 2 });
+
+const embed = new Discord.RichEmbed()
+const Text = messages1.first().content;
+const Image = messages2.first().attachments.first()
+const Attachment = require('discord.js').Attachment;
+const attachment = new Attachment(Image.url)
+
+const TEXT = new Discord.RichEmbed()
+.setColor('#0099ff')
+.setDescription(Text.content)
+
+const ATTACHMENT = new Discord.RichEmbed()
+.setColor('#0099ff')
+.setImage(Image.url)
+
+embed.setColor('#0099ff')
+embed.setDescription(Text)
+embed.setImage(Image.url)
+MaraudersSubmission.send(embed);
+CheckText.send("War Counter Submission Received.");
 } else if (args[1] === "shield"){
 const CheckImage = client.channels.get('673261006918516741')
 const CheckText = client.channels.get('673261006918516741')
@@ -2210,6 +2262,32 @@ embed.setColor('#0099ff')
 embed.setDescription(Text)
 embed.setImage(Image.url)
 S6Submission.send(embed);
+CheckText.send("War Counter Submission Received.");
+} else if (args[1] === "ultron"){
+const CheckImage = client.channels.get('673261006918516741')
+const CheckText = client.channels.get('673261006918516741')
+const UltronSubmission = client.channels.get('698225120837369998')
+const messages1 = await CheckText.fetchMessages({ limit: 2 });
+const messages2 = await CheckImage.fetchMessages({ limit: 2 });
+
+const embed = new Discord.RichEmbed()
+const Text = messages1.first().content;
+const Image = messages2.first().attachments.first()
+const Attachment = require('discord.js').Attachment;
+const attachment = new Attachment(Image.url)
+
+const TEXT = new Discord.RichEmbed()
+.setColor('#0099ff')
+.setDescription(Text.content)
+
+const ATTACHMENT = new Discord.RichEmbed()
+.setColor('#0099ff')
+.setImage(Image.url)
+
+embed.setColor('#0099ff')
+embed.setDescription(Text)
+embed.setImage(Image.url)
+UltronSubmission.send(embed);
 CheckText.send("War Counter Submission Received.");
 } else {
 message.channel.send("Please use a valid phrase, such as !submit counter aim,asgardians,brawlers,shield, or s6.").catch(console.error);	
