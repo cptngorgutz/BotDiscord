@@ -1886,8 +1886,8 @@ message.channel.send("@everyone Free For All")
 }
 }//IF USER IS IN WAR CHANNELS
 
-if(command === 'counter') { //123 or bottesting
-if (message.channel.id === '560885677475102740' || message.channel.id === '562757850477101063' || message.channel.id === '643140704624967694' || message.channel.id === '606119830516400162') {
+if(command === 'counter') { //123 or bottesting 
+if (message.channel.id === '560885677475102740' || message.channel.id === '562757850477101063' || message.channel.id === '643140704624967694' || message.channel.id === '606119830516400162'|| message.channel.id === '661221254958940220' || message.channel.id === '699707863148265512') {
 if(args[0] == "aim"){
 const aimcounterimage = client.channels.get('666332891730673668')
 aimcounterimage.fetchMessages({ limit: 1 }).then(messages => {
