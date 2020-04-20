@@ -546,7 +546,7 @@ const TB3captains = message.guild.roles.find(role => role.name === 'TB3 Captain'
 const BEYONDER = message.guild.roles.find(role => role.name === 'The Beyonder');
 
 //RAID LAUNCHES                   //RAID CHANNELS&TESTING 
-if (message.channel.id === '429231250600099850' || message.channel.id === '462365472248299521' || message.channel.id === '643140903300497408' || message.channel.id === '606119830516400162') { 
+if (message.channel.id === '429231250600099850' || message.channel.id === '462365472248299521' || message.channel.id === '643140903300497408' || message.channel.id === '606119830516400162' || message.channel.id === '606119830516400162') { 
 if(command === 'u6') {
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
@@ -592,7 +592,7 @@ message.channel.send("You dont have permission to use this command.")
 //LAUNCHING ACTUAL RAIDS      //testing room   || message.channel.id === '617707484626288672'
 if(command === 'raid') {
 if(args[0] === "ultimus" && args[1] === "6"){
-if (message.channel.id === '656244057244303361' || message.channel.id === '643229492650704973' || message.channel.id === '617707484626288672') {
+if (message.channel.id === '656244057244303361' || message.channel.id === '643229492650704973' || message.channel.id === '617707484626288672' || message.channel.id === '606119830516400162') {
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 //                           TB2 ULT 6 ROOM                             TB3 ULT 6 ROOM                       
 	message.channel.bulkDelete(100)
@@ -633,7 +633,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 }
 if(args[0] === "ultimus" && args[1] === "7"){
-if (message.channel.id === '634155222490415104' || message.channel.id === '634155347736526848' || message.channel.id === '646322699869880340' || message.channel.id === '617707484626288672') {
+if (message.channel.id === '634155222490415104' || message.channel.id === '634155347736526848' || message.channel.id === '646322699869880340' || message.channel.id === '617707484626288672' || message.channel.id === '606119830516400162') {
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 //                           TB1 ULT 7 ROOM                             TB2 ULT 7 ROOM                              TB3 ULT 7 ROOM
 	message.channel.bulkDelete(100)
@@ -674,7 +674,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 }
 if(args[0] === "alpha" && args[1] === "4"){ 
-if (message.channel.id === '656230420265828363' || message.channel.id === '656230665221701682' || message.channel.id === '656207417033359371' || message.channel.id === '656216714723459116' || message.channel.id === '656232194137784333' || message.channel.id === '656232345371672577' || message.channel.id === '643229344793231370' || message.channel.id === '617707484626288672') {
+if (message.channel.id === '656230420265828363' || message.channel.id === '656230665221701682' || message.channel.id === '656207417033359371' || message.channel.id === '656216714723459116' || message.channel.id === '656232194137784333' || message.channel.id === '656232345371672577' || message.channel.id === '643229344793231370' || message.channel.id === '617707484626288672' || message.channel.id === '606119830516400162') {
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 //                       TB1 EVENT ROOM#1                           TB1 EVENT ROOM#2                           TB2 EVENT ROOM#1                           TB2 EVENT ROOM#2                           TB3 EVENT ROOM#1                           TB3 EVENT ROOM#2                           TB3 ALPHA ROOM 
 	message.channel.bulkDelete(100)
@@ -715,7 +715,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 }
 if(args[0] === "beta" && args[1] === "4"){
-if (message.channel.id === '656230420265828363' || message.channel.id === '656230665221701682' || message.channel.id === '656207417033359371' || message.channel.id === '656216714723459116' || message.channel.id === '656232194137784333' || message.channel.id === '656232345371672577' || message.channel.id === '651159388685336587' || message.channel.id === '617707484626288672') {
+if (message.channel.id === '656230420265828363' || message.channel.id === '656230665221701682' || message.channel.id === '656207417033359371' || message.channel.id === '656216714723459116' || message.channel.id === '656232194137784333' || message.channel.id === '656232345371672577' || message.channel.id === '651159388685336587' || message.channel.id === '617707484626288672' || message.channel.id === '606119830516400162') {
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 //                       TB1 EVENT ROOM#1                           TB1 EVENT ROOM#2                           TB2 EVENT ROOM#1                           TB2 EVENT ROOM#2                           TB3 EVENT ROOM#1                           TB3 EVENT ROOM#2 TB3 room 
 message.channel.bulkDelete(100)
@@ -756,7 +756,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 }
 if(args[0] === "gamma" && args[1] === "4"){
-if (message.channel.id === '656230420265828363' || message.channel.id === '656230665221701682' || message.channel.id === '656207417033359371' || message.channel.id === '656216714723459116' || message.channel.id === '656232194137784333' || message.channel.id === '656232345371672577' || message.channel.id === '655246084418830346' || message.channel.id === '617707484626288672') {
+if (message.channel.id === '656230420265828363' || message.channel.id === '656230665221701682' || message.channel.id === '656207417033359371' || message.channel.id === '656216714723459116' || message.channel.id === '656232194137784333' || message.channel.id === '656232345371672577' || message.channel.id === '655246084418830346' || message.channel.id === '617707484626288672' || message.channel.id === '606119830516400162') {
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 //                           TB1 EVENT ROOM#1                           TB1 EVENT ROOM#2                           TB2 EVENT ROOM#1                           TB2 EVENT ROOM#2                           TB3 EVENT ROOM#1                           TB3 EVENT ROOM#2                            TB3 GAMMA ROOM :/
 message.channel.bulkDelete(100)
