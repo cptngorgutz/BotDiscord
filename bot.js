@@ -1958,7 +1958,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription(rows.join('\n'))
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
