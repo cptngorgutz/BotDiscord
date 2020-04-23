@@ -539,7 +539,7 @@ const speedEmbed = new Discord.RichEmbed()
 	function functionultron (){
 	const embedEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250> **Ultron** \n**For more character info, try a valid phrase:** \nbasic\nspecial\nultimate\npassive\nkit\nspeed\ntrait\nunlock")
+	.setDescription("<:ultron:663750798202634250> **Ultron** \n**For more character info, try a valid phrase:** \nbasic || special || ultimate || passive || kit || speed || trait || unlock")
 	message.channel.send(embedEmbed); 
 	}
 	setTimeout(functionultron, 2000);
