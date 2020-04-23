@@ -536,10 +536,13 @@ const speedEmbed = new Discord.RichEmbed()
 	message.channel.send(traitEmbed); 
 } else {
 	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/Ultron.png')] });
+	function functionultron (){
 	const embedEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:ultron:663750798202634250> **Ultron** \n**For more character info, try a valid phrase:** \nbasic\nspecial\nultimate\npassive\nkit\nspeed\ntrait\nunlock")
 	message.channel.send(embedEmbed); 
+	}
+	setTimeout(functionultron, 2000);
 }
 
 
