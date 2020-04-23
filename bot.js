@@ -52028,7 +52028,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else {
 							//   bot-spamTB                                 bot-spamTESTserver                            General-TESTSERVER                       EMOJITESTSERVER-testing room
 if (message.channel.id === '673261006918516741' || message.channel.id === '666305824813219870' || message.channel.id === '661221254958940220' || message.channel.id === '699707863148265512') {
-const reviewchannel = client.channels.get('701452871056752640')
+const reviewchannel = client.channels.get('701432148774617148')
 const messages1 = await message.channel.fetchMessages({ limit: 1 });
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
