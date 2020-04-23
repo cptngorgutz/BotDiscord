@@ -474,8 +474,6 @@ let aunlock = args[1];
 let atrait = args[1];
 let afarm = args[1];
 if(command === 'ultron') {
-message.channel.bulkDelete(1)
-message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/Ultron.png')] });
 if(akit === "kit" || akit === "k" || kit === "kit" || kit === "k") {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
@@ -531,7 +529,20 @@ const speedEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:ultron:663750798202634250> **Ultron** \nUltron is farmable in:**")
 	message.channel.send(speedEmbed); 
+} else if(atrait === "trait" || atrait === "traits" || atrait === "trai" || atrait === "tra" || atrait === "t" || trait === "trait" || trait === "traits" || trait === "trai" || trait === "tra" || trait === "t") {
+	const traitEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("<:ultron:663750798202634250> **Ultron** \nTech,whatever")  
+	message.channel.send(traitEmbed); 
+} else {
+	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/Ultron.png')] });
+	const embedEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("<:ultron:663750798202634250> **Ultron** \n**For more character info, try a valid phrase:** \nbasic\nspecial\nultimate\npassive\nkit\nspeed\ntrait\nunlock")
+	message.channel.send(embedEmbed); 
 }
+
+
 }
 
 if(command === 'juggernaut') {
