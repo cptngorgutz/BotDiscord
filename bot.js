@@ -327,6 +327,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 }
 if(command === 'bug') {
+if(message.channel.id === '673261006918516741'){
 const bugchannel = client.channels.get('702906621495345322')
 const messages1 = await message.channel.fetchMessages({ limit: 1 });
 const embed = new Discord.RichEmbed()
@@ -342,7 +343,9 @@ embed.setTimestamp()
 bugchannel.send(embed);
 message.channel.send("Bug Received.");
 }
+}
 if(command === 'request') {
+if(message.channel.id === '673261006918516741'){
 const requestchannel = client.channels.get('702906597244010497')
 const messages1 = await message.channel.fetchMessages({ limit: 1 });
 const embed = new Discord.RichEmbed()
@@ -357,6 +360,7 @@ embed.setDescription(message.author + " " + Text)
 embed.setTimestamp()
 requestchannel.send(embed);
 message.channel.send("Request Received.");
+}
 }
 
 //LEGENDARY EVENTS
