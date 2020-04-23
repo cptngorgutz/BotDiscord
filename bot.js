@@ -232,7 +232,7 @@ message.channel.send("You dont have permission to use this command.")
 if(command === 'commands') {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("**Commands List** \n \n**Add away note**\n**!away (reason for being away)** \n*(Removes away message for privacy and informs captains of your circumstances)* \n \n**Uniques** \n**!uniques** \n(Infographic showing uniques list) \n \n**Blitz Predictions** \n**!blitz** \n(Shows current blitz predictions, !blitz2 for orb assault blitz) \n \n**Legendary Events** \n**!event** \nDisplays a list of legendary events with commands* \n \n**Character Infographic** \n**![charactername]** \nProvides an infographic of gear needed for chosen character.")
+	.setDescription("**Commands List** \n \n**Add away note**\n**!away (reason for being away)** \n*(Removes away message for privacy and informs captains of your circumstances)* \n \n**Uniques** \n**!uniques** \n(Infographic showing uniques list) \n \n**Blitz Predictions** \n**!blitz** \n(Shows current blitz predictions, !blitz2 for orb assault blitz) \n \n**Legendary Events** \n**!event** \nA list of legendary events \n \n**Character Infographic** \n**![charactername]** \nProvides an infographic of gear needed for chosen character.")
 	message.channel.send(exampleEmbed);
 }
 if(command === "purge") { //PURGE MESSAGES
@@ -448,17 +448,92 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
 } else {
 const eventEmbed = new Discord.RichEmbed()
 .setColor('#0099ff')
-.setDescription("**Legendary Events:** \n**!event name** or\n **!legendary charactername** \n \n**Availible characters:** \nBlack Bolt,\nFury,\nIron Man,\nMagneto,\nPhoenix,\nShuri,\nStarlord,\nInvisible Woman")
+.setDescription("**Legendary Events:** \n**!event name** or\n **!legendary charactername** \n \n**Available characters:** \nBlack Bolt,\nFury,\nIron Man,\nMagneto,\nPhoenix,\nShuri,\nStarlord,\nInvisible Woman")
 .setThumbnail('https://i.imgur.com/9eCZztr.png') 
 message.channel.send(eventEmbed);
 }
 }
 
 //-------------CHARACTER TIERS
+let kit = args[0]; 
+let basic = args[0];
+let special = args[0];
+let ultimate = args[0];
+let passive = args[0];
+let speed = args[0];
+let unlock = args[0];
+let trait = args[0];
+let farm = args[0];
+let akit = args[1]; 
+let abasic = args[1];
+let aspecial = args[1];
+let aultimate = args[1];
+let apassive = args[1];
+let aspeed = args[1];
+let aunlock = args[1];
+let atrait = args[1];
+let afarm = args[1];
 if(command === 'ultron') {
 message.channel.bulkDelete(1)
 message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/Ultron.png')] });
+if(akit === "kit" || akit === "k" || kit === "kit" || kit === "k") {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Basic)** \n \n**Disintegration Beam • T4 Upgrade** \n \nAttack primary target for **270% -> 340%** damage + steal 2 positive effects + clear Taunt.")
+	.setThumbnail('https://i.imgur.com/Y78BMF9.png') 
+	message.channel.send(exampleEmbed);
+	const exampleEmbed2 = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Special)** \n \n**Factory Upgrade • T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278>\nSummon **2-3 -> 3** Ultron Minions at **300% -> 340%** normal damage and 100% of normal Health. Apply Defense Up to self and all ULTRON MINION allies for 2 turns.\nPossible Summons:\nUltron Incinerator\nUltron Accelerator\nUltron Fabricator")
+	.setThumbnail('https://i.imgur.com/HaIZygM.png') 
+	message.channel.send(exampleEmbed2);
+	const exampleEmbed3 = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Ultimate)** \n \n**Purge System • T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityoff:663751832413405184><:abilityoff:663751832413405184>\nAttack primary target for **620% -> 700%** Piercing damage. This ability deals double damage against targets with Defense Up. Gain 1 Ability Energy per positive effect on self.")
+	.setThumbnail('https://i.imgur.com/8BbEwWt.png') 
+	message.channel.send(exampleEmbed3);
+	const exampleEmbed4 = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Passive)** \n \n**Ultron Prime • T4 Upgrade** \n \nIf Health is full at the start of a match, Revive once with 50% of this character's Max Health.\nOn Kill, this character and all VILLAIN TECH allies have **4 -> all** positive effects prolonged by a duration of 1.")
+	.setThumbnail('https://i.imgur.com/s2kLpjn.png') 
+	message.channel.send(exampleEmbed4);
+} else if(abasic === "basic" || abasic === "bas" || abasic === "b" || basic === "basic" || basic === "bas" || basic === "b") {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Basic)** \n \n**Disintegration Beam • T4 Upgrade** \n \nAttack primary target for **270% -> 340%** damage + steal 2 positive effects + clear Taunt.")
+	.setThumbnail('https://i.imgur.com/Y78BMF9.png') 
+	message.channel.send(exampleEmbed);
+} else if(aspecial === "special" || aspecial === "spec" || aspecial === "spe" || special === "special" || special === "spec" || special === "spe" || special === "s") {
+	const exampleEmbed2 = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Special)** \n \n**Factory Upgrade • T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278>\nSummon **2-3 -> 3** Ultron Minions at **300% -> 340%** normal damage and 100% of normal Health. Apply Defense Up to self and all ULTRON MINION allies for 2 turns.\nPossible Summons:\nUltron Incinerator\nUltron Accelerator\nUltron Fabricator")
+	.setThumbnail('https://i.imgur.com/HaIZygM.png') 
+	message.channel.send(exampleEmbed2);
+} else if(aultimate === "ultimate" || aultimate === "ultimat" || aultimate === "ulti" || aultimate === "ult" || ultimate === "ultimate" || ultimate === "ultimat" || ultimate === "ulti" || ultimate === "ult") {
+	const exampleEmbed3 = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Ultimate)** \n \n**Purge System • T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityoff:663751832413405184><:abilityoff:663751832413405184>\nAttack primary target for **620% -> 700%** Piercing damage. This ability deals double damage against targets with Defense Up. Gain 1 Ability Energy per positive effect on self.")
+	.setThumbnail('https://i.imgur.com/8BbEwWt.png') 
+	message.channel.send(exampleEmbed3);
+} else if(apassive === "passive" || apassive === "pass" || apassive === "p" || apassive === "passi" || passive === "passive" || passive === "pass" || passive === "p" || passive === "passi") {
+	const exampleEmbed4 = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Passive)** \n \n**Ultron Prime • T4 Upgrade** \n \nIf Health is full at the start of a match, Revive once with 50% of this character's Max Health.\nOn Kill, this character and all VILLAIN TECH allies have **4 -> all** positive effects prolonged by a duration of 1.")
+	.setThumbnail('https://i.imgur.com/s2kLpjn.png') 
+	message.channel.send(exampleEmbed4);
+} else if(aspeed === "speed" || aspeed === "spee" || aspeed === "spe" || speed === "speed" || speed === "spee" || speed === "spe") {
+const speedEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("<:ultron:663750798202634250> **Ultron** \nUltron's speed is: **")
+	message.channel.send(speedEmbed);
+} else if(aunlock === "unlock" || aunlock === "unlo" || aunlock === "u" || aunlock === "unl" || afarm === "farm" || afarm === "far" || afarm === "f" || unlock === "unlock" || unlock === "unlo" || unlock === "u" || unlock === "unl" || farm === "farm" || farm === "far" || farm === "f") {
+	const speedEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("<:ultron:663750798202634250> **Ultron** \nUltron is farmable in:**")
+	message.channel.send(speedEmbed); 
 }
+}
+
 if(command === 'juggernaut') {
 message.channel.bulkDelete(1)
 message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './Character Tiers/Juggernaut.png')] });
