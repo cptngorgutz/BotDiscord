@@ -326,7 +326,38 @@ message.channel.send("Error: mentionedUser does not have a role of recruit/TB1/T
 message.channel.send("You dont have permission to use this command.")
 }
 }
+if(command === 'bug') {
+const bugchannel = client.channels.get('702906621495345322')
+const messages1 = await message.channel.fetchMessages({ limit: 1 });
+const embed = new Discord.RichEmbed()
+const Text = messages1.first().content;
 
+const TEXT = new Discord.RichEmbed()
+.setColor('#0099ff')
+.setDescription(Text.content)
+
+embed.setColor('#0099ff')
+embed.setDescription(message.author + " " + Text)
+embed.setTimestamp()
+bugchannel.send(embed);
+message.channel.send("Bug Received.");
+}
+if(command === 'request') {
+const requestchannel = client.channels.get('702906597244010497')
+const messages1 = await message.channel.fetchMessages({ limit: 1 });
+const embed = new Discord.RichEmbed()
+const Text = messages1.first().content;
+
+const TEXT = new Discord.RichEmbed()
+.setColor('#0099ff')
+.setDescription(Text.content)
+
+embed.setColor('#0099ff')
+embed.setDescription(message.author + " " + Text)
+embed.setTimestamp()
+requestchannel.send(embed);
+message.channel.send("Request Received.");
+}
 
 //LEGENDARY EVENTS
 if(command === 'event'|| command === 'events' || command === 'legendary' || command === 'legendaries' || command === 'events' && args[0] === "list") {
