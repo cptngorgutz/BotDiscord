@@ -52175,7 +52175,10 @@ embed.setColor('#0099ff')
 embed.setDescription(message.author + " " + Text)
 embed.setTimestamp()
 reviewchannel.send(embed);
-message.channel.send(`__**War stat added:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(`__**War stat added:**__ \nAttacker: **${args[0]}** **${args[1]}** \nDefender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
 }
 }
 }
