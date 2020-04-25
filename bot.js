@@ -52175,7 +52175,7 @@ embed.setColor('#0099ff')
 embed.setDescription(message.author + " " + Text)
 embed.setTimestamp()
 reviewchannel.send(embed);
-message.channel.send("War stat Received.");
+message.channel.send(`__**War stat added:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 }
 }
 }
