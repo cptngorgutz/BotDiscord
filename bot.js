@@ -52179,6 +52179,8 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription(`__War stat added:__ \nAttacker: **${args[0]}** **${args[1]}** \nDefender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
+} else {
+message.channel.send("Sorry, this doesn't work here. Head to <#673261006918516741> and try again.").catch(console.error);
 }
 }
 }
@@ -52194,6 +52196,8 @@ let y = args[1];
 let z = (y - x) / x*100;
 
 message.channel.send(z.toFixed(1) + "%");
+} else {
+message.channel.send("Sorry, this doesn't work here. Head to <#673261006918516741> or your war chat channel and try again.").catch(console.error);
 }
 }
 });
