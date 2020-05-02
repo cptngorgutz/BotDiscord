@@ -52490,7 +52490,7 @@ if (z > 0) {
     let var1 = "Punch Up";
 	message.channel.send(z.toFixed(1) + "%" + " " + var1).catch(console.error);
 } else if (z == 0) {
-    let var3 = "Equal Matchup";
+    let var3 = "Even Matchup";
 	message.channel.send(z.toFixed(1) + "%" + " " + var3).catch(console.error);
 } else {
 	let var2 = "Punch Down";
