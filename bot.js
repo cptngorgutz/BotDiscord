@@ -52161,8 +52161,8 @@ const exampleEmbed = new Discord.RichEmbed()
 	message.channel.send(exampleEmbed);
 }
 } else {
-							//   bot-spamTB                                 bot-spamTESTserver                            General-TESTSERVER                       EMOJITESTSERVER-testing room
-if (message.channel.id === '673261006918516741' || message.channel.id === '666305824813219870' || message.channel.id === '661221254958940220' || message.channel.id === '699707863148265512') {
+							//   bot-spamTB                                 bot-spamTESTserver                              TB1-WAR-CHAT                                   TB2-WAR-CHAT                                    TB3-WAR-CHAT                                 General-TESTSERVER                       EMOJITESTSERVER-testing room
+if (message.channel.id === '673261006918516741' || message.channel.id === '666305824813219870' || message.channel.id === '560885677475102740' || message.channel.id === '562757850477101063' || message.channel.id === '643140704624967694' || message.channel.id === '661221254958940220' || message.channel.id === '699707863148265512') {
 const reviewchannel = client.channels.get('701432148774617148')
 const messages1 = await message.channel.fetchMessages({ limit: 1 });
 const embed = new Discord.RichEmbed()
@@ -52195,8 +52195,16 @@ let y = args[1];
 // Divide x by y to get the product
 //let z = x / y;
 let z = (y - x) / x*100;
-
-message.channel.send(z.toFixed(1) + "%");
+if (z > 0) {
+    let var1 = "Positive";
+	message.channel.send(z.toFixed(1) + "%" + " " + var1).catch(console.error);
+} else if (z == 0) {
+    let var3 = "Neutral";
+	message.channel.send(z.toFixed(1) + "%" + " " + var3).catch(console.error);
+} else {
+	let var2 = "Negative";
+	message.channel.send(z.toFixed(1) + "%" + " " + var2).catch(console.error);
+}
 } else {
 message.channel.send("Sorry, this doesn't work here. Head to <#673261006918516741> or your war chat channel and try again.").catch(console.error);
 }
