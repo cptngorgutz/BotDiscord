@@ -2024,9 +2024,26 @@ message.channel.send("@everyone Free For All")
 }
 }//IF USER IS IN WAR CHANNELS
 
-if(command === 'counter') { //   bot-spamTB                                 bot-spamTESTserver                              TB1-WAR-CHAT                                   TB2-WAR-CHAT                                    TB3-WAR-CHAT                                 General-TESTSERVER                       EMOJITESTSERVER-testing room
+if(command === 'counter' || command === 'c') { //   bot-spamTB                                 bot-spamTESTserver                              TB1-WAR-CHAT                                   TB2-WAR-CHAT                                    TB3-WAR-CHAT                                 General-TESTSERVER                       EMOJITESTSERVER-testing room
 if (message.channel.id === '673261006918516741' || message.channel.id === '666305824813219870' || message.channel.id === '560885677475102740' || message.channel.id === '562757850477101063' || message.channel.id === '643140704624967694' || message.channel.id === '661221254958940220' || message.channel.id === '699707863148265512') {
-if(args[0] == "aim"){
+if(args[0] == "aim" && args[1] === "stats"){
+//stats
+	sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!D1:F",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
+} else if(args[0] == "aim"){
 const aimcounterimage = client.channels.get('666332891730673668')
 aimcounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counteraim = messages.first().attachments.first()
@@ -2104,6 +2121,24 @@ function function2() {
 function1();
 function2();
 setTimeout(function3, 4000);
+
+} else if(args[0] == "asgardians" && args[1] === "stats"){
+//stats
+	sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!A1:C",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 
 } else if(args[0] == "asgardians"){
 const asgardcounterimage = client.channels.get('666340204872990730')
@@ -2183,6 +2218,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} else if(args[0] == "bkt" && args[1] === "stats"){
+//stats
+	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!P1:R",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "bkt"){
 const bktcounterimage = client.channels.get('700322361966067812')
 bktcounterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -2262,6 +2314,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} else if(args[0] == "brawlers" && args[1] === "stats"){
+//stats
+	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!S1:U",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "brawlers"){
 const brawlerscounterimage = client.channels.get('666340239903686659')
 brawlerscounterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -2342,6 +2411,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} else if(args[0] == "captainmarvel" && args[1] === "stats"){
+//stats
+	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!V1:X",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "captainmarvel"){
 const cptnmarvelcounterimage = client.channels.get('700487765518843938')
 cptnmarvelcounterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -2423,6 +2509,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} else if(args[0] == "defenders" && args[1] === "stats"){
+//stats
+	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!Y1:AA",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "defenders"){
 const defenderscounterimage = client.channels.get('700322862535278683')
 defenderscounterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -2503,6 +2606,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} else if(args[0] == "gotg" && args[1] === "stats"){
+//stats
+	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!AE1:AG",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "gotg"){
 const gotgcounterimage = client.channels.get('700323244305022976')
 gotgcounterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -2584,6 +2704,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} else if(args[0] == "hydra" && args[1] === "stats"){
+//stats
+	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!AH1:AJ",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "hydra"){
 const hydracounterimage = client.channels.get('698203936061915206')
 hydracounterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -2664,6 +2801,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} else if(args[0] == "kreeronan" && args[1] === "stats"){
+//stats
+	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!AN1:AP",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "kreeronan"){
 const kreeronancounterimage = client.channels.get('700532345576620072')
 kreeronancounterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -2745,6 +2899,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} else if(args[0] == "marauders" && args[1] === "stats"){
+//stats
+	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!AT1:AV",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "marauders"){
 const marauderscounterimage = client.channels.get('700532345576620072')
 marauderscounterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -2826,6 +2997,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} else if(args[0] == "shield" && args[1] === "stats"){
+//stats
+	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!BF1:BH",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "shield"){
 const shieldcounterimage = client.channels.get('666340284962963524')
 shieldcounterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -2909,6 +3097,23 @@ setTimeout(function3, 4000);
 
 
 
+} else if(args[0] == "s6" && args[1] === "stats"){
+//stats
+	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!BC1:BE",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "s6"){
 const s6counterimage = client.channels.get('666340318102421504')
 s6counterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -2990,6 +3195,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 	
+} else if(args[0] == "supernatural" || args[0] === "supernaturals" && args[1] === "stats"){
+//stats
+	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!BI1:BK",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "supernatural" || args[0] == "supernaturals"){
 const supernaturalcounterimage = client.channels.get('700533212358901760')
 supernaturalcounterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -3071,6 +3293,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} else if(args[0] == "symbiote" || args[0] === "symbiotes" && args[1] === "stats"){
+//stats
+	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!BL1:BN",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "symbiote" || args[0] == "symbiotes"){
 const symbiotecounterimage = client.channels.get('700535722498588682')
 symbiotecounterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -3152,6 +3391,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} else if(args[0] == "ultron" && args[1] === "stats"){
+//stats
+	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!BO1:BQ",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "ultron"){
 const ultroncounterimage = client.channels.get('698225013723234396')
 ultroncounterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -3231,6 +3487,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} else if(args[0] == "wakanda" && args[1] === "stats"){
+//stats
+	sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!BR1:BT",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "wakanda"){
 const wakandacounterimage = client.channels.get('700323525348818994')
 wakandacounterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -3312,6 +3585,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} else if(args[0] == "xmen" && args[1] === "stats"){
+//stats
+	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!BU1:BW",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription(rows.join('\n').replace(/,/g, ' '))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "xmen"){
 const xmencounterimage = client.channels.get('700535062361276476')
 xmencounterimage.fetchMessages({ limit: 1 }).then(messages => {
@@ -3401,6 +3691,7 @@ message.channel.send("Sorry, this doesn't work here. Head to <#67326100691851674
 
 
 }
+
 if (command === 'add'){
 const managerrole = message.guild.roles.find(role => role.name === 'Bot Management');
 if(message.member.roles.has(managerrole.id)) {
