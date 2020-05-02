@@ -52487,13 +52487,13 @@ let y = args[1];
 //let z = x / y;
 let z = (y - x) / x*100;
 if (z > 0) {
-    let var1 = "Positive";
+    let var1 = "Punch Up";
 	message.channel.send(z.toFixed(1) + "%" + " " + var1).catch(console.error);
 } else if (z == 0) {
-    let var3 = "Neutral";
+    let var3 = "Equal Matchup";
 	message.channel.send(z.toFixed(1) + "%" + " " + var3).catch(console.error);
 } else {
-	let var2 = "Negative";
+	let var2 = "Punch Down";
 	message.channel.send(z.toFixed(1) + "%" + " " + var2).catch(console.error);
 }
 } else {
