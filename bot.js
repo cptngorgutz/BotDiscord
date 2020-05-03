@@ -52467,10 +52467,10 @@ embed.setColor('#0099ff')
 embed.setDescription(message.author + " " + Text)
 embed.setTimestamp()
 reviewchannel.send(embed);
-const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#0099ff')
-	.setDescription(`__War stat added:__ \nAttacker: **${args[0]}** **${args[1]}** \nDefender: **${args[2]}** **${args[3]}**`)
-	message.channel.send(exampleEmbed);
+//const exampleEmbed = new Discord.RichEmbed()
+//	.setColor('#0099ff')
+//	.setDescription(`__War stat added:__ \nAttacker: **${args[0]}** **${args[1]}** \nDefender: **${args[2]}** **${args[3]}**`)
+//	message.channel.send(exampleEmbed);
 } else {
 message.channel.send("Sorry, this doesn't work here. Head to <#673261006918516741> and try again.").catch(console.error);
 }
