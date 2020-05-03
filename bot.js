@@ -37271,7 +37271,8 @@ const exampleEmbed = new Discord.RichEmbed()
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "aim" && args[2] === "pa"){
-message.channel.bulkDelete(1)const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor";
 sheets.spreadsheets.values.get(
   {
