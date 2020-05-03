@@ -2715,7 +2715,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2743,7 +2743,7 @@ function functionhydrastats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2789,7 +2789,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2812,7 +2812,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2840,7 +2840,7 @@ function functionkreeronanstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2886,7 +2886,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2910,7 +2910,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2938,7 +2938,7 @@ function functionmaraudersstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2984,7 +2984,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3008,7 +3008,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3036,7 +3036,7 @@ function functionshieldstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3083,7 +3083,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3108,7 +3108,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3136,7 +3136,7 @@ function functions6stats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3183,7 +3183,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3206,7 +3206,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3234,7 +3234,7 @@ function functionsupernaturalstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3280,7 +3280,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3304,7 +3304,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3332,7 +3332,7 @@ function functionsymbiotestats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3378,7 +3378,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3402,7 +3402,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3430,7 +3430,7 @@ function functionultronstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3475,7 +3475,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3498,7 +3498,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3526,7 +3526,7 @@ function functionwakandastats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3572,7 +3572,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3596,7 +3596,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3624,7 +3624,7 @@ function functionxmenstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3669,7 +3669,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Attacking**__" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
