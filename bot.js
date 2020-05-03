@@ -7009,7 +7009,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -7088,7 +7088,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -7167,7 +7167,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -7246,7 +7246,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -7325,7 +7325,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -7404,7 +7404,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -7483,7 +7483,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -7562,7 +7562,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -7641,7 +7641,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -7720,7 +7720,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -7799,7 +7799,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -7878,7 +7878,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -7957,7 +7957,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -8036,7 +8036,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -8115,7 +8115,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -8194,7 +8194,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -8273,7 +8273,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -8352,7 +8352,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -8431,7 +8431,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -8510,7 +8510,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -8589,7 +8589,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -8668,7 +8668,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -8747,7 +8747,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -8826,7 +8826,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -8905,7 +8905,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -8984,7 +8984,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -9063,7 +9063,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -9142,7 +9142,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -9221,7 +9221,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -9300,7 +9300,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -9379,7 +9379,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -9458,7 +9458,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -9537,7 +9537,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -9616,7 +9616,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -9695,7 +9695,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -9774,7 +9774,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -9853,7 +9853,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -9932,7 +9932,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -10011,7 +10011,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -10090,7 +10090,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -10169,7 +10169,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -10248,7 +10248,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -10327,7 +10327,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -10406,7 +10406,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -10485,7 +10485,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -10564,7 +10564,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -10643,7 +10643,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -10722,7 +10722,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -10801,7 +10801,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -10880,7 +10880,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -10959,7 +10959,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -11038,7 +11038,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -11117,7 +11117,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -11196,7 +11196,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -11275,7 +11275,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -11354,7 +11354,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -11433,7 +11433,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -11512,7 +11512,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -11591,7 +11591,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -11670,7 +11670,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -11749,7 +11749,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -11828,7 +11828,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -11907,7 +11907,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -11986,7 +11986,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -12065,7 +12065,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -12144,7 +12144,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -12223,7 +12223,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -12302,7 +12302,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -12381,7 +12381,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -12460,7 +12460,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -12539,7 +12539,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -12618,7 +12618,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -12697,7 +12697,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -12776,7 +12776,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -12855,7 +12855,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -12934,7 +12934,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -13013,7 +13013,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -13092,7 +13092,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -13171,7 +13171,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -13250,7 +13250,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -13329,7 +13329,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -13408,7 +13408,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -13487,7 +13487,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -13566,7 +13566,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -13645,7 +13645,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -13724,7 +13724,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -13803,7 +13803,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -13882,7 +13882,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -13961,7 +13961,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -14040,7 +14040,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -14119,7 +14119,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -14198,7 +14198,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -14277,7 +14277,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -14356,7 +14356,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -14435,7 +14435,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -14514,7 +14514,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -14593,7 +14593,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -14672,7 +14672,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -14751,7 +14751,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -14830,7 +14830,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -14909,7 +14909,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -14988,7 +14988,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -15067,7 +15067,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -15146,7 +15146,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -15225,7 +15225,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -15304,7 +15304,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -15383,7 +15383,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -15462,7 +15462,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -15541,7 +15541,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -15620,7 +15620,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -15699,7 +15699,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -15778,7 +15778,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -15857,7 +15857,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -15936,7 +15936,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -16015,7 +16015,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -16094,7 +16094,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -16173,7 +16173,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -16252,7 +16252,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -16331,7 +16331,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -16410,7 +16410,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -16489,7 +16489,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -16568,7 +16568,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -16647,7 +16647,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -16726,7 +16726,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -16805,7 +16805,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -16884,7 +16884,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -16963,7 +16963,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -17042,7 +17042,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -17121,7 +17121,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -17200,7 +17200,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -17279,7 +17279,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -17358,7 +17358,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -17437,7 +17437,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -17516,7 +17516,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -17595,7 +17595,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -17674,7 +17674,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -17753,7 +17753,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -17832,7 +17832,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -17911,7 +17911,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -17990,7 +17990,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -18069,7 +18069,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -18148,7 +18148,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -18227,7 +18227,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -18306,7 +18306,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -18385,7 +18385,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -18464,7 +18464,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -18543,7 +18543,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -18622,7 +18622,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -18701,7 +18701,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -18780,7 +18780,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -18859,7 +18859,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -18938,7 +18938,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -19017,7 +19017,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -19096,7 +19096,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -19175,7 +19175,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -19254,7 +19254,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -19333,7 +19333,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -19412,7 +19412,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -19491,7 +19491,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -19570,7 +19570,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -19649,7 +19649,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -19728,7 +19728,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -19807,7 +19807,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -19886,7 +19886,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -19965,7 +19965,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -20044,7 +20044,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -20123,7 +20123,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -20202,7 +20202,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -20281,7 +20281,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -20360,7 +20360,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -20439,7 +20439,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -20518,7 +20518,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -20597,7 +20597,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -20676,7 +20676,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -20755,7 +20755,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -20834,7 +20834,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -20913,7 +20913,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -20992,7 +20992,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -21071,7 +21071,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -21150,7 +21150,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -21229,7 +21229,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -21308,7 +21308,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -21387,7 +21387,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -21466,7 +21466,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -21545,7 +21545,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -21624,7 +21624,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -21703,7 +21703,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -21782,7 +21782,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -21861,7 +21861,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -21940,7 +21940,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -22019,7 +22019,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -22098,7 +22098,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -22177,7 +22177,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -22256,7 +22256,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -22335,7 +22335,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -22414,7 +22414,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -22493,7 +22493,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -22572,7 +22572,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -22651,7 +22651,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -22730,7 +22730,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -22809,7 +22809,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -22888,7 +22888,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -22967,7 +22967,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -23046,7 +23046,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -23125,7 +23125,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -23204,7 +23204,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -23283,7 +23283,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -23362,7 +23362,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -23441,7 +23441,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -23520,7 +23520,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -23599,7 +23599,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -23678,7 +23678,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -23757,7 +23757,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -23836,7 +23836,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -23915,7 +23915,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -23994,7 +23994,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -24073,7 +24073,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -24152,7 +24152,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -24231,7 +24231,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -24310,7 +24310,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -24389,7 +24389,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -24468,7 +24468,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -24547,7 +24547,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -24626,7 +24626,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -24705,7 +24705,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -24784,7 +24784,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -24863,7 +24863,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -24942,7 +24942,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -25021,7 +25021,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -25100,7 +25100,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -25179,7 +25179,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -25258,7 +25258,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -25337,7 +25337,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -25416,7 +25416,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -25495,7 +25495,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -25574,7 +25574,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -25653,7 +25653,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -25732,7 +25732,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -25811,7 +25811,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -25890,7 +25890,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -25969,7 +25969,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -26048,7 +26048,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -26127,7 +26127,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -26206,7 +26206,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -26285,7 +26285,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -26364,7 +26364,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -26443,7 +26443,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -26522,7 +26522,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -26601,7 +26601,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -26680,7 +26680,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -26759,7 +26759,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -26838,7 +26838,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -26917,7 +26917,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -26996,7 +26996,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -27075,7 +27075,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -27154,7 +27154,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -27233,7 +27233,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -27312,7 +27312,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -27391,7 +27391,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -27470,7 +27470,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -27549,7 +27549,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -27628,7 +27628,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -27707,7 +27707,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -27786,7 +27786,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -27865,7 +27865,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -27944,7 +27944,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -28023,7 +28023,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -28102,7 +28102,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -28181,7 +28181,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -28260,7 +28260,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -28339,7 +28339,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -28418,7 +28418,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -28497,7 +28497,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -28576,7 +28576,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -28655,7 +28655,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -28734,7 +28734,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -28813,7 +28813,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -28892,7 +28892,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -28971,7 +28971,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -29050,7 +29050,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -29129,7 +29129,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -29208,7 +29208,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -29287,7 +29287,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -29366,7 +29366,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -29445,7 +29445,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -29524,7 +29524,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -29603,7 +29603,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -29682,7 +29682,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -29761,7 +29761,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -29840,7 +29840,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -29919,7 +29919,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -29998,7 +29998,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -30077,7 +30077,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -30156,7 +30156,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -30235,7 +30235,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -30314,7 +30314,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -30393,7 +30393,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -30472,7 +30472,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -30551,7 +30551,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -30630,7 +30630,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -30709,7 +30709,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -30788,7 +30788,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -30867,7 +30867,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -30946,7 +30946,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -31025,7 +31025,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -31104,7 +31104,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -31183,7 +31183,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -31262,7 +31262,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -31341,7 +31341,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -31420,7 +31420,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -31499,7 +31499,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -31578,7 +31578,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -31657,7 +31657,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -31736,7 +31736,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -31815,7 +31815,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -31894,7 +31894,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -31973,7 +31973,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -32052,7 +32052,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -32131,7 +32131,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -32210,7 +32210,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -32289,7 +32289,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -32368,7 +32368,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -32447,7 +32447,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -32526,7 +32526,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -32605,7 +32605,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -32684,7 +32684,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -32763,7 +32763,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -32842,7 +32842,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -32921,7 +32921,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -33000,7 +33000,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -33079,7 +33079,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -33158,7 +33158,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -33237,7 +33237,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -33316,7 +33316,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -33395,7 +33395,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -33474,7 +33474,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -33553,7 +33553,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -33632,7 +33632,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -33711,7 +33711,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -33790,7 +33790,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -33869,7 +33869,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -33948,7 +33948,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -34027,7 +34027,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -34106,7 +34106,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -34185,7 +34185,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -34264,7 +34264,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -34343,7 +34343,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -34422,7 +34422,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -34501,7 +34501,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -34580,7 +34580,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -34659,7 +34659,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -34738,7 +34738,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -34817,7 +34817,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -34896,7 +34896,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -34975,7 +34975,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -35054,7 +35054,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -35133,7 +35133,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -35212,7 +35212,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -35291,7 +35291,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -35370,7 +35370,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -35449,7 +35449,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -35528,7 +35528,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -35607,7 +35607,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -35686,7 +35686,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -35765,7 +35765,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -35844,7 +35844,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -35923,7 +35923,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -36002,7 +36002,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -36081,7 +36081,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -36160,7 +36160,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -36239,7 +36239,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -36318,7 +36318,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -36397,7 +36397,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -36476,7 +36476,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -36555,7 +36555,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -36634,7 +36634,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -36713,7 +36713,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -36792,7 +36792,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -36871,7 +36871,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -36950,7 +36950,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -37029,7 +37029,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -37108,7 +37108,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -37187,7 +37187,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -37266,7 +37266,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -37345,7 +37345,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -37424,7 +37424,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -37503,7 +37503,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -37582,7 +37582,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -37661,7 +37661,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -37740,7 +37740,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -37819,7 +37819,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -37898,7 +37898,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -37977,7 +37977,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -38056,7 +38056,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -38135,7 +38135,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -38214,7 +38214,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -38293,7 +38293,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -38372,7 +38372,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -38451,7 +38451,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -38530,7 +38530,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -38609,7 +38609,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -38688,7 +38688,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -38767,7 +38767,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -38846,7 +38846,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -38925,7 +38925,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -39004,7 +39004,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -39083,7 +39083,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -39162,7 +39162,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -39241,7 +39241,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -39320,7 +39320,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -39399,7 +39399,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -39478,7 +39478,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -39557,7 +39557,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -39636,7 +39636,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -39715,7 +39715,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -39794,7 +39794,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -39873,7 +39873,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -39952,7 +39952,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -40031,7 +40031,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -40110,7 +40110,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -40189,7 +40189,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -40268,7 +40268,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -40347,7 +40347,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -40426,7 +40426,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -40505,7 +40505,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -40584,7 +40584,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -40663,7 +40663,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -40742,7 +40742,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -40821,7 +40821,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -40900,7 +40900,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -40979,7 +40979,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -41058,7 +41058,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -41137,7 +41137,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -41216,7 +41216,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -41295,7 +41295,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -41374,7 +41374,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -41453,7 +41453,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -41532,7 +41532,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -41611,7 +41611,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -41690,7 +41690,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -41769,7 +41769,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -41848,7 +41848,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -41927,7 +41927,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -42006,7 +42006,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -42085,7 +42085,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -42164,7 +42164,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -42243,7 +42243,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -42322,7 +42322,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -42401,7 +42401,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -42480,7 +42480,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -42559,7 +42559,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -42638,7 +42638,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -42717,7 +42717,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -42796,7 +42796,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -42875,7 +42875,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -42954,7 +42954,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -43033,7 +43033,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -43112,7 +43112,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -43191,7 +43191,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -43270,7 +43270,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -43349,7 +43349,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -43428,7 +43428,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -43507,7 +43507,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -43586,7 +43586,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -43665,7 +43665,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -43744,7 +43744,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -43823,7 +43823,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -43902,7 +43902,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -43981,7 +43981,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -44060,7 +44060,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -44139,7 +44139,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -44218,7 +44218,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -44297,7 +44297,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -44376,7 +44376,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -44455,7 +44455,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -44534,7 +44534,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -44613,7 +44613,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -44692,7 +44692,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -44771,7 +44771,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -44850,7 +44850,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -44929,7 +44929,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -45008,7 +45008,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -45087,7 +45087,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -45166,7 +45166,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -45245,7 +45245,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -45324,7 +45324,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -45403,7 +45403,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -45482,7 +45482,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -45561,7 +45561,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -45640,7 +45640,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -45719,7 +45719,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -45798,7 +45798,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -45877,7 +45877,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -45956,7 +45956,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -46035,7 +46035,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -46114,7 +46114,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -46193,7 +46193,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -46272,7 +46272,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -46351,7 +46351,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -46430,7 +46430,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -46509,7 +46509,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -46588,7 +46588,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -46667,7 +46667,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -46746,7 +46746,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -46825,7 +46825,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -46904,7 +46904,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -46983,7 +46983,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -47062,7 +47062,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -47141,7 +47141,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -47220,7 +47220,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -47299,7 +47299,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -47378,7 +47378,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -47457,7 +47457,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -47536,7 +47536,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -47615,7 +47615,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -47694,7 +47694,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -47773,7 +47773,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -47852,7 +47852,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -47931,7 +47931,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -48010,7 +48010,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -48089,7 +48089,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -48168,7 +48168,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -48247,7 +48247,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -48326,7 +48326,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -48405,7 +48405,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -48484,7 +48484,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -48563,7 +48563,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -48642,7 +48642,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -48721,7 +48721,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -48800,7 +48800,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -48879,7 +48879,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -48958,7 +48958,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -49037,7 +49037,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -49116,7 +49116,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -49195,7 +49195,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -49274,7 +49274,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -49353,7 +49353,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -49432,7 +49432,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -49511,7 +49511,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -49590,7 +49590,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -49669,7 +49669,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -49748,7 +49748,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -49827,7 +49827,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -49906,7 +49906,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -49985,7 +49985,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -50064,7 +50064,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -50143,7 +50143,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -50222,7 +50222,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -50301,7 +50301,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -50380,7 +50380,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -50459,7 +50459,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -50538,7 +50538,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -50617,7 +50617,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -50696,7 +50696,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -50775,7 +50775,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -50854,7 +50854,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -50933,7 +50933,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -51012,7 +51012,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -51091,7 +51091,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -51170,7 +51170,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
@@ -51249,7 +51249,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -51328,7 +51328,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -51407,7 +51407,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -51486,7 +51486,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -51565,7 +51565,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -51644,7 +51644,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -51723,7 +51723,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -51802,7 +51802,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -51881,7 +51881,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -51960,7 +51960,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -52039,7 +52039,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -52118,7 +52118,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -52197,7 +52197,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -52276,7 +52276,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -52355,7 +52355,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -52434,7 +52434,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -52513,7 +52513,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -52592,7 +52592,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -52671,7 +52671,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -52750,7 +52750,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -52829,7 +52829,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -52908,7 +52908,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -52987,7 +52987,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
@@ -53066,7 +53066,7 @@ sheets.spreadsheets.values.get(
   }
 );
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#FF0000')
+	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
