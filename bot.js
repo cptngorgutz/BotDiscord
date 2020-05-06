@@ -596,7 +596,7 @@ if(command === 'vaystfu') {
 	.setImage('https://i.imgur.com/tVcDb5u.gif') 
 	message.channel.send(exampleEmbed);
 }
-if(command === 'badluck') {
+if(command === 'unlucky') {
 	message.channel.bulkDelete(1)
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
@@ -605,7 +605,7 @@ if(command === 'badluck') {
 	.setImage('attachment://sadgif.gif')
 	message.channel.send(exampleEmbed);
 }
-if(command === 'goodluck') {
+if(command === 'lucky') {
 	message.channel.bulkDelete(1)
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
