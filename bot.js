@@ -45,6 +45,7 @@ footer: {
 
 //POLLS 
 client.on('message', message =>{
+if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 let args = message.content.toLowerCase().slice(config.prefix.length).trim().split(/ +/g);
 	switch(args[0]){
 		
@@ -56,7 +57,7 @@ let args = message.content.toLowerCase().slice(config.prefix.length).trim().spli
 			let msgArgs = args.slice(1).join(" ");
 			message.channel.bulkDelete(1)
 			message.channel.send(msgArgs).then(messageReaction => {
-			messageReaction.react("👍");
+			messageReaction.react("??");
 			});
 			
 		break;
@@ -67,8 +68,8 @@ let args = message.content.toLowerCase().slice(config.prefix.length).trim().spli
 			let msgArgs1 = args.slice(1).join(" ");
 			message.channel.bulkDelete(1)
 			message.channel.send(msgArgs1).then(async messageReaction => {
-				await messageReaction.react("👍");
-				await messageReaction.react("👎");
+				await messageReaction.react("??");
+				await messageReaction.react("??");
 
 			});	
 		break;
@@ -79,9 +80,9 @@ let args = message.content.toLowerCase().slice(config.prefix.length).trim().spli
 			let msgArgs2 = args.slice(1).join(" ");
 			message.channel.bulkDelete(1).catch(O_o=>{}); 
 			message.channel.send(msgArgs2).then(async messageReaction => {
-				await messageReaction.react("1️⃣");
-				await messageReaction.react("2️⃣");
-				await messageReaction.react("3️⃣");
+				await messageReaction.react("1??");
+				await messageReaction.react("2??");
+				await messageReaction.react("3??");
 
 			});	
 		break;
@@ -92,10 +93,10 @@ let args = message.content.toLowerCase().slice(config.prefix.length).trim().spli
 			let msgArgs3 = args.slice(1).join(" ");
 			message.channel.bulkDelete(1)
 			message.channel.send(msgArgs3).then(async messageReaction => {
-				await messageReaction.react("1️⃣");
-				await messageReaction.react("2️⃣");
-				await messageReaction.react("3️⃣"); 
-				await messageReaction.react("4️⃣"); 
+				await messageReaction.react("1??");
+				await messageReaction.react("2??");
+				await messageReaction.react("3??"); 
+				await messageReaction.react("4??"); 
 			});	
 		break;
 	}
@@ -104,13 +105,14 @@ let args = message.content.toLowerCase().slice(config.prefix.length).trim().spli
 	let Embed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setTitle("Initiate Poll")
-	.setDescription("**POLL:** \n**!poll** \n(!poll2 @ everyone thumbs up if we should abc, thumbs down if you disagree.) \n\n!poll1 to launch a 1 responce poll 👍 \n!poll2 to launch a 2 responce poll 👍,👎 \n!poll3 to launch a 3 responce poll 1️⃣,2️⃣,3️⃣\n!poll4 to launch a 4 responce poll 1️⃣,2️⃣,3️⃣,4️⃣");	
+	.setDescription("**POLL:** \n**!poll** \n(!poll2 @ everyone thumbs up if we should abc, thumbs down if you disagree.) \n\n!poll1 to launch a 1 responce poll ?? \n!poll2 to launch a 2 responce poll ??,?? \n!poll3 to launch a 3 responce poll 1??,2??,3??\n!poll4 to launch a 4 responce poll 1??,2??,3??,4??");	
 	message.channel.send(Embed);
 }
 });
 
 //AWAY NOTES
 client.on("message", async message => {
+if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 if(message.content.startsWith('!away')) {
 const awaynoteschannel = client.channels.get('600465818014449674')
 const messages1 = await message.channel.fetchMessages({ limit: 1 });
@@ -152,6 +154,7 @@ message.channel.send("Away-note Received.");
 
 //MISC COMMANDS        Character tiers, events etc.
 client.on("message", async message => {
+if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 const args = message.content.toLowerCase().slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
 const mentionedUser = message.mentions.members.first();
@@ -240,7 +243,7 @@ if(command === 'commands') {
 	function function2(){
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("**Commands List #2** \n \n**WAR** \n \n**!counter [teamname]** \nThis will bring up an infographic of who counters your chosen team, as well as some stats indicating average team punchups. \n**!counter [teamname+]** \n This will bring up team infographic + average punchup stats as well as a potential explanation, if the counters has a specific or unusual way of playing the fight. \n \n **!%** \nUse this command to calculate the punchup percentage of two teams. \n[example] !% 145 189 (offence to defence) \nExplanation: A hydra defence is 250k, you use the !counter hydra command to find the percentages. Example: !counter hydra \n shows -> Inhumans  7.78%  #1 records\nIf you want to use your 240k inhumans use the command: !% 240 250 this would = 4.2%, \n the 7.78% is on the good side of the % which shows that inhumans can punch up at least 7%, so 4% is 'easier' than that and you know you should be good to go \n \n**!add** \nThis command is for submitting war attack punchups. Use this command in the following format (offence to defence) \n120 = 120,000 you just need to round the power levels to the first 3 digits, \n[example] !add aim 120 wakanda 240 = 120k vs 240k")
+	.setDescription("**Commands List #2** \n \n**WAR** \n \n**!counter [teamname]** \nThis will bring up an infographic of who counters your chosen team, as well as some stats indicating average team punchups. \n**!counter [teamname+]** \n This will bring up team infographic + average punchup stats as well as a potential explanation, if the counters has a specific or unusual way of playing the fight. \n \n **!%** \nUse this command to calculate the punchup percentage of two teams. \n[example] !% 145 189 (offence to defence) \nExplanation: A hydra defence is 250k, you use the !counter hydra command to find the percentages. Example: !counter hydra \n shows -> Inhumans ?7.78%? #1 records\nIf you want to use your 240k inhumans use the command: !% 240 250 this would = 4.2%, \n the 7.78% is on the good side of the % which shows that inhumans can punch up at least 7%, so 4% is 'easier' than that and you know you should be good to go \n \n**!add** \nThis command is for submitting war attack punchups. Use this command in the following format (offence to defence) \n120 = 120,000 you just need to round the power levels to the first 3 digits, \n[example] !add aim 120 wakanda 240 = 120k vs 240k")
 	message.channel.send(exampleEmbed);
 	}
 	function1();
@@ -287,7 +290,7 @@ message.channel.send("TB3 Removed from " + mentionedUser + " + TB1 Added.")
 message.channel.send("" + mentionedUser + " Is already in TB1")
 } else if(mentionedUser.roles.has(recruit.id)) { // GIVE TB1 WHILST HAVING RECRUIT ROLE
 mentionedUser.addRole(TB1).catch(console.error);
-message.channel.send("You've just added " + mentionedUser + " to the TB1 family ❤️")
+message.channel.send("You've just added " + mentionedUser + " to the TB1 family ??")
 mentionedUser.removeRole(recruit).catch(console.error);
 } else {
 message.channel.send("Error: mentionedUser does not have a role of recruit/TB1/TB2/TB3.")
@@ -308,7 +311,7 @@ mentionedUser.removeRole(TB3).catch(console.error);
 message.channel.send("" + mentionedUser + " Is already in TB2")
 } else if(mentionedUser.roles.has(recruit.id)) { // GIVE TB2 WHILST HAVING RECRUIT ROLE
 mentionedUser.addRole(TB2).catch(console.error);
-message.channel.send("You've just added " + mentionedUser + " to the TB2 family ❤️")
+message.channel.send("You've just added " + mentionedUser + " to the TB2 family ??")
 mentionedUser.removeRole(recruit).catch(console.error);
 } else {
 message.channel.send("Error: mentionedUser does not have a role of recruit/TB1/TB2/TB3.")
@@ -327,7 +330,7 @@ message.channel.send("TB1 Removed from " + mentionedUser + " + TB3 Added.")
 mentionedUser.removeRole(TB1).catch(console.error);
 } else if(mentionedUser.roles.has(recruit.id)) { // GIVE TB3 WHILST HAVING RECRUIT ROLE
 mentionedUser.addRole(TB3).catch(console.error);
-message.channel.send("You've just added " + mentionedUser + " to the TB3 family ❤️")
+message.channel.send("You've just added " + mentionedUser + " to the TB3 family ??")
 mentionedUser.removeRole(recruit).catch(console.error);
 } else {
 message.channel.send("Error: mentionedUser does not have a role of recruit/TB1/TB2/TB3.")
@@ -488,46 +491,46 @@ if(command === 'ultron') {
 if(akit === "kit" || akit === "k" || kit === "kit" || kit === "k") {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Basic)** \n \n**Disintegration Beam • T4 Upgrade** \n \nAttack primary target for **270% -> 340%** damage + steal 2 positive effects + clear Taunt.")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Basic)** \n \n**Disintegration Beam � T4 Upgrade** \n \nAttack primary target for **270% -> 340%** damage + steal 2 positive effects + clear Taunt.")
 	.setThumbnail('https://i.imgur.com/Y78BMF9.png') 
 	message.channel.send(exampleEmbed);
 	const exampleEmbed2 = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Special)** \n \n**Factory Upgrade • T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278>\nSummon **2-3 -> 3** Ultron Minions at **300% -> 340%** normal damage and 100% of normal Health. Apply Defense Up to self and all ULTRON MINION allies for 2 turns.\nPossible Summons:\nUltron Incinerator\nUltron Accelerator\nUltron Fabricator")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Special)** \n \n**Factory Upgrade � T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278>\nSummon **2-3 -> 3** Ultron Minions at **300% -> 340%** normal damage and 100% of normal Health. Apply Defense Up to self and all ULTRON MINION allies for 2 turns.\nPossible Summons:\nUltron Incinerator\nUltron Accelerator\nUltron Fabricator")
 	.setThumbnail('https://i.imgur.com/HaIZygM.png') 
 	message.channel.send(exampleEmbed2);
 	const exampleEmbed3 = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Ultimate)** \n \n**Purge System • T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityoff:663751832413405184><:abilityoff:663751832413405184>\nAttack primary target for **620% -> 700%** Piercing damage. This ability deals double damage against targets with Defense Up. Gain 1 Ability Energy per positive effect on self.")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Ultimate)** \n \n**Purge System � T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityoff:663751832413405184><:abilityoff:663751832413405184>\nAttack primary target for **620% -> 700%** Piercing damage. This ability deals double damage against targets with Defense Up. Gain 1 Ability Energy per positive effect on self.")
 	.setThumbnail('https://i.imgur.com/8BbEwWt.png') 
 	message.channel.send(exampleEmbed3);
 	const exampleEmbed4 = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Passive)** \n \n**Ultron Prime • T4 Upgrade** \n \nIf Health is full at the start of a match, Revive once with 50% of this character's Max Health.\nOn Kill, this character and all VILLAIN TECH allies have **4 -> all** positive effects prolonged by a duration of 1.")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Passive)** \n \n**Ultron Prime � T4 Upgrade** \n \nIf Health is full at the start of a match, Revive once with 50% of this character's Max Health.\nOn Kill, this character and all VILLAIN TECH allies have **4 -> all** positive effects prolonged by a duration of 1.")
 	.setThumbnail('https://i.imgur.com/s2kLpjn.png') 
 	message.channel.send(exampleEmbed4);
 } else if(abasic === "basic" || abasic === "bas" || abasic === "b" || basic === "basic" || basic === "bas" || basic === "b") {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Basic)** \n \n**Disintegration Beam • T4 Upgrade** \n \nAttack primary target for **270% -> 340%** damage + steal 2 positive effects + clear Taunt.")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Basic)** \n \n**Disintegration Beam � T4 Upgrade** \n \nAttack primary target for **270% -> 340%** damage + steal 2 positive effects + clear Taunt.")
 	.setThumbnail('https://i.imgur.com/Y78BMF9.png') 
 	message.channel.send(exampleEmbed);
 } else if(aspecial === "special" || aspecial === "spec" || aspecial === "spe" || special === "special" || special === "spec" || special === "spe" || special === "s") {
 	const exampleEmbed2 = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Special)** \n \n**Factory Upgrade • T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278>\nSummon **2-3 -> 3** Ultron Minions at **300% -> 340%** normal damage and 100% of normal Health. Apply Defense Up to self and all ULTRON MINION allies for 2 turns.\nPossible Summons:\nUltron Incinerator\nUltron Accelerator\nUltron Fabricator")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Special)** \n \n**Factory Upgrade � T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278>\nSummon **2-3 -> 3** Ultron Minions at **300% -> 340%** normal damage and 100% of normal Health. Apply Defense Up to self and all ULTRON MINION allies for 2 turns.\nPossible Summons:\nUltron Incinerator\nUltron Accelerator\nUltron Fabricator")
 	.setThumbnail('https://i.imgur.com/HaIZygM.png') 
 	message.channel.send(exampleEmbed2);
 } else if(aultimate === "ultimate" || aultimate === "ultimat" || aultimate === "ulti" || aultimate === "ult" || ultimate === "ultimate" || ultimate === "ultimat" || ultimate === "ulti" || ultimate === "ult") {
 	const exampleEmbed3 = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Ultimate)** \n \n**Purge System • T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityoff:663751832413405184><:abilityoff:663751832413405184>\nAttack primary target for **620% -> 700%** Piercing damage. This ability deals double damage against targets with Defense Up. Gain 1 Ability Energy per positive effect on self.")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Ultimate)** \n \n**Purge System � T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityoff:663751832413405184><:abilityoff:663751832413405184>\nAttack primary target for **620% -> 700%** Piercing damage. This ability deals double damage against targets with Defense Up. Gain 1 Ability Energy per positive effect on self.")
 	.setThumbnail('https://i.imgur.com/8BbEwWt.png') 
 	message.channel.send(exampleEmbed3);
 } else if(apassive === "passive" || apassive === "pass" || apassive === "p" || apassive === "passi" || passive === "passive" || passive === "pass" || passive === "p" || passive === "passi") {
 	const exampleEmbed4 = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Passive)** \n \n**Ultron Prime • T4 Upgrade** \n \nIf Health is full at the start of a match, Revive once with 50% of this character's Max Health.\nOn Kill, this character and all VILLAIN TECH allies have **4 -> all** positive effects prolonged by a duration of 1.")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Passive)** \n \n**Ultron Prime � T4 Upgrade** \n \nIf Health is full at the start of a match, Revive once with 50% of this character's Max Health.\nOn Kill, this character and all VILLAIN TECH allies have **4 -> all** positive effects prolonged by a duration of 1.")
 	.setThumbnail('https://i.imgur.com/s2kLpjn.png') 
 	message.channel.send(exampleEmbed4);
 } else if(aspeed === "speed" || aspeed === "spee" || aspeed === "spe" || speed === "speed" || speed === "spee" || speed === "spe") {
@@ -731,9 +734,9 @@ if (message.channel.id === '656244057244303361' || message.channel.id === '64322
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 //                           TB2 ULT 6 ROOM                             TB3 ULT 6 ROOM                       
 	message.channel.bulkDelete(100)
-    message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
+    message.channel.send('```To claim a lane: \n Put an ?? emoji on the lane of choice.```');
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Ultimus6.png')] });
-	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 1 ║  \n ╚═══════════════╝ ```")
+	message.channel.send("``` +---------------+ \n � Strike Team 1 �  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -742,7 +745,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  
-	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 2 ║  \n ╚═══════════════╝ ```")
+	message.channel.send("``` +---------------+ \n � Strike Team 2 �  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -751,7 +754,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  	
-	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 3 ║  \n ╚═══════════════╝ ```")
+	message.channel.send("``` +---------------+ \n � Strike Team 3 �  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -772,9 +775,9 @@ if (message.channel.id === '634155222490415104' || message.channel.id === '63415
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 //                           TB1 ULT 7 ROOM                             TB2 ULT 7 ROOM                              TB3 ULT 7 ROOM
 	message.channel.bulkDelete(100)
-    message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
+    message.channel.send('```To claim a lane: \n Put an ?? emoji on the lane of choice.```');
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Ultimus7.png')] });
-	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 1 ║  \n ╚═══════════════╝ ```")
+	message.channel.send("``` +---------------+ \n � Strike Team 1 �  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -783,7 +786,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  
-	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 2 ║  \n ╚═══════════════╝ ```")
+	message.channel.send("``` +---------------+ \n � Strike Team 2 �  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -792,7 +795,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  	
-	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 3 ║  \n ╚═══════════════╝ ```")
+	message.channel.send("``` +---------------+ \n � Strike Team 3 �  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -813,9 +816,9 @@ if (message.channel.id === '656230420265828363' || message.channel.id === '65623
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 //                       TB1 EVENT ROOM#1                           TB1 EVENT ROOM#2                           TB2 EVENT ROOM#1                           TB2 EVENT ROOM#2                           TB3 EVENT ROOM#1                           TB3 EVENT ROOM#2                           TB3 ALPHA ROOM 
 	message.channel.bulkDelete(100)
-    message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
+    message.channel.send('```To claim a lane: \n Put an ?? emoji on the lane of choice.```');
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Alpha4.png')] });
-	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 1 ║  \n ╚═══════════════╝ ```")
+	message.channel.send("``` +---------------+ \n � Strike Team 1 �  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -824,7 +827,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  
-	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 2 ║  \n ╚═══════════════╝ ```")
+	message.channel.send("``` +---------------+ \n � Strike Team 2 �  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -833,7 +836,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  	
-	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 3 ║  \n ╚═══════════════╝ ```")
+	message.channel.send("``` +---------------+ \n � Strike Team 3 �  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -854,9 +857,9 @@ if (message.channel.id === '656230420265828363' || message.channel.id === '65623
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 //                       TB1 EVENT ROOM#1                           TB1 EVENT ROOM#2                           TB2 EVENT ROOM#1                           TB2 EVENT ROOM#2                           TB3 EVENT ROOM#1                           TB3 EVENT ROOM#2 TB3 room 
 message.channel.bulkDelete(100)
-    message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
+    message.channel.send('```To claim a lane: \n Put an ?? emoji on the lane of choice.```');
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Beta4.png')] });
-	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 1 ║  \n ╚═══════════════╝ ```")
+	message.channel.send("``` +---------------+ \n � Strike Team 1 �  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -865,7 +868,7 @@ message.channel.bulkDelete(100)
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  
-	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 2 ║  \n ╚═══════════════╝ ```")
+	message.channel.send("``` +---------------+ \n � Strike Team 2 �  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -874,7 +877,7 @@ message.channel.bulkDelete(100)
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  	
-	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 3 ║  \n ╚═══════════════╝ ```")
+	message.channel.send("``` +---------------+ \n � Strike Team 3 �  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -895,9 +898,9 @@ if (message.channel.id === '656230420265828363' || message.channel.id === '65623
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 //                           TB1 EVENT ROOM#1                           TB1 EVENT ROOM#2                           TB2 EVENT ROOM#1                           TB2 EVENT ROOM#2                           TB3 EVENT ROOM#1                           TB3 EVENT ROOM#2                            TB3 GAMMA ROOM :/
 message.channel.bulkDelete(100)
-    message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
+    message.channel.send('```To claim a lane: \n Put an ?? emoji on the lane of choice.```');
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Gamma4.png')] });
-	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 1 ║  \n ╚═══════════════╝ ```")
+	message.channel.send("``` +---------------+ \n � Strike Team 1 �  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -906,7 +909,7 @@ message.channel.bulkDelete(100)
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  
-	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 2 ║  \n ╚═══════════════╝ ```")
+	message.channel.send("``` +---------------+ \n � Strike Team 2 �  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -915,7 +918,7 @@ message.channel.bulkDelete(100)
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  	
-	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 3 ║  \n ╚═══════════════╝ ```")
+	message.channel.send("``` +---------------+ \n � Strike Team 3 �  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -943,7 +946,7 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -982,7 +985,7 @@ if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1022,7 +1025,7 @@ if (message.channel.id === '656207417033359371') { //TB2 EVENTROOM1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1060,7 +1063,7 @@ message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1099,7 +1102,7 @@ if (message.channel.id === '656232194137784333') { //TB3 EVENTROOM1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1137,7 +1140,7 @@ message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1180,7 +1183,7 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1218,7 +1221,7 @@ if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1257,7 +1260,7 @@ if (message.channel.id === '656207417033359371') { //TB2 EVENTROOM1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1295,7 +1298,7 @@ if (message.channel.id === '656216714723459116') { //TB2 EVENTROOM2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1334,7 +1337,7 @@ message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1372,7 +1375,7 @@ message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1413,7 +1416,7 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch();
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1451,7 +1454,7 @@ if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1490,7 +1493,7 @@ if (message.channel.id === '656207417033359371') {
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1528,7 +1531,7 @@ message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1567,7 +1570,7 @@ message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1605,7 +1608,7 @@ message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1644,7 +1647,7 @@ if (message.channel.id === '656244057244303361'){
 message.channel.bulkDelete(1)
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1681,7 +1684,7 @@ if (message.channel.id === '643229492650704973'){
 message.channel.bulkDelete(1)
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1719,7 +1722,7 @@ if(args[0] === "ultimus" && args[1] === "7"){
 if (message.channel.id === '634155222490415104') { //TB1 U7ROOM
 message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1757,7 +1760,7 @@ message.channel.bulkDelete(1)
 //TB1 U7 ROOM
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1795,7 +1798,7 @@ message.channel.bulkDelete(1)
 //TB3 U7 ROOM
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
+	if (message.content.includes('+'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -2037,7 +2040,7 @@ if(args[0] == "aim" && args[1] === "stats"){
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2065,7 +2068,7 @@ function functionaimstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2110,7 +2113,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2122,7 +2125,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "asgardians" && args[1] === "stats"){
+} else if(args[0] == "asgardians" || args[0] == "asgardian" || args[0] == "asgard" && args[1] === "stats"){
 //stats
 	sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -2133,14 +2136,14 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
     }
   });
 
-} else if(args[0] == "asgardians"){
+} else if(args[0] == "asgardians" || args[0] == "asgardian" || args[0] == "asgard"){
 const asgardcounterimage = client.channels.get('666340204872990730')
 asgardcounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterasgard = messages.first().attachments.first()
@@ -2162,7 +2165,7 @@ function functionasgardiansstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2170,7 +2173,7 @@ function functionasgardiansstats() {
   });	
 }
 setTimeout(functionasgardiansstats, 3000);
-} else if(args[0] == "asgardians+"){
+} else if(args[0] == "asgardians+" || args[0] == "asgardian+" || args[0] == "asgard+"){
 const asgardianscounterimage2 = client.channels.get('666340204872990730')
 const channelToCheckText = client.channels.get('666271343536373761')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
@@ -2206,7 +2209,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2218,7 +2221,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "avengers" && args[1] === "stats"){
+} else if(args[0] == "avengers" || args[0] == "avenger" || args[0] == "avenge" && args[1] === "stats"){
 //stats
 	sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -2229,13 +2232,13 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
     }
   });
-} else if(args[0] == "avengers"){
+} else if(args[0] == "avengers" || args[0] == "avenger" || args[0] == "avenge"){
 const avengerscounterimage = client.channels.get('706507015911899207')
 avengerscounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counteravengers = messages.first().attachments.first()
@@ -2257,7 +2260,7 @@ function functionavengersstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2265,7 +2268,7 @@ function functionavengersstats() {
   });
 }
 setTimeout(functionavengersstats, 3000);
-} else if(args[0] == "avengers+"){
+} else if(args[0] == "avengers+" || args[0] == "avenger+" || args[0] == "avenge+"){
 const avengerscounterimage2 = client.channels.get('706507015911899207')
 const channelToCheckText = client.channels.get('706507049063940156')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
@@ -2302,7 +2305,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2325,7 +2328,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2353,7 +2356,7 @@ function functionbktstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2397,7 +2400,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2410,7 +2413,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "brawlers" && args[1] === "stats"){
+} else if(args[0] == "brawlers" || args[0] == "brawler" || args[0] == "brawl" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -2421,13 +2424,13 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
     }
   });
-} else if(args[0] == "brawlers"){
+} else if(args[0] == "brawlers" || args[0] == "brawler" || args[0] == "brawl"){
 const brawlerscounterimage = client.channels.get('666340239903686659')
 brawlerscounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterbrawlers = messages.first().attachments.first()
@@ -2449,7 +2452,7 @@ function functionbrawlerstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2457,7 +2460,7 @@ function functionbrawlerstats() {
   });
 }
 setTimeout(functionbrawlerstats, 3000);
-} else if(args[0] == "brawlers+"){
+} else if(args[0] == "brawlers+" || args[0] == "brawler+" || args[0] == "brawl+"){
 const brawlerscounterimage2 = client.channels.get('666340239903686659')
 
 const channelToCheckText = client.channels.get('666317820656615435')
@@ -2495,7 +2498,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2518,7 +2521,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2546,7 +2549,7 @@ function functioncptnmarvelstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2592,7 +2595,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2616,7 +2619,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2644,7 +2647,7 @@ function functiondefendersstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2689,7 +2692,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2713,7 +2716,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2741,7 +2744,7 @@ function functiongotgstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2787,7 +2790,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + " " + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2811,7 +2814,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+	.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2839,7 +2842,7 @@ function functionhydrastats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2885,7 +2888,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2908,7 +2911,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2936,7 +2939,7 @@ function functionkreeronanstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -2982,7 +2985,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3006,7 +3009,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3034,7 +3037,7 @@ function functionmaraudersstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3080,7 +3083,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3093,7 +3096,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "shield" && args[1] === "stats"){
+} else if(args[0] == "shield" || args[0] === "coulson" || args[0] === "colson" || args[0] === "coulsen" || args[0] === "colsen" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -3104,13 +3107,13 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
     }
   });
-} else if(args[0] == "shield"){
+} else if(args[0] == "shield" || args[0] === "coulson" || args[0] === "colson" || args[0] === "coulsen" || args[0] === "colsen"){
 const shieldcounterimage = client.channels.get('666340284962963524')
 shieldcounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const countershield = messages.first().attachments.first()
@@ -3132,7 +3135,7 @@ function functionshieldstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3140,7 +3143,7 @@ function functionshieldstats() {
   });
 }
 setTimeout(functionshieldstats, 3000);
-} else if(args[0] == "shield+"){
+} else if(args[0] == "shield+" || args[0] === "coulson+" || args[0] === "colson+" || args[0] === "coulsen+" || args[0] === "colsen+"){
 const shieldcounterimage2 = client.channels.get('666340284962963524')
 
 const channelToCheckText = client.channels.get('666318788140072981')
@@ -3179,7 +3182,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3204,7 +3207,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3232,7 +3235,7 @@ function functions6stats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3279,7 +3282,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3302,7 +3305,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3330,7 +3333,7 @@ function functionsupernaturalstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3376,7 +3379,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3400,7 +3403,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3428,7 +3431,7 @@ function functionsymbiotestats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3474,7 +3477,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3498,7 +3501,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3526,7 +3529,7 @@ function functionultronstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3571,7 +3574,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3594,7 +3597,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3622,7 +3625,7 @@ function functionwakandastats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3668,7 +3671,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3692,7 +3695,7 @@ setTimeout(function3, 4000);
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3720,7 +3723,7 @@ function functionxmenstats() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -3765,7 +3768,7 @@ function function2() {
     if (rows.length) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-.setDescription("Attacking" + rows.join('\n').replace(/,/g, ' '))
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, '?'))
 	message.channel.send(exampleEmbed); 
     } else {
       console.log('No data found.');
@@ -49292,7 +49295,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "wakanda"){
