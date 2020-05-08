@@ -3096,6 +3096,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} if(args[0] == "mercenary" && args[1] === "stats"){
+//stats
+	sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!CA1:CC",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("Attacking" + rows.join('\n').replace(/,/g, ''))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "shield" && args[1] === "stats" || args[0] === "coulson" && args[1] === "stats" || args[0] === "colson" && args[1] === "stats" || args[0] === "coulsen" && args[1] === "stats" || args[0] === "colsen" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
