@@ -4364,7 +4364,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "captainmarvel" && args[2] === "asgardians" || args[0] === "cm" && args[2] === "asgardians" || args[0] === "cm" && args[2] === "asgardian" || || args[0] === "cm" && args[2] === "asgard"){
+} else if (args[0] === "captainmarvel" && args[2] === "asgardians" || args[0] === "cm" && args[2] === "asgardians" || args[0] === "cm" && args[2] === "asgardian" || args[0] === "cm" && args[2] === "asgard"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
