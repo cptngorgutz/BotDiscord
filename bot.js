@@ -2125,7 +2125,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "asgardians" || args[0] == "asgardian" || args[0] == "asgard" && args[1] === "stats"){
+} else if(args[0] == "asgardians" && args[1] === "stats" || args[0] == "asgardian" && args[1] === "stats" || args[0] == "asgard" && args[1] === "stats"){
 //stats
 	sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -2221,7 +2221,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "avengers" || args[0] == "avenger" || args[0] == "avenge" && args[1] === "stats"){
+} else if(args[0] == "avengers" && args[1] === "stats" || args[0] == "avenger" && args[1] === "stats" || args[0] == "avenge" && args[1] === "stats"){
 //stats
 	sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -2510,7 +2510,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "captainmarvel" || args[0] == "cm" || args[0] == "captain" || args[0] == "marvel" && args[1] === "stats" || args[0] == "captain" && args[1] === "marvel" && args[2] === "stats"){
+} else if(args[0] == "captainmarvel" && args[1] === "stats" || args[0] == "cm" && args[1] === "stats" || args[0] == "captain" && args[1] === "stats" || args[0] == "marvel"  && args[1] === "stats" || args[0] == "captain" && args[1] === "marvel" && args[2] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -2608,7 +2608,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "defenders" && args[1] === "stats"){
+} else if(args[0] == "defenders" && args[1] === "stats" || args[0] == "punfenders" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -2705,7 +2705,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "gotg" && args[1] === "stats"){
+} else if(args[0] == "gotg" && args[1] === "stats" || args[0] == "guardians" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -2900,7 +2900,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "kreeronan" && args[1] === "stats"){
+} else if(args[0] == "kreeronan" && args[1] === "stats" || args[0] == "kree" && args[1] === "ronan" && args[2] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -2998,7 +2998,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "marauders" || args[0] == "marauder" && args[1] === "stats"){
+} else if(args[0] == "marauders" && args[1] === "stats" || args[0] == "marauder" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -3096,7 +3096,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "shield" || args[0] === "coulson" || args[0] === "colson" || args[0] === "coulsen" || args[0] === "colsen" && args[1] === "stats"){
+} else if(args[0] == "shield" && args[1] === "stats" || args[0] === "coulson" && args[1] === "stats" || args[0] === "colson" && args[1] === "stats" || args[0] === "coulsen" && args[1] === "stats" || args[0] === "colsen" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -3196,7 +3196,7 @@ setTimeout(function3, 4000);
 
 
 
-} else if(args[0] == "s6" || args[0] == "sinister6" || args[0] == "sinistersix" && args[1] === "stats"){
+} else if(args[0] == "s6" && args[1] === "stats" || args[0] == "sinister6" && args[1] === "stats" || args[0] == "sinistersix" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -3294,7 +3294,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 	
-} else if(args[0] == "supernatural" || args[0] === "supernaturals" && args[1] === "stats"){
+} else if(args[0] == "supernatural" && args[1] === "stats" || args[0] === "supernaturals" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -3392,7 +3392,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "symbiote" || args[0] === "symbiotes" && args[1] === "stats"){
+} else if(args[0] == "symbiote" && args[1] === "stats" || args[0] === "symbiotes" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -3490,7 +3490,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "ultron" && args[1] === "stats"){
+} else if(args[0] == "ultron" && args[1] === "stats" || args[0] == "ult" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -3586,7 +3586,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "wakanda" && args[1] === "stats"){
+} else if(args[0] == "wakanda" && args[1] === "stats" || args[0] == "wakandan" && args[1] === "stats" || args[0] == "wakandans" && args[1] === "stats"){
 //stats
 	sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -3603,7 +3603,7 @@ setTimeout(function3, 4000);
       console.log('No data found.');
     }
   });
-} else if(args[0] == "wakanda"){
+} else if(args[0] == "wakanda" || args[0] == "wakandan" || args[0] == "wakandans"){
 const wakandacounterimage = client.channels.get('700323525348818994')
 wakandacounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterwakanda = messages.first().attachments.first()
