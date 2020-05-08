@@ -31523,6 +31523,85 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "aim" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!F:F`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!F${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!G:G`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!G${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
 } else if (args[0] === "asgardians" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
@@ -31681,10 +31760,168 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "aimtron" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!H:H`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!H${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!I:I`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!I${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
 } else if (args[0] === "ogbh" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!J:J`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!J${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!K:K`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!K${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
+} else if (args[0] === "ogbh" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -31839,10 +32076,168 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "bh" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!L:L`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!L${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!M:M`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!M${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
 } else if (args[0] === "bkt" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!N:N`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!N${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!O:O`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!O${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
+} else if (args[0] === "bkt" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -31997,10 +32392,168 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "brawlers" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!P:P`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!P${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!Q:Q`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!Q${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
 } else if (args[0] === "captainmarvel" || args[0] === "cm" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!R:R`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!R${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!S:S`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!S${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
+} else if (args[0] === "cm" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -32155,10 +32708,168 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "defenders" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!T:T`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!T${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!U:U`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!U${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
 } else if (args[0] === "f4" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!V:V`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!V${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!W:W`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!W${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
+} else if (args[0] === "f4" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -32313,10 +33024,168 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "gotg" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!X:X`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!X${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!Y:Y`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!Y${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
 } else if (args[0] === "hydra" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!Z:Z`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!Z${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AA:AA`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AA${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
+} else if (args[0] === "hydra" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -32471,10 +33340,168 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "inhumans" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AB:AB`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AB${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AC:AC`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AC${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
 } else if (args[0] === "kreeronan" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AD:AD`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AD${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AE:AE`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AE${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
+} else if (args[0] === "kreeronan" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -32629,10 +33656,168 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "kreeultimus" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AF:AF`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AF${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AG:AG`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AG${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
 } else if (args[0] === "marauders" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AH:AH`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AH${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AI:AI`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AI${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
+} else if (args[0] === "marauders" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -32787,10 +33972,168 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "maraudertron" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AJ:AJ`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AJ${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AK:AK`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AK${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
 } else if (args[0] === "pa" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AL:AL`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AL${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AM:AM`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AM${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
+} else if (args[0] === "pa" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -32945,10 +34288,168 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "s6" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AN:AN`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AN${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AO:AO`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AO${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
 } else if (args[0] === "coulsonshield" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AP:AP`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AP${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AQ:AQ`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AQ${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
+} else if (args[0] === "coulsonshield" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -33103,10 +34604,168 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "supernatural" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AR:AR`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AR${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AS:AS`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AS${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
 } else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AT:AT`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AT${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AU:AU`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AU${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
+} else if (args[0] === "symbiote" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -33261,6 +34920,85 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "ultron" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AV:AV`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AV${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AW:AW`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AW${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
 } else if (args[0] === "wakanda" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
@@ -33340,10 +35078,168 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "wakanda" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AX:AX`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AX${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AY:AY`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AY${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
 } else if (args[0] === "xmen" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!AZ:AZ`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!AZ${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!BA:BA`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!BA${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
+} else if (args[0] === "xmen" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -35552,6 +37448,84 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "asgardians" && args[2] === "mercenary"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Mercenary";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!D:D`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!D${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!E:E`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!E${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
 } else if (args[0] === "aimtron" && args[2] === "maraudertron"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
@@ -55147,7 +57121,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "asgardians"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "Asgardians";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -55226,7 +57200,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "avengers"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "Avengers";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -55384,7 +57358,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "aim"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "Aim";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -55463,7 +57437,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "aimtron"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "AimTron";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -55542,7 +57516,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "ogbh"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "ogBH";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -55621,7 +57595,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "bh"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "BH";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -55700,7 +57674,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "bkt"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "BKT";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -55779,7 +57753,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "brawlers"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "Brawlers";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -55858,7 +57832,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "cm"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "CaptainMarvel";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -55937,7 +57911,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "defenders"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "Defenders";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -56016,7 +57990,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "f4"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "FantasticFour";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -56095,7 +58069,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "gotg"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "GuardiansOfTheGalaxy";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -56174,7 +58148,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "hydra"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "Hydra";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -56253,7 +58227,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "inhumans"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "Inhumans";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -56332,7 +58306,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "kreeronan"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "KreeRonan";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -56411,7 +58385,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "KreeUltimus";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -56490,7 +58464,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "marauders"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "Marauders";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -56569,7 +58543,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "maraudertron"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "Maraudertron";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -56648,7 +58622,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "pa"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "PowerArmor";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -56727,7 +58701,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "s6"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "SinisterSix";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -56806,7 +58780,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "CoulsonSHIELD";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -56885,7 +58859,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "supernatural"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "Supernaturals";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -56964,7 +58938,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "symbiote"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "Symbiote";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -57043,7 +59017,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "ultron"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "Ultron";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -57122,7 +59096,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "wakanda"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "Wakanda";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
@@ -57201,7 +59175,7 @@ const exampleEmbed = new Discord.RichEmbed()
 } else if (args[0] === "mercenary" && args[2] === "xmen"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
-const sheetName = "Mercenary";
+const sheetName = "XMen";
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
