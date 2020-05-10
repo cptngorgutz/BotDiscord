@@ -3096,7 +3096,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} if(args[0] == "mercenary" && args[1] === "stats"){
+} else if(args[0] == "mercenary" && args[1] === "stats"){
 //stats
 	sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
