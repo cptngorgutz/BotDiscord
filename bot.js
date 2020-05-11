@@ -3808,9 +3808,14 @@ message.channel.send("Sorry, this doesn't work here. Head to <#67326100691851674
 
 }
 
-if (command === 'add'){
+if(command === 'add'){
 const managerrole = message.guild.roles.find(role => role.name === 'Bot Management');
-if(message.member.roles.has(managerrole.id)) {
+if(args[0] === "teamlist"){
+	let Embed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("__**Available Teamlist:**__ \n\n AIM | AIMtron | Asgardians | Avengers | BH | BKT | Brawlers | CM | Coulson | Defenders | F4 | GotG | Hydra | Inhumans | KreeRonan | KreeUltimus | Marauders | Maraudertron | ogBH | PA | S6 | Shield | Supernaturals | Symbiotes | Ultitron | Ultron | Wakanda | Xmen");	
+	message.channel.send(Embed);
+} else if(message.member.roles.has(managerrole.id)) {
 if (args[0] === "asgardians" && args[2] === "asgardians" || args[0] === "asgardian" && args[2] === "asgardian" || args[0] === "asgard" && args[2] === "asgard"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
