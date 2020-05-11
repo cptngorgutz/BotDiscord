@@ -7837,7 +7837,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "aimtron"){
@@ -9812,7 +9812,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "ogbh"){
@@ -11787,7 +11787,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "bh"){
@@ -13762,7 +13762,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "bkt"){
@@ -15737,7 +15737,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "brawlers"){
@@ -17712,7 +17712,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "cm"){
@@ -19687,7 +19687,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "defenders"){
@@ -21662,7 +21662,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "f4"){
@@ -23637,7 +23637,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "gotg"){
@@ -25612,7 +25612,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "hydra"){
@@ -27587,7 +27587,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "inhumans"){
@@ -29562,7 +29562,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "kreeronan"){
@@ -31537,7 +31537,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "aim" && args[2] === "mercenary"){
@@ -35408,7 +35408,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "marauders"){
@@ -37383,7 +37383,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "maraudertron"){
@@ -39436,7 +39436,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "pa"){
@@ -43386,7 +43386,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "shield"){
@@ -45361,7 +45361,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "supernatural" || args[0] === "asgardians" && args[2] === "supernaturals"){
@@ -47336,7 +47336,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "symbiote"){
@@ -49311,7 +49311,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "ultron"){
@@ -53261,7 +53261,7 @@ sheets.spreadsheets.values.get(
 );
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
-	.setDescription("Added: " + args[0] + " " + args[1] + " vs " + args[2] + " " + args[3])
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
 } else if (args[0] === "asgardians" && args[2] === "xmen"){
@@ -61331,6 +61331,9 @@ const exampleEmbed = new Discord.RichEmbed()
 } else {
 							//   bot-spamTB                                 bot-spamTESTserver                              TB1-WAR-CHAT                                   TB2-WAR-CHAT                                    TB3-WAR-CHAT                                 General-TESTSERVER                       EMOJITESTSERVER-testing room
 if (message.channel.id === '673261006918516741' || message.channel.id === '666305824813219870' || message.channel.id === '560885677475102740' || message.channel.id === '562757850477101063' || message.channel.id === '643140704624967694' || message.channel.id === '661221254958940220' || message.channel.id === '699707863148265512') {
+if(!isNaN(args[0]) || !isNaN(args[2])) {
+message.channel.send("Please add in the following order: [teamname] [power] [teamname] [power]");
+} else {
 const reviewchannel = client.channels.get('701432148774617148')
 const messages1 = await message.channel.fetchMessages({ limit: 1 });
 const embed = new Discord.RichEmbed()
@@ -61348,9 +61351,9 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription(`__Submitted for review:__ \nAttacker: **${args[0]}** **${args[1]}** \nDefender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
+} 
 } else {
 message.channel.send("Sorry, this doesn't work here. Head to <#673261006918516741> and try again.").catch(console.error);
-}
 }
 }
 if (command === '%'){
