@@ -232,23 +232,123 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 message.channel.send("You dont have permission to use this command.")
 }
 }
-if(command === 'commands') {
-	function function1() {
-	const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#0099ff')
-	.setDescription("**Commands List** \n \n**!commands** \nuse this command to bring up the commands list. \n \n**!away**\n**Add away note (reason for being away)** \n*(Deletes your away message for privacy(those with notifications on may still be able to see it) and informs captains of your circumstances)* \n \n**!uniques** \n(Infographic showing uniques gear list) \n \n**!blitz** \n(Shows current blitz predictions, !blitz2 for orb assault blitz) \n \n**!event [name]** \nA list of legendary events \n \n**Character Infographic** \n**![charactername]** \nProvides an infographic of gear needed for chosen character. \n \n**!bug** \nIf you find a bug or error please use !bug with an explanation of the error. \n\n**!request** \nIf you would like to request a feature or command, use !request with your request. \n\n**!notifications** \nUse this command to join the notifications role, we will ping this role when the game is on/off for maintenance as well as other important reasons such as good value offers etc.")
+//if(command === 'commands') {
+//	function function1() {
+//	const exampleEmbed = new Discord.RichEmbed()
+//	.setColor('#0099ff')
+//	.setDescription("**Commands List** \n \n**!commands** \nuse this command to bring up the commands list. \n \n**!away**\n**Add away note (reason for being away)** \n*(Deletes your away message for privacy(those with notifications on may still be able to see it) and informs captains of your circumstances)* \n \n**!uniques** \n(Infographic showing uniques gear list) \n \n**!blitz** \n(Shows current blitz predictions, !blitz2 for orb assault blitz) \n \n**!event [name]** \nA list of legendary events \n \n**Character Infographic** \n**![charactername]** \nProvides an infographic of gear needed for chosen character. \n \n**!bug** \nIf you find a bug or error please use !bug with an explanation of the error. \n\n**!request** \nIf you would like to request a feature or command, use !request with your request. \n\n**!notifications** \nUse this command to join the notifications role, we will ping this role when the game is on/off for maintenance as well as other important reasons such as good value offers etc.")
 //	.setDescription("**Commands List** \n \n**!commands** \nuse this command to bring up the commands list. \n \n**!away**\n**Add away note (reason for being away)** \n*(Deletes your away message for (somewhat) privacy and informs captains of your circumstances)* \n \n**!uniques** \n(Infographic showing uniques gear list) \n \n**!blitz** \n(Shows current blitz predictions, !blitz2 for orb assault blitz) \n \n**!event [name]** \nA list of legendary events \n \n**Character Infographic** \n**![charactername]** \nProvides an infographic of gear needed for chosen character. \n**![charactername] [phrase]** \nExample usage: !ultron ultimate \nEnter a valid phrase: basic | special | ultimate | passive | kit | speed | trait | unlock \n\n**!bug** \nIf you find a bug or error please use !bug with an explanation of the error. \n\n**!request** \nIf you would like to request a feature or command, use !request with your request. \n\n**!notifications** \nUse this command to join the notifications role, we will ping this role when the game is on/off for maintenance as well as other important reasons such as good value offers etc.")
-	message.channel.send(exampleEmbed);
-	}
-	function function2(){
-	const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#0099ff')
-	.setDescription("**Commands List #2** \n \n**WAR** \n \n**!counter [teamname]** \nThis will bring up an infographic of who counters your chosen team, as well as some stats indicating average team punchups. \n**!counter [teamname+]** \n This will bring up team infographic + average punchup stats as well as a potential explanation, if the counters has a specific or unusual way of playing the fight. \n \n **!%** \nUse this command to calculate the punchup percentage of two teams. \n[example] !% 145 189 (offence to defence) \nExplanation: A hydra defence is 250k, you use the !counter hydra command to find the percentages. Example: !counter hydra \n shows -> Inhumans ?7.78%? #1 records\nIf you want to use your 240k inhumans use the command: !% 240 250 this would = 4.2%, \n the 7.78% is on the good side of the % which shows that inhumans can punch up at least 7%, so 4% is 'easier' than that and you know you should be good to go \n \n**!add** \nThis command is for submitting war attack punchups. Use this command in the following format (offence to defence) \n120 = 120,000 you just need to round the power levels to the first 3 digits, \n[example] !add aim 120 wakanda 240 = 120k vs 240k")
-	message.channel.send(exampleEmbed);
-	}
-	function1();
-	setTimeout(function2, 3000);
+//	message.channel.send(exampleEmbed);
+//	}
+//	function function2(){
+//	const exampleEmbed = new Discord.RichEmbed()
+//	.setColor('#0099ff')
+//	.setDescription("**Commands List #2** \n \n**WAR** \n \n**!counter [teamname]** \nThis will bring up an infographic of who counters your chosen team, as well as some stats indicating average team punchups. \n**!counter [teamname+]** \n This will bring up team infographic + average punchup stats as well as a potential explanation, if the counters has a specific or unusual way of playing the fight. \n \n **!%** \nUse this command to calculate the punchup percentage of two teams. \n[example] !% 145 189 (offence to defence) \nExplanation: A hydra defence is 250k, you use the !counter hydra command to find the percentages. Example: !counter hydra \n shows -> Inhumans ?7.78%? #1 records\nIf you want to use your 240k inhumans use the command: !% 240 250 this would = 4.2%, \n the 7.78% is on the good side of the % which shows that inhumans can punch up at least 7%, so 4% is 'easier' than that and you know you should be good to go \n \n**!add** \nThis command is for submitting war attack punchups. Use this command in the following format (offence to defence) \n120 = 120,000 you just need to round the power levels to the first 3 digits, \n[example] !add aim 120 wakanda 240 = 120k vs 240k")
+//	message.channel.send(exampleEmbed);
+//	}
+//	function1();
+//	setTimeout(function2, 3000);
+//}
+if(command === 'commands'){
+	
+let pages = [`<:cmd:709397091461496833> __**General Commands**__ \n \n<:__:709403821901611019>commands \n**Provides a commands list** \n\n<:__:709403821901611019>away [reason] \n**Send a message to the captains saying you'll be away** \n\n<:__:709403821901611019>uniques \n**Sends an infographic of unique gear required for characters** \n\n<:__:709403821901611019>blitz \n**Send an infographic of current blitz predictions** \n\n<:__:709403821901611019>event [charactername] \n**Send an infographic of required toons for the event**`, '<:cmd:709397091461496833> __**General Commands 2**__ \n\n<:__:709403821901611019>bug [reason] \n**Send a bug report to admin-logs for something to get fixed on the bot** \n\n<:__:709403821901611019>request [reason] \n**Send a request to admin-logs for something to be added to the bot** \n\n<:__:709403821901611019>notifications \n**Join the role to be notified of important announcements** \n\n<:__:709403821901611019>charactername \n**Character graphics are a work-in-progress and will be added to the #bot-changelog channel when they are available to use**'];
+let page = 1; 
+
+    const embed = new Discord.RichEmbed() // Define a new embed
+    .setColor('#0099ff') // Set the color
+    .setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`)
+    .setDescription(pages[page-1])
+
+    message.channel.send(embed).then(msg => {
+
+    msg.react('?').then( r => {
+    msg.react('?')
+
+        // Filters
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
+
+        const backwards = msg.createReactionCollector(backwardsFilter, {time: 300000});
+        const forwards = msg.createReactionCollector(forwardsFilter, {time: 300000});
+
+        backwards.on('collect', r => {
+            if (page === 1) return;
+            page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+        })
+
+        forwards.on('collect', r => {
+            if (page === pages.length) return;
+            page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+        })
+		
+		forwards.on('end', r => {
+		msg.clearReactions().catch(error => console.error('Failed to clear reactions: ', error));
+		})
+		
+    })
+})
+
+
 }
+
+if(command === 'warcommands'){
+	
+let pages = [`<:cmd:709397091461496833> __**War Counters**__ \n \n<:__:709403821901611019>counter [teamname]  \n\n**Sends an image of the recommended teams countering your requested team**\n(ex. !counter aim -> Counter graphic + stats) \n\n<:__:709403821901611019>counter [teamname]+ \n**Sends a counter graphic + stats + guide(if available)\n(ex. !counter aim+** \n\n<:__:709403821901611019>counter [teamname] stats \n**Sends ONLY the war stats of the chosen team**`, '<:cmd:709397091461496833> __**War - Adding Stats**__ \n\n<:__:709403821901611019>add [offenseteamname] [number] [defenseteamname] [number] \n**Adds successful war match to the database. Offense -> Defense** \n(Number rounded to nearest thousand, ex. !add aim 200 wakanda 285) \n\n<:__:709403821901611019>add teamlist \n**Shows currently available teams to add to the database** \n\n<:__:709403821901611019>% [offense] [defense]\n**Calculates the % between two numbers off -> def** \n(ex. [!% 200 285] = 42.5% punch up)'];
+let page = 1; 
+
+    const embed = new Discord.RichEmbed() // Define a new embed
+    .setColor('#0099ff') // Set the color
+    .setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`)
+    .setDescription(pages[page-1])
+
+    message.channel.send(embed).then(msg => {
+
+    msg.react('?').then( r => {
+    msg.react('?')
+
+        // Filters
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
+
+        const backwards = msg.createReactionCollector(backwardsFilter, {time: 300000});
+        const forwards = msg.createReactionCollector(forwardsFilter, {time: 300000});
+
+        backwards.on('collect', r => {
+            if (page === 1) return;
+            page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+        })
+
+        forwards.on('collect', r => {
+            if (page === pages.length) return;
+            page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+        })
+		
+		forwards.on('end', r => {
+		msg.clearReactions().catch(error => console.error('Failed to clear reactions: ', error));
+		})
+		
+    })
+})
+
+
+}
+
 if(command === "purge") { //PURGE MESSAGES
 const TB1captains = message.guild.roles.find(role => role.name === 'TB1 Captain');
 const TB2captains = message.guild.roles.find(role => role.name === 'TB2 Captain');
@@ -358,7 +458,7 @@ bugchannel.send(embed);
 message.channel.send("Bug Received.");
 }
 }
-if(command === 'request') {
+if(command === 'request' || command === 'suggest') {
 if(message.channel.id === '673261006918516741'){
 const requestchannel = client.channels.get('702906597244010497')
 const messages1 = await message.channel.fetchMessages({ limit: 1 });
@@ -373,7 +473,7 @@ embed.setColor('#0099ff')
 embed.setDescription(message.author + " " + Text)
 embed.setTimestamp()
 requestchannel.send(embed);
-message.channel.send("Request Received.");
+message.channel.send("Request/Suggestion Received.");
 }
 }
 
