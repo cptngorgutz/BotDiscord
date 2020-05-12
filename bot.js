@@ -233,7 +233,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 }
 //if(command === 'commands') {
-//	function function1() {
+////	function function1() {
 //	const exampleEmbed = new Discord.RichEmbed()
 //	.setColor('#0099ff')
 //	.setDescription("**Commands List** \n \n**!commands** \nuse this command to bring up the commands list. \n \n**!away**\n**Add away note (reason for being away)** \n*(Deletes your away message for privacy(those with notifications on may still be able to see it) and informs captains of your circumstances)* \n \n**!uniques** \n(Infographic showing uniques gear list) \n \n**!blitz** \n(Shows current blitz predictions, !blitz2 for orb assault blitz) \n \n**!event [name]** \nA list of legendary events \n \n**Character Infographic** \n**![charactername]** \nProvides an infographic of gear needed for chosen character. \n \n**!bug** \nIf you find a bug or error please use !bug with an explanation of the error. \n\n**!request** \nIf you would like to request a feature or command, use !request with your request. \n\n**!notifications** \nUse this command to join the notifications role, we will ping this role when the game is on/off for maintenance as well as other important reasons such as good value offers etc.")
@@ -265,8 +265,8 @@ let page = 1;
     msg.react('➡')
 
         // Filters
-        const backwardsFilter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
-        const forwardsFilter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡' && user.id === message.author.id;
 
         const backwards = msg.createReactionCollector(backwardsFilter, {time: 300000});
         const forwards = msg.createReactionCollector(forwardsFilter, {time: 300000});
@@ -315,8 +315,8 @@ let page = 1;
     msg.react('➡')
 
         // Filters
-        const backwardsFilter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
-        const forwardsFilter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡' && user.id === message.author.id;
 
         const backwards = msg.createReactionCollector(backwardsFilter, {time: 300000});
         const forwards = msg.createReactionCollector(forwardsFilter, {time: 300000});
@@ -348,6 +348,10 @@ let page = 1;
 
 
 }
+
+
+
+
 
 if(command === "purge") { //PURGE MESSAGES
 const TB1captains = message.guild.roles.find(role => role.name === 'TB1 Captain');
