@@ -261,8 +261,8 @@ let page = 1;
 
     message.channel.send(embed).then(msg => {
 
-    msg.react('?').then( r => {
-    msg.react('?')
+    msg.react('â¬…').then( r => {
+    msg.react('âž¡')
 
         // Filters
         const backwardsFilter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
@@ -311,8 +311,8 @@ let page = 1;
 
     message.channel.send(embed).then(msg => {
 
-    msg.react('?').then( r => {
-    msg.react('?')
+    msg.react('â¬…').then( r => {
+    msg.react('âž¡')
 
         // Filters
         const backwardsFilter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
@@ -591,46 +591,46 @@ if(command === 'ultron') {
 if(akit === "kit" || akit === "k" || kit === "kit" || kit === "k") {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Basic)** \n \n**Disintegration Beam • T4 Upgrade** \n \nAttack primary target for **270% -> 340%** damage + steal 2 positive effects + clear Taunt.")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Basic)** \n \n**Disintegration Beam â€¢ T4 Upgrade** \n \nAttack primary target for **270% -> 340%** damage + steal 2 positive effects + clear Taunt.")
 	.setThumbnail('https://i.imgur.com/Y78BMF9.png') 
 	message.channel.send(exampleEmbed);
 	const exampleEmbed2 = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Special)** \n \n**Factory Upgrade • T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278>\nSummon **2-3 -> 3** Ultron Minions at **300% -> 340%** normal damage and 100% of normal Health. Apply Defense Up to self and all ULTRON MINION allies for 2 turns.\nPossible Summons:\nUltron Incinerator\nUltron Accelerator\nUltron Fabricator")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Special)** \n \n**Factory Upgrade â€¢ T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278>\nSummon **2-3 -> 3** Ultron Minions at **300% -> 340%** normal damage and 100% of normal Health. Apply Defense Up to self and all ULTRON MINION allies for 2 turns.\nPossible Summons:\nUltron Incinerator\nUltron Accelerator\nUltron Fabricator")
 	.setThumbnail('https://i.imgur.com/HaIZygM.png') 
 	message.channel.send(exampleEmbed2);
 	const exampleEmbed3 = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Ultimate)** \n \n**Purge System • T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityoff:663751832413405184><:abilityoff:663751832413405184>\nAttack primary target for **620% -> 700%** Piercing damage. This ability deals double damage against targets with Defense Up. Gain 1 Ability Energy per positive effect on self.")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Ultimate)** \n \n**Purge System â€¢ T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityoff:663751832413405184><:abilityoff:663751832413405184>\nAttack primary target for **620% -> 700%** Piercing damage. This ability deals double damage against targets with Defense Up. Gain 1 Ability Energy per positive effect on self.")
 	.setThumbnail('https://i.imgur.com/8BbEwWt.png') 
 	message.channel.send(exampleEmbed3);
 	const exampleEmbed4 = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Passive)** \n \n**Ultron Prime • T4 Upgrade** \n \nIf Health is full at the start of a match, Revive once with 50% of this character's Max Health.\nOn Kill, this character and all VILLAIN TECH allies have **4 -> all** positive effects prolonged by a duration of 1.")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Passive)** \n \n**Ultron Prime â€¢ T4 Upgrade** \n \nIf Health is full at the start of a match, Revive once with 50% of this character's Max Health.\nOn Kill, this character and all VILLAIN TECH allies have **4 -> all** positive effects prolonged by a duration of 1.")
 	.setThumbnail('https://i.imgur.com/s2kLpjn.png') 
 	message.channel.send(exampleEmbed4);
 } else if(abasic === "basic" || abasic === "bas" || abasic === "b" || basic === "basic" || basic === "bas" || basic === "b") {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Basic)** \n \n**Disintegration Beam • T4 Upgrade** \n \nAttack primary target for **270% -> 340%** damage + steal 2 positive effects + clear Taunt.")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Basic)** \n \n**Disintegration Beam â€¢ T4 Upgrade** \n \nAttack primary target for **270% -> 340%** damage + steal 2 positive effects + clear Taunt.")
 	.setThumbnail('https://i.imgur.com/Y78BMF9.png') 
 	message.channel.send(exampleEmbed);
 } else if(aspecial === "special" || aspecial === "spec" || aspecial === "spe" || special === "special" || special === "spec" || special === "spe" || special === "s") {
 	const exampleEmbed2 = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Special)** \n \n**Factory Upgrade • T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278>\nSummon **2-3 -> 3** Ultron Minions at **300% -> 340%** normal damage and 100% of normal Health. Apply Defense Up to self and all ULTRON MINION allies for 2 turns.\nPossible Summons:\nUltron Incinerator\nUltron Accelerator\nUltron Fabricator")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Special)** \n \n**Factory Upgrade â€¢ T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278>\nSummon **2-3 -> 3** Ultron Minions at **300% -> 340%** normal damage and 100% of normal Health. Apply Defense Up to self and all ULTRON MINION allies for 2 turns.\nPossible Summons:\nUltron Incinerator\nUltron Accelerator\nUltron Fabricator")
 	.setThumbnail('https://i.imgur.com/HaIZygM.png') 
 	message.channel.send(exampleEmbed2);
 } else if(aultimate === "ultimate" || aultimate === "ultimat" || aultimate === "ulti" || aultimate === "ult" || ultimate === "ultimate" || ultimate === "ultimat" || ultimate === "ulti" || ultimate === "ult") {
 	const exampleEmbed3 = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Ultimate)** \n \n**Purge System • T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityoff:663751832413405184><:abilityoff:663751832413405184>\nAttack primary target for **620% -> 700%** Piercing damage. This ability deals double damage against targets with Defense Up. Gain 1 Ability Energy per positive effect on self.")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Ultimate)** \n \n**Purge System â€¢ T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityoff:663751832413405184><:abilityoff:663751832413405184>\nAttack primary target for **620% -> 700%** Piercing damage. This ability deals double damage against targets with Defense Up. Gain 1 Ability Energy per positive effect on self.")
 	.setThumbnail('https://i.imgur.com/8BbEwWt.png') 
 	message.channel.send(exampleEmbed3);
 } else if(apassive === "passive" || apassive === "pass" || apassive === "p" || apassive === "passi" || passive === "passive" || passive === "pass" || passive === "p" || passive === "passi") {
 	const exampleEmbed4 = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250>	**Ultron (Passive)** \n \n**Ultron Prime • T4 Upgrade** \n \nIf Health is full at the start of a match, Revive once with 50% of this character's Max Health.\nOn Kill, this character and all VILLAIN TECH allies have **4 -> all** positive effects prolonged by a duration of 1.")
+	.setDescription("<:ultron:663750798202634250>	**Ultron (Passive)** \n \n**Ultron Prime â€¢ T4 Upgrade** \n \nIf Health is full at the start of a match, Revive once with 50% of this character's Max Health.\nOn Kill, this character and all VILLAIN TECH allies have **4 -> all** positive effects prolonged by a duration of 1.")
 	.setThumbnail('https://i.imgur.com/s2kLpjn.png') 
 	message.channel.send(exampleEmbed4);
 } else if(aspeed === "speed" || aspeed === "spee" || aspeed === "spe" || speed === "speed" || speed === "spee" || speed === "spe") {
@@ -836,7 +836,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.bulkDelete(100)
     message.channel.send('```To claim a lane: \n Put an ?? emoji on the lane of choice.```');
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Ultimus6.png')] });
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 1 ¦  \n +---------------+ ```")
+	message.channel.send("``` +---------------+ \n Â¦ Strike Team 1 Â¦  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -845,7 +845,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 2 ¦  \n +---------------+ ```")
+	message.channel.send("``` +---------------+ \n Â¦ Strike Team 2 Â¦  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -854,7 +854,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  	
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 3 ¦  \n +---------------+ ```")
+	message.channel.send("``` +---------------+ \n Â¦ Strike Team 3 Â¦  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -877,7 +877,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.bulkDelete(100)
     message.channel.send('```To claim a lane: \n Put an ?? emoji on the lane of choice.```');
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Ultimus7.png')] });
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 1 ¦  \n +---------------+ ```")
+	message.channel.send("``` +---------------+ \n Â¦ Strike Team 1 Â¦  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -886,7 +886,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 2 ¦  \n +---------------+ ```")
+	message.channel.send("``` +---------------+ \n Â¦ Strike Team 2 Â¦  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -895,7 +895,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  	
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 3 ¦  \n +---------------+ ```")
+	message.channel.send("``` +---------------+ \n Â¦ Strike Team 3 Â¦  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -918,7 +918,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.bulkDelete(100)
     message.channel.send('```To claim a lane: \n Put an ?? emoji on the lane of choice.```');
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Alpha4.png')] });
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 1 ¦  \n +---------------+ ```")
+	message.channel.send("``` +---------------+ \n Â¦ Strike Team 1 Â¦  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -927,7 +927,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 2 ¦  \n +---------------+ ```")
+	message.channel.send("``` +---------------+ \n Â¦ Strike Team 2 Â¦  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -936,7 +936,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  	
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 3 ¦  \n +---------------+ ```")
+	message.channel.send("``` +---------------+ \n Â¦ Strike Team 3 Â¦  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -959,7 +959,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 message.channel.bulkDelete(100)
     message.channel.send('```To claim a lane: \n Put an ?? emoji on the lane of choice.```');
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Beta4.png')] });
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 1 ¦  \n +---------------+ ```")
+	message.channel.send("``` +---------------+ \n Â¦ Strike Team 1 Â¦  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -968,7 +968,7 @@ message.channel.bulkDelete(100)
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 2 ¦  \n +---------------+ ```")
+	message.channel.send("``` +---------------+ \n Â¦ Strike Team 2 Â¦  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -977,7 +977,7 @@ message.channel.bulkDelete(100)
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  	
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 3 ¦  \n +---------------+ ```")
+	message.channel.send("``` +---------------+ \n Â¦ Strike Team 3 Â¦  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1000,7 +1000,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 message.channel.bulkDelete(100)
     message.channel.send('```To claim a lane: \n Put an ?? emoji on the lane of choice.```');
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Gamma4.png')] });
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 1 ¦  \n +---------------+ ```")
+	message.channel.send("``` +---------------+ \n Â¦ Strike Team 1 Â¦  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1009,7 +1009,7 @@ message.channel.bulkDelete(100)
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 2 ¦  \n +---------------+ ```")
+	message.channel.send("``` +---------------+ \n Â¦ Strike Team 2 Â¦  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1018,7 +1018,7 @@ message.channel.bulkDelete(100)
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  	
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 3 ¦  \n +---------------+ ```")
+	message.channel.send("``` +---------------+ \n Â¦ Strike Team 3 Â¦  \n +---------------+ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
