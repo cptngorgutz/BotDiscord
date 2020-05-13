@@ -3217,6 +3217,86 @@ setTimeout(function3, 4000);
       console.log('No data found.');
     }
   });
+} else if(args[0] == "mercenary" || args[0] == "merc" || args[0] == "mercs"){
+const merccounterimage = client.channels.get('709838173630496899')
+merccounterimage.fetchMessages({ limit: 1 }).then(messages => {
+const countermerc = messages.first().attachments.first()
+const Attachment = require('discord.js').Attachment;
+const attachment = new Attachment(countermerc.url)
+const embed2 = new Discord.RichEmbed()
+embed2.setColor('#0099ff')
+embed2.setImage(countermerc.url)
+//message.channel.send(attachment);
+message.channel.send(embed2);
+})	
+function functionmercstats() {
+	 	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!CA1:CC",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ''))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
+}
+setTimeout(functionmercstats, 3000);
+} else if(args[0] == "mercenary+" || args[0] === "mercs+" || args[0] === "merc+" || args[0] === "mercen+" || args[0] === "mer+"){
+const merccounterimage2 = client.channels.get('709838173630496899')
+
+const channelToCheckText = client.channels.get('709838208459866283')
+const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+
+const messages3 = await merccounterimage2.fetchMessages({ limit: 1 });
+const countermerc22 = messages3.first().attachments.first()
+const embed = new Discord.RichEmbed()
+const Text = messages1.first().content;
+
+const Attachment = require('discord.js').Attachment;
+
+
+function function1() {
+const embed1 = new Discord.RichEmbed()
+embed1.setColor('#0099ff')
+embed1.setImage(countermerc22.url)
+message.channel.send(embed1);
+}
+function function3() {
+const TEXT = new Discord.RichEmbed()
+.setColor('#0099ff')
+.setDescription(Text.content)
+embed.setColor('#0099ff')
+embed.setDescription(Text)
+message.channel.send(embed);
+}
+function function2() {
+//stats
+	  sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!CA1:CC",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+.setDescription("Attacking" + rows.join('\n').replace(/,/g, ''))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
+}
+
+function1();
+function2();
+setTimeout(function3, 4000);
 } else if(args[0] == "shield" && args[1] === "stats" || args[0] === "coulson" && args[1] === "stats" || args[0] === "colson" && args[1] === "stats" || args[0] === "coulsen" && args[1] === "stats" || args[0] === "colsen" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
