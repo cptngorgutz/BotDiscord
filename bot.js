@@ -3983,7 +3983,10 @@ function2();
 setTimeout(function3, 4000);
 
 } else {
-message.channel.send("Please use a valid team phrase, such as: aim | asgardians | avengers | bkt | brawlers | captainmarvel | defenders | gotg | hydra | kreeronan | marauders | mercenary | shield | s6 | supernatural | symbiote | ultron | wakanda").catch(console.error);	
+	let Embed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("Please use a valid team phrase, such as: aim | asgardians | avengers | bkt | brawlers | captainmarvel | defenders | gotg | hydra | kreeronan | marauders | mercenary | shield | s6 | supernatural | symbiote | ultron | wakanda");	
+	message.channel.send(Embed);
 }
 } else {
 message.channel.send("Sorry, this doesn't work here. Head to <#673261006918516741> or your war chat channel and try again.").catch(console.error);
@@ -3997,7 +4000,7 @@ const managerrole = message.guild.roles.find(role => role.name === 'Bot Manageme
 if(args[0] === "teamlist"){
 	let Embed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Available Teams to add:**__ \n\n AIM | AIMtron | Asgardians | Avengers | BH | BKT | Brawlers | CM | Coulson | Defenders | F4 | GotG | Hydra | Inhumans | KreeRonan | KreeUltimus | Marauders | Maraudertron | ogBH | PA | S6 | Shield | Supernaturals | Symbiotes | Ultitron | Ultron | Wakanda | Xmen");	
+	.setDescription("__**Available teams to !add:**__ \n\n AIM | AIMtron | Asgardians | Avengers | BH | BKT | Brawlers | CM | Coulson | Defenders | F4 | GotG | Hydra | Inhumans | KreeRonan | KreeUltimus | Marauders | Maraudertron | ogBH | PA | S6 | Shield | Supernaturals | Symbiotes | Ultitron | Ultron | Wakanda | Xmen");	
 	message.channel.send(Embed);
 } else if(message.member.roles.has(managerrole.id)) {
 if (args[0] === "asgardians" && args[2] === "asgardians" || args[0] === "asgardian" && args[2] === "asgardian" || args[0] === "asgard" && args[2] === "asgard"){
@@ -43499,7 +43502,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "aim" && args[2] === "shield"){
+} else if (args[0] === "aim" && args[2] === "shield" || args[0] === "aim" &&  args[2] === "coulson" || args[0] === "aim" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -43578,7 +43581,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "asgardians" && args[2] === "shield"){
+} else if (args[0] === "asgardians" && args[2] === "shield" || args[0] === "asgardians" &&  args[2] === "coulson" || args[0] === "asgardians" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -43657,7 +43660,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "aimtron" && args[2] === "shield"){
+} else if (args[0] === "aimtron" && args[2] === "shield" || args[0] === "aimtron" &&  args[2] === "coulson" || args[0] === "aimtron" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -43736,7 +43739,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "ogbh" && args[2] === "shield"){
+} else if (args[0] === "ogbh" && args[2] === "shield" || args[0] === "ogbh" &&  args[2] === "coulson" || args[0] === "ogbh" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -43815,7 +43818,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "bh" && args[2] === "shield"){
+} else if (args[0] === "bh" && args[2] === "shield" || args[0] === "bh" &&  args[2] === "coulson" || args[0] === "bh" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -43894,7 +43897,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "bkt" && args[2] === "shield"){
+} else if (args[0] === "bkt" && args[2] === "shield" || args[0] === "bkt" &&  args[2] === "coulson" || args[0] === "bkt" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -43973,7 +43976,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "brawlers" && args[2] === "shield"){
+} else if (args[0] === "brawlers" && args[2] === "shield" || args[0] === "brawlers" &&  args[2] === "coulson" || args[0] === "brawlers" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -44052,7 +44055,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "captainmarvel" || args[0] === "cm" && args[2] === "shield"){
+} else if (args[0] === "captainmarvel" && args[2] === "shield" || args[0] === "captainmarvel" &&  args[2] === "coulson" || args[0] === "captainmarvel" &&  args[2] === "coulsonshield" || args[0] === "cm" && args[2] === "shield" || args[0] === "cm" &&  args[2] === "coulson" || args[0] === "cm" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -44131,7 +44134,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "defenders" && args[2] === "shield"){
+} else if (args[0] === "defenders" && args[2] === "shield" || args[0] === "defenders" &&  args[2] === "coulson" || args[0] === "defenders" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -44210,7 +44213,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "f4" && args[2] === "shield"){
+} else if (args[0] === "f4" && args[2] === "shield" || args[0] === "f4" &&  args[2] === "coulson" || args[0] === "f4" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -44289,7 +44292,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "gotg" && args[2] === "shield"){
+} else if (args[0] === "gotg" && args[2] === "shield" || args[0] === "gotg" &&  args[2] === "coulson" || args[0] === "gotg" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -44368,7 +44371,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "hydra" && args[2] === "shield"){
+} else if (args[0] === "hydra" && args[2] === "shield" || args[0] === "hydra" &&  args[2] === "coulson" || args[0] === "hydra" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -44447,7 +44450,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "inhumans" && args[2] === "shield"){
+} else if (args[0] === "inhumans" && args[2] === "shield" || args[0] === "inhumans" &&  args[2] === "coulson" || args[0] === "inhumans" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -44526,7 +44529,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "kreeronan" && args[2] === "shield"){
+} else if (args[0] === "kreeronan" && args[2] === "shield" || args[0] === "kreeronan" &&  args[2] === "coulson" || args[0] === "kreeronan" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -44605,7 +44608,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "kreeultimus" && args[2] === "shield"){
+} else if (args[0] === "kreeultimus" && args[2] === "shield" || args[0] === "kreeultimus" &&  args[2] === "coulson" || args[0] === "kreeultimus" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -44684,7 +44687,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "marauders" && args[2] === "shield"){
+} else if (args[0] === "marauders" && args[2] === "shield" || args[0] === "marauders" &&  args[2] === "coulson" || args[0] === "marauders" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -44763,7 +44766,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "maraudertron" && args[2] === "shield"){
+} else if (args[0] === "maraudertron" && args[2] === "shield" || args[0] === "maraudertron" &&  args[2] === "coulson" || args[0] === "maraudertron" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -44842,7 +44845,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "pa" && args[2] === "shield"){
+} else if (args[0] === "pa" && args[2] === "shield" || args[0] === "pa" &&  args[2] === "coulson" || args[0] === "pa" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -44921,7 +44924,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "s6" && args[2] === "shield"){
+} else if (args[0] === "s6" && args[2] === "shield" || args[0] === "s6" &&  args[2] === "coulson" || args[0] === "s6" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -45079,7 +45082,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "supernatural" && args[2] === "shield" || args[0] === "supernaturals" && args[2] === "shield"){
+} else if (args[0] === "supernatural" && args[2] === "shield" || args[0] === "supernatural" &&  args[2] === "coulson" || args[0] === "supernatural" &&  args[2] === "coulsonshield" || args[0] === "supernaturals" && args[2] === "shield" || args[0] === "supernaturals" &&  args[2] === "coulson" || args[0] === "supernaturals" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -45158,7 +45161,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "shield"){
+} else if (args[0] === "symbiote" && args[2] === "shield" || args[0] === "symbiote" &&  args[2] === "coulson" || args[0] === "symbiote" &&  args[2] === "coulsonshield" || args[0] === "symbiotes" && args[2] === "shield" || args[0] === "symbiotes" &&  args[2] === "coulson" || args[0] === "symbiotes" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -45237,7 +45240,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "ultron" && args[2] === "shield"){
+} else if (args[0] === "ultron" && args[2] === "shield" || args[0] === "ultron" &&  args[2] === "coulson" || args[0] === "ultron" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -45316,7 +45319,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "wakanda" && args[2] === "shield" || args[0] === "wakandan" && args[2] === "shield"){
+} else if (args[0] === "wakanda" && args[2] === "shield" || args[0] === "wakanda" &&  args[2] === "coulson" || args[0] === "wakanda" &&  args[2] === "coulsonshield" || args[0] === "wakandan" && args[2] === "shield" || args[0] === "wakandan" &&  args[2] === "coulson" || args[0] === "wakandan" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -45395,7 +45398,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "xmen" && args[2] === "shield"){
+} else if (args[0] === "xmen" && args[2] === "shield" || args[0] === "xmen" &&  args[2] === "coulson" || args[0] === "xmen" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -57008,7 +57011,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "avengers" && args[2] === "shield"){
+} else if (args[0] === "avengers" && args[2] === "shield" || args[0] === "avengers" &&  args[2] === "coulson" || args[0] === "avengers" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -61037,7 +61040,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "shield"){
+} else if (args[0] === "mercenary" && args[2] === "shield" || args[0] === "mercenary" &&  args[2] === "coulson" || args[0] === "mercenary" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
