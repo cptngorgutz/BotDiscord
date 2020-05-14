@@ -2135,7 +2135,7 @@ if(command === 'counter' || command === 'c') { //   bot-spamTB                  
 if (message.channel.id === '673261006918516741' || message.channel.id === '666305824813219870' || message.channel.id === '560885677475102740' || message.channel.id === '562757850477101063' || message.channel.id === '643140704624967694' || message.channel.id === '661221254958940220' || message.channel.id === '699707863148265512') {
 if(args[0] == "teamlist"){
 const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#00FF00')
+	.setColor('#0099ff')
 	.setDescription("__**Available counters:**__ \n\naim | asgardians | avengers | bkt | brawlers | captainmarvel | defenders | gotg | hydra | kreeronan | marauders | mercenary | shield | s6 | supernatural | symbiote | ultron | wakanda")
 	message.channel.send(exampleEmbed);
 } else if(args[0] == "aim" && args[1] === "stats"){
