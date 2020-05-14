@@ -265,7 +265,7 @@ let page = 1;
     msg.react('3️⃣')
 	msg.react('4️⃣')
 	msg.react('5️⃣')
-	msg.react('6️⃣')
+	//msg.react('6️⃣')
 	
 
         // Filters
@@ -274,14 +274,14 @@ let page = 1;
 		const threeFilter = (reaction, user) => reaction.emoji.name === '3️⃣' && user.id === message.author.id;
 		const fourFilter = (reaction, user) => reaction.emoji.name === '4️⃣' && user.id === message.author.id;
 		const fiveFilter = (reaction, user) => reaction.emoji.name === '5️⃣' && user.id === message.author.id;
-		const sixFilter = (reaction, user) => reaction.emoji.name === '6️⃣' && user.id === message.author.id;
+		//const sixFilter = (reaction, user) => reaction.emoji.name === '6️⃣' && user.id === message.author.id;
 
         const one = msg.createReactionCollector(oneFilter, {time: 300000});
 		const two = msg.createReactionCollector(twoFilter, {time: 300000});
 		const three = msg.createReactionCollector(threeFilter, {time: 300000});
 		const four = msg.createReactionCollector(fourFilter, {time: 300000});
 		const five = msg.createReactionCollector(fiveFilter, {time: 300000});
-		const six = msg.createReactionCollector(sixFilter, {time: 300000});
+		//const six = msg.createReactionCollector(sixFilter, {time: 300000});
 
         one.on('collect', r => {
             if (page === 1) {
@@ -518,56 +518,56 @@ let page = 1;
 			}
 		})		
 		
-		six.on('collect', r => {
-            if (page === 1) {
-            page++;
-			page++;
-			page++;
-			page++;
-			page++;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`);
-            msg.edit(embed)
-			r.remove(r.users.filter(u => !u.bot).first());
-			}
-			 if (page === 2) {
-            page++;
-			page++;
-			page++;
-			page++;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`);
-            msg.edit(embed)
-			r.remove(r.users.filter(u => !u.bot).first());
-			}
-			 if (page === 3) {
-            page++;
-			page++;
-			page++;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`);
-            msg.edit(embed)
-			r.remove(r.users.filter(u => !u.bot).first());
-			}
-			if (page === 4) {
-            page++;
-			page++;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`);
-            msg.edit(embed)
-			r.remove(r.users.filter(u => !u.bot).first());
-			}
-			if (page === 5) {
-            page++;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`);
-            msg.edit(embed)
-			r.remove(r.users.filter(u => !u.bot).first());
-			}
-			if (page === 6) {
-			r.remove(r.users.filter(u => !u.bot).first());
-			}
-        })
+//		six.on('collect', r => {
+//            if (page === 1) {
+//            page++;
+//			page++;
+//			page++;
+//			page++;
+//			page++;
+ //           embed.setDescription(pages[page-1]);
+//            embed.setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`);
+//            msg.edit(embed)
+//			r.remove(r.users.filter(u => !u.bot).first());
+//			}
+//			 if (page === 2) {
+//            page++;
+//			page++;
+//			page++;
+//			page++;
+//            embed.setDescription(pages[page-1]);
+//            embed.setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`);
+//            msg.edit(embed)
+//			r.remove(r.users.filter(u => !u.bot).first());
+//			}
+//			 if (page === 3) {
+//            page++;
+//			page++;
+//			page++;
+ //           embed.setDescription(pages[page-1]);
+ //           embed.setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`);
+ //           msg.edit(embed)
+//			r.remove(r.users.filter(u => !u.bot).first());
+//			}
+//			if (page === 4) {
+//            page++;
+//			page++;
+//            embed.setDescription(pages[page-1]);
+ //           embed.setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`);
+//            msg.edit(embed)
+//			r.remove(r.users.filter(u => !u.bot).first());
+//			}
+//			if (page === 5) {
+//            page++;
+//            embed.setDescription(pages[page-1]);
+//            embed.setFooter(`Page ${page} of ${pages.length} - Use reaction below to navigate to the previous/next pages`);
+//            msg.edit(embed)
+//			r.remove(r.users.filter(u => !u.bot).first());
+//			}
+//			if (page === 6) {
+//			r.remove(r.users.filter(u => !u.bot).first());
+//			}
+//        })
 		
     })
 })
