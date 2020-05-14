@@ -3985,13 +3985,18 @@ setTimeout(function3, 4000);
 } else {
 	let Embed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("Please use a valid team phrase, such as: aim | asgardians | avengers | bkt | brawlers | captainmarvel | defenders | gotg | hydra | kreeronan | marauders | mercenary | shield | s6 | supernatural | symbiote | ultron | wakanda");	
+	.setDescription("**Available phrases to use:** \n\naim | asgardians | avengers | bkt | brawlers | captainmarvel | defenders | gotg | hydra | kreeronan | marauders | mercenary | shield | s6 | supernatural | symbiote | ultron | wakanda");	
 	message.channel.send(Embed);
 }
 } else {
 message.channel.send("Sorry, this doesn't work here. Head to <#673261006918516741> or your war chat channel and try again.").catch(console.error);
 }
-
+if(args[0] == "teamlist"){
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#00FF00')
+	.setDescription("__**Available counters:**__ \n\naim | asgardians | avengers | bkt | brawlers | captainmarvel | defenders | gotg | hydra | kreeronan | marauders | mercenary | shield | s6 | supernatural | symbiote | ultron | wakanda")
+	message.channel.send(exampleEmbed);
+}
 
 }
 
