@@ -3372,7 +3372,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "marauders" || args[0] == "marauder"){
-const marauderscounterimage = client.channels.get('700532345576620072')
+const marauderscounterimage = client.channels.get('698224640199491654')
 marauderscounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterkreeronan = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
