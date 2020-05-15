@@ -3386,7 +3386,7 @@ message.channel.send(embed2);
 function functionmaraudersstats() {
 	  sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
-    range: "ControlPanel!AN1:AP",
+    range: "ControlPanel!AT1:AV",
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
