@@ -7340,7 +7340,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.get([
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -7415,7 +7415,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "marauders" && args[2] === "aim" || args[0] === "mauraders" && args[2] === "aim" || args[0] === "maurader" && args[2] === "aim")
+} else if (args[0] === "marauders" && args[2] === "aim" || args[0] === "mauraders" && args[2] === "aim" || args[0] === "maurader" && args[2] === "aim"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
