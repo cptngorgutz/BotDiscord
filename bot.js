@@ -243,23 +243,6 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 message.channel.send("You dont have permission to use this command.")
 }
 }
-//if(command === 'commands') {
-////	function function1() {
-//	const exampleEmbed = new Discord.RichEmbed()
-//	.setColor('#0099ff')
-//	.setDescription("**Commands List** \n \n**!commands** \nuse this command to bring up the commands list. \n \n**!away**\n**Add away note (reason for being away)** \n*(Deletes your away message for privacy(those with notifications on may still be able to see it) and informs captains of your circumstances)* \n \n**!uniques** \n(Infographic showing uniques gear list) \n \n**!blitz** \n(Shows current blitz predictions, !blitz2 for orb assault blitz) \n \n**!event [name]** \nA list of legendary events \n \n**Character Infographic** \n**![charactername]** \nProvides an infographic of gear needed for chosen character. \n \n**!bug** \nIf you find a bug or error please use !bug with an explanation of the error. \n\n**!request** \nIf you would like to request a feature or command, use !request with your request. \n\n**!notifications** \nUse this command to join the notifications role, we will ping this role when the game is on/off for maintenance as well as other important reasons such as good value offers etc.")
-//	.setDescription("**Commands List** \n \n**!commands** \nuse this command to bring up the commands list. \n \n**!away**\n**Add away note (reason for being away)** \n*(Deletes your away message for (somewhat) privacy and informs captains of your circumstances)* \n \n**!uniques** \n(Infographic showing uniques gear list) \n \n**!blitz** \n(Shows current blitz predictions, !blitz2 for orb assault blitz) \n \n**!event [name]** \nA list of legendary events \n \n**Character Infographic** \n**![charactername]** \nProvides an infographic of gear needed for chosen character. \n**![charactername] [phrase]** \nExample usage: !ultron ultimate \nEnter a valid phrase: basic | special | ultimate | passive | kit | speed | trait | unlock \n\n**!bug** \nIf you find a bug or error please use !bug with an explanation of the error. \n\n**!request** \nIf you would like to request a feature or command, use !request with your request. \n\n**!notifications** \nUse this command to join the notifications role, we will ping this role when the game is on/off for maintenance as well as other important reasons such as good value offers etc.")
-//	message.channel.send(exampleEmbed);
-//	}
-//	function function2(){
-//	const exampleEmbed = new Discord.RichEmbed()
-//	.setColor('#0099ff')
-//	.setDescription("**Commands List #2** \n \n**WAR** \n \n**!counter [teamname]** \nThis will bring up an infographic of who counters your chosen team, as well as some stats indicating average team punchups. \n**!counter [teamname+]** \n This will bring up team infographic + average punchup stats as well as a potential explanation, if the counters has a specific or unusual way of playing the fight. \n \n **!%** \nUse this command to calculate the punchup percentage of two teams. \n[example] !% 145 189 (offence to defence) \nExplanation: A hydra defence is 250k, you use the !counter hydra command to find the percentages. Example: !counter hydra \n shows -> Inhumans ?7.78%? #1 records\nIf you want to use your 240k inhumans use the command: !% 240 250 this would = 4.2%, \n the 7.78% is on the good side of the % which shows that inhumans can punch up at least 7%, so 4% is 'easier' than that and you know you should be good to go \n \n**!add** \nThis command is for submitting war attack punchups. Use this command in the following format (offence to defence) \n120 = 120,000 you just need to round the power levels to the first 3 digits, \n[example] !add aim 120 wakanda 240 = 120k vs 240k")
-//	message.channel.send(exampleEmbed);
-//	}
-//	function1();
-//	setTimeout(function2, 3000);
-//}
 if(command === 'commands'){
 	
 let pages = [`<:cmd:709397091461496833> __**Commands Menu**__ \n \nHome - Commands Menu\nPage 1 - General commands\nPage 2 - General commands 2\nPage 3 - War commands\nPage 4 - War commands 2\nPage 5 - PVP (coming soon™️)`,`<:cmd:709397091461496833> __**General Commands**__ \n \n<:__:709403821901611019>commands \n**Provides a commands list** \n\n<:__:709403821901611019>away [reason] \n**Send a message to the captains saying you'll be away** \n\n<:__:709403821901611019>uniques \n**Sends an infographic of unique gear required for characters** \n\n<:__:709403821901611019>miniuniques \n**Sends an infographic of miniuniques required for characters** \n\n<:__:709403821901611019>blitz \n**Send an infographic of current blitz predictions**\n(ex. !blitz / !blitz2) \n\n<:__:709403821901611019>event [charactername] \n**Send an infographic of required toons for the event**\n(ex. !ultron)`, '<:cmd:709397091461496833> __**General Commands 2**__ \n\n<:__:709403821901611019>bug [reason] \n**Send a bug report to admin-logs for something to get fixed on the bot** \n\n<:__:709403821901611019>request [reason] \n**Send a request to admin-logs for something to be added to the bot** \n\n<:__:709403821901611019>notifications \n**Join the role to be notified of important announcements** \n\n<:__:709403821901611019>charactername \n**Character graphics are a work-in-progress and will be added to the #bot-changelog channel when they are available to use**', `<:cmd:709397091461496833> __**War Counters**__ \n \n<:__:709403821901611019>counter [teamname]  \n\n**Sends an image of the recommended teams countering your requested team**\n(ex. !counter aim -> Counter graphic + stats) \n\n<:__:709403821901611019>counter [teamname]+ \n**Sends a counter graphic + stats + guide(if available)\n(ex. !counter aim+** \n\n<:__:709403821901611019>counter [teamname] stats \n**Sends ONLY the war stats of the chosen team**`, '<:cmd:709397091461496833> __**War - Adding Stats**__ \n\n<:__:709403821901611019>add [offenseteamname] [number] [defenseteamname] [number] \n**Adds successful war match to the database. Offense -> Defense** \n(Number rounded to nearest thousand, ex. !add aim 200 wakanda 285) \n\n<:__:709403821901611019>add teamlist \n**Shows currently available teams to add to the database** \n\n<:__:709403821901611019>% [offense] [defense]\n**Calculates the % between two numbers off -> def** \n(ex. [!% 200 285] = 42.5% punch up)', '<:cmd:709397091461496833> __**PVP (Coming Soon™️)**__ \n \n'];
@@ -595,11 +578,6 @@ let page = 1;
 })
 
 }
-
-
-
-
-
 if(command === "purge") { //PURGE MESSAGES
 const TB1captains = message.guild.roles.find(role => role.name === 'TB1 Captain');
 const TB2captains = message.guild.roles.find(role => role.name === 'TB2 Captain');
@@ -829,6 +807,7 @@ let speed = args[0];
 let unlock = args[0];
 let trait = args[0];
 let farm = args[0];
+let unique = args[0];
 let akit = args[1]; 
 let abasic = args[1];
 let aspecial = args[1];
@@ -838,6 +817,8 @@ let aspeed = args[1];
 let aunlock = args[1];
 let atrait = args[1];
 let afarm = args[1];
+let aunique = args[1];
+
 if(command === 'ultron') {
 if(akit === "kit" || akit === "k" || kit === "kit" || kit === "k") {
 	const exampleEmbed = new Discord.RichEmbed()
@@ -899,12 +880,24 @@ const speedEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:ultron:663750798202634250> **Ultron** \nTech,whatever")  
 	message.channel.send(traitEmbed); 
+} else if(command === 'ultron' && args[0] === "unique") {
+	const uniqueEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setThumbnail('https://i.imgur.com/RGtqMSY.png')
+	.setDescription("<:ultron:663750798202634250> **Ultron** \nAdamantium")  
+	message.channel.send(uniqueEmbed); 
+} else if(command === 'ultron' && args[0] === "mini" && args[1] === "unique" || command === 'ultron' && args[0] === "miniunique") {
+	const uniqueEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setThumbnail('https://i.imgur.com/LbEqkLM.png')
+	.setDescription("<:ultron:663750798202634250> **Ultron** \nMini Uniques: \n\n<:GOLDore:712321731892740126> **x30** \n<:GOLDtachyon:712322007341203538> **x75** \n<:GOLDnanites:712322085489475585> **x75**")  
+	message.channel.send(uniqueEmbed); 
 } else {
 	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/Ultron.png')] });
 	function functionultron (){
 	const embedEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ultron:663750798202634250> **Ultron** \n**For more character info, try a valid phrase:** \nbasic | special | ultimate | passive | kit | speed | trait | unlock")
+	.setDescription("<:ultron:663750798202634250> **Ultron** \n**For more character info, try a valid phrase:** \nbasic | special | ultimate | passive | kit | speed | trait | unlock | unique")
 	message.channel.send(embedEmbed); 
 	}
 	setTimeout(functionultron, 2000);
@@ -1085,9 +1078,9 @@ if (message.channel.id === '656244057244303361' || message.channel.id === '64322
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 //                           TB2 ULT 6 ROOM                             TB3 ULT 6 ROOM                       
 	message.channel.bulkDelete(100)
-    message.channel.send('```To claim a lane: \n Put an ?? emoji on the lane of choice.```');
+    message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Ultimus6.png')] });
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 1 ¦  \n +---------------+ ```")
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 1 ║  \n ╚═══════════════╝ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1096,7 +1089,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 2 ¦  \n +---------------+ ```")
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 2 ║  \n ╚═══════════════╝ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1105,7 +1098,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  	
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 3 ¦  \n +---------------+ ```")
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 3 ║  \n ╚═══════════════╝ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1126,9 +1119,9 @@ if (message.channel.id === '634155222490415104' || message.channel.id === '63415
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 //                           TB1 ULT 7 ROOM                             TB2 ULT 7 ROOM                              TB3 ULT 7 ROOM
 	message.channel.bulkDelete(100)
-    message.channel.send('```To claim a lane: \n Put an ?? emoji on the lane of choice.```');
+    message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Ultimus7.png')] });
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 1 ¦  \n +---------------+ ```")
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 1 ║  \n ╚═══════════════╝ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1137,7 +1130,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 2 ¦  \n +---------------+ ```")
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 2 ║  \n ╚═══════════════╝ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1146,7 +1139,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  	
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 3 ¦  \n +---------------+ ```")
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 3 ║  \n ╚═══════════════╝ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1167,9 +1160,9 @@ if (message.channel.id === '656230420265828363' || message.channel.id === '65623
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 //                       TB1 EVENT ROOM#1                           TB1 EVENT ROOM#2                           TB2 EVENT ROOM#1                           TB2 EVENT ROOM#2                           TB3 EVENT ROOM#1                           TB3 EVENT ROOM#2                           TB3 ALPHA ROOM 
 	message.channel.bulkDelete(100)
-    message.channel.send('```To claim a lane: \n Put an ?? emoji on the lane of choice.```');
+    message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Alpha4.png')] });
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 1 ¦  \n +---------------+ ```")
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 1 ║  \n ╚═══════════════╝ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1178,7 +1171,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 2 ¦  \n +---------------+ ```")
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 2 ║  \n ╚═══════════════╝ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1187,7 +1180,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  	
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 3 ¦  \n +---------------+ ```")
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 3 ║  \n ╚═══════════════╝ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1208,9 +1201,9 @@ if (message.channel.id === '656230420265828363' || message.channel.id === '65623
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 //                       TB1 EVENT ROOM#1                           TB1 EVENT ROOM#2                           TB2 EVENT ROOM#1                           TB2 EVENT ROOM#2                           TB3 EVENT ROOM#1                           TB3 EVENT ROOM#2 TB3 room 
 message.channel.bulkDelete(100)
-    message.channel.send('```To claim a lane: \n Put an ?? emoji on the lane of choice.```');
+    message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Beta4.png')] });
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 1 ¦  \n +---------------+ ```")
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 1 ║  \n ╚═══════════════╝ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1219,7 +1212,7 @@ message.channel.bulkDelete(100)
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 2 ¦  \n +---------------+ ```")
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 2 ║  \n ╚═══════════════╝ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1228,7 +1221,7 @@ message.channel.bulkDelete(100)
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  	
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 3 ¦  \n +---------------+ ```")
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 3 ║  \n ╚═══════════════╝ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1249,9 +1242,9 @@ if (message.channel.id === '656230420265828363' || message.channel.id === '65623
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
 //                           TB1 EVENT ROOM#1                           TB1 EVENT ROOM#2                           TB2 EVENT ROOM#1                           TB2 EVENT ROOM#2                           TB3 EVENT ROOM#1                           TB3 EVENT ROOM#2                            TB3 GAMMA ROOM :/
 message.channel.bulkDelete(100)
-    message.channel.send('```To claim a lane: \n Put an ?? emoji on the lane of choice.```');
+    message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
 	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Gamma4.png')] });
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 1 ¦  \n +---------------+ ```")
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 1 ║  \n ╚═══════════════╝ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1260,7 +1253,7 @@ message.channel.bulkDelete(100)
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 2 ¦  \n +---------------+ ```")
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 2 ║  \n ╚═══════════════╝ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1269,7 +1262,7 @@ message.channel.bulkDelete(100)
 	message.channel.send("Lane 6 - White")  
 	message.channel.send("Lane 7 - Teal")
 	message.channel.send("Lane 8 - Orange")	  	
-	message.channel.send("``` +---------------+ \n ¦ Strike Team 3 ¦  \n +---------------+ ```")
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 3 ║  \n ╚═══════════════╝ ```")
     message.channel.send("Lane 1 - Blue")
 	message.channel.send("Lane 2 - Yellow") 
 	message.channel.send("Lane 3 - Red")  
@@ -1297,7 +1290,7 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1336,7 +1329,7 @@ if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1376,7 +1369,7 @@ if (message.channel.id === '656207417033359371') { //TB2 EVENTROOM1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1414,7 +1407,7 @@ message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1453,7 +1446,7 @@ if (message.channel.id === '656232194137784333') { //TB3 EVENTROOM1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1491,7 +1484,7 @@ message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1534,7 +1527,7 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1572,7 +1565,7 @@ if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1611,7 +1604,7 @@ if (message.channel.id === '656207417033359371') { //TB2 EVENTROOM1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1649,7 +1642,7 @@ if (message.channel.id === '656216714723459116') { //TB2 EVENTROOM2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1688,7 +1681,7 @@ message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1726,7 +1719,7 @@ message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1767,7 +1760,7 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch();
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1805,7 +1798,7 @@ if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1844,7 +1837,7 @@ if (message.channel.id === '656207417033359371') {
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1882,7 +1875,7 @@ message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1921,7 +1914,7 @@ message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1959,7 +1952,7 @@ message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -1998,7 +1991,7 @@ if (message.channel.id === '656244057244303361'){
 message.channel.bulkDelete(1)
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -2035,7 +2028,7 @@ if (message.channel.id === '643229492650704973'){
 message.channel.bulkDelete(1)
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -2073,7 +2066,7 @@ if(args[0] === "ultimus" && args[1] === "7"){
 if (message.channel.id === '634155222490415104') { //TB1 U7ROOM
 message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -2111,7 +2104,7 @@ message.channel.bulkDelete(1)
 //TB1 U7 ROOM
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
@@ -2149,7 +2142,7 @@ message.channel.bulkDelete(1)
 //TB3 U7 ROOM
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
-	if (message.content.includes('+'))  {
+	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
