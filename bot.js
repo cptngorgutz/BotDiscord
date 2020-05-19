@@ -890,7 +890,7 @@ const speedEmbed = new Discord.RichEmbed()
 	const uniqueEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setThumbnail('https://i.imgur.com/LbEqkLM.png')
-	.setDescription("<:ultron:663750798202634250> **Ultron** \nMini Uniques: \n\n<:GOLDore:712321731892740126> **x30** \n<:GOLDtachyon:712322007341203538> **x75** \n<:GOLDnanites:712322085489475585> **x75**")  
+	.setDescription("<:ultron:663750798202634250> **Ultron** \nMini Uniques: \n\nOmnium ore <:GOLDore:712321731892740126> **x30** \nTachyon conductor <:GOLDtachyon:712322007341203538> **x75** \nNanites <:GOLDnanites:712322085489475585> **x75**")  
 	message.channel.send(uniqueEmbed); 
 } else {
 	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/Ultron.png')] });
