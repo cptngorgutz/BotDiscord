@@ -705,7 +705,7 @@ requestchannel.send(embed);
 message.channel.send("Request/Suggestion Received.");
 }
 }
-if(command === 'hairysmurf') {
+if(command === 'hairysmurf' || command === 'comeinhairymouthhole') {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("__**HairySmurf: (<@416730768388390912>)**__ \n\n**You have been summoned to war!**")
