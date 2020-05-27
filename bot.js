@@ -61608,7 +61608,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "wakanda" || args[0] === "mercenary" && args[2] === "wakandan" || args[0] === "merc" && args[2] === "wakanda" || args[0] === "mercs" && args[2] === "wakanda" || args[0] === "mercenaries" && args[2] === "wakanda"{
+} else if (args[0] === "mercenary" && args[2] === "wakanda" || args[0] === "mercenary" && args[2] === "wakandan" || args[0] === "merc" && args[2] === "wakanda" || args[0] === "mercs" && args[2] === "wakanda" || args[0] === "mercenaries" && args[2] === "wakanda"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
