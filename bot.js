@@ -2383,7 +2383,7 @@ if (message.channel.id === '673261006918516741' || message.channel.id === '66630
 if(args[0] == "teamlist"){
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Available counters:**__ \n\naim | asgardians | avengers | bkt | brawlers | captainmarvel | defenders | gotg | hydra | kreeronan | marauders | mercenary | shield | s6 | supernatural | symbiote | ultron | wakanda")
+	.setDescription("__**Available counters:**__ \n\naim | asgardians | avengers | bkt | brawlers | cm | defenders | gotg | hydra | kreeronan | marauders | mercenary | shield | s6 | supernatural | symbiote | ultron | wakanda")
 	message.channel.send(exampleEmbed);
 } else if(args[0] == "aim" && args[1] === "stats"){
 //stats
@@ -2883,7 +2883,7 @@ setTimeout(function3, 4000);
       console.log('No data found.');
     }
   });
-} else if(args[0] == "captainmarvel"){
+} else if(args[0] == "captainmarvel" || args[0] == "cm" || args[0] == "capmarv"){
 const cptnmarvelcounterimage = client.channels.get('700487765518843938')
 cptnmarvelcounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const countercptnmarvel = messages.first().attachments.first()
@@ -2913,7 +2913,7 @@ function functioncptnmarvelstats() {
   });
 }
 setTimeout(functioncptnmarvelstats, 3000);
-} else if(args[0] == "captainmarvel+"){
+} else if(args[0] == "captainmarvel+" || args[0] == "cm+" || args[0] == "capmarv++"){
 const cptnmarvelcounterimage2 = client.channels.get('700487765518843938')
 
 const channelToCheckText = client.channels.get('700487792999792700')
@@ -3452,7 +3452,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "mercenary" && args[1] === "stats"){
+} else if(args[0] == "mercenary" && args[1] === "stats" || args[0] == "merc" && args[1] === "stats" || args[0] == "mercs" && args[1] === "stats" || args[0] == "mercenaries" && args[1] === "stats"){
 //stats
 	sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -3469,7 +3469,7 @@ setTimeout(function3, 4000);
       console.log('No data found.');
     }
   });
-} else if(args[0] == "mercenary" || args[0] == "merc" || args[0] == "mercs"){
+} else if(args[0] == "mercenary" || args[0] == "merc" || args[0] == "mercs" || args[0] == "mercenaries"){
 const merccounterimage = client.channels.get('709838173630496899')
 merccounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const countermerc = messages.first().attachments.first()
@@ -3499,7 +3499,7 @@ function functionmercstats() {
   });
 }
 setTimeout(functionmercstats, 3000);
-} else if(args[0] == "mercenary+" || args[0] === "mercs+" || args[0] === "merc+" || args[0] === "mercen+" || args[0] === "mer+"){
+} else if(args[0] == "mercenary+" || args[0] === "mercs+" || args[0] === "merc+" || args[0] === "mercen+" || args[0] === "mer+" || args[0] === "mercenaries+"){
 const merccounterimage2 = client.channels.get('709838173630496899')
 
 const channelToCheckText = client.channels.get('709838208459866283')
@@ -31984,7 +31984,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "aim" && args[2] === "mercenary"){
+} else if (args[0] === "aim" && args[2] === "mercenary" || args[0] === "aim" && args[2] === "merc" || args[0] === "aim" && args[2] === "mercs" || args[0] === "aim" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -32221,7 +32221,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "aimtron" && args[2] === "mercenary"){
+} else if (args[0] === "aimtron" && args[2] === "mercenary" || args[0] === "aimtron" && args[2] === "merc" || args[0] === "aimtron" && args[2] === "mercs" || args[0] === "aimtron" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -32379,7 +32379,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "ogbh" && args[2] === "mercenary"){
+} else if (args[0] === "ogbh" && args[2] === "mercenary" || args[0] === "ogbh" && args[2] === "merc" || args[0] === "ogbh" && args[2] === "mercs" || args[0] === "ogbh" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -32537,7 +32537,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "bh" && args[2] === "mercenary"){
+} else if (args[0] === "bh" && args[2] === "mercenary" || args[0] === "bh" && args[2] === "merc" || args[0] === "bh" && args[2] === "mercs" || args[0] === "bh" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -32695,7 +32695,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "bkt" && args[2] === "mercenary"){
+} else if (args[0] === "bkt" && args[2] === "mercenary" || args[0] === "bkt" && args[2] === "merc" || args[0] === "bkt" && args[2] === "mercs" || args[0] === "bkt" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -32853,7 +32853,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "brawlers" && args[2] === "mercenary"){
+} else if (args[0] === "brawlers" && args[2] === "mercenary" || args[0] === "brawlers" && args[2] === "merc" || args[0] === "brawlers" && args[2] === "mercs" || args[0] === "brawlers" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -33011,7 +33011,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "cm" && args[2] === "mercenary"){
+} else if (args[0] === "cm" && args[2] === "mercenary" || args[0] === "cm" && args[2] === "merc" || args[0] === "cm" && args[2] === "mercs" || args[0] === "cm" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -33169,7 +33169,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "defenders" && args[2] === "mercenary"){
+} else if (args[0] === "defenders" && args[2] === "mercenary" || args[0] === "defenders" && args[2] === "merc" || args[0] === "defenders" && args[2] === "mercs" || args[0] === "defenders" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -33327,7 +33327,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "f4" && args[2] === "mercenary"){
+} else if (args[0] === "f4" && args[2] === "mercenary" || args[0] === "f4" && args[2] === "merc" || args[0] === "f4" && args[2] === "mercs" || args[0] === "f4" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -33485,7 +33485,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "gotg" && args[2] === "mercenary"){
+} else if (args[0] === "gotg" && args[2] === "mercenary" || args[0] === "gotg" && args[2] === "merc" || args[0] === "gotg" && args[2] === "mercs" || args[0] === "gotg" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -33643,7 +33643,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "hydra" && args[2] === "mercenary"){
+} else if (args[0] === "hydra" && args[2] === "mercenary" || args[0] === "hydra" && args[2] === "merc" || args[0] === "hydra" && args[2] === "mercs" || args[0] === "hydra" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -33801,7 +33801,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "inhumans" && args[2] === "mercenary"){
+} else if (args[0] === "inhumans" && args[2] === "mercenary" || args[0] === "inhumans" && args[2] === "merc" || args[0] === "inhumans" && args[2] === "mercs" || args[0] === "inhumans" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -33959,7 +33959,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "kreeronan" && args[2] === "mercenary"){
+} else if (args[0] === "kreeronan" && args[2] === "mercenary" || args[0] === "kreeronan" && args[2] === "merc" || args[0] === "kreeronan" && args[2] === "mercs" || args[0] === "kreeronan" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -34117,7 +34117,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "kreeultimus" && args[2] === "mercenary"){
+} else if (args[0] === "kreeultimus" && args[2] === "mercenary" || args[0] === "kreeultimus" && args[2] === "merc" || args[0] === "kreeultimus" && args[2] === "mercs" || args[0] === "kreeultimus" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -34275,7 +34275,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "marauders" && args[2] === "mercenary" || args[0] === "mauraders" && args[2] === "mercenary" || args[0] === "maurader" && args[2] === "mercenary"){
+} else if (args[0] === "marauders" && args[2] === "mercenary" || args[0] === "mauraders" && args[2] === "mercenary" || args[0] === "maurader" && args[2] === "mercenary" || args[0] === "marauders" && args[2] === "merc" || args[0] === "marauders" && args[2] === "mercs" || args[0] === "marauders" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -34433,7 +34433,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "maraudertron" && args[2] === "mercenary"){
+} else if (args[0] === "maraudertron" && args[2] === "mercenary" || args[0] === "maraudertron" && args[2] === "merc" || args[0] === "maraudertron" && args[2] === "mercs" || args[0] === "maraudertron" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -34591,7 +34591,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "pa" && args[2] === "mercenary"){
+} else if (args[0] === "pa" && args[2] === "mercenary" || args[0] === "pa" && args[2] === "merc" || args[0] === "pa" && args[2] === "mercs" || args[0] === "pa" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -34749,7 +34749,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "s6" && args[2] === "mercenary"){
+} else if (args[0] === "s6" && args[2] === "mercenary" || args[0] === "s6" && args[2] === "merc" || args[0] === "s6" && args[2] === "mercs" || args[0] === "s6" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -34907,7 +34907,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "shield" || args[0] === "coulson" || args[0] === "coulsonshield" && args[2] === "mercenary"){
+} else if (args[0] === "shield" || args[0] === "coulson" || args[0] === "coulsonshield" && args[2] === "mercenary" || args[0] === "shield" && args[2] === "merc" || args[0] === "shield" && args[2] === "mercs" || args[0] === "shield" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -35065,7 +35065,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "supernatural" && args[2] === "mercenary"){
+} else if (args[0] === "supernatural" && args[2] === "mercenary" || args[0] === "supernatural" && args[2] === "merc" || args[0] === "supernatural" && args[2] === "mercs" || args[0] === "supernatural" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -35223,7 +35223,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" && args[2] === "mercenary"){
+} else if (args[0] === "symbiote" && args[2] === "mercenary" || args[0] === "symbiote" && args[2] === "merc" || args[0] === "symbiote" && args[2] === "mercs" || args[0] === "symbiote" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -35381,7 +35381,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "ultron" && args[2] === "mercenary"){
+} else if (args[0] === "ultron" && args[2] === "mercenary" || args[0] === "ultron" && args[2] === "merc" || args[0] === "ultron" && args[2] === "mercs" || args[0] === "ultron" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -35539,7 +35539,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "wakanda" && args[2] === "mercenary" || args[0] === "wakandan" && args[2] === "mercenary"){
+} else if (args[0] === "wakanda" && args[2] === "mercenary" || args[0] === "wakandan" && args[2] === "mercenary" || args[0] === "wakanda" && args[2] === "merc" || args[0] === "wakanda" && args[2] === "mercs" || args[0] === "wakanda" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -35697,7 +35697,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "xmen" && args[2] === "mercenary"){
+} else if (args[0] === "xmen" && args[2] === "mercenary" || args[0] === "xmen" && args[2] === "merc" || args[0] === "xmen" && args[2] === "mercs" || args[0] === "xmen" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -37909,7 +37909,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "asgardians" && args[2] === "mercenary"){
+} else if (args[0] === "asgardians" && args[2] === "mercenary" || args[0] === "asgardians" && args[2] === "merc" || args[0] === "asgardians" && args[2] === "mercs" || args[0] === "asgardians" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -57026,7 +57026,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "avengers" && args[2] === "mercenary"){
+} else if (args[0] === "avengers" && args[2] === "mercenary" || args[0] === "avengers" && args[2] === "merc" || args[0] === "avengers" && args[2] === "mercs" || args[0] === "avengers" && args[2] === "mercenaries"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
@@ -59633,7 +59633,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "asgardians"){
+} else if (args[0] === "mercenary" && args[2] === "asgardians" || args[0] === "merc" && args[2] === "asgardians" || args[0] === "mercs" && args[2] === "asgardians" || args[0] === "mercenaries" && args[2] === "asgardians"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
@@ -59712,7 +59712,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "avengers"){
+} else if (args[0] === "mercenary" && args[2] === "avengers" || args[0] === "merc" && args[2] === "avengers" || args[0] === "mercs" && args[2] === "avengers" || args[0] === "mercenaries" && args[2] === "avengers"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
@@ -59870,7 +59870,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "aim"){
+} else if (args[0] === "mercenary" && args[2] === "aim" || args[0] === "merc" && args[2] === "aim" || args[0] === "mercs" && args[2] === "aim" || args[0] === "mercenaries" && args[2] === "aim"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
@@ -59949,7 +59949,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "aimtron"){
+} else if (args[0] === "mercenary" && args[2] === "aimtron" || args[0] === "merc" && args[2] === "aimtron" || args[0] === "mercs" && args[2] === "aimtron" || args[0] === "mercenaries" && args[2] === "aimtron"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
@@ -60028,7 +60028,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "ogbh"){
+} else if (args[0] === "mercenary" && args[2] === "ogbh" || args[0] === "merc" && args[2] === "ogbh" || args[0] === "mercs" && args[2] === "ogbh" || args[0] === "mercenaries" && args[2] === "ogbh"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
@@ -60107,7 +60107,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "bh"){
+} else if (args[0] === "mercenary" && args[2] === "bh" || args[0] === "merc" && args[2] === "bh" || args[0] === "mercs" && args[2] === "bh" || args[0] === "mercenaries" && args[2] === "bh"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
@@ -60186,7 +60186,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "bkt"){
+} else if (args[0] === "mercenary" && args[2] === "bkt" || args[0] === "merc" && args[2] === "bkt" || args[0] === "mercs" && args[2] === "bkt" || args[0] === "mercenaries" && args[2] === "bkt"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
@@ -60265,7 +60265,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "brawlers"){
+} else if (args[0] === "mercenary" && args[2] === "brawlers" || args[0] === "merc" && args[2] === "brawlers" || args[0] === "mercs" && args[2] === "brawlers" || args[0] === "mercenaries" && args[2] === "brawlers"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
@@ -60344,7 +60344,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "cm"){
+} else if (args[0] === "mercenary" && args[2] === "cm" || args[0] === "merc" && args[2] === "cm" || args[0] === "mercs" && args[2] === "cm" || args[0] === "mercenaries" && args[2] === "cm"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
@@ -60423,7 +60423,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "defenders"){
+} else if (args[0] === "mercenary" && args[2] === "defenders" || args[0] === "merc" && args[2] === "defenders" || args[0] === "mercs" && args[2] === "defenders" || args[0] === "mercenaries" && args[2] === "defenders"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
@@ -60502,7 +60502,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "f4"){
+} else if (args[0] === "mercenary" && args[2] === "f4" || args[0] === "merc" && args[2] === "f4" || args[0] === "mercs" && args[2] === "f4" || args[0] === "mercenaries" && args[2] === "f4"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
@@ -60581,7 +60581,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "gotg"){
+} else if (args[0] === "mercenary" && args[2] === "gotg" || args[0] === "merc" && args[2] === "gotg" || args[0] === "mercs" && args[2] === "gotg" || args[0] === "mercenaries" && args[2] === "gotg"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
@@ -60660,7 +60660,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "hydra"){
+} else if (args[0] === "mercenary" && args[2] === "hydra" || args[0] === "merc" && args[2] === "hydra" || args[0] === "mercs" && args[2] === "hydra" || args[0] === "mercenaries" && args[2] === "hydra"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
@@ -60739,7 +60739,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "inhumans"){
+} else if (args[0] === "mercenary" && args[2] === "inhumans" || args[0] === "merc" && args[2] === "inhumans" || args[0] === "mercs" && args[2] === "inhumans" || args[0] === "mercenaries" && args[2] === "inhumans"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
@@ -60818,7 +60818,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "kreeronan"){
+} else if (args[0] === "mercenary" && args[2] === "kreeronan" || args[0] === "merc" && args[2] === "kreeronan" || args[0] === "mercs" && args[2] === "kreeronan" || args[0] === "mercenaries" && args[2] === "kreeronan"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
@@ -60897,7 +60897,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "kreeultimus"){
+} else if (args[0] === "mercenary" && args[2] === "kreeultimus" || args[0] === "merc" && args[2] === "kreeultimus" || args[0] === "mercs" && args[2] === "kreeultimus" || args[0] === "mercenaries" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
@@ -60976,7 +60976,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "marauders" || args[0] === "mercenary" && args[2] === "mauraders" || args[0] === "mercenary" && args[2] === "maurader"){
+} else if (args[0] === "mercenary" && args[2] === "marauders" || args[0] === "mercenary" && args[2] === "mauraders" || args[0] === "mercenary" && args[2] === "maurader" || args[0] === "merc" && args[2] === "marauders" || args[0] === "mercs" && args[2] === "marauders" || args[0] === "mercenaries" && args[2] === "marauders"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
@@ -61055,7 +61055,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "maraudertron"){
+} else if (args[0] === "mercenary" && args[2] === "maraudertron" || args[0] === "merc" && args[2] === "maraudertron" || args[0] === "mercs" && args[2] === "maraudertron" || args[0] === "mercenaries" && args[2] === "maraudertron"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
@@ -61134,7 +61134,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "pa"){
+} else if (args[0] === "mercenary" && args[2] === "pa" || args[0] === "merc" && args[2] === "pa" || args[0] === "mercs" && args[2] === "pa" || args[0] === "mercenaries" && args[2] === "pa"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor";
@@ -61213,7 +61213,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "s6"){
+} else if (args[0] === "mercenary" && args[2] === "s6" || args[0] === "merc" && args[2] === "s6" || args[0] === "mercs" && args[2] === "s6" || args[0] === "mercenaries" && args[2] === "s6"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
@@ -61292,7 +61292,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "shield" || args[0] === "mercenary" &&  args[2] === "coulson" || args[0] === "mercenary" &&  args[2] === "coulsonshield"){
+} else if (args[0] === "mercenary" && args[2] === "shield" || args[0] === "mercenary" &&  args[2] === "coulson" || args[0] === "mercenary" &&  args[2] === "coulsonshield" || args[0] === "merc" && args[2] === "shield" || args[0] === "mercs" && args[2] === "shield" || args[0] === "mercenaries" && args[2] === "shield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -61371,7 +61371,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "supernatural" || args[0] === "mercenary" && args[2] === "supernaturals"){
+} else if (args[0] === "mercenary" && args[2] === "supernatural" || args[0] === "mercenary" && args[2] === "supernaturals" || args[0] === "merc" && args[2] === "supernatural" || args[0] === "mercs" && args[2] === "supernatural" || args[0] === "mercenaries" && args[2] === "supernatural"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
@@ -61450,7 +61450,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "symbiote"){
+} else if (args[0] === "mercenary" && args[2] === "symbiote" || args[0] === "merc" && args[2] === "symbiote" || args[0] === "mercs" && args[2] === "symbiote" || args[0] === "mercenaries" && args[2] === "symbiote"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -61529,7 +61529,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "ultron"){
+} else if (args[0] === "mercenary" && args[2] === "ultron" || args[0] === "merc" && args[2] === "ultron" || args[0] === "mercs" && args[2] === "ultron" || args[0] === "mercenaries" && args[2] === "ultron"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
@@ -61608,7 +61608,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "wakanda" || args[0] === "mercenary" && args[2] === "wakandan"){
+} else if (args[0] === "mercenary" && args[2] === "wakanda" || args[0] === "mercenary" && args[2] === "wakandan" || args[0] === "merc" && args[2] === "wakanda" || args[0] === "mercs" && args[2] === "wakanda" || args[0] === "mercenaries" && args[2] === "wakanda"{
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
@@ -61687,7 +61687,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "mercenary" && args[2] === "xmen"){
+} else if (args[0] === "mercenary" && args[2] === "xmen" || args[0] === "merc" && args[2] === "xmen" || args[0] === "mercs" && args[2] === "xmen" || args[0] === "mercenaries" && args[2] === "xmen"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
