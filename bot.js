@@ -61777,7 +61777,7 @@ const exampleEmbed = new Discord.RichEmbed()
 if (message.channel.id === '673261006918516741' || message.channel.id === '666305824813219870' || message.channel.id === '560885677475102740' || message.channel.id === '562757850477101063' || message.channel.id === '643140704624967694' || message.channel.id === '661221254958940220' || message.channel.id === '699707863148265512') {
 if(!isNaN(args[0]) || !isNaN(args[2])) {
 message.channel.send("Please add in the following order: [teamname] [power] [teamname] [power]");
-} else {
+} else if(args[1].length == 3 || args[3].length == 3) {
 const reviewchannel = client.channels.get('701432148774617148')
 const messages1 = await message.channel.fetchMessages({ limit: 1 });
 const embed = new Discord.RichEmbed()
@@ -61795,10 +61795,12 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription(`__Submitted for review:__ \nAttacker: **${args[0]}** **${args[1]}** \nDefender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
-} 
+} else {
+message.channel.send("Please Only use 3 digits, Example: 123, not 123678.");
+}
+}
 } else {
 message.channel.send("Sorry, this doesn't work here. Head to <#673261006918516741> and try again.").catch(console.error);
-}
 }
 }
 if (command === '%'){
@@ -61825,13 +61827,7 @@ if (z > 0) {
 message.channel.send("Sorry, this doesn't work here. Head to <#673261006918516741> or your war chat channel and try again.").catch(console.error);
 }
 }
-if(command === 'runtest'){
-if(args[1].length == 3) {
-	message.channel.send("Well done");
-} else {
-message.channel.send("More or less than 3 args.");
-}
-}
+
 
 });
 
