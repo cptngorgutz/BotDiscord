@@ -61798,9 +61798,9 @@ const exampleEmbed = new Discord.RichEmbed()
 } else {
 message.channel.send("Please Only use 3 digits, Example: 123, not 123678.");
 }
-}
 } else {
 message.channel.send("Sorry, this doesn't work here. Head to <#673261006918516741> and try again.").catch(console.error);
+}
 }
 }
 if (command === '%'){
