@@ -2481,6 +2481,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} else if(args[0] == "aimtron" || args[0] == "aimtron" && args[1] === "stats"){
+//stats
+	sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!G1:I",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("Attacking" + rows.join('\n').replace(/,/g, ''))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "asgardians" && args[1] === "stats" || args[0] == "asgardian" && args[1] === "stats" || args[0] == "asgard" && args[1] === "stats"){
 //stats
 	sheets.spreadsheets.values.get({
@@ -2769,6 +2786,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+} else if(args[0] == "bo" || args[0] == "bo" && args[1] === "stats"){
+//stats
+	sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!CD1:CF",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("Attacking" + rows.join('\n').replace(/,/g, ''))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "brawlers" && args[1] === "stats" || args[0] == "brawler" && args[1] === "stats"|| args[0] == "brawl" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
@@ -2866,6 +2900,40 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+}  else if(args[0] == "ogbh" || args[0] == "ogbh" && args[1] === "stats"){
+//stats
+	sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!J1:L",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("Attacking" + rows.join('\n').replace(/,/g, ''))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
+}  else if(args[0] == "bh" || args[0] == "bh" && args[1] === "stats"){
+//stats
+	sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!M1:O",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("Attacking" + rows.join('\n').replace(/,/g, ''))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "captainmarvel" && args[1] === "stats" || args[0] == "cm" && args[1] === "stats" || args[0] == "captain" && args[1] === "stats" || args[0] == "marvel"  && args[1] === "stats" || args[0] == "captain" && args[1] === "marvel" && args[2] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
@@ -3061,6 +3129,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+}  else if(args[0] == "f4" || args[0] == "f4" && args[1] === "stats"){
+//stats
+	sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!AB1:AD",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("Attacking" + rows.join('\n').replace(/,/g, ''))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "gotg" && args[1] === "stats" || args[0] == "guardians" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
@@ -3256,6 +3341,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+}  else if(args[0] == "inhumans" || args[0] == "inhumans" && args[1] === "stats"){
+//stats
+	sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!AK1:AM",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("Attacking" + rows.join('\n').replace(/,/g, ''))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "kreeronan" && args[1] === "stats" || args[0] == "kree" && args[1] === "ronan" && args[2] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
@@ -3354,6 +3456,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+}  else if(args[0] == "kreeultimus" || args[0] == "kreeultimus" && args[1] === "stats"){
+//stats
+	sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!AQ1:AS",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("Attacking" + rows.join('\n').replace(/,/g, ''))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "marauders" && args[1] === "stats" || args[0] == "marauder" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
@@ -3452,6 +3571,23 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
+}  else if(args[0] == "maraudertron" || args[0] == "maraudertron" && args[1] === "stats"){
+//stats
+	sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!AW1:AY",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("Attacking" + rows.join('\n').replace(/,/g, ''))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "mercenary" && args[1] === "stats" || args[0] == "merc" && args[1] === "stats" || args[0] == "mercs" && args[1] === "stats" || args[0] == "mercenaries" && args[1] === "stats"){
 //stats
 	sheets.spreadsheets.values.get({
@@ -3549,6 +3685,23 @@ function function2() {
 function1();
 function2();
 setTimeout(function3, 4000);
+}  else if(args[0] == "pa" || args[0] == "pa" && args[1] === "stats"){
+//stats
+	sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!AZ1:BB",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("Attacking" + rows.join('\n').replace(/,/g, ''))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
 } else if(args[0] == "shield" && args[1] === "stats" || args[0] === "coulson" && args[1] === "stats" || args[0] === "colson" && args[1] === "stats" || args[0] === "coulsen" && args[1] === "stats" || args[0] === "colsen" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
@@ -66070,8 +66223,8 @@ message.channel.send("Sorry, this doesn't work here. Head to <#67326100691851674
 }
 }
 if (command === '%'){
-							//   bot-spamTB                                 bot-spamTESTserver                              TB1-WAR-CHAT                                   TB2-WAR-CHAT                                    TB3-WAR-CHAT                                 General-TESTSERVER                       EMOJITESTSERVER-testing room
-if (message.channel.id === '673261006918516741' || message.channel.id === '666305824813219870' || message.channel.id === '560885677475102740' || message.channel.id === '562757850477101063' || message.channel.id === '643140704624967694' || message.channel.id === '661221254958940220' || message.channel.id === '699707863148265512') {
+							//  war-counter-chat     						 bot-spamTB                                 bot-spamTESTserver                              TB1-WAR-CHAT                                   TB2-WAR-CHAT                                    TB3-WAR-CHAT                                 General-TESTSERVER                       EMOJITESTSERVER-testing room
+if (message.channel.id === '706159210290741330' || message.channel.id === '673261006918516741' || message.channel.id === '666305824813219870' || message.channel.id === '560885677475102740' || message.channel.id === '562757850477101063' || message.channel.id === '643140704624967694' || message.channel.id === '661221254958940220' || message.channel.id === '699707863148265512') {
 // Assign values to x and y
 let x = args[0];
 let y = args[1];
