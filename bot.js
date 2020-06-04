@@ -4409,7 +4409,7 @@ let page = 1;
 
  const embed = new Discord.RichEmbed() // Define a new embed
     .setColor('#0099ff') // Set the color
-    .setFooter(`Page 1 - Use reaction below to navigate to the next/previous pages`)
+    .setFooter(`Home - Use reaction below to navigate to the next/previous pages`)
     .setDescription(pages[page-1])
 
     message.channel.send(embed).then(msg => {
@@ -4432,8 +4432,7 @@ let page = 1;
 
 		one.on('collect', r => {
 			if (page === 1) {
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page 1 of 3 - Use reaction below to navigate to the previous/next pages`);
+			embed.setFooter(`Page 1 of 3 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
@@ -4462,8 +4461,7 @@ let page = 1;
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
 			if (page === 2) {
-            embed.setDescription(pages[page-1]);
-             embed.setFooter(`Page 2 of 3 - Use reaction below to navigate to the previous/next pages`);
+			embed.setFooter(`Page 2 of 3 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
@@ -4492,8 +4490,7 @@ let page = 1;
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
 			if (page === 3) {
-            embed.setDescription(pages[page-1]);
-             embed.setFooter(`Page 3 of 3 - Use reaction below to navigate to the previous/next pages`);
+			embed.setFooter(`Page 3 of 3 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
