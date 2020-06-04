@@ -4404,7 +4404,7 @@ if(command === 'add'){
 const managerrole = message.guild.roles.find(role => role.name === 'Bot Management');
 if(args[0] === "teamlist"){
 	
-let pages = [`<:cmd:709397091461496833> __**Adding Teams**__ \n`,`<:cmd:709397091461496833> __**Adding Teams page 2**__ \n`, `<:cmd:709397091461496833> __**Adding Team page 3**__ \npower armor - 1 \n<:vision:663750896835887110> <:rescue:663750496057819147> <:ironman:663751735591960577> <:warmachine:663750909146300441> <:falcon:663749983551488063>\n\npower armor - 2 \n<:ironheart:684029278425579566> <:rescue:663750496057819147> <:ironman:663751735591960577> <:warmachine:663750909146300441> <:falcon:663749983551488063>`,];
+let pages = [`<:cmd:709397091461496833> __**Adding Teams**__ \n`,`<:cmd:709397091461496833> __**Adding Teams Page 2**__ \n`, `<:cmd:709397091461496833> __**Adding Teams Page 3**__ \npower armor - 1 (vis,res,im,wm,falc) \n<:vision:663750896835887110> <:rescue:663750496057819147> <:ironman:663751735591960577> <:warmachine:663750909146300441> <:falcon:663749983551488063>\npower armor - 2 (ih,res,im,wm,falc) \n<:ironheart:684029278425579566> <:rescue:663750496057819147> <:ironman:663751735591960577> <:warmachine:663750909146300441> <:falcon:663749983551488063>`,];
 let page = 1; 
 
  const embed = new Discord.RichEmbed() // Define a new embed
@@ -4416,37 +4416,61 @@ let page = 1;
 	msg.react('1️⃣').then( r => {
     msg.react('2️⃣')
 	msg.react('3️⃣')
-	//msg.react('4️⃣')
 
 
         // Filters
 		const oneFilter = (reaction, user) => reaction.emoji.name === '1️⃣' && user.id === message.author.id;
 		const twoFilter = (reaction, user) => reaction.emoji.name === '2️⃣' && user.id === message.author.id;
 		const threeFilter = (reaction, user) => reaction.emoji.name === '3️⃣' && user.id === message.author.id;
-		//const fiveFilter = (reaction, user) => reaction.emoji.name === '4️⃣' && user.id === message.author.id;
 
 		const one = msg.createReactionCollector(oneFilter, {time: 300000});
 		const two = msg.createReactionCollector(twoFilter, {time: 300000});
 		const three = msg.createReactionCollector(threeFilter, {time: 300000});
-		//const five = msg.createReactionCollector(fiveFilter, {time: 300000});
 
 		one.on('collect', r => {
 			if (page === 1) {
-			embed.setFooter(`Page 1 of 3 - Use reaction below to navigate to the previous/next pages`);
+			page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page 1 of 4 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
 			if (page === 2) {
-			page--;
-			embed.setFooter(`Page 1 of 3 - Use reaction below to navigate to the previous/next pages`);
+			embed.setFooter(`Page 1 of 4 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
 			if (page === 3) {
             page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page 1 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 4) {
+            page--;
 			page--;
             embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page 1 of 3 - Use reaction below to navigate to the previous/next pages`);
+            embed.setFooter(`Page 1 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 5) {
+            page--;
+			page--;
+			page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page 1 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 6) {
+            page--;
+			page--;
+			page--;
+			page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page 1 of 4 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
@@ -4455,19 +4479,45 @@ let page = 1;
 		two.on('collect', r => {
 		if (page === 1) {
 			page++;
+			page++;
             embed.setDescription(pages[page-1]);
-             embed.setFooter(`Page 2 of 3 - Use reaction below to navigate to the previous/next pages`);
+             embed.setFooter(`Page 2 of 4 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
 			if (page === 2) {
-			embed.setFooter(`Page 2 of 3 - Use reaction below to navigate to the previous/next pages`);
+			page++;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 2 of 4 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
 			if (page === 3) {
+			embed.setFooter(`Page 2 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 4) {
+            page--;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 2 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 5) {
+            page--;
 			page--;
-			embed.setFooter(`Page 2 of 3 - Use reaction below to navigate to the previous/next pages`);
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 2 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 6) {
+            page--;
+			page--;
+			page--;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 2 of 4 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
@@ -4477,28 +4527,51 @@ let page = 1;
 		if (page === 1) {
 			page++;
 			page++;
+			page++;
             embed.setDescription(pages[page-1]);
-             embed.setFooter(`Page 3 of 3 - Use reaction below to navigate to the previous/next pages`);
+             embed.setFooter(`Page 3 of 4 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
 			if (page === 2) {
 			page++;
+			page++;
             embed.setDescription(pages[page-1]);
-             embed.setFooter(`Page 3 of 3 - Use reaction below to navigate to the previous/next pages`);
+             embed.setFooter(`Page 3 of 4 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
 			if (page === 3) {
-			embed.setFooter(`Page 3 of 3 - Use reaction below to navigate to the previous/next pages`);
+			page++;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 3 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 4) {
+			embed.setFooter(`Page 3 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 5) {
+            page--;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 3 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 6) {
+            page--;
+			page--;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 3 of 4 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
 		})
 		
-		
-    })
-})
+	})
+	})
 
 
 
