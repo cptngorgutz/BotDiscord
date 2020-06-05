@@ -4403,8 +4403,8 @@ message.channel.send("Sorry, this doesn't work here. Head to <#67326100691851674
 if(command === 'add'){
 const managerrole = message.guild.roles.find(role => role.name === 'Bot Management');
 if(args[0] === "teamlist"){
-	
-let pages = [`<:cmd:709397091461496833> __**Adding Teams**__ \n`,`<:cmd:709397091461496833> __**Adding Teams Page 2**__ \n`, `<:cmd:709397091461496833> __**Adding Teams Page 3**__ \npower armor - 1 (vis,res,im,wm,falc) \n<:vision:663750896835887110> <:rescue:663750496057819147> <:ironman:663751735591960577> <:warmachine:663750909146300441> <:falcon:663749983551488063>\npower armor - 2 (ih,res,im,wm,falc) \n<:ironheart:684029278425579566> <:rescue:663750496057819147> <:ironman:663751735591960577> <:warmachine:663750909146300441> <:falcon:663749983551488063>`,];
+		
+let pages = [`<:cmd:709397091461496833> __**Commands Menu**__ \n \nHome - Commands Menu\nPage 1 - General commands\nPage 2 - General commands 2\nPage 3 - War commands\nPage 4 - War commands 2\nPage 5 - PVP (coming soon™️)`,`<:cmd:709397091461496833> __**General Commands**__ \n \n<:__:709403821901611019>commands \n**Provides a commands list** \n\n<:__:709403821901611019>away [reason] \n**Send a message to the captains saying you'll be away** \n\n<:__:709403821901611019>uniques \n**Sends an infographic of unique gear required for characters** \n\n<:__:709403821901611019>miniuniques \n**Sends an infographic of miniuniques required for characters** \n\n<:__:709403821901611019>blitz \n**Send an infographic of current blitz predictions**\n(ex. !blitz / !blitz2) \n\n<:__:709403821901611019>event [charactername] \n**Send an infographic of required toons for the event**\n(ex. !ultron)`, '<:cmd:709397091461496833> __**General Commands 2**__ \n\n<:__:709403821901611019>bug [reason] \n**Send a bug report to admin-logs for something to get fixed on the bot** \n\n<:__:709403821901611019>request [reason] \n**Send a request to admin-logs for something to be added to the bot** \n\n<:__:709403821901611019>notifications \n**Join the role to be notified of important announcements** \n\n<:__:709403821901611019>charactername \n**Character graphics are a work-in-progress and will be added to the #bot-changelog channel when they are available to use**', `<:cmd:709397091461496833> __**War Counters**__ \n \n<:__:709403821901611019>counter [teamname]  \n\n**Sends an image of the recommended teams countering your requested team**\n(ex. !counter aim -> Counter graphic + stats) \n\n<:__:709403821901611019>counter [teamname]+ \n**Sends a counter graphic + stats + guide(if available)\n(ex. !counter aim+** \n\n<:__:709403821901611019>counter [teamname] stats \n**Sends ONLY the war stats of the chosen team**`, '<:cmd:709397091461496833> __**War - Adding Stats**__ \n\n<:__:709403821901611019>add [offenseteamname] [number] [defenseteamname] [number] \n**Adds successful war match to the database. Offense -> Defense** \n(Number rounded to nearest thousand, ex. !add aim 200 wakanda 285) \n\n<:__:709403821901611019>add teamlist \n**Shows currently available teams to add to the database** \n\n<:__:709403821901611019>% [offense] [defense]\n**Calculates the % between two numbers off -> def** \n(ex. [!% 200 285] = 42.5% punch up)', '<:cmd:709397091461496833> __**PVP (Coming Soon™️)**__ \n \n'];
 let page = 1; 
 
  const embed = new Discord.RichEmbed() // Define a new embed
@@ -4413,30 +4413,37 @@ let page = 1;
     .setDescription(pages[page-1])
 
     message.channel.send(embed).then(msg => {
-	msg.react('1️⃣').then( r => {
+	msg.react(':housetest:').then( r => {
+    msg.react('1️⃣')
     msg.react('2️⃣')
 	msg.react('3️⃣')
-
+	msg.react('4️⃣')
 
         // Filters
-		const oneFilter = (reaction, user) => reaction.emoji.name === '1️⃣' && user.id === message.author.id;
-		const twoFilter = (reaction, user) => reaction.emoji.name === '2️⃣' && user.id === message.author.id;
-		const threeFilter = (reaction, user) => reaction.emoji.name === '3️⃣' && user.id === message.author.id;
+		const oneFilter = (reaction, user) => reaction.emoji.name === ':housetest:' && user.id === message.author.id;
+		const twoFilter = (reaction, user) => reaction.emoji.name === '1️⃣' && user.id === message.author.id;
+		const threeFilter = (reaction, user) => reaction.emoji.name === '2️⃣' && user.id === message.author.id;
+		const fourFilter = (reaction, user) => reaction.emoji.name === '3️⃣' && user.id === message.author.id;
+		const fiveFilter = (reaction, user) => reaction.emoji.name === '4️⃣' && user.id === message.author.id;
+		//const sixFilter = (reaction, user) => reaction.emoji.name === '6️⃣' && user.id === message.author.id;
 
-		const one = msg.createReactionCollector(oneFilter, {time: 300000});
+        const one = msg.createReactionCollector(oneFilter, {time: 300000});
 		const two = msg.createReactionCollector(twoFilter, {time: 300000});
 		const three = msg.createReactionCollector(threeFilter, {time: 300000});
+		const four = msg.createReactionCollector(fourFilter, {time: 300000});
+		const five = msg.createReactionCollector(fiveFilter, {time: 300000});
+		//const six = msg.createReactionCollector(sixFilter, {time: 300000});
 
-		one.on('collect', r => {
-			if (page === 1) {
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page 1 of 3 - Use reaction below to navigate to the previous/next pages`);
+        one.on('collect', r => {
+            if (page === 1) {
+            embed.setFooter(`Home - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
 			if (page === 2) {
-			page--;
-			embed.setFooter(`Page 2 of 3 - Use reaction below to navigate to the previous/next pages`);
+            page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Home - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
@@ -4444,29 +4451,86 @@ let page = 1;
             page--;
 			page--;
             embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page 3 of 3 - Use reaction below to navigate to the previous/next pages`);
+            embed.setFooter(`Home - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
-		})
-		
+			if (page === 4) {
+            page--;
+			page--;
+			page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Home - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 5) {
+            page--;
+			page--;
+			page--;
+			page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Home - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 6) {
+            page--;
+			page--;
+			page--;
+			page--;
+			page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page 1 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+        })
+
 		two.on('collect', r => {
-		if (page === 1) {
+			if (page === 1) {
 			page++;
             embed.setDescription(pages[page-1]);
-             embed.setFooter(`Page 1 of 3 - Use reaction below to navigate to the previous/next pages`);
+            embed.setFooter(`Page 1 of 4 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
 			if (page === 2) {
-            embed.setDescription(pages[page-1]);
-             embed.setFooter(`Page 2 of 3 - Use reaction below to navigate to the previous/next pages`);
+			embed.setFooter(`Page 1 of 4 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
 			if (page === 3) {
+            page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page 1 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 4) {
+            page--;
 			page--;
-			embed.setFooter(`Page 3 of 3 - Use reaction below to navigate to the previous/next pages`);
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page 1 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 5) {
+            page--;
+			page--;
+			page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page 1 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 6) {
+            page--;
+			page--;
+			page--;
+			page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page 1 of 4 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
@@ -4477,29 +4541,146 @@ let page = 1;
 			page++;
 			page++;
             embed.setDescription(pages[page-1]);
-             embed.setFooter(`Page 1 of 3 - Use reaction below to navigate to the previous/next pages`);
+             embed.setFooter(`Page 2 of 4 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
 			if (page === 2) {
 			page++;
             embed.setDescription(pages[page-1]);
-             embed.setFooter(`Page 2 of 3 - Use reaction below to navigate to the previous/next pages`);
+             embed.setFooter(`Page 2 of 4 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
 			if (page === 3) {
+			embed.setFooter(`Page 2 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 4) {
+            page--;
             embed.setDescription(pages[page-1]);
-             embed.setFooter(`Page 3 of 3 - Use reaction below to navigate to the previous/next pages`);
+             embed.setFooter(`Page 2 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 5) {
+            page--;
+			page--;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 2 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 6) {
+            page--;
+			page--;
+			page--;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 2 of 4 - Use reaction below to navigate to the previous/next pages`);
             msg.edit(embed)
 			r.remove(r.users.filter(u => !u.bot).first());
 			}
 		})
 		
-	})
-	})
-
-
+		four.on('collect', r => {
+		if (page === 1) {
+			page++;
+			page++;
+			page++;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 3 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 2) {
+			page++;
+			page++;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 3 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 3) {
+			page++;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 3 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 4) {
+			embed.setFooter(`Page 3 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 5) {
+            page--;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 3 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 6) {
+            page--;
+			page--;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 3 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+		})
+		
+		five.on('collect', r => {
+		if (page === 1) {
+			page++;
+			page++;
+			page++;
+			page++;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 4 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 2) {
+			page++;
+			page++;
+			page++;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 4 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 3) {
+			page++;
+			page++;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 4 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 4) {
+			page++;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 4 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 5) {
+			embed.setFooter(`Page 4 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+			if (page === 6) {
+            page--;
+            embed.setDescription(pages[page-1]);
+             embed.setFooter(`Page 4 of 4 - Use reaction below to navigate to the previous/next pages`);
+            msg.edit(embed)
+			r.remove(r.users.filter(u => !u.bot).first());
+			}
+		})		
+		
+    })
+})
 
 
 } else if(message.member.roles.has(managerrole.id)) {
