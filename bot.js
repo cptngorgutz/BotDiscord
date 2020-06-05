@@ -4420,7 +4420,7 @@ let page = 1;
 	msg.react('4️⃣')
 
         // Filters
-		const oneFilter = (reaction, user) => reaction.emoji.name === '710571162618298383' && user.id === message.author.id;
+		const oneFilter = (reaction, user) => reaction.emoji.name === ':housetest:' && user.id === message.author.id;
 		const twoFilter = (reaction, user) => reaction.emoji.name === '1️⃣' && user.id === message.author.id;
 		const threeFilter = (reaction, user) => reaction.emoji.name === '2️⃣' && user.id === message.author.id;
 		const fourFilter = (reaction, user) => reaction.emoji.name === '3️⃣' && user.id === message.author.id;
