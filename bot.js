@@ -4413,7 +4413,7 @@ let page = 1;
     .setDescription(pages[page-1])
 
     message.channel.send(embed).then(msg => {
-	msg.react('710571162618298383>').then( r => {
+	msg.react('710571162618298383').then( r => {
     msg.react('1️⃣')
     msg.react('2️⃣')
 	msg.react('3️⃣')
