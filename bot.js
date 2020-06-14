@@ -70820,7 +70820,7 @@ message.channel.send("Please add in the following order: [teamname] [power] [tea
 } else if (args[0] === "pa" || args[2] === "pa"){
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("PA is not a valid phrase, Please use PA1 or PA2 instead. \nPA1 = Falcon,Iron man,Rescue,Vision,War machine \nPA2 = Falcon,Iron man,Rescue,IronHeart,War machine")
+	.setDescription("PA is not a valid phrase, Please use PA1 or PA2 instead. \nPA1 = Vision,Falcon,Iron man,Rescue,War machine \nPA2 = IronHeart,Falcon,Iron man,Rescue,War machine")
 	message.channel.send(exampleEmbed);
 } else if(args[1].length == 3 || args[3].length == 3) {
 const reviewchannel = client.channels.get('701432148774617148')
