@@ -2786,7 +2786,7 @@ function1();
 function2();
 setTimeout(function3, 4000);
 
-} else if(args[0] == "bo" || args[0] == "bo" && args[1] === "stats"){
+} else if(args[0] == "bo" && args[1] === "stats"){
 //stats
 	sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
@@ -2803,6 +2803,85 @@ setTimeout(function3, 4000);
       console.log('No data found.');
     }
   });
+} else if(args[0] == "bo" || args[0] == "blackorder" || args[0] == "black" && args[1] == "order"){
+const avengerscounterimage = client.channels.get('727645962138550422')
+avengerscounterimage.fetchMessages({ limit: 1 }).then(messages => {
+const counteravengers = messages.first().attachments.first()
+const Attachment = require('discord.js').Attachment;
+const attachment = new Attachment(counteravengers.url)
+const embed2 = new Discord.RichEmbed()
+embed2.setColor('#0099ff')
+embed2.setImage(counteravengers.url)
+//message.channel.send(attachment);
+message.channel.send(embed2);
+})
+function functionavengersstats() {
+sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!CD1:CF",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("Attacking" + rows.join('\n').replace(/,/g, ''))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
+}
+setTimeout(functionavengersstats, 3000);
+} else if(args[0] == "bo+" || args[0] == "blackorder+" || args[0] == "black" && args[1] == "order+"){
+const avengerscounterimage2 = client.channels.get('727645962138550422')
+const channelToCheckText = client.channels.get('727646011291598940')
+const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages2 = await avengerscounterimage2.fetchMessages({ limit: 1 });
+const counteravengers22 = messages2.first().attachments.first()
+const embed = new Discord.RichEmbed()
+
+const Text = messages1.first().content;
+const Attachment = require('discord.js').Attachment;
+
+function function1() {
+const embed1 = new Discord.RichEmbed()
+embed1.setColor('#0099ff')
+embed1.setImage(counteravengers22.url)
+message.channel.send(embed1);
+}
+function function3() {
+const TEXT = new Discord.RichEmbed()
+.setColor('#0099ff')
+.setDescription(Text.content)
+
+embed.setColor('#0099ff')
+embed.setDescription(Text)
+message.channel.send(embed);
+}
+function function2() {
+//stats
+sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "ControlPanel!CD1:CF",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("Attacking" + rows.join('\n').replace(/,/g, ''))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
+}
+
+function1();
+function2();
+setTimeout(function3, 4000);
+
 } else if(args[0] == "brawlers" && args[1] === "stats" || args[0] == "brawler" && args[1] === "stats"|| args[0] == "brawl" && args[1] === "stats"){
 //stats
 	  sheets.spreadsheets.values.get({
