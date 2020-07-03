@@ -712,13 +712,7 @@ if(command === 'hairysmurf' || command === 'comeinhairymouthhole') {
 	.setThumbnail("https://i.imgur.com/6fIaj3e.jpg");
 	message.channel.send(exampleEmbed);
 }
-if(command === 'testme'){
-if(args[0] !== "aim"){
-message.channel.send("Not equal to aim");
-} else {
-	message.channel.send("equal to aim");
-}
-}
+
 //LEGENDARY EVENTS
 if(command === 'event'|| command === 'events' || command === 'legendary' || command === 'legendaries' || command === 'events' && args[0] === "list") {
 if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && args[1] === "boltagon" || args[0] === "black" && args[1] === "bolt"){
