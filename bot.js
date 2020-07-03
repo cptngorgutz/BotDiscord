@@ -4566,7 +4566,7 @@ setTimeout(function3, 4000);
 } else {
 	let Embed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("__**Available phrases to use:**__ \n\naim | asgardians | avengers | bkt | brawlers | captainmarvel | defenders | gotg | hydra | kreeronan | marauders | mercenary | shield | s6 | supernatural | symbiote | ultron | wakanda");	
+	.setDescription("__**Available phrases to use:**__ \n\naim | asgardians | avengers | bkt | bo(blackorder) | brawlers | cm(captain marvel) | defenders | gotg | hydra | kreeronan | marauders | mercenary | shield | s6 | supernatural | symbiote | ultron | wakanda ");	
 	message.channel.send(Embed);
 }
 } else {
@@ -75571,14 +75571,19 @@ const exampleEmbed = new Discord.RichEmbed()
 	message.channel.send(exampleEmbed);
 }
 } else {
-							//   bot-spamTB                                 bot-spamTESTserver                              TB1-WAR-CHAT                                   TB2-WAR-CHAT                                    TB3-WAR-CHAT                                 General-TESTSERVER                       EMOJITESTSERVER-testing room
-if (message.channel.id === '673261006918516741' || message.channel.id === '666305824813219870' || message.channel.id === '560885677475102740' || message.channel.id === '562757850477101063' || message.channel.id === '643140704624967694' || message.channel.id === '661221254958940220' || message.channel.id === '699707863148265512') {
+							//TB-Bot-testing   								   bot-spamTB                                 bot-spamTESTserver                              TB1-WAR-CHAT                                   TB2-WAR-CHAT                                    TB3-WAR-CHAT                                 General-TESTSERVER                       EMOJITESTSERVER-testing room
+if (message.channel.id === '606119830516400162' || message.channel.id === '673261006918516741' || message.channel.id === '666305824813219870' || message.channel.id === '560885677475102740' || message.channel.id === '562757850477101063' || message.channel.id === '643140704624967694' || message.channel.id === '661221254958940220' || message.channel.id === '699707863148265512') {
 if(!isNaN(args[0]) || !isNaN(args[2])) {
 message.channel.send("Please add in the following order: [teamname] [power] [teamname] [power]");
 } else if (args[0] === "pa" || args[2] === "pa"){
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("PA is not a valid phrase, Please use PA1 or PA2 instead. \nPA1 = Vision,Falcon,Iron man,Rescue,War machine \nPA2 = IronHeart,Falcon,Iron man,Rescue,War machine")
+	message.channel.send(exampleEmbed);
+} else if (args[0] !== "avengers" || args[0] !== "asgardians" || args[0] !== "aim" || args[0] !== "aimtron" || args[0] !== "ogbh" || args[0] !== "bh" || args[0] !== "bkt" || args[0] !== "brawlers" || args[0] !== "cm" || args[0] !== "defenders" || args[0] !== "f4" || args[0] !== "gotg" || args[0] !== "hydra" || args[0] !== "inhumans" || args[0] !== "kreeronan" || args[0] !== "kreeultimus" || args[0] !== "marauders" || args[0] !== "maraudertron" || args[0] !== "mercs" || args[0] !== "pa1" || args[0] !== "pa2" || args[0] !== "s6" || args[0] !== "shield" || args[0] !== "supernaturals" || args[0] !== "symbiotes" || args[0] !== "ultron" || args[0] !== "wakanda" || args[0] !== "xmen" || args[0] !== "xforce" || args[2] !== "avengers" || args[2] !== "asgardians" || args[2] !== "aim" || args[2] !== "aimtron" || args[2] !== "ogbh" || args[2] !== "bh" || args[2] !== "bkt" || args[2] !== "brawlers" || args[2] !== "cm" || args[2] !== "defenders" || args[2] !== "f4" || args[2] !== "gotg" || args[2] !== "hydra" || args[2] !== "inhumans" || args[2] !== "kreeronan" || args[2] !== "kreeultimus" || args[2] !== "marauders" || args[2] !== "maraudertron" || args[2] !== "mercs" || args[2] !== "pa1" || args[2] !== "pa2" || args[2] !== "s6" || args[2] !== "shield" || args[2] !== "supernaturals" || args[2] !== "symbiotes" || args[2] !== "ultron" || args[2] !== "wakanda" || args[2] !== "xmen" || args[2] !== "xforce"){
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("Teamname not recognized. Please make sure spelling and/or teamname is correct.")
 	message.channel.send(exampleEmbed);
 } else if(args[1].length == 3 || args[3].length == 3) {
 const reviewchannel = client.channels.get('701432148774617148')
