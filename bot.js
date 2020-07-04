@@ -57,7 +57,7 @@ let args = message.content.toLowerCase().slice(config.prefix.length).trim().spli
 			let msgArgs = args.slice(1).join(" ");
 			message.channel.bulkDelete(1)
 			message.channel.send(msgArgs).then(messageReaction => {
-			messageReaction.react("??");
+			messageReaction.react("👍");
 			});
 			
 		break;
@@ -68,8 +68,8 @@ let args = message.content.toLowerCase().slice(config.prefix.length).trim().spli
 			let msgArgs1 = args.slice(1).join(" ");
 			message.channel.bulkDelete(1)
 			message.channel.send(msgArgs1).then(async messageReaction => {
-				await messageReaction.react("??");
-				await messageReaction.react("??");
+				await messageReaction.react("👍");
+				await messageReaction.react("👎");
 
 			});	
 		break;
@@ -80,9 +80,9 @@ let args = message.content.toLowerCase().slice(config.prefix.length).trim().spli
 			let msgArgs2 = args.slice(1).join(" ");
 			message.channel.bulkDelete(1).catch(O_o=>{}); 
 			message.channel.send(msgArgs2).then(async messageReaction => {
-				await messageReaction.react("1??");
-				await messageReaction.react("2??");
-				await messageReaction.react("3??");
+				await messageReaction.react("1️⃣");
+				await messageReaction.react("2️⃣");
+				await messageReaction.react("3️⃣");
 
 			});	
 		break;
@@ -93,10 +93,10 @@ let args = message.content.toLowerCase().slice(config.prefix.length).trim().spli
 			let msgArgs3 = args.slice(1).join(" ");
 			message.channel.bulkDelete(1)
 			message.channel.send(msgArgs3).then(async messageReaction => {
-				await messageReaction.react("1??");
-				await messageReaction.react("2??");
-				await messageReaction.react("3??"); 
-				await messageReaction.react("4??"); 
+				await messageReaction.react("1️⃣");
+				await messageReaction.react("2️⃣");
+				await messageReaction.react("3️⃣"); 
+				await messageReaction.react("4️⃣"); 
 			});	
 		break;
 	}
@@ -105,7 +105,7 @@ let args = message.content.toLowerCase().slice(config.prefix.length).trim().spli
 	let Embed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setTitle("Initiate Poll")
-	.setDescription("**POLL:** \n**!poll** \n(!poll2 @ everyone thumbs up if we should abc, thumbs down if you disagree.) \n\n!poll1 to launch a 1 responce poll ?? \n!poll2 to launch a 2 responce poll ??,?? \n!poll3 to launch a 3 responce poll 1??,2??,3??\n!poll4 to launch a 4 responce poll 1??,2??,3??,4??");	
+	.setDescription("**POLL:** \n**!poll** \n(!poll2 @ everyone thumbs up if we should abc, thumbs down if you disagree.) \n\n!poll1 to launch a 1 responce poll 👍 \n!poll2 to launch a 2 responce poll 👍,👎 \n!poll3 to launch a 3 responce poll 1️⃣,2️⃣,3️⃣  \n!poll4 to launch a 4 responce poll 1️⃣,2️⃣,3️⃣,4️⃣");	
 	message.channel.send(Embed);
 }
 });
