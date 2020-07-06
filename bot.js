@@ -8652,7 +8652,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "aim"){
+} else if (args[0] === "symbiote" && args[2] === "aim" || args[0] === "symbiotes" && args[2] === "aim"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
@@ -10706,7 +10706,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "aimtron"){
+} else if (args[0] === "symbiote" && args[2] === "aimtron" || args[0] === "symbiotes" && args[2] === "aimtron"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
@@ -12760,7 +12760,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "ogbh"){
+} else if (args[0] === "symbiote" && args[2] === "ogbh" || args[0] === "symbiotes" && args[2] === "ogbh"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
@@ -14814,7 +14814,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "bh"){
+} else if (args[0] === "symbiote" && args[2] === "bh" || args[0] === "symbiotes" && args[2] === "bh"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
@@ -16868,7 +16868,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "bkt"){
+} else if (args[0] === "symbiote" && args[2] === "bkt" || args[0] === "symbiotes" && args[2] === "bkt"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
@@ -18922,7 +18922,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "brawlers"){
+} else if (args[0] === "symbiote" && args[2] === "brawlers" || args[0] === "symbiotes" && args[2] === "brawlers"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
@@ -20976,7 +20976,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "cm"){
+} else if (args[0] === "symbiote" && args[2] === "cm" || args[0] === "symbiotes" && args[2] === "cm"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
@@ -23030,7 +23030,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "defenders"){
+} else if (args[0] === "symbiote" && args[2] === "defenders" || args[0] === "symbiotes" && args[2] === "defenders"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
@@ -25084,7 +25084,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "f4"){
+} else if (args[0] === "symbiote" && args[2] === "f4" || args[0] === "symbiotes" && args[2] === "f4"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
@@ -29192,7 +29192,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "hydra"){
+} else if (args[0] === "symbiote" && args[2] === "hydra" || args[0] === "symbiotes" && args[2] === "hydra"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
@@ -31246,7 +31246,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "inhumans"){
+} else if (args[0] === "symbiote" && args[2] === "inhumans" || args[0] === "symbiotes" && args[2] === "inhumans"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
@@ -33300,7 +33300,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "kreeronan"){
+} else if (args[0] === "symbiote" && args[2] === "kreeronan" || args[0] === "symbiotes" && args[2] === "kreeronan"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
@@ -37013,7 +37013,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "kreeultimus"){
+} else if (args[0] === "symbiote" && args[2] === "kreeultimus" || args[0] === "symbiotes" && args[2] === "kreeultimus"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
@@ -41515,7 +41515,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "maraudertron"){
+} else if (args[0] === "symbiote" && args[2] === "maraudertron" || args[0] === "symbiotes" && args[2] === "maraudertron"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
@@ -45149,7 +45149,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "pa1"){
+} else if (args[0] === "symbiote" && args[2] === "pa1" || args[0] === "symbiotes" && args[2] === "pa1"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
@@ -45228,7 +45228,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "pa2"){
+} else if (args[0] === "symbiote" && args[2] === "pa2" || args[0] === "symbiotes" && args[2] === "pa2"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
@@ -47519,7 +47519,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "s6"){
+} else if (args[0] === "symbiote" && args[2] === "s6" || args[0] === "symbiotes" && args[2] === "s6"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
@@ -51943,7 +51943,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "aim" && args[2] === "symbiote"){
+} else if (args[0] === "aim" && args[2] === "symbiote" || args[0] === "aim" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -52022,7 +52022,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "asgardians" && args[2] === "symbiote"){
+} else if (args[0] === "asgardians" && args[2] === "symbiote" || args[0] === "asgardians" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -52101,7 +52101,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "aimtron" && args[2] === "symbiote"){
+} else if (args[0] === "aimtron" && args[2] === "symbiote" || args[0] === "aimtron" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -52180,7 +52180,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "ogbh" && args[2] === "symbiote"){
+} else if (args[0] === "ogbh" && args[2] === "symbiote" || args[0] === "ogbh" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -52259,7 +52259,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "bh" && args[2] === "symbiote"){
+} else if (args[0] === "bh" && args[2] === "symbiote" || args[0] === "bh" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -52338,7 +52338,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "bkt" && args[2] === "symbiote"){
+} else if (args[0] === "bkt" && args[2] === "symbiote" || args[0] === "bkt" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -52417,7 +52417,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "brawlers" && args[2] === "symbiote"){
+} else if (args[0] === "brawlers" && args[2] === "symbiote" || args[0] === "brawlers" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -52496,7 +52496,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "captainmarvel" || args[0] === "cm" && args[2] === "symbiote"){
+} else if (args[0] === "captainmarvel" || args[0] === "cm" && args[2] === "symbiote" || args[0] === "cm" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -52575,7 +52575,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "defenders" && args[2] === "symbiote"){
+} else if (args[0] === "defenders" && args[2] === "symbiote" || args[0] === "defenders" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -52654,7 +52654,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "f4" && args[2] === "symbiote"){
+} else if (args[0] === "f4" && args[2] === "symbiote" || args[0] === "f4" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -52733,7 +52733,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "gotg" && args[2] === "symbiote" || args[0] === "guardians" && args[2] === "symbiote"){
+} else if (args[0] === "gotg" && args[2] === "symbiote" || args[0] === "guardians" && args[2] === "symbiotes" || args[0] === "gotg" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -52812,7 +52812,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "hydra" && args[2] === "symbiote"){
+} else if (args[0] === "hydra" && args[2] === "symbiote" || args[0] === "hydra" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -52891,7 +52891,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "inhumans" && args[2] === "symbiote"){
+} else if (args[0] === "inhumans" && args[2] === "symbiote" || args[0] === "inhumans" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -52970,7 +52970,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "kreeronan" && args[2] === "symbiote"){
+} else if (args[0] === "kreeronan" && args[2] === "symbiote" || args[0] === "kreeronan" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -53049,7 +53049,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "kreeultimus" && args[2] === "symbiote"){
+} else if (args[0] === "kreeultimus" && args[2] === "symbiote" || args[0] === "kreeultimus" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -53207,7 +53207,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "maraudertron" && args[2] === "symbiote"){
+} else if (args[0] === "maraudertron" && args[2] === "symbiote" || args[0] === "maraudertron" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -53286,7 +53286,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "pa1" && args[2] === "symbiote"){
+} else if (args[0] === "pa1" && args[2] === "symbiote" || args[0] === "pa1" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -53365,7 +53365,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "pa2" && args[2] === "symbiote"){
+} else if (args[0] === "pa2" && args[2] === "symbiote" || args[0] === "pa2" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -53444,7 +53444,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "s6" && args[2] === "symbiote"){
+} else if (args[0] === "s6" && args[2] === "symbiote" || args[0] === "s6" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -53523,7 +53523,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "shield" || args[0] === "coulson" || args[0] === "coulsonshield" && args[2] === "symbiote"){
+} else if (args[0] === "shield" || args[0] === "coulson" || args[0] === "coulsonshield" && args[2] === "symbiote" || args[0] === "coulson" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -53602,7 +53602,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "supernatural" && args[2] === "symbiote" || args[0] === "supernaturals" && args[2] === "symbiote"){
+} else if (args[0] === "supernatural" && args[2] === "symbiote" || args[0] === "supernaturals" && args[2] === "symbiote" || args[0] === "supernatural" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -53760,7 +53760,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "ultron" && args[2] === "symbiote"){
+} else if (args[0] === "ultron" && args[2] === "symbiote" || args[0] === "ultron" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -53918,7 +53918,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "xmen" && args[2] === "symbiote"){
+} else if (args[0] === "xmen" && args[2] === "symbiote" || args[0] === "xmen" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -55735,7 +55735,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "ultron"){
+} else if (args[0] === "symbiote" && args[2] === "ultron" || args[0] === "symbiotes" && args[2] === "ultron"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
@@ -62055,7 +62055,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "avengers" && args[2] === "symbiote"){
+} else if (args[0] === "avengers" && args[2] === "symbiote" || args[0] === "avengers" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -64030,7 +64030,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "avengers"){
+} else if (args[0] === "symbiote" && args[2] === "avengers" || args[0] === "symbiotes" && args[2] === "avengers"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
@@ -68928,7 +68928,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "xforce"){
+} else if (args[0] === "symbiote" && args[2] === "xforce" || args[0] === "symbiotes" && args[2] === "xforce"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
@@ -70745,7 +70745,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "symbiote" || args[0] === "symbiotes" && args[2] === "bo"){
+} else if (args[0] === "symbiote" && args[2] === "bo" || args[0] === "symbiotes" && args[2] === "bo"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
@@ -72957,7 +72957,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "bo" && args[2] === "symbiote"){
+} else if (args[0] === "bo" && args[2] === "symbiote" || args[0] === "bo" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -75248,7 +75248,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "xforce" && args[2] === "symbiote"){
+} else if (args[0] === "xforce" && args[2] === "symbiote" || args[0] === "xforce" && args[2] === "symbiotes"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
@@ -75580,7 +75580,7 @@ message.channel.send("Please add in the following order: [teamname] [power] [tea
 	.setColor('#0099ff')
 	.setDescription("PA is not a valid phrase, Please use PA1 or PA2 instead. \nPA1 = Vision,Falcon,Iron man,Rescue,War machine \nPA2 = IronHeart,Falcon,Iron man,Rescue,War machine")
 	message.channel.send(exampleEmbed);
-} else if (args[0] !== "avengers" || args[0] !== "asgardians" || args[0] !== "aim" || args[0] !== "aimtron" || args[0] !== "ogbh" || args[0] !== "bh" || args[0] !== "bkt" || args[0] !== "brawlers" || args[0] !== "cm" || args[0] !== "defenders" || args[0] !== "f4" || args[0] !== "gotg" || args[0] !== "hydra" || args[0] !== "inhumans" || args[0] !== "kreeronan" || args[0] !== "kreeultimus" || args[0] !== "marauders" || args[0] !== "maraudertron" || args[0] !== "mercs" || args[0] !== "pa1" || args[0] !== "pa2" || args[0] !== "s6" || args[0] !== "shield" || args[0] !== "supernaturals" || args[0] !== "symbiotes" || args[0] !== "ultron" || args[0] !== "wakanda" || args[0] !== "xmen" || args[0] !== "xforce" || args[2] !== "avengers" || args[2] !== "asgardians" || args[2] !== "aim" || args[2] !== "aimtron" || args[2] !== "ogbh" || args[2] !== "bh" || args[2] !== "bkt" || args[2] !== "brawlers" || args[2] !== "cm" || args[2] !== "defenders" || args[2] !== "f4" || args[2] !== "gotg" || args[2] !== "hydra" || args[2] !== "inhumans" || args[2] !== "kreeronan" || args[2] !== "kreeultimus" || args[2] !== "marauders" || args[2] !== "maraudertron" || args[2] !== "mercs" || args[2] !== "pa1" || args[2] !== "pa2" || args[2] !== "s6" || args[2] !== "shield" || args[2] !== "supernaturals" || args[2] !== "symbiotes" || args[2] !== "ultron" || args[2] !== "wakanda" || args[2] !== "xmen" || args[2] !== "xforce"){
+} else if (args[0] !== "avengers" || args[0] !== "asgardians" || args[0] !== "aim" || args[0] !== "aimtron" || args[0] !== "ogbh" || args[0] !== "bh" || args[0] !== "bkt" || args[0] !== "brawlers" || args[0] !== "cm" || args[0] !== "defenders" || args[0] !== "f4" || args[0] !== "gotg" || args[0] !== "hydra" || args[0] !== "inhumans" || args[0] !== "kreeronan" || args[0] !== "kreeultimus" || args[0] !== "marauders" || args[0] !== "maraudertron" || args[0] !== "mercs" || args[0] !== "mercenary" || args[0] !== "pa1" || args[0] !== "pa2" || args[0] !== "s6" || args[0] !== "shield" || args[0] !== "supernaturals" || args[0] !== "symbiotes" || args[0] !== "ultron" || args[0] !== "wakanda" || args[0] !== "xmen" || args[0] !== "xforce" || args[2] !== "avengers" || args[2] !== "asgardians" || args[2] !== "aim" || args[2] !== "aimtron" || args[2] !== "ogbh" || args[2] !== "bh" || args[2] !== "bkt" || args[2] !== "brawlers" || args[2] !== "cm" || args[2] !== "defenders" || args[2] !== "f4" || args[2] !== "gotg" || args[2] !== "hydra" || args[2] !== "inhumans" || args[2] !== "kreeronan" || args[2] !== "kreeultimus" || args[2] !== "marauders" || args[2] !== "maraudertron" || args[2] !== "mercs" || args[2] !== "mercenary" || args[2] !== "pa1" || args[2] !== "pa2" || args[2] !== "s6" || args[2] !== "shield" || args[2] !== "supernaturals" || args[2] !== "symbiotes" || args[2] !== "ultron" || args[2] !== "wakanda" || args[2] !== "xmen" || args[2] !== "xforce"){
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("Teamname not recognized. Please make sure spelling and/or teamname is correct.")
