@@ -75610,7 +75610,6 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription(`__Submitted for review:__ \nAttacker: **${args[0]}** **${args[1]}** \nDefender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
-}
 } else {
 message.channel.send("Please Only use 3 digits, Example: 123, not 123678.");
 }
