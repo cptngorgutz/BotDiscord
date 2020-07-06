@@ -713,7 +713,7 @@ if(command === 'hairysmurf' || command === 'comeinhairymouthhole') {
 	message.channel.send(exampleEmbed);
 }
 if(command === 'testthis'){
-if (!["aa", "bb", "cc"].includes(args[0])) && (!["aa", "bb", "cc"].includes(args[3])){
+if (!["aa", "bb", "cc"].includes(args[0]) && (!["aa", "bb", "cc"].includes(args[3]))){
  message.channel.send("you did not put a b or c")
 } else {
  message.channel.send("YOU DID put a b or c")
