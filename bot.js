@@ -75585,14 +75585,15 @@ if (args[0] === "pa" || args[2] === "pa"){
 	.setColor('#0099ff')
 	.setDescription("PA is not a valid phrase, Please use PA1 or PA2 instead. \nPA1 = Vision,Falcon,Iron man,Rescue,War machine \nPA2 = IronHeart,Falcon,Iron man,Rescue,War machine")
 	message.channel.send(exampleEmbed);
-} else if (args[0] !== "avengers" || args[0] !== "asgardians" || args[0] !== "aim" || args[0] !== "aimtron" || args[0] !== "ogbh" || args[0] !== "bh" || args[0] !== "bkt" || args[0] !== "brawlers" || args[0] !== "cm" || args[0] !== "defenders" || args[0] !== "f4" || args[0] !== "gotg" || args[0] !== "hydra" || args[0] !== "inhumans" || args[0] !== "kreeronan" || args[0] !== "kreeultimus" || args[0] !== "marauders" || args[0] !== "maraudertron" || args[0] !== "mercs" || args[0] !== "mercenary" || args[0] !== "pa1" || args[0] !== "pa2" || args[0] !== "s6" || args[0] !== "shield" || args[0] !== "supernaturals" || args[0] !== "symbiotes" || args[0] !== "ultron" || args[0] !== "wakanda" || args[0] !== "xmen" || args[0] !== "xforce" && args[2] !== "avengers" || args[2] !== "asgardians" || args[2] !== "aim" || args[2] !== "aimtron" || args[2] !== "ogbh" || args[2] !== "bh" || args[2] !== "bkt" || args[2] !== "brawlers" || args[2] !== "cm" || args[2] !== "defenders" || args[2] !== "f4" || args[2] !== "gotg" || args[2] !== "hydra" || args[2] !== "inhumans" || args[2] !== "kreeronan" || args[2] !== "kreeultimus" || args[2] !== "marauders" || args[2] !== "maraudertron" || args[2] !== "mercs" || args[2] !== "mercenary" || args[2] !== "pa1" || args[2] !== "pa2" || args[2] !== "s6" || args[2] !== "shield" || args[2] !== "supernaturals" || args[2] !== "symbiotes" || args[2] !== "ultron" || args[2] !== "wakanda" || args[2] !== "xmen" || args[2] !== "xforce"){
+} else if(!isNaN(args[0]) || !isNaN(args[2])) {
+message.channel.send("Please add in the following order: [teamname] [power] [teamname] [power]");
+}  else if(args[1].length == 3 || args[3].length == 3) {
+if (args[0] !== "avengers" || args[0] !== "asgardians" || args[0] !== "aim" || args[0] !== "aimtron" || args[0] !== "ogbh" || args[0] !== "bh" || args[0] !== "bkt" || args[0] !== "brawlers" || args[0] !== "cm" || args[0] !== "defenders" || args[0] !== "f4" || args[0] !== "gotg" || args[0] !== "hydra" || args[0] !== "inhumans" || args[0] !== "kreeronan" || args[0] !== "kreeultimus" || args[0] !== "marauders" || args[0] !== "maraudertron" || args[0] !== "mercs" || args[0] !== "mercenary" || args[0] !== "pa1" || args[0] !== "pa2" || args[0] !== "s6" || args[0] !== "shield" || args[0] !== "supernaturals" || args[0] !== "symbiotes" || args[0] !== "ultron" || args[0] !== "wakanda" || args[0] !== "xmen" || args[0] !== "xforce" && args[2] !== "avengers" || args[2] !== "asgardians" || args[2] !== "aim" || args[2] !== "aimtron" || args[2] !== "ogbh" || args[2] !== "bh" || args[2] !== "bkt" || args[2] !== "brawlers" || args[2] !== "cm" || args[2] !== "defenders" || args[2] !== "f4" || args[2] !== "gotg" || args[2] !== "hydra" || args[2] !== "inhumans" || args[2] !== "kreeronan" || args[2] !== "kreeultimus" || args[2] !== "marauders" || args[2] !== "maraudertron" || args[2] !== "mercs" || args[2] !== "mercenary" || args[2] !== "pa1" || args[2] !== "pa2" || args[2] !== "s6" || args[2] !== "shield" || args[2] !== "supernaturals" || args[2] !== "symbiotes" || args[2] !== "ultron" || args[2] !== "wakanda" || args[2] !== "xmen" || args[2] !== "xforce"){
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("Teamname not recognized. Please make sure spelling and/or teamname is correct.")
 	message.channel.send(exampleEmbed);
-} else if(!isNaN(args[0]) || !isNaN(args[2])) {
-message.channel.send("Please add in the following order: [teamname] [power] [teamname] [power]");
-} else if(args[1].length == 3 || args[3].length == 3) {
+} else {
 const reviewchannel = client.channels.get('701432148774617148')
 const messages1 = await message.channel.fetchMessages({ limit: 1 });
 const embed = new Discord.RichEmbed()
@@ -75610,6 +75611,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription(`__Submitted for review:__ \nAttacker: **${args[0]}** **${args[1]}** \nDefender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
+}
 } else {
 message.channel.send("Please Only use 3 digits, Example: 123, not 123678.");
 }
