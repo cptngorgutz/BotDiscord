@@ -75590,7 +75590,7 @@ message.channel.send("Please add in the following order: [teamname] [power] [tea
 } else if (!["aim","aimtron","asgard","asgardian","asgardians","bh","bkt","bo","brawl","brawler","brawlers","captainmarvel","cm","coulson","coulsonshield","defenders","f4","gotg","guardians","hydra","inhuman","inhumans","kreeronan","kreeultimus","marauders","maraudertron","maurader","mauraders","mauraderstron","mauradertron","merc","mercenary","mercs","ogbh","pa1","pa2","s6","shield","supernatural","supernaturals","symbiote","symbiotes","ultron","wakanda","wakandan","xforce","xmen"].includes(args[0]) || (!["aim","aimtron","asgard","asgardian","asgardians","bh","bkt","bo","brawl","brawler","brawlers","captainmarvel","cm","coulson","coulsonshield","defenders","f4","gotg","guardians","hydra","inhuman","inhumans","kreeronan","kreeultimus","marauders","maraudertron","maurader","mauraders","mauraderstron","mauradertron","merc","mercenary","mercs","ogbh","pa1","pa2","s6","shield","supernatural","supernaturals","symbiote","symbiotes","ultron","wakanda","wakandan","xforce","xmen"].includes(args[2]))){
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("TTeamname not recognized. Please make sure spelling and/or teamname is correct.")
+	.setDescription("Teamname not recognized. Please make sure spelling and/or teamname is correct.")
 	message.channel.send(exampleEmbed);
 } else if(args[1].length == 3 || args[3].length == 3) {
 const reviewchannel = client.channels.get('701432148774617148')
