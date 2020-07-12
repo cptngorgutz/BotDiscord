@@ -75595,17 +75595,14 @@ message.channel.send("Please add in the following order: [teamname] [power] [tea
 } else if(args[1].length == 3 || args[3].length == 3) {
 const reviewchannel = client.channels.get('701432148774617148')
 const messages1 = await message.channel.fetchMessages({ limit: 1 });
-const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
 
 const TEXT = new Discord.RichEmbed()
 .setColor('#0099ff')
 .setDescription(Text.content)
 
-embed.setColor('#0099ff')
-embed.setDescription(message.author + " \n" + Text)
-embed.setTimestamp()
-reviewchannel.send(embed);
+reviewchannel.send(message.author.username + " \n" + Text);
+
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription(`__Submitted for review:__ \nAttacker: **${args[0]}** **${args[1]}** \nDefender: **${args[2]}** **${args[3]}**`)
