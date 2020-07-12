@@ -75603,6 +75603,8 @@ const TEXT = new Discord.RichEmbed()
 
 reviewchannel.send(message.author.username);
 reviewchannel.send(Text);
+reviewchannel.send("--------------------------------------");
+reviewchannel.send("‎");
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription(`__Submitted for review:__ \nAttacker: **${args[0]}** **${args[1]}** \nDefender: **${args[2]}** **${args[3]}**`)
