@@ -75608,7 +75608,6 @@ reviewchannel.send(embed);
 //reviewchannel.send(message.author.username);
 function functionwait (){
 reviewchannel.send(Text);
-reviewchannel.send("‎");
 }
 setTimeout(functionwait, 2000);
 const exampleEmbed = new Discord.RichEmbed()
