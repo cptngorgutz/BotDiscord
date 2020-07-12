@@ -75606,8 +75606,11 @@ embed.setColor('#0099ff')
 embed.setDescription(message.author.username)
 reviewchannel.send(embed);
 //reviewchannel.send(message.author.username);
+function functionwait (){
 reviewchannel.send(Text);
 reviewchannel.send("‎");
+}
+setTimeout(functionwait, 2000);
 const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription(`__Submitted for review:__ \nAttacker: **${args[0]}** **${args[1]}** \nDefender: **${args[2]}** **${args[3]}**`)
