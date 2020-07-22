@@ -132,21 +132,30 @@ embed.setColor('#0099ff')
 embed.setDescription("**The Beyonders \n**"  + message.author.username + " " + Text)
 embed.setTimestamp()
 awaynoteschannel.send(embed);
+function functionultron (){ 
 message.channel.send("Away-note Received.");
+setTimeout(functionultron, 2000);
+}
 }
 if (message.member.roles.find(role => role.name === 'TB2')) {
 embed.setColor('#0099ff')
 embed.setDescription("**The Beyonders II \n**" + message.author.username + " " + Text)
 embed.setTimestamp()
 awaynoteschannel.send(embed);
+function functionultron (){ 
 message.channel.send("Away-note Received.");
+setTimeout(functionultron, 2000);
+}
 }
 if (message.member.roles.find(role => role.name === 'TB3')) {
 embed.setColor('#0099ff')
 embed.setDescription("**The Beyonders III \n**" + message.author.username + " " + Text)
 embed.setTimestamp()
 awaynoteschannel.send(embed);
+function functionultron (){ 
 message.channel.send("Away-note Received.");
+setTimeout(functionultron, 2000);
+}
 }
 
 }
@@ -681,7 +690,7 @@ const TEXT = new Discord.RichEmbed()
 .setDescription(Text.content)
 
 embed.setColor('#0099ff')
-embed.setDescription(message.author + " " + Text)
+embed.setDescription(message.author.username + " " + Text)
 embed.setTimestamp()
 bugchannel.send(embed);
 message.channel.send("Bug Received.");
@@ -699,7 +708,7 @@ const TEXT = new Discord.RichEmbed()
 .setDescription(Text.content)
 
 embed.setColor('#0099ff')
-embed.setDescription(message.author + " " + Text)
+embed.setDescription(message.author.username + " " + Text)
 embed.setTimestamp()
 requestchannel.send(embed);
 message.channel.send("Request/Suggestion Received.");
