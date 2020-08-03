@@ -75749,6 +75749,7 @@ if(akit === "kit" || akit === "k"){
 	const embedEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:aimassault:663749974869147648> **Aim Assaulter** \n**For more character info, try a valid phrase:** \nbasic | special | passive | kit | speed | trait | unlock")
+	.setFooter("If something is missing/incorrect please use !bug [explanation] to report it")
 	message.channel.send(embedEmbed); 
 	}
 	setTimeout(functionultron, 2000);
