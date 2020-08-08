@@ -133,30 +133,21 @@ embed.setColor('#0099ff')
 embed.setDescription("**The Beyonders \n**"  + message.author.username + " " + Text)
 embed.setTimestamp()
 awaynoteschannel.send(embed);
-function functionultron (){ 
 botspamchannel.send("Away-note Received.");
-setTimeout(functionultron, 2000);
-}
 }
 if (message.member.roles.find(role => role.name === 'TB2')) {
 embed.setColor('#0099ff')
 embed.setDescription("**The Beyonders II \n**" + message.author.username + " " + Text)
 embed.setTimestamp()
 awaynoteschannel.send(embed);
-function functionultron (){ 
 botspamchannel.send("Away-note Received.");
-setTimeout(functionultron, 2000);
-}
 }
 if (message.member.roles.find(role => role.name === 'TB3')) {
 embed.setColor('#0099ff')
 embed.setDescription("**The Beyonders III \n**" + message.author.username + " " + Text)
 embed.setTimestamp()
 awaynoteschannel.send(embed);
-function functionultron (){ 
 botspamchannel.send("Away-note Received.");
-setTimeout(functionultron, 2000);
-}
 }
 
 }
