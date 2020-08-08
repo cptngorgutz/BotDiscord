@@ -115,6 +115,7 @@ client.on("message", async message => {
 if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 if(message.content.startsWith('!away')) {
 const awaynoteschannel = client.channels.get('600465818014449674')
+const botspamchannel = client.channels.get('673261006918516741')
 const messages1 = await message.channel.fetchMessages({ limit: 1 });
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -133,7 +134,7 @@ embed.setDescription("**The Beyonders \n**"  + message.author.username + " " + T
 embed.setTimestamp()
 awaynoteschannel.send(embed);
 function functionultron (){ 
-message.channel.send("Away-note Received.");
+botspamchannel.send("Away-note Received.");
 setTimeout(functionultron, 2000);
 }
 }
@@ -143,7 +144,7 @@ embed.setDescription("**The Beyonders II \n**" + message.author.username + " " +
 embed.setTimestamp()
 awaynoteschannel.send(embed);
 function functionultron (){ 
-message.channel.send("Away-note Received.");
+botspamchannel.send("Away-note Received.");
 setTimeout(functionultron, 2000);
 }
 }
@@ -153,7 +154,7 @@ embed.setDescription("**The Beyonders III \n**" + message.author.username + " " 
 embed.setTimestamp()
 awaynoteschannel.send(embed);
 function functionultron (){ 
-message.channel.send("Away-note Received.");
+botspamchannel.send("Away-note Received.");
 setTimeout(functionultron, 2000);
 }
 }
@@ -216,7 +217,7 @@ if(command === 'uniques') {
     console.error(err)
     })
 }
-if(command === 'miniuniques' || command === 'mini' && args[0] === "uniques") {
+if(command === 'miniuniques' || command === 'mini' && args[0] === "uniques" || command === 'mini' && args[0] === "unique") {
     const channelToCheck = client.channels.get('710562474835050496')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
@@ -76304,7 +76305,7 @@ if(akit === "kit" || akit === "k" || kit === "kit" || kit === "k") {
 } else if(atrait === "trait" || atrait === "traits" || atrait === "trai" || atrait === "tra" || atrait === "t" || trait === "trait" || trait === "traits" || trait === "trai" || trait === "tra" || trait === "t") {
 	const traitEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:blackbolt:663749971971014698> **Black Bolt** \nBio,Blaster,Cosmic,Hero,Inhuman")  
+	.setDescription("<:blackbolt:663749971971014698> **Black Bolt** \nLegendary,Bio,Blaster,Cosmic,Hero,Inhuman")  
 	message.channel.send(traitEmbed); 
 } else {
 	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/BlackBolt.png')] });
@@ -77875,7 +77876,7 @@ if(akit === "kit" || akit === "k" || kit === "kit" || kit === "k") {
 } else if(atrait === "trait" || atrait === "traits" || atrait === "trai" || atrait === "tra" || atrait === "t" || trait === "trait" || trait === "traits" || trait === "trai" || trait === "tra" || trait === "t") {
 	const traitEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ebonymaw:724635997312385155> **Ebony Maw** \nBlackOrder,Cosmic,Mystic,Support,Villain")  
+	.setDescription("<:ebonymaw:724635997312385155> **Ebony Maw** \nLegendary,BlackOrder,Cosmic,Mystic,Support,Villain")  
 	message.channel.send(traitEmbed); 
 } else {
 	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/EbonyMaw.png')] });
@@ -79691,7 +79692,7 @@ const speedEmbed = new Discord.RichEmbed()
 } else if(atrait === "trait" || atrait === "traits" || atrait === "trai" || atrait === "tra" || atrait === "t" || trait === "trait" || trait === "traits" || trait === "trai" || trait === "tra" || trait === "t") {
 	const traitEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:invisiblewoman:663752234126934016> **Invisible Woman** \nBio,Cosmic,FantasticFour,Hero,Protector")  
+	.setDescription("<:invisiblewoman:663752234126934016> **Invisible Woman** \nLegendary,Bio,Cosmic,FantasticFour,Hero,Protector")  
 	message.channel.send(traitEmbed); 
 } else {
 	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/InvisibleWoman.png')] });
@@ -79911,7 +79912,7 @@ const speedEmbed = new Discord.RichEmbed()
 } else if(atrait === "trait" || atrait === "traits" || atrait === "trai" || atrait === "tra" || atrait === "t" || trait === "trait" || trait === "traits" || trait === "trai" || trait === "tra" || trait === "t") {
 	const traitEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:ironman:663751735591960577> **Iron Man** \nBlaster,Global,Hero,PowerArmor,Tech,Wave1Avenger")  
+	.setDescription("<:ironman:663751735591960577> **Iron Man** \nLegendary,Blaster,Global,Hero,PowerArmor,Tech,Wave1Avenger")  
 	message.channel.send(traitEmbed); 
 } else {
 	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/IronMan.png')] });
@@ -80905,7 +80906,7 @@ const speedEmbed = new Discord.RichEmbed()
 } else if(atrait === "trait" || atrait === "traits" || atrait === "trai" || atrait === "tra" || atrait === "t" || trait === "trait" || trait === "traits" || trait === "trai" || trait === "tra" || trait === "t") {
 	const traitEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:magneto:663750493419339810>	**Magneto** \nBrotherhood,Controller,Global,Mutant,Villain")  
+	.setDescription("<:magneto:663750493419339810>	**Magneto** \nLegendary,Brotherhood,Controller,Global,Mutant,Villain")  
 	message.channel.send(traitEmbed); 
 } else {
 	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/Magneto.png')] });
@@ -82116,7 +82117,7 @@ if(akit === "kit" || akit === "k" || kit === "kit" || kit === "k") {
 } else if(aunlock === "unlock" || aunlock === "unlo" || aunlock === "u" || aunlock === "unl" || afarm === "farm" || afarm === "far" || afarm === "f" || unlock === "unlock" || unlock === "unlo" || unlock === "u" || unlock === "unl" || farm === "farm" || farm === "far" || farm === "f") {
 	const speedEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:negasonic:725114435236003951> **Negasonic** \nNegasonic is farmable in: The Future") // \n\nCampaign:\n**Villains - Node 6-9** \n \nOrbs:\n**Premium,Legacy,Mega,Milestones,Beta raid orb,blitz orb** \n \nStore:\n**Blitz Store**")
+	.setDescription("<:negasonic:725114435236003951> **Negasonic** \nNegasonic is farmable in: \n\nCampaign:\n**Doom war - Node 1-9**") // \n\nCampaign:\n**Villains - Node 6-9** \n \nOrbs:\n**Premium,Legacy,Mega,Milestones,Beta raid orb,blitz orb** \n \nStore:\n**Blitz Store**")
 	message.channel.send(speedEmbed); 
 } else if(atrait === "trait" || atrait === "traits" || atrait === "trai" || atrait === "tra" || atrait === "t" || trait === "trait" || trait === "traits" || trait === "trai" || trait === "tra" || trait === "t") {
 	const traitEmbed = new Discord.RichEmbed()
@@ -82194,7 +82195,7 @@ const speedEmbed = new Discord.RichEmbed()
 } else if(atrait === "trait" || atrait === "traits" || atrait === "trai" || atrait === "tra" || atrait === "t" || trait === "trait" || trait === "traits" || trait === "trai" || trait === "tra" || trait === "t") {
 	const traitEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:nickfury:663750493687775236>	**Nick Fury** \nAvenger,Global,Hero,Shield,Skill,Support")  
+	.setDescription("<:nickfury:663750493687775236>	**Nick Fury** \nLegendary,Avenger,Global,Hero,Shield,Skill,Support")  
 	message.channel.send(traitEmbed); 
 } else {
 	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/NickFury.png')] });
@@ -82484,12 +82485,12 @@ const speedEmbed = new Discord.RichEmbed()
 } else if(args[1] == "unlock" || unlock === "farm") {
 	const speedEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:Phoenix:663750496829308958> **Dark Phoenix** \nDark Phoenix is farmable in:\nLegendary Event, requiring x5 Controller,Mystic,Villain characters")
+	.setDescription("<:Phoenix:663750496829308958> **Dark Phoenix** \nDark Phoenix is a summoned form of phoenix")
 	message.channel.send(speedEmbed); 
 } else if(args[1] == "trait" || unlock === "trait") {
 		const traitEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:Phoenix:663750496829308958> **Dark Phoenix** \nHero,Global,Mutant,Controller,Xmen.")
+	.setDescription("<:Phoenix:663750496829308958> **Dark Phoenix** \nLegendary,Hero,Global,Mutant,Controller,Xmen.")
 	message.channel.send(traitEmbed);	
 } else {
 	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/Phoenix.png')] });
@@ -82562,7 +82563,7 @@ const speedEmbed = new Discord.RichEmbed()
 } else if(args[0] == "trait" || unlock === "trait") {
 		const traitEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:Phoenix:663750496829308958> **Phoenix** \nHero,Global,Mutant,Controller,Xmen")
+	.setDescription("<:Phoenix:663750496829308958> **Phoenix** \nLegendary,Hero,Global,Mutant,Controller,Xmen")
 	message.channel.send(traitEmbed);	
 }  else {
 	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/Phoenix.png')] });
@@ -84178,7 +84179,7 @@ const speedEmbed = new Discord.RichEmbed()
 } else if(atrait === "trait" || atrait === "traits" || atrait === "trai" || atrait === "tra" || atrait === "t" || trait === "trait" || trait === "traits" || trait === "trai" || trait === "tra" || trait === "t") {
 	const traitEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:shuri:663750793765060629>	**Shuri** \nGlobal,Hero,Support,Tech,Wakanda")  
+	.setDescription("<:shuri:663750793765060629>	**Shuri** \nLegendary,Global,Hero,Support,Tech,Wakanda")  
 	message.channel.send(traitEmbed); 
 } else {
 	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/Shuri.png')] });
@@ -84476,7 +84477,7 @@ const speedEmbed = new Discord.RichEmbed()
 } else if(atrait === "trait" || atrait === "traits" || atrait === "trai" || atrait === "tra" || atrait === "t" || trait === "trait" || trait === "traits" || trait === "trai" || trait === "tra" || trait === "t") {
 	const traitEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:starlord:663750797447921705>	**Star Lord** \nController,Cosmic,GotG,Hero,Tech")  
+	.setDescription("<:starlord:663750797447921705>	**Star Lord** \nLegendary,Controller,Cosmic,GotG,Hero,Tech")  
 	message.channel.send(traitEmbed); 
 } else {
 	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/StarLord.png')] });
@@ -84844,7 +84845,7 @@ const speedEmbed = new Discord.RichEmbed()
 } else if(aunlock === "unlock" || aunlock === "unlo" || aunlock === "u" || aunlock === "unl" || afarm === "farm" || afarm === "far" || afarm === "f" || unlock === "unlock" || unlock === "unlo" || unlock === "u" || unlock === "unl" || farm === "farm" || farm === "far" || farm === "f") {
 	const speedEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:thanos:663750798324400128> **Thanos** \nThanos is farmable in: \n\nCampaign:\n**Nexus - Node 8-9** \n \nOrbs:\n**Premium,Mega,Milestones,Alpha raid orb**")
+	.setDescription("<:thanos:663750798324400128> **Thanos** \nThanos is farmable in: \n\nCampaign:\n**Nexus - Node 8-9** \n \nOrbs:\n**Premium,Milestones,Alpha raid orb**")
 message.channel.send(speedEmbed); 
 }  else if(atrait === "trait" || atrait === "traits" || atrait === "trai" || atrait === "tra" || atrait === "t" || trait === "trait" || trait === "traits" || trait === "trai" || trait === "tra" || trait === "t") {
 	const traitEmbed = new Discord.RichEmbed()
@@ -85069,7 +85070,7 @@ const speedEmbed = new Discord.RichEmbed()
 } else if(aunlock === "unlock" || aunlock === "unlo" || aunlock === "u" || aunlock === "unl" || afarm === "farm" || afarm === "far" || afarm === "f" || unlock === "unlock" || unlock === "unlo" || unlock === "u" || unlock === "unl" || farm === "farm" || farm === "far" || farm === "f") {
 	const speedEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:thor:663750798014021632>	**Thor** \nThor is farmable in: \n\nOrbs:\n**Legacy,Milestones,Raid orb** \n \nStore:\n**Raid Store**")
+	.setDescription("<:thor:663750798014021632>	**Thor** \nThor is farmable in: \n\nCampaign:\n**Doom war - Node 1-6** \n\nOrbs:\n**Legacy,Milestones,Raid orb** \n \nStore:\n**Raid Store**")
 message.channel.send(speedEmbed); 
 } else if(atrait === "trait" || atrait === "traits" || atrait === "trai" || atrait === "tra" || atrait === "t" || trait === "trait" || trait === "traits" || trait === "trai" || trait === "tra" || trait === "t") {
 	const traitEmbed = new Discord.RichEmbed()
@@ -86074,7 +86075,7 @@ if(akit === "kit" || akit === "k" || kit === "kit" || kit === "k") {
 } else if(aunlock === "unlock" || aunlock === "unlo" || aunlock === "u" || aunlock === "unl" || afarm === "farm" || afarm === "far" || afarm === "f" || unlock === "unlock" || unlock === "unlo" || unlock === "u" || unlock === "unl" || farm === "farm" || farm === "far" || farm === "f") {
 	const speedEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("<:x23:725110299396407297> **X-23** \nX-23 is farmable in: the future") // \n\nCampaign:\n**Villains - Node 6-9** \n \nOrbs:\n**Premium,Legacy,Mega,Milestones,Beta raid orb,blitz orb** \n \nStore:\n**Blitz Store**")
+	.setDescription("<:x23:725110299396407297> **X-23** \nX-23 is farmable in: \n \nOrbs:\n**Basic,Premium,Mega,Ultimus**") // \n\nCampaign:\n**Villains - Node 6-9** \n \nOrbs:\n**Premium,Legacy,Mega,Milestones,Beta raid orb,blitz orb** \n \nStore:\n**Blitz Store**")
 	message.channel.send(speedEmbed); 
 } else if(atrait === "trait" || atrait === "traits" || atrait === "trai" || atrait === "tra" || atrait === "t" || trait === "trait" || trait === "traits" || trait === "trai" || trait === "tra" || trait === "t") {
 	const traitEmbed = new Discord.RichEmbed()
