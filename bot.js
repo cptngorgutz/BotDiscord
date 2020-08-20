@@ -85246,6 +85246,85 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "defendertron" && args[2] === "emmarauders" || args[0] === "defendertron" && args[2] === "emma" || args[0] === "deftron" && args[2] === "emmarauders" || args[0] === "deftron" && args[2] === "emma"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Emmarauders";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!BR:BR`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!BR${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!BS:BS`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!BS${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
 } else {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#00FF00')
@@ -85262,7 +85341,7 @@ message.channel.send("Please add in the following order: [teamname] [power] [tea
 	.setColor('#0099ff')
 	.setDescription("PA is not a valid phrase, Please use PA1 or PA2 instead. \nPA1 = Vision,Falcon,Iron man,Rescue,War machine \nPA2 = IronHeart,Falcon,Iron man,Rescue,War machine")
 	message.channel.send(exampleEmbed);
-}  else if (!["aim","aimtron","asgard","asgardian","asgardians","bh","bkt","bo","brawl","brawler","brawlers","captainmarvel","cm","coulson","coulsonshield","defenders","defendertron","emma","f4","gotg","guardians","hydra","inhuman","inhumans","kreeronan","kreeultimus","emmarauders","marauders","maraudertron","maurader","mauraders","mauraderstron","mauradertron","merc","mercenary","mercs","ogbh","pa1","pa2","s6","shield","supernatural","supernaturals","symbiote","symbiotes","ultron","wakanda","wakandan","xforce","xmen","ya","youngavengers","young"].includes(args[0]) || (!["aim","aimtron","asgard","asgardian","asgardians","bh","bkt","bo","brawl","brawler","brawlers","captainmarvel","cm","coulson","coulsonshield","defenders","defendertron","emma","f4","gotg","guardians","hydra","inhuman","inhumans","kreeronan","kreeultimus","emmarauders","marauders","maraudertron","maurader","mauraders","mauraderstron","mauradertron","merc","mercenary","mercs","ogbh","pa1","pa2","s6","shield","supernatural","supernaturals","symbiote","symbiotes","ultron","wakanda","wakandan","xforce","xmen","ya","youngavengers","young"].includes(args[2]))){
+}  else if (!["aim","aimtron","asgard","asgardian","asgardians","bh","bkt","bo","brawl","brawler","brawlers","captainmarvel","cm","coulson","coulsonshield","defenders","defendertron","deftron","emma","f4","gotg","guardians","hydra","inhuman","inhumans","kreeronan","kreeultimus","emmarauders","marauders","maraudertron","maurader","mauraders","mauraderstron","mauradertron","merc","mercenary","mercs","ogbh","pa1","pa2","s6","shield","supernatural","supernaturals","symbiote","symbiotes","ultron","wakanda","wakandan","xforce","xmen","ya","youngavengers","young"].includes(args[0]) || (!["aim","aimtron","asgard","asgardian","asgardians","bh","bkt","bo","brawl","brawler","brawlers","captainmarvel","cm","coulson","coulsonshield","defenders","defendertron","deftron","emma","f4","gotg","guardians","hydra","inhuman","inhumans","kreeronan","kreeultimus","emmarauders","marauders","maraudertron","maurader","mauraders","mauraderstron","mauradertron","merc","mercenary","mercs","ogbh","pa1","pa2","s6","shield","supernatural","supernaturals","symbiote","symbiotes","ultron","wakanda","wakandan","xforce","xmen","ya","youngavengers","young"].includes(args[2]))){
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("Teamname not recognized. Please make sure spelling and/or teamname is correct.\nPlease check <#693575175622361218> for a list of available teams.")
