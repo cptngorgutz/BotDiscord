@@ -87620,7 +87620,7 @@ const speedEmbed = new Discord.RichEmbed()
 	.setDescription("<:drstrange:663749984990265364> **Doctor Strange** \nCosmic,Hero,Mystic,Supernatural,Support")  
 	message.channel.send(traitEmbed); 
 } else {
-	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/AntMan.png')] });
+	message.channel.send({ files:[('.C:\Users\User\discord-greeter-bot', './Character Tiers/DoctorStrange.png')] });
 	function functionultron (){
 	const embedEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
