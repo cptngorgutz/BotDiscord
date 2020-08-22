@@ -87563,46 +87563,46 @@ if(akit === "kit" || akit === "k" || kit === "kit" || kit === "k") {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:drstrange:663749984990265364>	**Doctor Strange (Basic)** \n \n**Bolt of Balthak • T4 Upgrade** \n \nAttack primary target for **150% -> 170%** Piercing \n+ apply Offense Down for **1 -> 1-2** turns. \nThis is Unavoidable.")
-	.setThumbnail('111') 
+	.setThumbnail('https://i.imgur.com/6NipMLR.png') 
 	message.channel.send(exampleEmbed);
 	const exampleEmbed2 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:drstrange:663749984990265364>	**Doctor Strange (Special)** \n \n**Winds of Watoomb • T4 Upgrade** \n<:abilityon:663751832690229278> \nApply 2 random negative effects against primary target + \n**90% -> 100%** chance to flip all positive effects on each enemy to negative effects. \nIf positive effects are not flipped, they are removed instead.")
-	.setThumbnail('222') 
+	.setThumbnail('https://i.imgur.com/kWgjtRq.png') 
 	message.channel.send(exampleEmbed2);
 	const exampleEmbed3 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:drstrange:663749984990265364>	**Doctor Strange (Ultimate)** \n \n**Book of the Vishanti • T4 Upgrade** \n<:abilityoff:663751832413405184> \nRevive a dead SUPERNATURAL ally with 65% Health. \nRevive a dead ally with **40% -> 50%** Health. \nHeal all allies for **5000 -> 8000** Health + 10% of this character's Max Health.")
-	.setThumbnail('333') 
+	.setThumbnail('https://i.imgur.com/zWXQb56.png') 
 	message.channel.send(exampleEmbed3);
 	const exampleEmbed4 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:drstrange:663749984990265364>	**Doctor Strange (Passive)** \n \n**Master of the Arcane Arts • T4 Upgrade** \n \nOn Turn, **20% -> 30%** chance to Fill lowest Speed Bar by 30%. \nIf this character has 3 or more SUPERNATURAL allies, \nwhen a positive effect is applied to an enemy, \nheal for 5% of this character's Max Health + \ngain 1 Deflect, up to a maximum of 5.")
-	.setThumbnail('444') 
+	.setThumbnail('https://i.imgur.com/xX7GVLa.png') 
 	message.channel.send(exampleEmbed4);
 } else if(abasic === "basic" || abasic === "bas" || abasic === "b" || basic === "basic" || basic === "bas" || basic === "b") {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:drstrange:663749984990265364>	**Doctor Strange (Basic)** \n \n**Bolt of Balthak • T4 Upgrade** \n \nAttack primary target for **150% -> 170%** Piercing \n+ apply Offense Down for **1 -> 1-2** turns. \nThis is Unavoidable.")
-	.setThumbnail('111') 
+	.setThumbnail('https://i.imgur.com/6NipMLR.png') 
 	message.channel.send(exampleEmbed);
 } else if(aspecial === "special" || aspecial === "spec" || aspecial === "spe" || special === "special" || special === "spec" || special === "spe" || special === "s") {
 	const exampleEmbed2 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:drstrange:663749984990265364>	**Doctor Strange (Special)** \n \n**Winds of Watoomb • T4 Upgrade** \n<:abilityon:663751832690229278> \nApply 2 random negative effects against primary target + \n**90% -> 100%** chance to flip all positive effects on each enemy to negative effects. \nIf positive effects are not flipped, they are removed instead.")
-	.setThumbnail('222') 
+	.setThumbnail('https://i.imgur.com/kWgjtRq.png') 
 	message.channel.send(exampleEmbed2);
 } else if(aultimate === "ultimate" || aultimate === "ultimat" || aultimate === "ulti" || aultimate === "ult" || ultimate === "ultimate" || ultimate === "ultimat" || ultimate === "ulti" || ultimate === "ult") {
 	const exampleEmbed3 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:drstrange:663749984990265364>	**Doctor Strange (Ultimate)** \n \n**Book of the Vishanti • T4 Upgrade** \n<:abilityoff:663751832413405184> \nRevive a dead SUPERNATURAL ally with 65% Health. \nRevive a dead ally with **40% -> 50%** Health. \nHeal all allies for **5000 -> 8000** Health + 10% of this character's Max Health.")
-	.setThumbnail('333') 
+	.setThumbnail('https://i.imgur.com/zWXQb56.png') 
 	message.channel.send(exampleEmbed3);
 } else if(apassive === "passive" || apassive === "pass" || apassive === "p" || apassive === "passi" || passive === "passive" || passive === "pass" || passive === "p" || passive === "passi") {
 	const exampleEmbed4 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:drstrange:663749984990265364>	**Doctor Strange (Passive)** \n \n**Master of the Arcane Arts • T4 Upgrade** \n \nOn Turn, **20% -> 30%** chance to Fill lowest Speed Bar by 30%. \nIf this character has 3 or more SUPERNATURAL allies, \nwhen a positive effect is applied to an enemy, \nheal for 5% of this character's Max Health + \ngain 1 Deflect, up to a maximum of 5.")
-	.setThumbnail('444') 
+	.setThumbnail('https://i.imgur.com/xX7GVLa.png') 
 	message.channel.send(exampleEmbed4);
 } else if(aspeed === "speed" || aspeed === "spee" || aspeed === "spe" || speed === "speed" || speed === "spee" || speed === "spe") {
 const speedEmbed = new Discord.RichEmbed()
@@ -87717,46 +87717,46 @@ if(akit === "kit" || akit === "k" || kit === "kit" || kit === "k") {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:ebonymaw:724635997312385155>	**Ebony Maw (Basic)** \n \n**Needle Storm • T4 Upgrade** \n \nAttack primary target for **70% -> 80%** Piercing + Bonus Attack **2 -> 3** times for 60% Piercing.\nApply Bleed. If the primary target is a HERO CONTROLLER, apply Bleed for 2 turns instead.")
-	.setThumbnail('111') 
+	.setThumbnail('https://i.imgur.com/Pe8Rvc8.png') 
 	message.channel.send(exampleEmbed);
 	const exampleEmbed2 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:ebonymaw:724635997312385155>	**Ebony Maw (Special)** \n \n**Insidious Whisper • T4 Upgrade** \n \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278>\nApply Defense Up for **1 -> 2** turns to self and all allies.\nApply Counter to self, all BLACK ORDER, and Thanos allies.\nApply Offense Down for 2 turns to all enemies.\nClear Counter from all enemies.")
-	.setThumbnail('222') 
+	.setThumbnail('https://i.imgur.com/t9tAt65.png') 
 	message.channel.send(exampleEmbed2);
 	const exampleEmbed3 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:ebonymaw:724635997312385155>	**Ebony Maw (Ultimate)** \n \n**Forced Transfusion • T4 Upgrade** \n \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityoff:663751832413405184><:abilityoff:663751832413405184>\nSteal 3% Health from all enemies and redistribute to all allies. This bypasses Heal Block.\nRepeat this attack 4 additional times.\nApply Slow to all enemies for 2 turns.\nFill Speed Bar for self and all allies by 5% per BLACK ORDER and Thanos allies.\nReduce Speed Bar for all enemies by -5% per BLACK ORDER and Thanos allies.\nEach attack redistributes a maximum of 25% of this character's Max Health.")
-	.setThumbnail('333') 
+	.setThumbnail('https://i.imgur.com/xm0Iyjt.png') 
 	message.channel.send(exampleEmbed3);
 	const exampleEmbed4 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:ebonymaw:724635997312385155>	**Ebony Maw (Passive)** \n \n**Envoy of Thanos • T4 Upgrade** \n \nOn Spawn, gain 2 Regeneration, 2 Deathproof, and Immunity for 2 turns + fill an ally Thanos Speed Bar by 25% per BLACK ORDER ally.\nOn ally Thanos Turn, if he doesn't have the Reality Stone, Time Stone, or Soul Stone, grant him them + 2 Regeneration, 2 Deathproof, and Immunity for 2 turns. This character can only do this once per match.\nOn Death of an enemy HERO CONTROLLER, gain Charged, apply Immunity to all allies, and Barrier all allies for 20% of this character's Max Health.\nIf Charged, on enemy Turn, apply Ability Block to all HERO CONTROLLER enemies and then lose Charged. This cannot be dodged.\nGain **+20% -> +30%** Resistance. BLACK ORDER and Thanos allies gain **+20% -> +30%** Resistance.")
-	.setThumbnail('444') 
+	.setThumbnail('https://i.imgur.com/iBoHtvt.png') 
 	message.channel.send(exampleEmbed4);
 } else if(abasic === "basic" || abasic === "bas" || abasic === "b" || basic === "basic" || basic === "bas" || basic === "b") {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:ebonymaw:724635997312385155>	**Ebony Maw (Basic)** \n \n**Needle Storm • T4 Upgrade** \n \nAttack primary target for **70% -> 80%** Piercing + Bonus Attack **2 -> 3** times for 60% Piercing.\nApply Bleed. If the primary target is a HERO CONTROLLER, apply Bleed for 2 turns instead.")
-	.setThumbnail('111') 
+	.setThumbnail('https://i.imgur.com/Pe8Rvc8.png') 
 	message.channel.send(exampleEmbed);
 } else if(aspecial === "special" || aspecial === "spec" || aspecial === "spe" || special === "special" || special === "spec" || special === "spe" || special === "s") {
 	const exampleEmbed2 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:ebonymaw:724635997312385155>	**Ebony Maw (Special)** \n \n**Insidious Whisper • T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278>\nApply Defense Up for **1 -> 2** turns to self and all allies.\nApply Counter to self, all BLACK ORDER, and Thanos allies.\nApply Offense Down for 2 turns to all enemies.\nClear Counter from all enemies.")
-	.setThumbnail('222') 
+	.setThumbnail('https://i.imgur.com/t9tAt65.png') 
 	message.channel.send(exampleEmbed2);
 } else if(aultimate === "ultimate" || aultimate === "ultimat" || aultimate === "ulti" || aultimate === "ult" || ultimate === "ultimate" || ultimate === "ultimat" || ultimate === "ulti" || ultimate === "ult") {
 	const exampleEmbed3 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:ebonymaw:724635997312385155>	**Ebony Maw (Ultimate)** \n \n**Forced Transfusion • T4 Upgrade** \n<:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityon:663751832690229278><:abilityoff:663751832413405184><:abilityoff:663751832413405184>\nSteal 3% Health from all enemies and redistribute to all allies. This bypasses Heal Block.\nRepeat this attack 4 additional times.\nApply Slow to all enemies for 2 turns.\nFill Speed Bar for self and all allies by 5% per BLACK ORDER and Thanos allies.\nReduce Speed Bar for all enemies by -5% per BLACK ORDER and Thanos allies.\nEach attack redistributes a maximum of 25% of this character's Max Health.")
-	.setThumbnail('333') 
+	.setThumbnail('https://i.imgur.com/xm0Iyjt.png') 
 	message.channel.send(exampleEmbed3);
 } else if(apassive === "passive" || apassive === "pass" || apassive === "p" || apassive === "passi" || passive === "passive" || passive === "pass" || passive === "p" || passive === "passi") {
 	const exampleEmbed4 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:ebonymaw:724635997312385155>	**Ebony Maw (Passive)** \n \n**Envoy of Thanos • T4 Upgrade** \n \nOn Spawn, gain 2 Regeneration, 2 Deathproof, and Immunity for 2 turns + fill an ally Thanos Speed Bar by 25% per BLACK ORDER ally.\nOn ally Thanos Turn, if he doesn't have the Reality Stone, Time Stone, or Soul Stone, grant him them + 2 Regeneration, 2 Deathproof, and Immunity for 2 turns. This character can only do this once per match.\nOn Death of an enemy HERO CONTROLLER, gain Charged, apply Immunity to all allies, and Barrier all allies for 20% of this character's Max Health.\nIf Charged, on enemy Turn, apply Ability Block to all HERO CONTROLLER enemies and then lose Charged. This cannot be dodged.\nGain **+20% -> +30%** Resistance. BLACK ORDER and Thanos allies gain **+20% -> +30%** Resistance.")
-	.setThumbnail('444') 
+	.setThumbnail('https://i.imgur.com/iBoHtvt.png') 
 	message.channel.send(exampleEmbed4);
 } else if(aspeed === "speed" || aspeed === "spee" || aspeed === "spe" || speed === "speed" || speed === "spee" || speed === "spe") {
 	const speedEmbed = new Discord.RichEmbed()
@@ -88463,35 +88463,35 @@ if(akit === "kit" || akit === "k" || kit === "kit" || kit === "k") {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:greg:663749986290499614>	**Undead Asgardian (Basic)** \n \n**Heavy Slash • T4 Upgrade** \n \nAttack primary target for **210% -> 260%** Piercing + \napply Heal Block.")
-	.setThumbnail('111') 
+	.setThumbnail('https://i.imgur.com/uPt0InM.png') 
 	message.channel.send(exampleEmbed);
 	const exampleEmbed2 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:greg:663749986290499614>	**Undead Asgardian (Special)** \n \n**Dark Sacrifice • T4 Upgrade** \n<:abilityon:663751832690229278> \nAttack primary target for **340% -> 400%** Piercing + \napply 2 Bleed for 2 turns. \nAttack self for 2000% Piercing damage. \nThis attack cannot miss **though it can be dodged**.")
-	.setThumbnail('222') 
+	.setThumbnail('https://i.imgur.com/uPt0InM.png') 
 	message.channel.send(exampleEmbed2);
 	const exampleEmbed4 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:greg:663749986290499614>	**Undead Asgardian (Passive)** \n \n**Undeath • T4 Upgrade** \n \nOn Death, Heal most injured, non-summoned ASGARDIAN \nally for **140% -> 180%** of this character's Max Health. \nOn Death, change Speed Bar of all enemies by -10%.")
-	.setThumbnail('444') 
+	.setThumbnail('https://i.imgur.com/uPt0InM.png') 
 	message.channel.send(exampleEmbed4);
 } else if(abasic === "basic" || abasic === "bas" || abasic === "b" || basic === "basic" || basic === "bas" || basic === "b") {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:greg:663749986290499614>	**Undead Asgardian (Basic)** \n \n**Heavy Slash • T4 Upgrade** \n \nAttack primary target for **210% -> 260%** Piercing + \napply Heal Block.")
-	.setThumbnail('111') 
+	.setThumbnail('https://i.imgur.com/uPt0InM.png') 
 	message.channel.send(exampleEmbed);
 } else if(aspecial === "special" || aspecial === "spec" || aspecial === "spe" || special === "special" || special === "spec" || special === "spe" || special === "s") {
 	const exampleEmbed2 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:greg:663749986290499614>	**Undead Asgardian (Special)** \n \n**Dark Sacrifice • T4 Upgrade** \n<:abilityon:663751832690229278> \nAttack primary target for **340% -> 400%** Piercing + \napply 2 Bleed for 2 turns. \nAttack self for 2000% Piercing damage. \nThis attack cannot miss **though it can be dodged**.")
-	.setThumbnail('222') 
+	.setThumbnail('https://i.imgur.com/uPt0InM.png') 
 	message.channel.send(exampleEmbed2);
 } else if(apassive === "passive" || apassive === "pass" || apassive === "p" || apassive === "passi" || passive === "passive" || passive === "pass" || passive === "p" || passive === "passi") {
 	const exampleEmbed4 = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("<:greg:663749986290499614>	**Undead Asgardian (Passive)** \n \n**Undeath • T4 Upgrade** \n \nOn Death, Heal most injured, non-summoned ASGARDIAN \nally for **140% -> 180%** of this character's Max Health. \nOn Death, change Speed Bar of all enemies by -10%.")
-	.setThumbnail('444') 
+	.setThumbnail('https://i.imgur.com/uPt0InM.png') 
 	message.channel.send(exampleEmbed4);
 } else if(aspeed === "speed" || aspeed === "spee" || aspeed === "spe" || speed === "speed" || speed === "spee" || speed === "spe") {
 const speedEmbed = new Discord.RichEmbed()
