@@ -74897,6 +74897,85 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
+} else if (args[0] === "xforce" && args[2] === "emmarauders" || args[0] === "xforce" && args[2] === "emma" || args[0] === "xforce" && args[2] === "emmaurader"){
+message.channel.bulkDelete(1)
+const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
+const sheetName = "Emmarauders";
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!BL:BL`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardiannumber = args[1];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!BL${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardiannumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+sheets.spreadsheets.values.get(
+  {
+	spreadsheetId: mySpreadSheetId,
+    range: `${sheetName}!BM:BM`
+  },
+  (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const data = res.data.values;
+    let i = 0;
+    for (i = 0; i < data.length; i++) {
+      if (!data[i][0]) break;
+    }
+	let asgardnumber = args[3];
+    sheets.spreadsheets.values.update(
+      {
+		spreadsheetId: mySpreadSheetId,
+        range: `${sheetName}!BM${i + 1}`,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          majorDimension: "ROWS",
+          values: [[asgardnumber]],
+        }
+      },
+      (err, resp) => {
+        if (err) {
+          console.log("Data Error :", err);
+          reject(err);
+        }
+      }
+    );
+  }
+);
+const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#26ff00')
+	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
+	message.channel.send(exampleEmbed);
+
 } else if (args[0] === "xforce" && args[2] === "marauders" || args[0] === "xforce" && args[2] === "mauraders" || args[0] === "xforce" && args[2] === "maurader"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
