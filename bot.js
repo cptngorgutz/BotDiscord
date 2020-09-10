@@ -4784,7 +4784,7 @@ if(args[0] === "stats"){
 //stats
 	sheets.spreadsheets.values.get({
     spreadsheetId: '14vw4cnEBNd4lpMaVO2ym5I08WI24K4YmU4rOWNzEPIQ',
-    range: "Strikes!B200:I200",
+    range: "Strikes!B200:I",
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
