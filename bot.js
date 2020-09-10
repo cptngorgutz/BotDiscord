@@ -4778,6 +4778,32 @@ message.channel.send("Sorry, this doesn't work here. Head to <#67326100691851674
 
 }
 
+if(command === 'read') { //TB-bot-testing   bot-spamTB                                 bot-spamTESTserver                              TB1-WAR-CHAT                                   TB2-WAR-CHAT                                    TB3-WAR-CHAT                                 General-TESTSERVER                       EMOJITESTSERVER-testing room
+if (message.channel.id === '606119830516400162' || message.channel.id === '673261006918516741') {
+if(args[0] === "stats"){
+//stats
+	sheets.spreadsheets.values.get({
+    spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
+    range: "TESTING!A1:C",
+  }, (err, res) => {
+    if (err) return console.log('The API returned an error: ' + err);
+    const rows = res.data.values;
+    if (rows.length) {
+	const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setDescription("rows.join('\n').replace(/,/g, ''))
+	message.channel.send(exampleEmbed); 
+    } else {
+      console.log('No data found.');
+    }
+  });
+}
+}
+}
+
+
+
+
 if(command === 'add'){
 const managerrole = message.guild.roles.find(role => role.name === 'Bot Management');
 if(args[0] === "teamlist"){
