@@ -3,45 +3,7 @@ const client = new Discord.Client();
 const config = require('./config.json');
 
 //USERS JOINING & LEAVING
-client.on('guildMemberAdd', function(member)
-{
-let memberRole = member.guild.roles.find(role => role.name === 'recruit');
-member.addRole(memberRole);
-member.guild.channels.get('551566689620197376').send(`Welcome to The Beyonders! ${member}. \nOne of the captains will be with you shortly. \nWe hope you enjoy your stay here. \nPlease post a profile picture in the <#630780029013458954> channel. Thankyou.`);
-//NEW USERS JOIN
-member.guild.channels.get('428968153800900608').send({embed: {
-color: 0x00ff00, 
-title: "**MEMBER JOINED! ** ",
-description: member + " has joined **The Beyonders ** discord server!",
-author: "Member Joined",
-thumbnail: { url: member.user.displayAvatarURL },
-fields: [{
-name: member.user.username + "#" + member.user.discriminator,   
-value: "ID# " + member.id + "",
-}
-],
-timestamp: new Date(),
-footer: {
-}
-}})
-});	 
-client.on('guildMemberRemove', function(member)
-{
-member.guild.channels.get('428968153800900608').send({embed: {
-color: 0xff0000,
-title: "**MEMBER LEFT! ** ",
-description: member + " has left **The Beyonders ** discord server!",
-author: "Member Left",
-thumbnail: { url: member.user.displayAvatarURL },
-fields: [{
-name: member.user.username + "#" + member.user.discriminator,   
-value: "ID# " + member.id + "",
-}
-],
-timestamp: new Date(),
-footer: {
-}
-}}); });	
+
 
 //POLLS 
 client.on('message', message =>{
