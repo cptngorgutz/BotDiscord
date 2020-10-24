@@ -85497,7 +85497,7 @@ let atrait = args[1];
 let afarm = args[1];
 725130712168005662
 						//		grimtest					Beyonders-bot-testing						Beyonders Bot-Spam Channel 
-if (message.channel.id === '606119830516400162' || message.channel.id === '606119830516400162' || message.channel.id === '673261006918516741' || message.channel.id === '699707863148265512' || message.channel.id === '666305824813219870' || message.channel.id === '661221254958940220') { //bot spam channel
+if (message.channel.id === '725130712168005662' || message.channel.id === '606119830516400162' || message.channel.id === '673261006918516741' || message.channel.id === '699707863148265512' || message.channel.id === '666305824813219870' || message.channel.id === '661221254958940220') { //bot spam channel
 if(command === 'aim' || command === 'ai') {
 if(args[0] === "assaulter" || args[0] === "assault" || args[0] === "ass" || args[0] === "assau" || args[0] === "assa"){
 if(akit === "kit" || akit === "k"){
