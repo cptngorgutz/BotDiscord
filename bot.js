@@ -3289,9 +3289,9 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
-    range: "ControlPanel!Y1:AA",
+    range: "ControlPanel!AB1:AD",
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
