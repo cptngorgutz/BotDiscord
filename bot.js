@@ -3180,9 +3180,9 @@ setTimeout(function3, 4000);
 
 }  else if(args[0] == "f4" && args[1] === "stats" || args[0] == "fantastic" && args[1] === "four" && args[2] === "stats"){
 //stats
-	sheets.spreadsheets.values.get({
+  	sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
-    range: "ControlPanel!AB1:AD",
+    range: "ControlPanel!DB1:DD",
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
@@ -3196,9 +3196,9 @@ setTimeout(function3, 4000);
     }
   });
   function functionf44stats() {
-  	sheets.spreadsheets.values.get({
+sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
-    range: "ControlPanel!DB1:DD",
+    range: "ControlPanel!AB1:AD",
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
@@ -3226,9 +3226,9 @@ embed2.setImage(counterdefenders.url)
 message.channel.send(embed2);
 })
 function functiondefendersstats() {
-  sheets.spreadsheets.values.get({
+	  	sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
-    range: "ControlPanel!AB1:AD",
+    range: "ControlPanel!DB1:DD",
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
@@ -3244,9 +3244,9 @@ function functiondefendersstats() {
 }
 setTimeout(functiondefendersstats, 3000);
   function functionf44stats() {
-  	sheets.spreadsheets.values.get({
+sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
-    range: "ControlPanel!DB1:DD",
+    range: "ControlPanel!AB1:AD",
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
@@ -3289,9 +3289,9 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	sheets.spreadsheets.values.get({
+	  	sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
-    range: "ControlPanel!AB1:AD",
+    range: "ControlPanel!DB1:DD",
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
@@ -3304,12 +3304,11 @@ function function2() {
       console.log('No data found.');
     }
   });
-
 }
 function function4() {
-  	sheets.spreadsheets.values.get({
+sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
-    range: "ControlPanel!DB1:DD",
+    range: "ControlPanel!AB1:AD",
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
@@ -95200,7 +95199,7 @@ message.channel.send("Please add in the following order: [teamname] [power] [tea
 } else if (args[0] === "f4" || args[2] === "f4"){
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
-	.setDescription("F4 is not a valid phrase, Please use F41 or F42 instead. \nF41 = Fandtastic Four + Namor \nF42 = Fantastic Four + She-Hulk")
+	.setDescription("F4 is not a valid phrase, Please use F41 or F42 instead. \nF41 = Fantastic Four + Namor \nF42 = Fantastic Four + She-Hulk")
 	message.channel.send(exampleEmbed);
 } else if (!["avenger","avengers","aim","aimtron","asgard","asgardian","asgardians","asguardian","asguardians","bh","bkt","bo","brawl","brawler","brawlers","captainmarvel","cm","coulson","coulsonshield","defenders","defendertron","deftron","emma","f41","f42","fantasticfour2","gotg","guardians","hydra","inhuman","inhumans","kreeronan","kreeultimus","emmarauders","marauders","maraudertron","maurader","mauraders","mauraderstron","mauradertron","merc","mercenary","mercs","ogbh","pa1","pa2","s6","shield","supernatural","supernaturals","symbiote","symbiotes","ultron","wakanda","wakandan","xforce","xmen","ya","youngavengers","young","pym","pymtech"].includes(args[0]) || (!["avenger","avengers","aim","aimtron","asgard","asgardian","asgardians","asguardian","asguardians","bh","bkt","bo","brawl","brawler","brawlers","captainmarvel","cm","coulson","coulsonshield","defenders","defendertron","deftron","emma","f41","f42","fantasticfour2","gotg","guardians","hydra","inhuman","inhumans","kreeronan","kreeultimus","emmarauders","marauders","maraudertron","maurader","mauraders","mauraderstron","mauradertron","merc","mercenary","mercs","ogbh","pa1","pa2","s6","shield","supernatural","supernaturals","symbiote","symbiotes","ultron","wakanda","wakandan","xforce","xmen","ya","youngavengers","young","pym","pymtech"].includes(args[2]))){
 	const exampleEmbed = new Discord.RichEmbed()
