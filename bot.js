@@ -89677,7 +89677,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "pymtech" && args[2] === "shield" || args[0] === "young" &&  args[2] === "coulson" || args[0] === "young" &&  args[2] === "coulsonshield" || args[0] === "pym" && args[2] === "shield" || args[0] === "pym" &&  args[2] === "coulson" || args[0] === "pym" &&  args[2] === "coulsonshield"){
+} else if (args[0] === "pymtech" && args[2] === "shield" || args[0] === "pymtech" &&  args[2] === "coulson" || args[0] === "pymtech" &&  args[2] === "coulsonshield" || args[0] === "pym" && args[2] === "shield" || args[0] === "pym" &&  args[2] === "coulson" || args[0] === "pym" &&  args[2] === "coulsonshield"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
@@ -89756,7 +89756,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "pymtech" && args[2] === "supernatural" || args[0] === "young" && args[2] === "supernaturals" || args[0] === "pym" && args[2] === "supernatural" || args[0] === "pym" && args[2] === "supernaturals"){
+} else if (args[0] === "pymtech" && args[2] === "supernatural" || args[0] === "pymtech" && args[2] === "supernaturals" || args[0] === "pym" && args[2] === "supernatural" || args[0] === "pym" && args[2] === "supernaturals"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
