@@ -3214,7 +3214,7 @@ setTimeout(function3, 4000);
 }
 setTimeout(functionf44stats, 2000);
 }  else if(args[0] == "f4"){
-const defenderscounterimage = client.channels.get('700322862535278683')
+const defenderscounterimage = client.channels.get('800444078113292298')
 defenderscounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterdefenders = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -3228,7 +3228,7 @@ message.channel.send(embed2);
 function functiondefendersstats() {
   sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
-    range: "ControlPanel!Y1:AA",
+    range: "ControlPanel!AB1:AD",
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
@@ -3262,9 +3262,9 @@ setTimeout(functiondefendersstats, 3000);
 }
 setTimeout(functionf44stats, 6000);
 } else if(args[0] == "f4+"){
-const defenderscounterimage2 = client.channels.get('700322862535278683')
+const defenderscounterimage2 = client.channels.get('800444078113292298')
 
-const channelToCheckText = client.channels.get('700322892541591633')
+const channelToCheckText = client.channels.get('800444030352752650')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await defenderscounterimage2.fetchMessages({ limit: 1 });
