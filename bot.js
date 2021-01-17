@@ -4731,7 +4731,7 @@ setTimeout(function3, 4000);
 //stats
 	  sheets.spreadsheets.values.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
-    range: "ControlPanel!CG1:CI",
+    range: "ControlPanel!CP1:CR",
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
@@ -87882,7 +87882,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -87901,7 +87901,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -87961,7 +87961,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -87980,7 +87980,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -88040,7 +88040,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -88059,7 +88059,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -88119,7 +88119,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -88138,7 +88138,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -88199,7 +88199,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -88218,7 +88218,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -88278,7 +88278,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -88297,7 +88297,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -88357,7 +88357,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -88376,7 +88376,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -88436,7 +88436,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -88455,7 +88455,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -88515,7 +88515,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -88534,7 +88534,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -88594,7 +88594,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -88613,7 +88613,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -88673,7 +88673,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -88692,7 +88692,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -88752,7 +88752,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -88771,7 +88771,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -88831,7 +88831,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -88850,7 +88850,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -88910,7 +88910,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -88929,7 +88929,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -88989,7 +88989,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -89008,7 +89008,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -89068,7 +89068,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -89087,7 +89087,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -89147,7 +89147,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -89166,7 +89166,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -89226,7 +89226,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -89245,7 +89245,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -89305,7 +89305,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -89324,7 +89324,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -89384,7 +89384,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -89403,7 +89403,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -89463,7 +89463,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -89482,7 +89482,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -89542,7 +89542,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -89561,7 +89561,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -89621,7 +89621,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -89640,7 +89640,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -89700,7 +89700,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -89719,7 +89719,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -89779,7 +89779,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -89798,7 +89798,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -89858,7 +89858,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -89877,7 +89877,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -89937,7 +89937,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -89956,7 +89956,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -90016,7 +90016,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -90035,7 +90035,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -90095,7 +90095,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -90114,7 +90114,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
@@ -90174,7 +90174,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BU${i + 1}`,
+        range: `${sheetName}!BT${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -90193,7 +90193,7 @@ sheets.spreadsheets.values.get(
 sheets.spreadsheets.values.get(
   {
 	spreadsheetId: mySpreadSheetId,
-    range: `${sheetName}!BT:BT`
+    range: `${sheetName}!BU:BU`
   },
   (err, res) => {
     if (err) {
