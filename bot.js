@@ -3213,7 +3213,7 @@ sheets.spreadsheets.values.get({
   });
 }
 setTimeout(functionf44stats, 2000);
-}  else if(args[0] == "f4"){
+}  else if(args[0] == "f4" || args[0] == "fantastic" && args[1] === "four"){
 const defenderscounterimage = client.channels.get('800444078113292298')
 defenderscounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterdefenders = messages.first().attachments.first()
@@ -3261,7 +3261,7 @@ sheets.spreadsheets.values.get({
   });
 }
 setTimeout(functionf44stats, 6000);
-} else if(args[0] == "f4+"){
+} else if(args[0] == "f4+" || args[0] == "fantastic" && args[1] === "four+"){
 const defenderscounterimage2 = client.channels.get('800444078113292298')
 
 const channelToCheckText = client.channels.get('800444030352752650')
