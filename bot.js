@@ -100441,7 +100441,7 @@ sheets.spreadsheets.values.get(
     sheets.spreadsheets.values.update(
       {
 		spreadsheetId: mySpreadSheetId,
-        range: `${sheetName}!BWI${i + 1}`,
+        range: `${sheetName}!BW${i + 1}`,
         valueInputOption: "USER_ENTERED",
         resource: {
           majorDimension: "ROWS",
@@ -100462,7 +100462,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "skill" && args[2] === "oc6" || args[0] === "skillitary" && args[2] === "ock6"){
+} else if (args[0] === "skill" && args[2] === "oc6" || args[0] === "skillitary" && args[2] === "ock6" || args[0] === "skill" && args[2] === "ock6"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
@@ -105358,7 +105358,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
 
-} else if (args[0] === "oc6" && args[2] === "skill" || args[0] === "ock6" && args[2] === "skillitary"){
+} else if (args[0] === "oc6" && args[2] === "skill" || args[0] === "ock6" && args[2] === "skillitary" || args[0] === "ock6" && args[2] === "skill"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
@@ -105514,7 +105514,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
-} else if (args[0] === "oc6" && args[2] === "zemo" || args[0] === "ock6" && args[2] === "baronzemo"){
+} else if (args[0] === "oc6" && args[2] === "zemo" || args[0] === "ock6" && args[2] === "baronzemo" || args[0] === "ock6" && args[2] === "zemo"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
@@ -109221,7 +109221,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
-} else if (args[0] === "zemo" && args[2] === "oc6" || args[0] === "baronzemo" && args[2] === "ock6"){
+} else if (args[0] === "zemo" && args[2] === "oc6" || args[0] === "baronzemo" && args[2] === "ock6" || args[0] === "zemo" && args[2] === "ock6"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
@@ -109533,7 +109533,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#26ff00')
 	.setDescription(`__**Review accepted:**__ \nAttacker: **${args[0]}** **${args[1]}** \n Defender: **${args[2]}** **${args[3]}**`)
 	message.channel.send(exampleEmbed);
-} else if (args[0] === "f42" && args[2] === "oc6" || args[0] === "fantasticfour2" && args[2] === "ock6"){
+} else if (args[0] === "f42" && args[2] === "oc6" || args[0] === "fantasticfour2" && args[2] === "ock6" || args[0] === "f42" && args[2] === "ock6"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
