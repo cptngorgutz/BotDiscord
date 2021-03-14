@@ -86,25 +86,25 @@ const TEXT = new Discord.RichEmbed()
 .setColor('#0099ff')
 .setDescription(Text.content)
 
-const TB1 = message.guild.roles.find(role => role.name === 'TB1');
-const TB2 = message.guild.roles.find(role => role.name === 'TB2');
-const TB3 = message.guild.roles.find(role => role.name === 'TB3');
+const TB1 = message.guild.roles.cache.find(role => role.name === 'TB1');
+const TB2 = message.guild.roles.cache.find(role => role.name === 'TB2');
+const TB3 = message.guild.roles.cache.find(role => role.name === 'TB3');
 message.channel.bulkDelete(1)
-if (message.member.roles.find(role => role.name === 'TB1')) {
+if (message.member.roles.cache.find(role => role.name === 'TB1')) {
 embed.setColor('#0099ff')
 embed.setDescription("**The Beyonders \n**"  + message.author.username + " " + Text)
 embed.setTimestamp()
 awaynoteschannel.send(embed);
 botspamchannel.send("Away-note Received.");
 }
-if (message.member.roles.find(role => role.name === 'TB2')) {
+if (message.member.roles.cache.find(role => role.name === 'TB2')) {
 embed.setColor('#0099ff')
 embed.setDescription("**The Beyonders II \n**" + message.author.username + " " + Text)
 embed.setTimestamp()
 awaynoteschannel.send(embed);
 botspamchannel.send("Away-note Received.");
 }
-if (message.member.roles.find(role => role.name === 'TB3')) {
+if (message.member.roles.cache.find(role => role.name === 'TB3')) {
 embed.setColor('#0099ff')
 embed.setDescription("**The Beyonders III \n**" + message.author.username + " " + Text)
 embed.setTimestamp()
@@ -121,13 +121,13 @@ if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 const args = message.content.toLowerCase().slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
 const mentionedUser = message.mentions.members.first();
-const recruit = message.guild.roles.find(role => role.name === 'recruit');
-const TB1 = message.guild.roles.find(role => role.name === 'TB1');
-const TB2 = message.guild.roles.find(role => role.name === 'TB2');
-const TB3 = message.guild.roles.find(role => role.name === 'TB3');
-const TB1cap = message.guild.roles.find(role => role.name === 'TB1 Captain');
-const TB2cap = message.guild.roles.find(role => role.name === 'TB2 Captain');
-const TB3cap = message.guild.roles.find(role => role.name === 'TB3 Captain');
+const recruit = message.guild.roles.cache.find(role => role.name === 'recruit');
+const TB1 = message.guild.roles.cache.find(role => role.name === 'TB1');
+const TB2 = message.guild.roles.cache.find(role => role.name === 'TB2');
+const TB3 = message.guild.roles.cache.find(role => role.name === 'TB3');
+const TB1cap = message.guild.roles.cache.find(role => role.name === 'TB1 Captain');
+const TB2cap = message.guild.roles.cache.find(role => role.name === 'TB2 Captain');
+const TB3cap = message.guild.roles.cache.find(role => role.name === 'TB3 Captain');
 //                       TB1team1             TB1team2            TB1team3              TB2team1             TB2team2            TB2team3             TB3team1              TB3team2             TB3team3
 const rolelist = [ '431511357540532244','431511377824448512','431511398057771029','486675509166735371','486675593522446346','486675606021341204','643129349926682635','643129351549878295','643129353873391657',]
 const cap = [ '428987109391728651', '433659992516591617', '643130277161336875', ] //CAPTAIN ROLES 1/2/3
@@ -183,7 +183,7 @@ if(command === 'miniuniques' || command === 'mini' && args[0] === "uniques" || c
 }
 if(command === 'notifications') { //SELF ASSIGNED ROLES
 message.channel.bulkDelete(1)
-const notify = message.guild.roles.find(r => r.name === "notifications");
+const notify = message.guild.roles.cache.find(r => r.name === "notifications");
 if(message.member.roles.has(notify.id)) {
 message.channel.send("" + message.author + " Left Notifications");
 message.member.removeRole(notify).catch(console.error);
@@ -193,9 +193,9 @@ message.channel.send("" + message.author + " Joined Notifications");
 }
 }
 if(command === 'admincommands') {
-const TB1captains = message.guild.roles.find(role => role.name === 'TB1 Captain');
-const TB2captains = message.guild.roles.find(role => role.name === 'TB2 Captain');
-const TB3captains = message.guild.roles.find(role => role.name === 'TB3 Captain');
+const TB1captains = message.guild.roles.cache.find(role => role.name === 'TB1 Captain');
+const TB2captains = message.guild.roles.cache.find(role => role.name === 'TB2 Captain');
+const TB3captains = message.guild.roles.cache.find(role => role.name === 'TB3 Captain');
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
@@ -542,9 +542,9 @@ let page = 1;
 
 }
 if(command === "purge") { //PURGE MESSAGES
-const TB1captains = message.guild.roles.find(role => role.name === 'TB1 Captain');
-const TB2captains = message.guild.roles.find(role => role.name === 'TB2 Captain');
-const TB3captains = message.guild.roles.find(role => role.name === 'TB3 Captain');
+const TB1captains = message.guild.roles.cache.find(role => role.name === 'TB1 Captain');
+const TB2captains = message.guild.roles.cache.find(role => role.name === 'TB2 Captain');
+const TB3captains = message.guild.roles.cache.find(role => role.name === 'TB3 Captain');
 if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
 
     // This command removes all messages from all users in the channel, up to 100.
@@ -580,7 +580,7 @@ mentionedUser.addRole(TB1).catch(console.error);
 message.channel.send("TB3 Removed from " + mentionedUser + " + TB1 Added.")
 } else if(mentionedUser.roles.has(TB1.id)) { // GIVE TB1 WHILST HAVING TB1
 message.channel.send("" + mentionedUser + " Is already in TB1")
-} else if(mentionedUser.roles.find(r => r.name === "recruit")){ // GIVE TB1 WHILST HAVING RECRUIT ROLE
+} else if(mentionedUser.roles.cache.find(r => r.name === "recruit")){ // GIVE TB1 WHILST HAVING RECRUIT ROLE
 mentionedUser.addRole(TB1).catch(console.error);
 message.channel.send("You've just added " + mentionedUser + " to the TB1 family ♥️")
 mentionedUser.removeRole(recruit).catch(console.error);
@@ -601,7 +601,7 @@ message.channel.send("TB3 Removed from " + mentionedUser + " + TB2 Added.")
 mentionedUser.removeRole(TB3).catch(console.error);
 } else if(mentionedUser.roles.has(TB2.id)) { // GIVE TB2 WHILST HAVING TB2
 message.channel.send("" + mentionedUser + " Is already in TB2")
-} else if(mentionedUser.roles.find(r => r.name === "recruit")){ // GIVE TB2 WHILST HAVING RECRUIT ROLE
+} else if(mentionedUser.roles.cache.find(r => r.name === "recruit")){ // GIVE TB2 WHILST HAVING RECRUIT ROLE
 mentionedUser.addRole(TB2).catch(console.error);
 message.channel.send("You've just added " + mentionedUser + " to the TB2 family ♥️")
 mentionedUser.removeRole(recruit).catch(console.error);
@@ -620,7 +620,7 @@ mentionedUser.removeRoles(rolelist).catch(console.error);
 mentionedUser.addRole(TB3).catch(console.error);
 message.channel.send("TB1 Removed from " + mentionedUser + " + TB3 Added.")
 mentionedUser.removeRole(TB1).catch(console.error);
-} else if(mentionedUser.roles.find(r => r.name === "recruit")){ // GIVE TB3 WHILST HAVING RECRUIT ROLE
+} else if(mentionedUser.roles.cache.find(r => r.name === "recruit")){ // GIVE TB3 WHILST HAVING RECRUIT ROLE
 mentionedUser.addRole(TB3).catch(console.error);
 message.channel.send("You've just added " + mentionedUser + " to the TB3 family ♥️")
 mentionedUser.removeRole(recruit).catch(console.error);
@@ -999,10 +999,10 @@ if(command === 'dafuq3') {
 client.on('message', (message) => {
 const args = message.content.toLowerCase().slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
-const TB1captains = message.guild.roles.find(role => role.name === 'TB1 Captain');
-const TB2captains = message.guild.roles.find(role => role.name === 'TB2 Captain');
-const TB3captains = message.guild.roles.find(role => role.name === 'TB3 Captain');
-const BEYONDER = message.guild.roles.find(role => role.name === 'The Beyonder');
+const TB1captains = message.guild.roles.cache.find(role => role.name === 'TB1 Captain');
+const TB2captains = message.guild.roles.cache.find(role => role.name === 'TB2 Captain');
+const TB3captains = message.guild.roles.cache.find(role => role.name === 'TB3 Captain');
+const BEYONDER = message.guild.roles.cache.find(role => role.name === 'The Beyonder');
 
 //RAID LAUNCHES                   //RAID CHANNELS&TESTING 
 if (message.channel.id === '429231250600099850' || message.channel.id === '462365472248299521' || message.channel.id === '643140903300497408' || message.channel.id === '606119830516400162' || message.channel.id === '606119830516400162') { 
@@ -1264,7 +1264,7 @@ if(args[0] === "alpha" && args[1] === "4"){
 if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 	message.channel.bulkDelete(1)
 // TB1 EVENT ROOM #1
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1303,7 +1303,7 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 	// TB1 EVENT ROOM #2
 	message.channel.bulkDelete(1)
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1343,7 +1343,7 @@ if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 if (message.channel.id === '656207417033359371') { //TB2 EVENTROOM1
 	message.channel.bulkDelete(1)
 // TB2 EVENT ROOM #1
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1381,7 +1381,7 @@ if (message.channel.id === '656207417033359371') { //TB2 EVENTROOM1
 }
 if (message.channel.id === '656216714723459116') { //TB2 EVENTROOM2
 message.channel.bulkDelete(1)
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1420,7 +1420,7 @@ message.channel.bulkDelete(1)
 if (message.channel.id === '656232194137784333') { //TB3 EVENTROOM1
 	message.channel.bulkDelete(1)
 // TB3 EVENT ROOM #1
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1458,7 +1458,7 @@ if (message.channel.id === '656232194137784333') { //TB3 EVENTROOM1
 }
 if (message.channel.id === '656232345371672577') { //TB3 EVENTROOM2
 message.channel.bulkDelete(1)
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1501,7 +1501,7 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 //*****************************************************************************
 	message.channel.bulkDelete(1)
 //TB1 EVENT ROOM #1
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1539,7 +1539,7 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 }
 if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 	message.channel.bulkDelete(1)
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1578,7 +1578,7 @@ if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 if (message.channel.id === '656207417033359371') { //TB2 EVENTROOM1
 	message.channel.bulkDelete(1)
 //TB2 EVENT ROOM #1
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1616,7 +1616,7 @@ if (message.channel.id === '656207417033359371') { //TB2 EVENTROOM1
 }
 if (message.channel.id === '656216714723459116') { //TB2 EVENTROOM2
 	message.channel.bulkDelete(1)
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1655,7 +1655,7 @@ if (message.channel.id === '656216714723459116') { //TB2 EVENTROOM2
 if (message.channel.id === '656232194137784333') { //TB3 EVENTROOM1
 message.channel.bulkDelete(1)
 //TB3 EVENT ROOM #1
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1693,7 +1693,7 @@ message.channel.bulkDelete(1)
 }
 if (message.channel.id === '656232345371672577') { //TB3 EVENTROOM2
 message.channel.bulkDelete(1)
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1734,7 +1734,7 @@ if(args[0] === "gamma" && args[1] === "4"){
 if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 	message.channel.bulkDelete(1)
 // TB1 EVENT ROOM #1
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch();
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch();
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1772,7 +1772,7 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 }
 if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 	message.channel.bulkDelete(1)
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1811,7 +1811,7 @@ if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 if (message.channel.id === '656207417033359371') {
 	message.channel.bulkDelete(1)
 // TB2 EVENT ROOM #1
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1849,7 +1849,7 @@ if (message.channel.id === '656207417033359371') {
 }
 if (message.channel.id === '656216714723459116') {
 message.channel.bulkDelete(1)
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1888,7 +1888,7 @@ message.channel.bulkDelete(1)
 if (message.channel.id === '656232194137784333') {
 message.channel.bulkDelete(1)
 // TB3 EVENT ROOM #1
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -1926,7 +1926,7 @@ message.channel.bulkDelete(1)
 }
 if (message.channel.id === '656232345371672577') {
 message.channel.bulkDelete(1)
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
@@ -5224,7 +5224,7 @@ if(args[0] === "stats"){
 
 
 if(command === 'add'){
-const managerrole = message.guild.roles.find(role => role.name === 'Bot Management');
+const managerrole = message.guild.roles.cache.find(role => role.name === 'Bot Management');
 if(args[0] === "teamlist" || args[0] === "list" || args[0] === "teams"){
 		
 let pages = [`<:cmd:709397091461496833> __**Addable War Teams**__ \n \nHome - Menu\nPage 1 - Teams A-C\nPage 2 - Teams D-K\nPage 3 - Teams J-P\nPage 4 - Teams Q-Z`,`<:cmd:709397091461496833> __**Addable War Teams A-C**__ \n \n<:__:709403821901611019>Add Aim (Scientist Supreme, Assaulter, Monstrosity, Security, Graviton) \n\n<:__:709403821901611019>!add Aimtron (Scientist Supreme, Assaulter, Graviton, Ultron, Security) \n\n<:__:709403821901611019>!add Asgardians \n\n<:__:709403821901611019>!add Avengers (Can be with a CM) \n\n<:__:709403821901611019>!add bh (Juggs, Blob, Toad, Magneto, Pyro) \n\n<:__:709403821901611019>!add BKT ("Best Kree Team". Thanos, Rocket, Star-lord, Minn-erva, Groot) \n\n<:__:709403821901611019>!add BO (Black Order) \n\n<:__:709403821901611019>!add brawlers (Miss Marvel brawlers, With or without CM (balanced), Without Squirrel Girl) \n\n<:__:709403821901611019>!add cm (Strong Captain Marvel with brawlers or Avengers.) \n\n<:__:709403821901611019>!add coulson (Shield + Coulson) `, '<:cmd:709397091461496833> __**Addable War Teams D-K**__ \n\n<:__:709403821901611019>!add defenders \n\n<:__:709403821901611019>!add defendertron (Defenders + Ultron variant) \n\n<:__:709403821901611019>!add emmarauders (Marauders + Emma) \n\n<:__:709403821901611019>!add f41 (Fantastic Four + Namor) \n\n<:__:709403821901611019>!add f42 (Fantastic Four + SheHulk) \n\n<:__:709403821901611019>!add f4tron (Fantastic Four + Ultron variant) \n\n<:__:709403821901611019>!add gotg (Guardians with Mantis or Gamora) \n\n<:__:709403821901611019>!add hydra (Red Skull + Hydra) \n\n<:__:709403821901611019>!add inhumans (Blackbolt + inhumans) \n\n<:__:709403821901611019>!add kreeronan (Ronan + Kree) \n\n<:__:709403821901611019>!add kreeultimus (Ultimus, Minn-erva, Korath, Cyborg, Kingpin)', `<:cmd:709397091461496833> __**Addable War Teams J-P**__ \n\n<:__:709403821901611019>!add marauders \n\n<:__:709403821901611019>!add maraudertron (Marauders + Ultron variant)\n\n<:__:709403821901611019>!add mercs (Taskmaster + mercenaries)\n\n<:__:709403821901611019>!add ock6 (Dr Ock + Sinister six)\n\n<:__:709403821901611019>!add ogbh (Juggs, Mystique, Sabretooth, Magneto, Pyro)\n\n<:__:709403821901611019>!add pa1 (Power Armor + Vision variant)\n\n<:__:709403821901611019>!add pa2 (Power Armor + Ironheart variant)\n\n<:__:709403821901611019>!add pa3 (Power Armor + Ultron variant)\n\n<:__:709403821901611019>!add punfenders (Defenders + Punisher)\n\n<:__:709403821901611019>!add pymtech`, '<:cmd:709397091461496833> __**Addable War Teams Q-Z**__ \n\n<:__:709403821901611019>!add s6 (Sinister Six, without Doc Ock) \n\n<:__:709403821901611019>!add skillitary \n\n<:__:709403821901611019>!add supernaturals \n\n<:__:709403821901611019>!add symbiotes \n\n<:__:709403821901611019>!add ultron (Ultron in a random team) \n\n<:__:709403821901611019>!add wakanda \n\n<:__:709403821901611019>!add xforce \n\n<:__:709403821901611019>!add xmen (Phoenix and cyclops)\n\n<:__:709403821901611019>!add ya (Young Avengers,Can be with a CM) \n\n<:__:709403821901611019>!add zemo (Baron Zemo + Hydra)', '<:cmd:709397091461496833> __**PVP (Coming Soon™️)**__ \n \n'];
