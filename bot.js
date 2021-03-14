@@ -137,7 +137,7 @@ if(message.channel.id === '428968670908383242'){
     channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
-	const attachment = new MessageAttachment(lastMessage.url)
+	const attachment = new Discord.MessageAttachment(lastMessage.url)
 	message.channel.send(attachment);
 	//message.channel.send(lastMessage.url)
     }).catch(err => {
@@ -151,7 +151,7 @@ if(message.channel.id === '428968670908383242'){
     channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
-	const attachment = new MessageAttachment(lastMessage.url)
+	const attachment = new Discord.MessageAttachment(lastMessage.url)
 	message.channel.send(attachment);
 	//message.channel.send(lastMessage.url)
     }).catch(err => {
@@ -164,7 +164,7 @@ if(command === 'uniques') {
     channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
-	const attachment = new MessageAttachment(lastMessage.url)
+	const attachment = new Discord.MessageAttachment(lastMessage.url)
 	message.channel.send(attachment);
     }).catch(err => {
     console.error(err)
@@ -175,7 +175,7 @@ if(command === 'miniuniques' || command === 'mini' && args[0] === "uniques" || c
     channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
-	const attachment = new MessageAttachment(lastMessage.url)
+	const attachment = new Discord.MessageAttachment(lastMessage.url)
 	message.channel.send(attachment);
     }).catch(err => {
     console.error(err)
@@ -690,7 +690,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
-	const attachment = new MessageAttachment(lastMessage.url)
+	const attachment = new Discord.MessageAttachment(lastMessage.url)
 	message.channel.send(attachment);
     }).catch(err => {
     console.error(err)
@@ -700,7 +700,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
-	const attachment = new MessageAttachment(lastMessage.url)
+	const attachment = new Discord.MessageAttachment(lastMessage.url)
 	message.channel.send(attachment);
     }).catch(err => {
     console.error(err)
@@ -710,7 +710,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
-	const attachment = new MessageAttachment(lastMessage.url)
+	const attachment = new Discord.MessageAttachment(lastMessage.url)
 	message.channel.send(attachment);
     }).catch(err => {
     console.error(err)
@@ -720,7 +720,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
-	const attachment = new MessageAttachment(lastMessage.url)
+	const attachment = new Discord.MessageAttachment(lastMessage.url)
 	message.channel.send(attachment);
     }).catch(err => {
     console.error(err)
@@ -730,7 +730,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
-	const attachment = new MessageAttachment(lastMessage.url)
+	const attachment = new Discord.MessageAttachment(lastMessage.url)
 	message.channel.send(attachment);
     }).catch(err => {
     console.error(err)
@@ -740,7 +740,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
-	const attachment = new MessageAttachment(lastMessage.url)
+	const attachment = new Discord.MessageAttachment(lastMessage.url)
 	message.channel.send(attachment);
     }).catch(err => {
     console.error(err)
@@ -750,7 +750,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
-	const attachment = new MessageAttachment(lastMessage.url)
+	const attachment = new Discord.MessageAttachment(lastMessage.url)
 	message.channel.send(attachment);
     }).catch(err => {
     console.error(err)
@@ -760,7 +760,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
-	const attachment = new MessageAttachment(lastMessage.url)
+	const attachment = new Discord.MessageAttachment(lastMessage.url)
 	message.channel.send(attachment);
     }).catch(err => {
     console.error(err)
@@ -2377,7 +2377,7 @@ const aimcounterimage = client.channels.cache.get('666332891730673668')
 aimcounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counteraim = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counteraim.url)
+const attachment = new Discord.MessageAttachment(counteraim.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counteraim.url)
@@ -2491,7 +2491,7 @@ const asgardcounterimage = client.channels.cache.get('666340204872990730')
 asgardcounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterasgard = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterasgard.url)
+const attachment = new Discord.MessageAttachment(counterasgard.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterasgard.url)
@@ -2586,7 +2586,7 @@ const avengerscounterimage = client.channels.cache.get('706507015911899207')
 avengerscounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counteravengers = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counteravengers.url)
+const attachment = new Discord.MessageAttachment(counteravengers.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counteravengers.url)
@@ -2682,7 +2682,7 @@ const bktcounterimage = client.channels.cache.get('700322361966067812')
 bktcounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterbkt = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterbkt.url)
+const attachment = new Discord.MessageAttachment(counterbkt.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterbkt.url)
@@ -2778,7 +2778,7 @@ const avengerscounterimage = client.channels.cache.get('727645962138550422')
 avengerscounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counteravengers = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counteravengers.url)
+const attachment = new Discord.MessageAttachment(counteravengers.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counteravengers.url)
@@ -2874,7 +2874,7 @@ const brawlerscounterimage = client.channels.cache.get('666340239903686659')
 brawlerscounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterbrawlers = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterbrawlers.url)
+const attachment = new Discord.MessageAttachment(counterbrawlers.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterbrawlers.url)
@@ -3005,7 +3005,7 @@ const cptnmarvelcounterimage = client.channels.cache.get('700487765518843938')
 cptnmarvelcounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const countercptnmarvel = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(countercptnmarvel.url)
+const attachment = new Discord.MessageAttachment(countercptnmarvel.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(countercptnmarvel.url)
@@ -3103,7 +3103,7 @@ const defenderscounterimage = client.channels.cache.get('700322862535278683')
 defenderscounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterdefenders = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterdefenders.url)
+const attachment = new Discord.MessageAttachment(counterdefenders.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterdefenders.url)
@@ -3218,7 +3218,7 @@ const defenderscounterimage = client.channels.cache.get('800444078113292298')
 defenderscounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterdefenders = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterdefenders.url)
+const attachment = new Discord.MessageAttachment(counterdefenders.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterdefenders.url)
@@ -3350,7 +3350,7 @@ const gotgcounterimage = client.channels.cache.get('700323244305022976')
 gotgcounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const countergotg = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(countergotg.url)
+const attachment = new Discord.MessageAttachment(countergotg.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(countergotg.url)
@@ -3448,7 +3448,7 @@ const hydracounterimage = client.channels.cache.get('698203936061915206')
 hydracounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterhydra = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterhydra.url)
+const attachment = new Discord.MessageAttachment(counterhydra.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterhydra.url)
@@ -3562,7 +3562,7 @@ const kreeronancounterimage = client.channels.cache.get('700532345576620072')
 kreeronancounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterkreeronan = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterkreeronan.url)
+const attachment = new Discord.MessageAttachment(counterkreeronan.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterkreeronan.url)
@@ -3677,7 +3677,7 @@ const emmarauderscounterimage = client.channels.cache.get('745980786036965478')
 emmarauderscounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterkreeronan = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterkreeronan.url)
+const attachment = new Discord.MessageAttachment(counterkreeronan.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterkreeronan.url)
@@ -3775,7 +3775,7 @@ const marauderscounterimage = client.channels.cache.get('698224640199491654')
 marauderscounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterkreeronan = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterkreeronan.url)
+const attachment = new Discord.MessageAttachment(counterkreeronan.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterkreeronan.url)
@@ -3890,7 +3890,7 @@ const merccounterimage = client.channels.cache.get('709838173630496899')
 merccounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const countermerc = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(countermerc.url)
+const attachment = new Discord.MessageAttachment(countermerc.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(countermerc.url)
@@ -4004,7 +4004,7 @@ const shieldcounterimage = client.channels.cache.get('666340284962963524')
 shieldcounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const countershield = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(countershield.url)
+const attachment = new Discord.MessageAttachment(countershield.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(countershield.url)
@@ -4102,7 +4102,7 @@ const s6counterimage = client.channels.cache.get('800481422074839061')
 s6counterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counters6 = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counters6.url)
+const attachment = new Discord.MessageAttachment(counters6.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counters6.url)
@@ -4200,7 +4200,7 @@ const s6counterimage = client.channels.cache.get('666340318102421504')
 s6counterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counters6 = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counters6.url)
+const attachment = new Discord.MessageAttachment(counters6.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counters6.url)
@@ -4298,7 +4298,7 @@ const supernaturalcounterimage = client.channels.cache.get('700533212358901760')
 supernaturalcounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const countersupernatural = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(countersupernatural.url)
+const attachment = new Discord.MessageAttachment(countersupernatural.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(countersupernatural.url)
@@ -4396,7 +4396,7 @@ const symbiotecounterimage = client.channels.cache.get('700535722498588682')
 symbiotecounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const countersymbiote = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(countersymbiote.url)
+const attachment = new Discord.MessageAttachment(countersymbiote.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(countersymbiote.url)
@@ -4494,7 +4494,7 @@ const ultroncounterimage = client.channels.cache.get('698225013723234396')
 ultroncounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterultron = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterultron.url)
+const attachment = new Discord.MessageAttachment(counterultron.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterultron.url)
@@ -4590,7 +4590,7 @@ const wakandacounterimage = client.channels.cache.get('700323525348818994')
 wakandacounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterwakanda = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterwakanda.url)
+const attachment = new Discord.MessageAttachment(counterwakanda.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterwakanda.url)
@@ -4688,7 +4688,7 @@ const xmencounterimage = client.channels.cache.get('700535062361276476')
 xmencounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterxmen = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterxmen.url)
+const attachment = new Discord.MessageAttachment(counterxmen.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterxmen.url)
@@ -4785,7 +4785,7 @@ const xmencounterimage = client.channels.cache.get('728586453872934984')
 xmencounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterxmen = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterxmen.url)
+const attachment = new Discord.MessageAttachment(counterxmen.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterxmen.url)
@@ -4882,7 +4882,7 @@ const yacounterimage = client.channels.cache.get('745982808287215616')
 yacounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterya = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterya.url)
+const attachment = new Discord.MessageAttachment(counterya.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterya.url)
@@ -4978,7 +4978,7 @@ const xmencounterimage = client.channels.cache.get('800172168578990080')
 xmencounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterxmen = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterxmen.url)
+const attachment = new Discord.MessageAttachment(counterxmen.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterxmen.url)
@@ -5092,7 +5092,7 @@ const xmencounterimage = client.channels.cache.get('800481422074839061')
 xmencounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterxmen = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
-const attachment = new MessageAttachment(counterxmen.url)
+const attachment = new Discord.MessageAttachment(counterxmen.url)
 const embed2 = new Discord.MessageEmbed()
 embed2.setColor('#0099ff')
 embed2.setImage(counterxmen.url)
