@@ -78,7 +78,7 @@ if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 if(message.content.startsWith('!away')) {
 const awaynoteschannel = client.channels.cache.get('600465818014449674')
 const botspamchannel = client.channels.cache.get('673261006918516741')
-const messages1 = await message.channel.fetchMessages({ limit: 1 });
+const messages1 = await message.channel.messages.fetch({ limit: 1 });
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
 
@@ -134,7 +134,7 @@ const cap = [ '428987109391728651', '433659992516591617', '643130277161336875', 
 if(command === 'blitz') {
 if(message.channel.id === '428968670908383242'){
 	const channelToCheck = client.channels.cache.get('599409850031669267')
-    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+    channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
 	const attachment = new Attachment(lastMessage.url)
@@ -148,7 +148,7 @@ if(message.channel.id === '428968670908383242'){
 if(command === 'blitz2') {
 if(message.channel.id === '428968670908383242'){
     const channelToCheck = client.channels.cache.get('663350094309097472')
-    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+    channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
 	const attachment = new Attachment(lastMessage.url)
@@ -161,7 +161,7 @@ if(message.channel.id === '428968670908383242'){
 }
 if(command === 'uniques') {
     const channelToCheck = client.channels.cache.get('662765504041058320')
-    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+    channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
 	const attachment = new Attachment(lastMessage.url)
@@ -172,7 +172,7 @@ if(command === 'uniques') {
 }
 if(command === 'miniuniques' || command === 'mini' && args[0] === "uniques" || command === 'mini' && args[0] === "unique") {
     const channelToCheck = client.channels.cache.get('710562474835050496')
-    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+    channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
 	const attachment = new Attachment(lastMessage.url)
@@ -557,7 +557,7 @@ if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.
       return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
     
     // So we get our messages, and delete them. Simple enough, right?
-    const fetched = await message.channel.fetchMessages({limit: deleteCount});
+    const fetched = await message.channel.messages.fetch({limit: deleteCount});
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
 } else {
@@ -635,7 +635,7 @@ message.channel.send("You dont have permission to use this command.")
 if(command === 'bug') {
 if(message.channel.id === '673261006918516741'){
 const bugchannel = client.channels.cache.get('702906621495345322')
-const messages1 = await message.channel.fetchMessages({ limit: 1 });
+const messages1 = await message.channel.messages.fetch({ limit: 1 });
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
 
@@ -653,7 +653,7 @@ message.channel.send("Bug Received.");
 if(command === 'request' || command === 'suggest') {
 if(message.channel.id === '673261006918516741'){
 const requestchannel = client.channels.cache.get('702906597244010497')
-const messages1 = await message.channel.fetchMessages({ limit: 1 });
+const messages1 = await message.channel.messages.fetch({ limit: 1 });
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
 
@@ -687,7 +687,7 @@ if (!["avengers", "aim", "aimtron"].includes(args[0]) || (!["avengers", "aim", "
 if(command === 'event'|| command === 'events' || command === 'legendary' || command === 'legendaries' || command === 'events' && args[0] === "list") {
 if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && args[1] === "boltagon" || args[0] === "black" && args[1] === "bolt"){
 	const channelToCheck = client.channels.cache.get('688002560640155712')
-    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+    channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
 	const attachment = new Attachment(lastMessage.url)
@@ -697,7 +697,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     })
 } else if(args[0] === "fury" || args[0] === "nick" && args[1] === "fury"){
 	const channelToCheck = client.channels.cache.get('688002478649901056')
-    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+    channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
 	const attachment = new Attachment(lastMessage.url)
@@ -707,7 +707,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     })
 } else if(args[0] === "ironman" || args[0] === "iron" && args[1] === "man" || args[0] === "im"){
 	const channelToCheck = client.channels.cache.get('688002514792349797')
-    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+    channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
 	const attachment = new Attachment(lastMessage.url)
@@ -717,7 +717,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     })
 } else if(args[0] === "magneto" || args[0] === "mag"){
 	const channelToCheck = client.channels.cache.get('688002528792674352')
-    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+    channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
 	const attachment = new Attachment(lastMessage.url)
@@ -727,7 +727,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     })
 } else if(args[0] === "shuri"){
 	const channelToCheck = client.channels.cache.get('688002969987317780')
-    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+    channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
 	const attachment = new Attachment(lastMessage.url)
@@ -737,7 +737,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     })
 } else if(args[0] === "starlord" || args[0] === "star" && args[1] === "lord" || args[0] === "sl"){
 	const channelToCheck = client.channels.cache.get('688002652612853799')
-    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+    channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
 	const attachment = new Attachment(lastMessage.url)
@@ -747,7 +747,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     })
 } else if(args[0] === "phoenix" || args[0] === "ph"){
 	const channelToCheck = client.channels.cache.get('688002661244600331')
-    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+    channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
 	const attachment = new Attachment(lastMessage.url)
@@ -757,7 +757,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     }) 
 } else if(args[0] === "iw" || args[0] === "i" && args[1] === "w" || args[0] === "invisible" && args[1] === "woman" || args[0] === "invisiblewoman" || args[0] === "sue" && args[1] === "storm"){
 	const channelToCheck = client.channels.cache.get('688002544865378304')
-    channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
+    channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
 	const attachment = new Attachment(lastMessage.url)
@@ -1265,7 +1265,7 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 	message.channel.bulkDelete(1)
 // TB1 EVENT ROOM #1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1304,7 +1304,7 @@ if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 	// TB1 EVENT ROOM #2
 	message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1344,7 +1344,7 @@ if (message.channel.id === '656207417033359371') { //TB2 EVENTROOM1
 	message.channel.bulkDelete(1)
 // TB2 EVENT ROOM #1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1382,7 +1382,7 @@ if (message.channel.id === '656207417033359371') { //TB2 EVENTROOM1
 if (message.channel.id === '656216714723459116') { //TB2 EVENTROOM2
 message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1421,7 +1421,7 @@ if (message.channel.id === '656232194137784333') { //TB3 EVENTROOM1
 	message.channel.bulkDelete(1)
 // TB3 EVENT ROOM #1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1459,7 +1459,7 @@ if (message.channel.id === '656232194137784333') { //TB3 EVENTROOM1
 if (message.channel.id === '656232345371672577') { //TB3 EVENTROOM2
 message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1502,7 +1502,7 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 	message.channel.bulkDelete(1)
 //TB1 EVENT ROOM #1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1540,7 +1540,7 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 	message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1579,7 +1579,7 @@ if (message.channel.id === '656207417033359371') { //TB2 EVENTROOM1
 	message.channel.bulkDelete(1)
 //TB2 EVENT ROOM #1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1617,7 +1617,7 @@ if (message.channel.id === '656207417033359371') { //TB2 EVENTROOM1
 if (message.channel.id === '656216714723459116') { //TB2 EVENTROOM2
 	message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1656,7 +1656,7 @@ if (message.channel.id === '656232194137784333') { //TB3 EVENTROOM1
 message.channel.bulkDelete(1)
 //TB3 EVENT ROOM #1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1694,7 +1694,7 @@ message.channel.bulkDelete(1)
 if (message.channel.id === '656232345371672577') { //TB3 EVENTROOM2
 message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1735,7 +1735,7 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 	message.channel.bulkDelete(1)
 // TB1 EVENT ROOM #1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch();
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1773,7 +1773,7 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 	message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1812,7 +1812,7 @@ if (message.channel.id === '656207417033359371') {
 	message.channel.bulkDelete(1)
 // TB2 EVENT ROOM #1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1850,7 +1850,7 @@ if (message.channel.id === '656207417033359371') {
 if (message.channel.id === '656216714723459116') {
 message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1889,7 +1889,7 @@ if (message.channel.id === '656232194137784333') {
 message.channel.bulkDelete(1)
 // TB3 EVENT ROOM #1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1927,7 +1927,7 @@ message.channel.bulkDelete(1)
 if (message.channel.id === '656232345371672577') {
 message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -1966,7 +1966,7 @@ message.channel.bulkDelete(1)
 if(args[0] === "ultimus" && args[1] === "6"){
 if (message.channel.id === '656244057244303361'){
 message.channel.bulkDelete(1)
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -2003,7 +2003,7 @@ message.channel.bulkDelete(1)
 }
 if (message.channel.id === '643229492650704973'){
 message.channel.bulkDelete(1)
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -2041,7 +2041,7 @@ message.channel.bulkDelete(1)
 }
 if(args[0] === "ultimus" && args[1] === "7"){
 if (message.channel.id === '634155222490415104') { //TB1 U7ROOM
-message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -2079,7 +2079,7 @@ message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a 
 if (message.channel.id === '634155347736526848') {
 message.channel.bulkDelete(1)
 //TB1 U7 ROOM
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -2117,7 +2117,7 @@ message.channel.bulkDelete(1)
 if (message.channel.id === '646322699869880340') {
 message.channel.bulkDelete(1)
 //TB3 U7 ROOM
-	message.channel.fetchMessages({limit: 45}).then(collected => { //collected is a Collection
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
 	message.delete(480000).catch();
@@ -2374,7 +2374,7 @@ const exampleEmbed = new Discord.RichEmbed()
   });
 } else if(args[0] == "aim"){
 const aimcounterimage = client.channels.cache.get('666332891730673668')
-aimcounterimage.fetchMessages({ limit: 1 }).then(messages => {
+aimcounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counteraim = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counteraim.url)
@@ -2405,8 +2405,8 @@ setTimeout(functionaimstats, 3000);
 } else if(args[0] == "aim+"){
 const aimcounterimage2 = client.channels.cache.get('666332891730673668')
 const channelToCheckText = client.channels.cache.get('665671446026125312')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
-const messages2 = await aimcounterimage2.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
+const messages2 = await aimcounterimage2.messages.fetch({ limit: 1 });
 const counteraim22 = messages2.first().attachments.first()
 const embed = new Discord.RichEmbed()
 
@@ -2488,7 +2488,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "asgardians" || args[0] == "asgardian" || args[0] == "asgard" || args[0] == "asguardian" || args[0] == "asguardians"){
 const asgardcounterimage = client.channels.cache.get('666340204872990730')
-asgardcounterimage.fetchMessages({ limit: 1 }).then(messages => {
+asgardcounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterasgard = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterasgard.url)
@@ -2519,8 +2519,8 @@ setTimeout(functionasgardiansstats, 3000);
 } else if(args[0] == "asgardians+" || args[0] == "asgardian+" || args[0] == "asgard+" || args[0] == "asguardian+" || args[0] == "asguardians+"){
 const asgardianscounterimage2 = client.channels.cache.get('666340204872990730')
 const channelToCheckText = client.channels.cache.get('666271343536373761')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
-const messages3 = await asgardianscounterimage2.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
+const messages3 = await asgardianscounterimage2.messages.fetch({ limit: 1 });
 const counterasgardians22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -2583,7 +2583,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "avengers" || args[0] == "avenger" || args[0] == "avenge"){
 const avengerscounterimage = client.channels.cache.get('706507015911899207')
-avengerscounterimage.fetchMessages({ limit: 1 }).then(messages => {
+avengerscounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counteravengers = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counteravengers.url)
@@ -2614,8 +2614,8 @@ setTimeout(functionavengersstats, 3000);
 } else if(args[0] == "avengers+" || args[0] == "avenger+" || args[0] == "avenge+"){
 const avengerscounterimage2 = client.channels.cache.get('706507015911899207')
 const channelToCheckText = client.channels.cache.get('706507049063940156')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
-const messages2 = await avengerscounterimage2.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
+const messages2 = await avengerscounterimage2.messages.fetch({ limit: 1 });
 const counteravengers22 = messages2.first().attachments.first()
 const embed = new Discord.RichEmbed()
 
@@ -2679,7 +2679,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "bkt" || args[0] == "minn-tech" || args[0] == "technerva"){
 const bktcounterimage = client.channels.cache.get('700322361966067812')
-bktcounterimage.fetchMessages({ limit: 1 }).then(messages => {
+bktcounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterbkt = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterbkt.url)
@@ -2710,8 +2710,8 @@ setTimeout(functionbktstats, 3000);
 } else if(args[0] == "bkt+"){
 const bktcounterimage2 = client.channels.cache.get('700322361966067812')
 const channelToCheckText = client.channels.cache.get('700322417003986978')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
-const messages3 = await bktcounterimage2.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
+const messages3 = await bktcounterimage2.messages.fetch({ limit: 1 });
 const counterbkt22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -2775,7 +2775,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "bo" || args[0] == "blackorder" || args[0] == "black" && args[1] == "order"){
 const avengerscounterimage = client.channels.cache.get('727645962138550422')
-avengerscounterimage.fetchMessages({ limit: 1 }).then(messages => {
+avengerscounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counteravengers = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counteravengers.url)
@@ -2806,8 +2806,8 @@ setTimeout(functionavengersstats, 3000);
 } else if(args[0] == "bo+" || args[0] == "blackorder+" || args[0] == "black" && args[1] == "order+"){
 const avengerscounterimage2 = client.channels.cache.get('727645962138550422')
 const channelToCheckText = client.channels.cache.get('727646011291598940')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
-const messages2 = await avengerscounterimage2.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
+const messages2 = await avengerscounterimage2.messages.fetch({ limit: 1 });
 const counteravengers22 = messages2.first().attachments.first()
 const embed = new Discord.RichEmbed()
 
@@ -2871,7 +2871,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "brawlers" || args[0] == "brawler" || args[0] == "brawl"){
 const brawlerscounterimage = client.channels.cache.get('666340239903686659')
-brawlerscounterimage.fetchMessages({ limit: 1 }).then(messages => {
+brawlerscounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterbrawlers = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterbrawlers.url)
@@ -2903,9 +2903,9 @@ setTimeout(functionbrawlerstats, 3000);
 const brawlerscounterimage2 = client.channels.cache.get('666340239903686659')
 
 const channelToCheckText = client.channels.cache.get('666317820656615435')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await brawlerscounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await brawlerscounterimage2.messages.fetch({ limit: 1 });
 const counterbrawlers22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -3002,7 +3002,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "captainmarvel" || args[0] == "cm" || args[0] == "capmarv"){
 const cptnmarvelcounterimage = client.channels.cache.get('700487765518843938')
-cptnmarvelcounterimage.fetchMessages({ limit: 1 }).then(messages => {
+cptnmarvelcounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const countercptnmarvel = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(countercptnmarvel.url)
@@ -3034,9 +3034,9 @@ setTimeout(functioncptnmarvelstats, 3000);
 const cptnmarvelcounterimage2 = client.channels.cache.get('700487765518843938')
 
 const channelToCheckText = client.channels.cache.get('700487792999792700')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await cptnmarvelcounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await cptnmarvelcounterimage2.messages.fetch({ limit: 1 });
 const countercptnmarvel22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -3100,7 +3100,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "defenders" || args[0] == "punfenders" || args[0] == "def"){
 const defenderscounterimage = client.channels.cache.get('700322862535278683')
-defenderscounterimage.fetchMessages({ limit: 1 }).then(messages => {
+defenderscounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterdefenders = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterdefenders.url)
@@ -3132,9 +3132,9 @@ setTimeout(functiondefendersstats, 3000);
 const defenderscounterimage2 = client.channels.cache.get('700322862535278683')
 
 const channelToCheckText = client.channels.cache.get('700322892541591633')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await defenderscounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await defenderscounterimage2.messages.fetch({ limit: 1 });
 const counterdefenders22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -3215,7 +3215,7 @@ sheets.spreadsheets.values.cache.get({
 setTimeout(functionf44stats, 2000);
 }  else if(args[0] == "f4" || args[0] == "fantastic" && args[1] === "four"){
 const defenderscounterimage = client.channels.cache.get('800444078113292298')
-defenderscounterimage.fetchMessages({ limit: 1 }).then(messages => {
+defenderscounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterdefenders = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterdefenders.url)
@@ -3265,9 +3265,9 @@ setTimeout(functionf44stats, 6000);
 const defenderscounterimage2 = client.channels.cache.get('800444078113292298')
 
 const channelToCheckText = client.channels.cache.get('800444030352752650')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await defenderscounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await defenderscounterimage2.messages.fetch({ limit: 1 });
 const counterdefenders22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -3347,7 +3347,7 @@ setTimeout(function3, 8000);
   });
 } else if(args[0] == "gotg" || args[0] == "guardians"){
 const gotgcounterimage = client.channels.cache.get('700323244305022976')
-gotgcounterimage.fetchMessages({ limit: 1 }).then(messages => {
+gotgcounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const countergotg = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(countergotg.url)
@@ -3379,9 +3379,9 @@ setTimeout(functiongotgstats, 3000);
 const gotgcounterimage2 = client.channels.cache.get('700323244305022976')
 
 const channelToCheckText = client.channels.cache.get('700323286621487124')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await gotgcounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await gotgcounterimage2.messages.fetch({ limit: 1 });
 const countergotg22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -3445,7 +3445,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "hydra"){
 const hydracounterimage = client.channels.cache.get('698203936061915206')
-hydracounterimage.fetchMessages({ limit: 1 }).then(messages => {
+hydracounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterhydra = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterhydra.url)
@@ -3477,8 +3477,8 @@ setTimeout(functionhydrastats, 3000);
 const hydracounterimage2 = client.channels.cache.get('698203936061915206')
 const channelToCheckText = client.channels.cache.get('698224225516781638')
 
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
-const messages2 = await hydracounterimage2.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
+const messages2 = await hydracounterimage2.messages.fetch({ limit: 1 });
 
 const counterhydra22 = messages2.first().attachments.first()
 const embed = new Discord.RichEmbed()
@@ -3559,7 +3559,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "kreeronan" || args[0] == "kree" && args[1] == "ronan"){
 const kreeronancounterimage = client.channels.cache.get('700532345576620072')
-kreeronancounterimage.fetchMessages({ limit: 1 }).then(messages => {
+kreeronancounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterkreeronan = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterkreeronan.url)
@@ -3591,9 +3591,9 @@ setTimeout(functionkreeronanstats, 3000);
 const kreeronancounterimage2 = client.channels.cache.get('700532345576620072')
 
 const channelToCheckText = client.channels.cache.get('700532370079481936')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await kreeronancounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await kreeronancounterimage2.messages.fetch({ limit: 1 });
 const counterkreeronan22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -3674,7 +3674,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "emmarauders" || args[0] == "emmarauder" || args[0] == "emma" || args[0] == "emm" || args[0] == "emmauraders"){
 const emmarauderscounterimage = client.channels.cache.get('745980786036965478')
-emmarauderscounterimage.fetchMessages({ limit: 1 }).then(messages => {
+emmarauderscounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterkreeronan = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterkreeronan.url)
@@ -3706,9 +3706,9 @@ setTimeout(functionmaraudersstats, 3000);
 const emmarauderscounterimage2 = client.channels.cache.get('745980786036965478')
 
 const channelToCheckText = client.channels.cache.get('745980827208515665')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await emmarauderscounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await emmarauderscounterimage2.messages.fetch({ limit: 1 });
 const counteremmarauders22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -3772,7 +3772,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "marauders" || args[0] == "marauder"){
 const marauderscounterimage = client.channels.cache.get('698224640199491654')
-marauderscounterimage.fetchMessages({ limit: 1 }).then(messages => {
+marauderscounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterkreeronan = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterkreeronan.url)
@@ -3804,9 +3804,9 @@ setTimeout(functionmaraudersstats, 3000);
 const marauderscounterimage2 = client.channels.cache.get('698224640199491654')
 
 const channelToCheckText = client.channels.cache.get('698224678900203520')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await marauderscounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await marauderscounterimage2.messages.fetch({ limit: 1 });
 const countermarauders22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -3887,7 +3887,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "mercenary" || args[0] == "merc" || args[0] == "mercs" || args[0] == "mercenaries" || args[0] == "merce" || args[0] == "mercy" || args[0] == "merck"){
 const merccounterimage = client.channels.cache.get('709838173630496899')
-merccounterimage.fetchMessages({ limit: 1 }).then(messages => {
+merccounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const countermerc = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(countermerc.url)
@@ -3919,9 +3919,9 @@ setTimeout(functionmercstats, 3000);
 const merccounterimage2 = client.channels.cache.get('709838173630496899')
 
 const channelToCheckText = client.channels.cache.get('709838208459866283')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await merccounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await merccounterimage2.messages.fetch({ limit: 1 });
 const countermerc22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -4001,7 +4001,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "shield" || args[0] === "coulson" || args[0] === "colson" || args[0] === "coulsen" || args[0] === "colsen"){
 const shieldcounterimage = client.channels.cache.get('666340284962963524')
-shieldcounterimage.fetchMessages({ limit: 1 }).then(messages => {
+shieldcounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const countershield = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(countershield.url)
@@ -4033,9 +4033,9 @@ setTimeout(functionshieldstats, 3000);
 const shieldcounterimage2 = client.channels.cache.get('666340284962963524')
 
 const channelToCheckText = client.channels.cache.get('666318788140072981')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await shieldcounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await shieldcounterimage2.messages.fetch({ limit: 1 });
 const countershield22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -4099,7 +4099,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "oc6" || args[0] == "ock6" || args[0] == "drock"){
 const s6counterimage = client.channels.cache.get('800481422074839061')
-s6counterimage.fetchMessages({ limit: 1 }).then(messages => {
+s6counterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counters6 = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counters6.url)
@@ -4131,9 +4131,9 @@ setTimeout(functions6stats, 3000);
 const s6counterimage2 = client.channels.cache.get('800481422074839061')
 
 const channelToCheckText = client.channels.cache.get('800481338271858698')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await s6counterimage2.fetchMessages({ limit: 1 });
+const messages3 = await s6counterimage2.messages.fetch({ limit: 1 });
 const counters622 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -4197,7 +4197,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "s6" || args[0] == "sinister6" || args[0] == "sinistersix"){
 const s6counterimage = client.channels.cache.get('666340318102421504')
-s6counterimage.fetchMessages({ limit: 1 }).then(messages => {
+s6counterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counters6 = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counters6.url)
@@ -4229,9 +4229,9 @@ setTimeout(functions6stats, 3000);
 const s6counterimage2 = client.channels.cache.get('666340318102421504')
 
 const channelToCheckText = client.channels.cache.get('666319009465237524')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await s6counterimage2.fetchMessages({ limit: 1 });
+const messages3 = await s6counterimage2.messages.fetch({ limit: 1 });
 const counters622 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -4295,7 +4295,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "supernatural" || args[0] == "supernaturals" || args[0] == "super"){
 const supernaturalcounterimage = client.channels.cache.get('700533212358901760')
-supernaturalcounterimage.fetchMessages({ limit: 1 }).then(messages => {
+supernaturalcounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const countersupernatural = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(countersupernatural.url)
@@ -4327,9 +4327,9 @@ setTimeout(functionsupernaturalstats, 3000);
 const supernaturalcounterimage2 = client.channels.cache.get('700533212358901760')
 
 const channelToCheckText = client.channels.cache.get('700533244046606336')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await supernaturalcounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await supernaturalcounterimage2.messages.fetch({ limit: 1 });
 const countersupernatural22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -4393,7 +4393,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "symbiote" || args[0] == "symbiotes" || args[0] == "sym"){
 const symbiotecounterimage = client.channels.cache.get('700535722498588682')
-symbiotecounterimage.fetchMessages({ limit: 1 }).then(messages => {
+symbiotecounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const countersymbiote = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(countersymbiote.url)
@@ -4425,9 +4425,9 @@ setTimeout(functionsymbiotestats, 3000);
 const symbiotecounterimage2 = client.channels.cache.get('700535722498588682')
 
 const channelToCheckText = client.channels.cache.get('700535765448392754')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await symbiotecounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await symbiotecounterimage2.messages.fetch({ limit: 1 });
 const countersymbiote22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -4491,7 +4491,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "ultron" || args[0] == "ult"){
 const ultroncounterimage = client.channels.cache.get('698225013723234396')
-ultroncounterimage.fetchMessages({ limit: 1 }).then(messages => {
+ultroncounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterultron = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterultron.url)
@@ -4523,8 +4523,8 @@ setTimeout(functionultronstats, 3000);
 const ultroncounterimage2 = client.channels.cache.get('698225013723234396')
 const channelToCheckText = client.channels.cache.get('698225045499019284')
 
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
-const messages2 = await ultroncounterimage2.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
+const messages2 = await ultroncounterimage2.messages.fetch({ limit: 1 });
 
 const counterultron22 = messages2.first().attachments.first()
 const embed = new Discord.RichEmbed()
@@ -4587,7 +4587,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "wakanda" || args[0] == "wakandan" || args[0] == "wakandans"){
 const wakandacounterimage = client.channels.cache.get('700323525348818994')
-wakandacounterimage.fetchMessages({ limit: 1 }).then(messages => {
+wakandacounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterwakanda = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterwakanda.url)
@@ -4619,9 +4619,9 @@ setTimeout(functionwakandastats, 3000);
 const wakandacounterimage2 = client.channels.cache.get('700323525348818994')
 
 const channelToCheckText = client.channels.cache.get('700323563231641670')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await wakandacounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await wakandacounterimage2.messages.fetch({ limit: 1 });
 const counterwakanda22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -4685,7 +4685,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "xmen" || args[0] == "X-men"){
 const xmencounterimage = client.channels.cache.get('700535062361276476')
-xmencounterimage.fetchMessages({ limit: 1 }).then(messages => {
+xmencounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterxmen = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterxmen.url)
@@ -4717,9 +4717,9 @@ setTimeout(functionxmenstats, 3000);
 const xmencounterimage2 = client.channels.cache.get('700535062361276476')
 
 const channelToCheckText = client.channels.cache.get('700535081290301490')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await xmencounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await xmencounterimage2.messages.fetch({ limit: 1 });
 const counterxmen22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -4782,7 +4782,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "xforce"){
 const xmencounterimage = client.channels.cache.get('728586453872934984')
-xmencounterimage.fetchMessages({ limit: 1 }).then(messages => {
+xmencounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterxmen = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterxmen.url)
@@ -4814,9 +4814,9 @@ setTimeout(functionxmenstats, 3000);
 const xmencounterimage2 = client.channels.cache.get('728586453872934984')
 
 const channelToCheckText = client.channels.cache.get('728586499737649203')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await xmencounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await xmencounterimage2.messages.fetch({ limit: 1 });
 const counterxmen22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -4879,7 +4879,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "ya" || args[0] == "young" || args[0] == "youngavengers" || args[0] == "young" && args[1] === "avengers" || args[0] == "yavengers"){
 const yacounterimage = client.channels.cache.get('745982808287215616')
-yacounterimage.fetchMessages({ limit: 1 }).then(messages => {
+yacounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterya = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterya.url)
@@ -4911,9 +4911,9 @@ setTimeout(functionxmenstats, 3000);
 const yacounterimage2 = client.channels.cache.get('745982808287215616')
 
 const channelToCheckText = client.channels.cache.get('745982913459257394')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await yacounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await yacounterimage2.messages.fetch({ limit: 1 });
 const counterya22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -4975,7 +4975,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "pym" || args[0] == "pymtech"){
 const xmencounterimage = client.channels.cache.get('800172168578990080')
-xmencounterimage.fetchMessages({ limit: 1 }).then(messages => {
+xmencounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterxmen = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterxmen.url)
@@ -5007,9 +5007,9 @@ setTimeout(functionxmenstats, 3000);
 const xmencounterimage2 = client.channels.cache.get('800172168578990080')
 
 const channelToCheckText = client.channels.cache.get('800172156691677230')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await xmencounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await xmencounterimage2.messages.fetch({ limit: 1 });
 const counterxmen22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -5089,7 +5089,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "oc6" || args[0] == "ock6" || args[0] == "drock"){
 const xmencounterimage = client.channels.cache.get('800481422074839061')
-xmencounterimage.fetchMessages({ limit: 1 }).then(messages => {
+xmencounterimage.messages.fetch({ limit: 1 }).then(messages => {
 const counterxmen = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
 const attachment = new Attachment(counterxmen.url)
@@ -5121,9 +5121,9 @@ setTimeout(functionxmenstats, 3000);
 const xmencounterimage2 = client.channels.cache.get('800481422074839061')
 
 const channelToCheckText = client.channels.cache.get('800481338271858698')
-const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
+const messages1 = await channelToCheckText.messages.fetch({ limit: 1 });
 
-const messages3 = await xmencounterimage2.fetchMessages({ limit: 1 });
+const messages3 = await xmencounterimage2.messages.fetch({ limit: 1 });
 const counterxmen22 = messages3.first().attachments.first()
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -116345,7 +116345,7 @@ message.channel.send("Please add in the following order: [teamname] [power] [tea
 	message.channel.send(exampleEmbed);
 } else if(args[1].length == 3 || args[3].length == 3) {
 const reviewchannel = client.channels.cache.get('701432148774617148')
-const messages1 = await message.channel.fetchMessages({ limit: 1 });
+const messages1 = await message.channel.messages.fetch({ limit: 1 });
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
 
