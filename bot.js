@@ -580,10 +580,9 @@ message.channel.send("TB3 Removed from " + mentionedUser + " + TB1 Added.")
 } else if(mentionedUser.roles.has(TB1.id)) { // GIVE TB1 WHILST HAVING TB1
 message.channel.send("" + mentionedUser + " Is already in TB1")
 } else if(mentionedUser.roles.find(r => r.name === "recruit")){ // GIVE TB1 WHILST HAVING RECRUIT ROLE
-const recruit2 = message.guild.roles.find(role => role.name === 'recruit');
 mentionedUser.addRole(TB1).catch(console.error);
 message.channel.send("You've just added " + mentionedUser + " to the TB1 family ♥️")
-mentionedUser.removeRole(recruit2).catch(console.error);
+mentionedUser.removeRole(recruit).catch(console.error);
 } else {
 message.channel.send("Error: mentionedUser does not have a role of recruit/TB1/TB2/TB3.")
 }
@@ -602,10 +601,9 @@ mentionedUser.removeRole(TB3).catch(console.error);
 } else if(mentionedUser.roles.has(TB2.id)) { // GIVE TB2 WHILST HAVING TB2
 message.channel.send("" + mentionedUser + " Is already in TB2")
 } else if(mentionedUser.roles.find(r => r.name === "recruit")){ // GIVE TB2 WHILST HAVING RECRUIT ROLE
-const recruit2 = message.guild.roles.find(role => role.name === 'recruit');
 mentionedUser.addRole(TB2).catch(console.error);
 message.channel.send("You've just added " + mentionedUser + " to the TB2 family ♥️")
-mentionedUser.removeRole(recruit2).catch(console.error);
+mentionedUser.removeRole(recruit).catch(console.error);
 } else {
 message.channel.send("Error: mentionedUser does not have a role of recruit/TB1/TB2/TB3.")
 }
@@ -622,10 +620,9 @@ mentionedUser.addRole(TB3).catch(console.error);
 message.channel.send("TB1 Removed from " + mentionedUser + " + TB3 Added.")
 mentionedUser.removeRole(TB1).catch(console.error);
 } else if(mentionedUser.roles.find(r => r.name === "recruit")){ // GIVE TB3 WHILST HAVING RECRUIT ROLE
-const recruit2 = message.guild.roles.find(role => role.name === 'recruit');
 mentionedUser.addRole(TB3).catch(console.error);
 message.channel.send("You've just added " + mentionedUser + " to the TB3 family ♥️")
-mentionedUser.removeRole(recruit2).catch(console.error);
+mentionedUser.removeRole(recruit).catch(console.error);
 } else {
 message.channel.send("Error: mentionedUser does not have a role of recruit/TB1/TB2/TB3.")
 }
