@@ -121,7 +121,6 @@ if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 const args = message.content.toLowerCase().slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
 const mentionedUser = message.mentions.members.first();
-const recruit = message.guild.roles.find(role => role.name === 'recruit');
 const TB1 = message.guild.roles.find(role => role.name === 'TB1');
 const TB2 = message.guild.roles.find(role => role.name === 'TB2');
 const TB3 = message.guild.roles.find(role => role.name === 'TB3');
@@ -567,6 +566,7 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 if(command === 'give') {
 if(message.member.roles.has(TB1cap.id) || message.member.roles.has(TB2cap.id) || message.member.roles.has(TB3cap.id)) {
 if (args[0] === "tb1") { 
+const recruit = message.guild.roles.cache.find(role => role.name == "recruit");
 //GIVING TB1
 if(mentionedUser.roles.has(TB2.id)) { //GIVE TB1 REMOVE TB2
 mentionedUser.removeRoles(rolelist).catch(console.error);
@@ -588,7 +588,8 @@ mentionedUser.removeRole(recruit).catch(console.error);
 message.channel.send("Error: mentionedUser does not have a role of recruit/TB1/TB2/TB3.")
 }
 }
-if (args[0] === "tb2") { 
+if (args[0] === "tb2") {
+const recruit = message.guild.roles.cache.find(role => role.name == "recruit");	
 if(mentionedUser.roles.has(TB1.id)) { //GIVE TB2 REMOVE TB1
 mentionedUser.removeRoles(rolelist).catch(console.error);
 mentionedUser.addRole(TB2).catch(console.error);
@@ -610,6 +611,7 @@ message.channel.send("Error: mentionedUser does not have a role of recruit/TB1/T
 }
 }
 if (args[0] === "tb3") {
+const recruit = message.guild.roles.cache.find(role => role.name == "recruit");
 if(mentionedUser.roles.has(TB2.id)) { //GIVE TB3 REMOVE TB2
 mentionedUser.removeRoles(rolelist).catch(console.error);
 mentionedUser.addRole(TB3).catch(console.error);
