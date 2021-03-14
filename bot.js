@@ -184,7 +184,7 @@ if(command === 'miniuniques' || command === 'mini' && args[0] === "uniques" || c
 if(command === 'notifications') { //SELF ASSIGNED ROLES
 message.channel.bulkDelete(1)
 const notify = message.guild.roles.cache.find(r => r.name === "notifications");
-if(message.member.roles.has(notify.id)) {
+if(message.member.roles.cache.has(notify.id)) {
 message.channel.send("" + message.author + " Left Notifications");
 message.member.removeRole(notify).catch(console.error);
 } else {
@@ -196,7 +196,7 @@ if(command === 'admincommands') {
 const TB1captains = message.guild.roles.cache.find(role => role.name === 'TB1 Captain');
 const TB2captains = message.guild.roles.cache.find(role => role.name === 'TB2 Captain');
 const TB3captains = message.guild.roles.cache.find(role => role.name === 'TB3 Captain');
-if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
+if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.has(TB2captains.id) || message.member.roles.cache.has(TB3captains.id)) {
 	const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setDescription("**Admin Commands List** \n \n**RAIDS:** \n**!u6/u7/a4/b4/g4** \n(Only works in raid chat) \nPings @ everyone \n[chosenraid] launched \n \n**!raid** \n**ultimus 6/7 or** \n**alpha/beta/gamma 4**\n(Only works in claim channels) \nSends new claims for [chosenraid] \n\n**!refresh** \n**alpha/beta/gamma 4** \n(Only works in event/greek channels) \nSlowly deletes old claims and sends out new raid claims for [chosenraid] (takes approx 8 minutes) \n \n**PURGE MESSAGES:** \n**!purge #** \n# being number of lines to delete. \n \n**GIVING ROLES:** \n**!give rolename @mentioned user**\nexample, !give tb1 @username. Current addable roles, tb1,tb2,tb3. \n(command will remove recruit role automatically) \n \n **POLL:**\n**!poll** \nprovides a list of possible polls")
@@ -545,7 +545,7 @@ if(command === "purge") { //PURGE MESSAGES
 const TB1captains = message.guild.roles.cache.find(role => role.name === 'TB1 Captain');
 const TB2captains = message.guild.roles.cache.find(role => role.name === 'TB2 Captain');
 const TB3captains = message.guild.roles.cache.find(role => role.name === 'TB3 Captain');
-if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
+if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.has(TB2captains.id) || message.member.roles.cache.has(TB3captains.id)) {
 
     // This command removes all messages from all users in the channel, up to 100.
     
@@ -565,20 +565,20 @@ if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2capta
 }
 }
 if(command === 'give') {
-if(message.member.roles.has(TB1cap.id) || message.member.roles.has(TB2cap.id) || message.member.roles.has(TB3cap.id)) {
+if(message.member.roles.cache.has(TB1cap.id) || message.member.roles.cache.has(TB2cap.id) || message.member.roles.cache.has(TB3cap.id)) {
 if (args[0] === "tb1") { 
 //GIVING TB1
-if(mentionedUser.roles.has(TB2.id)) { //GIVE TB1 REMOVE TB2
+if(mentionedUser.roles.cache.has(TB2.id)) { //GIVE TB1 REMOVE TB2
 mentionedUser.removeRoles(rolelist).catch(console.error);
 mentionedUser.removeRole(TB2).catch(console.error);
 mentionedUser.addRole(TB1).catch(console.error);
 message.channel.send("TB2 Removed from " + mentionedUser + " + TB1 Added.")
-} else if(mentionedUser.roles.has(TB3.id)) { //GIVE TB1 REMOVE TB3
+} else if(mentionedUser.roles.cache.has(TB3.id)) { //GIVE TB1 REMOVE TB3
 mentionedUser.removeRoles(rolelist).catch(console.error);
 mentionedUser.removeRole(TB3).catch(console.error);
 mentionedUser.addRole(TB1).catch(console.error);
 message.channel.send("TB3 Removed from " + mentionedUser + " + TB1 Added.")
-} else if(mentionedUser.roles.has(TB1.id)) { // GIVE TB1 WHILST HAVING TB1
+} else if(mentionedUser.roles.cache.has(TB1.id)) { // GIVE TB1 WHILST HAVING TB1
 message.channel.send("" + mentionedUser + " Is already in TB1")
 } else if(mentionedUser.roles.cache.find(r => r.name === "recruit")){ // GIVE TB1 WHILST HAVING RECRUIT ROLE
 mentionedUser.addRole(TB1).catch(console.error);
@@ -589,17 +589,17 @@ message.channel.send("Error: mentionedUser does not have a role of recruit/TB1/T
 }
 }
 if (args[0] === "tb2") { 
-if(mentionedUser.roles.has(TB1.id)) { //GIVE TB2 REMOVE TB1
+if(mentionedUser.roles.cache.has(TB1.id)) { //GIVE TB2 REMOVE TB1
 mentionedUser.removeRoles(rolelist).catch(console.error);
 mentionedUser.addRole(TB2).catch(console.error);
 message.channel.send("TB1 Removed from " + mentionedUser + " + TB2 Added.")
 mentionedUser.removeRole(TB1).catch(console.error);
-} else if (mentionedUser.roles.has(TB3.id)) { //GIVE TB2 REMOVE TB3
+} else if (mentionedUser.roles.cache.has(TB3.id)) { //GIVE TB2 REMOVE TB3
 mentionedUser.removeRoles(rolelist).catch(console.error);
 mentionedUser.addRole(TB2).catch(console.error);
 message.channel.send("TB3 Removed from " + mentionedUser + " + TB2 Added.")
 mentionedUser.removeRole(TB3).catch(console.error);
-} else if(mentionedUser.roles.has(TB2.id)) { // GIVE TB2 WHILST HAVING TB2
+} else if(mentionedUser.roles.cache.has(TB2.id)) { // GIVE TB2 WHILST HAVING TB2
 message.channel.send("" + mentionedUser + " Is already in TB2")
 } else if(mentionedUser.roles.cache.find(r => r.name === "recruit")){ // GIVE TB2 WHILST HAVING RECRUIT ROLE
 mentionedUser.addRole(TB2).catch(console.error);
@@ -610,12 +610,12 @@ message.channel.send("Error: mentionedUser does not have a role of recruit/TB1/T
 }
 }
 if (args[0] === "tb3") {
-if(mentionedUser.roles.has(TB2.id)) { //GIVE TB3 REMOVE TB2
+if(mentionedUser.roles.cache.has(TB2.id)) { //GIVE TB3 REMOVE TB2
 mentionedUser.removeRoles(rolelist).catch(console.error);
 mentionedUser.addRole(TB3).catch(console.error);
 message.channel.send("TB2 Removed from " + mentionedUser + " + TB3 Added.")
 mentionedUser.removeRole(TB2).catch(console.error);
-} else if(mentionedUser.roles.has(TB1.id)) { //GIVE TB3 REMOVE TB1
+} else if(mentionedUser.roles.cache.has(TB1.id)) { //GIVE TB3 REMOVE TB1
 mentionedUser.removeRoles(rolelist).catch(console.error);
 mentionedUser.addRole(TB3).catch(console.error);
 message.channel.send("TB1 Removed from " + mentionedUser + " + TB3 Added.")
@@ -1007,7 +1007,7 @@ const BEYONDER = message.guild.roles.cache.find(role => role.name === 'The Beyon
 //RAID LAUNCHES                   //RAID CHANNELS&TESTING 
 if (message.channel.id === '429231250600099850' || message.channel.id === '462365472248299521' || message.channel.id === '643140903300497408' || message.channel.id === '606119830516400162' || message.channel.id === '606119830516400162') { 
 if(command === 'u6') {
-if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
+if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.has(TB2captains.id) || message.member.roles.cache.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Ultimus 6 Launched")
 } else {
@@ -1015,7 +1015,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 }
 if(command === 'u7') {
-if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
+if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.has(TB2captains.id) || message.member.roles.cache.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Ultimus 7 Launched")  
 } else {
@@ -1023,7 +1023,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 }
 if(command === 'a4') {
-if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
+if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.has(TB2captains.id) || message.member.roles.cache.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Alpha 4 Launched")  
 } else {
@@ -1031,7 +1031,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 }
 if(command === 'b4') {
-if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
+if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.has(TB2captains.id) || message.member.roles.cache.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Beta 4 Launched")  
 } else {
@@ -1039,7 +1039,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 }
 if(command === 'g4') {
-if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
+if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.has(TB2captains.id) || message.member.roles.cache.has(TB3captains.id)) {
 message.channel.bulkDelete(1)
 message.channel.send("@everyone Gamma 4 Launched")  
 } else {
@@ -1052,7 +1052,7 @@ message.channel.send("You dont have permission to use this command.")
 if(command === 'raid') {
 if(args[0] === "ultimus" && args[1] === "6"){
 if (message.channel.id === '656244057244303361' || message.channel.id === '643229492650704973' || message.channel.id === '617707484626288672' || message.channel.id === '606119830516400162') {
-if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
+if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.has(TB2captains.id) || message.member.roles.cache.has(TB3captains.id) || message.member.roles.cache.has(BEYONDER.id)) {
 //                           TB2 ULT 6 ROOM                             TB3 ULT 6 ROOM                       
 	message.channel.bulkDelete(100)
     message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
@@ -1093,7 +1093,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 if(args[0] === "ultimus" && args[1] === "7"){
 if (message.channel.id === '634155222490415104' || message.channel.id === '634155347736526848' || message.channel.id === '646322699869880340' || message.channel.id === '617707484626288672' || message.channel.id === '606119830516400162') {
-if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
+if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.has(TB2captains.id) || message.member.roles.cache.has(TB3captains.id) || message.member.roles.cache.has(BEYONDER.id)) {
 //                           TB1 ULT 7 ROOM                             TB2 ULT 7 ROOM                              TB3 ULT 7 ROOM
 	message.channel.bulkDelete(100)
     message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
@@ -1134,7 +1134,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 if(args[0] === "alpha" && args[1] === "4"){ 
 if (message.channel.id === '656230420265828363' || message.channel.id === '656230665221701682' || message.channel.id === '656207417033359371' || message.channel.id === '656216714723459116' || message.channel.id === '656232194137784333' || message.channel.id === '656232345371672577' || message.channel.id === '643229344793231370' || message.channel.id === '617707484626288672' || message.channel.id === '606119830516400162') {
-if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
+if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.has(TB2captains.id) || message.member.roles.cache.has(TB3captains.id) || message.member.roles.cache.has(BEYONDER.id)) {
 //                       TB1 EVENT ROOM#1                           TB1 EVENT ROOM#2                           TB2 EVENT ROOM#1                           TB2 EVENT ROOM#2                           TB3 EVENT ROOM#1                           TB3 EVENT ROOM#2                           TB3 ALPHA ROOM 
 	message.channel.bulkDelete(100)
     message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
@@ -1175,7 +1175,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 if(args[0] === "beta" && args[1] === "4"){
 if (message.channel.id === '656230420265828363' || message.channel.id === '656230665221701682' || message.channel.id === '656207417033359371' || message.channel.id === '656216714723459116' || message.channel.id === '656232194137784333' || message.channel.id === '656232345371672577' || message.channel.id === '651159388685336587' || message.channel.id === '617707484626288672' || message.channel.id === '606119830516400162') {
-if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
+if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.has(TB2captains.id) || message.member.roles.cache.has(TB3captains.id) || message.member.roles.cache.has(BEYONDER.id)) {
 //                       TB1 EVENT ROOM#1                           TB1 EVENT ROOM#2                           TB2 EVENT ROOM#1                           TB2 EVENT ROOM#2                           TB3 EVENT ROOM#1                           TB3 EVENT ROOM#2 TB3 room 
 message.channel.bulkDelete(100)
     message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
@@ -1216,7 +1216,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 if(args[0] === "gamma" && args[1] === "4"){
 if (message.channel.id === '656230420265828363' || message.channel.id === '656230665221701682' || message.channel.id === '656207417033359371' || message.channel.id === '656216714723459116' || message.channel.id === '656232194137784333' || message.channel.id === '656232345371672577' || message.channel.id === '655246084418830346' || message.channel.id === '617707484626288672' || message.channel.id === '606119830516400162') {
-if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id) || message.member.roles.has(BEYONDER.id)) {
+if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.has(TB2captains.id) || message.member.roles.cache.has(TB3captains.id) || message.member.roles.cache.has(BEYONDER.id)) {
 //                           TB1 EVENT ROOM#1                           TB1 EVENT ROOM#2                           TB2 EVENT ROOM#1                           TB2 EVENT ROOM#2                           TB3 EVENT ROOM#1                           TB3 EVENT ROOM#2                            TB3 GAMMA ROOM :/
 message.channel.bulkDelete(100)
     message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
@@ -1259,7 +1259,7 @@ message.channel.send("You dont have permission to use this command.")
 
 //RAID REFRESH GREEK/ULTIMUS 6 & 7
 if(command === 'refresh') {
-if(message.member.roles.has(TB1captains.id) || message.member.roles.has(TB2captains.id) || message.member.roles.has(TB3captains.id)) {
+if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.has(TB2captains.id) || message.member.roles.cache.has(TB3captains.id)) {
 if(args[0] === "alpha" && args[1] === "4"){
 if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 	message.channel.bulkDelete(1)
@@ -5506,7 +5506,7 @@ let page = 1;
 })
 
 
-} else if(message.member.roles.has(managerrole.id)) {
+} else if(message.member.roles.cache.has(managerrole.id)) {
 if (args[0] === "asgardians" && args[2] === "asgardians" || args[0] === "asgardian" && args[2] === "asgardian" || args[0] === "asgard" && args[2] === "asgard"){
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
