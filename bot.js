@@ -76,8 +76,8 @@ let args = message.content.toLowerCase().slice(config.prefix.length).trim().spli
 client.on("message", async message => {
 if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 if(message.content.startsWith('!away')) {
-const awaynoteschannel = client.channels.get('600465818014449674')
-const botspamchannel = client.channels.get('673261006918516741')
+const awaynoteschannel = client.channels.cache.get('600465818014449674')
+const botspamchannel = client.channels.cache.get('673261006918516741')
 const messages1 = await message.channel.fetchMessages({ limit: 1 });
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -133,7 +133,7 @@ const rolelist = [ '431511357540532244','431511377824448512','431511398057771029
 const cap = [ '428987109391728651', '433659992516591617', '643130277161336875', ] //CAPTAIN ROLES 1/2/3
 if(command === 'blitz') {
 if(message.channel.id === '428968670908383242'){
-	const channelToCheck = client.channels.get('599409850031669267')
+	const channelToCheck = client.channels.cache.get('599409850031669267')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
@@ -147,7 +147,7 @@ if(message.channel.id === '428968670908383242'){
 }
 if(command === 'blitz2') {
 if(message.channel.id === '428968670908383242'){
-    const channelToCheck = client.channels.get('663350094309097472')
+    const channelToCheck = client.channels.cache.get('663350094309097472')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
@@ -160,7 +160,7 @@ if(message.channel.id === '428968670908383242'){
 }
 }
 if(command === 'uniques') {
-    const channelToCheck = client.channels.get('662765504041058320')
+    const channelToCheck = client.channels.cache.get('662765504041058320')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
@@ -171,7 +171,7 @@ if(command === 'uniques') {
     })
 }
 if(command === 'miniuniques' || command === 'mini' && args[0] === "uniques" || command === 'mini' && args[0] === "unique") {
-    const channelToCheck = client.channels.get('710562474835050496')
+    const channelToCheck = client.channels.cache.get('710562474835050496')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
@@ -634,7 +634,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 if(command === 'bug') {
 if(message.channel.id === '673261006918516741'){
-const bugchannel = client.channels.get('702906621495345322')
+const bugchannel = client.channels.cache.get('702906621495345322')
 const messages1 = await message.channel.fetchMessages({ limit: 1 });
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -652,7 +652,7 @@ message.channel.send("Bug Received.");
 }
 if(command === 'request' || command === 'suggest') {
 if(message.channel.id === '673261006918516741'){
-const requestchannel = client.channels.get('702906597244010497')
+const requestchannel = client.channels.cache.get('702906597244010497')
 const messages1 = await message.channel.fetchMessages({ limit: 1 });
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
@@ -686,7 +686,7 @@ if (!["avengers", "aim", "aimtron"].includes(args[0]) || (!["avengers", "aim", "
 //LEGENDARY EVENTS
 if(command === 'event'|| command === 'events' || command === 'legendary' || command === 'legendaries' || command === 'events' && args[0] === "list") {
 if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && args[1] === "boltagon" || args[0] === "black" && args[1] === "bolt"){
-	const channelToCheck = client.channels.get('688002560640155712')
+	const channelToCheck = client.channels.cache.get('688002560640155712')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
@@ -696,7 +696,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     console.error(err)
     })
 } else if(args[0] === "fury" || args[0] === "nick" && args[1] === "fury"){
-	const channelToCheck = client.channels.get('688002478649901056')
+	const channelToCheck = client.channels.cache.get('688002478649901056')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
@@ -706,7 +706,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     console.error(err)
     })
 } else if(args[0] === "ironman" || args[0] === "iron" && args[1] === "man" || args[0] === "im"){
-	const channelToCheck = client.channels.get('688002514792349797')
+	const channelToCheck = client.channels.cache.get('688002514792349797')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
@@ -716,7 +716,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     console.error(err)
     })
 } else if(args[0] === "magneto" || args[0] === "mag"){
-	const channelToCheck = client.channels.get('688002528792674352')
+	const channelToCheck = client.channels.cache.get('688002528792674352')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
@@ -726,7 +726,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     console.error(err)
     })
 } else if(args[0] === "shuri"){
-	const channelToCheck = client.channels.get('688002969987317780')
+	const channelToCheck = client.channels.cache.get('688002969987317780')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
@@ -736,7 +736,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     console.error(err)
     })
 } else if(args[0] === "starlord" || args[0] === "star" && args[1] === "lord" || args[0] === "sl"){
-	const channelToCheck = client.channels.get('688002652612853799')
+	const channelToCheck = client.channels.cache.get('688002652612853799')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
@@ -746,7 +746,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     console.error(err)
     })
 } else if(args[0] === "phoenix" || args[0] === "ph"){
-	const channelToCheck = client.channels.get('688002661244600331')
+	const channelToCheck = client.channels.cache.get('688002661244600331')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
@@ -756,7 +756,7 @@ if(args[0] === "blackbolt" || args[0] === "bb" || args[0] === "blackagar" && arg
     console.error(err)
     }) 
 } else if(args[0] === "iw" || args[0] === "i" && args[1] === "w" || args[0] === "invisible" && args[1] === "woman" || args[0] === "invisiblewoman" || args[0] === "sue" && args[1] === "storm"){
-	const channelToCheck = client.channels.get('688002544865378304')
+	const channelToCheck = client.channels.cache.get('688002544865378304')
     channelToCheck.fetchMessages({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
 	const Attachment = require('discord.js').Attachment;
@@ -2357,7 +2357,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	message.channel.send(exampleEmbed);
 } else if(args[0] == "aim" && args[1] === "stats"){
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!D1:F",
   }, (err, res) => {
@@ -2373,7 +2373,7 @@ const exampleEmbed = new Discord.RichEmbed()
     }
   });
 } else if(args[0] == "aim"){
-const aimcounterimage = client.channels.get('666332891730673668')
+const aimcounterimage = client.channels.cache.get('666332891730673668')
 aimcounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counteraim = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -2385,7 +2385,7 @@ embed2.setImage(counteraim.url)
 message.channel.send(embed2);
 })
 function functionaimstats() {
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!D1:F",
   }, (err, res) => {
@@ -2403,8 +2403,8 @@ function functionaimstats() {
 }
 setTimeout(functionaimstats, 3000);
 } else if(args[0] == "aim+"){
-const aimcounterimage2 = client.channels.get('666332891730673668')
-const channelToCheckText = client.channels.get('665671446026125312')
+const aimcounterimage2 = client.channels.cache.get('666332891730673668')
+const channelToCheckText = client.channels.cache.get('665671446026125312')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 const messages2 = await aimcounterimage2.fetchMessages({ limit: 1 });
 const counteraim22 = messages2.first().attachments.first()
@@ -2430,7 +2430,7 @@ message.channel.send(embed);
 }
 function function2() {
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!D1:F",
   }, (err, res) => {
@@ -2453,7 +2453,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "aimtron" || args[0] == "aimtron" && args[1] === "stats"){ 
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!G1:I",
   }, (err, res) => {
@@ -2470,7 +2470,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "asgardians" && args[1] === "stats" || args[0] == "asgardian" && args[1] === "stats" || args[0] == "asgard" && args[1] === "stats" || args[0] == "asguardian" && args[1] === "stats" || args[0] == "asguardians" && args[1] === "stats"){
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!A1:C",
   }, (err, res) => {
@@ -2487,7 +2487,7 @@ setTimeout(function3, 4000);
   });
 
 } else if(args[0] == "asgardians" || args[0] == "asgardian" || args[0] == "asgard" || args[0] == "asguardian" || args[0] == "asguardians"){
-const asgardcounterimage = client.channels.get('666340204872990730')
+const asgardcounterimage = client.channels.cache.get('666340204872990730')
 asgardcounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterasgard = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -2499,7 +2499,7 @@ embed2.setImage(counterasgard.url)
 message.channel.send(embed2);
 })
 function functionasgardiansstats() {
-  sheets.spreadsheets.values.get({
+  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!A1:C",
   }, (err, res) => {
@@ -2517,8 +2517,8 @@ function functionasgardiansstats() {
 }
 setTimeout(functionasgardiansstats, 3000);
 } else if(args[0] == "asgardians+" || args[0] == "asgardian+" || args[0] == "asgard+" || args[0] == "asguardian+" || args[0] == "asguardians+"){
-const asgardianscounterimage2 = client.channels.get('666340204872990730')
-const channelToCheckText = client.channels.get('666271343536373761')
+const asgardianscounterimage2 = client.channels.cache.get('666340204872990730')
+const channelToCheckText = client.channels.cache.get('666271343536373761')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 const messages3 = await asgardianscounterimage2.fetchMessages({ limit: 1 });
 const counterasgardians22 = messages3.first().attachments.first()
@@ -2543,7 +2543,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!A1:C",
   }, (err, res) => {
@@ -2566,7 +2566,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "avengers" && args[1] === "stats" || args[0] == "avenger" && args[1] === "stats" || args[0] == "avenge" && args[1] === "stats"){
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BX1:BZ",
   }, (err, res) => {
@@ -2582,7 +2582,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "avengers" || args[0] == "avenger" || args[0] == "avenge"){
-const avengerscounterimage = client.channels.get('706507015911899207')
+const avengerscounterimage = client.channels.cache.get('706507015911899207')
 avengerscounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counteravengers = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -2594,7 +2594,7 @@ embed2.setImage(counteravengers.url)
 message.channel.send(embed2);
 })
 function functionavengersstats() {
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BX1:BZ",
   }, (err, res) => {
@@ -2612,8 +2612,8 @@ function functionavengersstats() {
 }
 setTimeout(functionavengersstats, 3000);
 } else if(args[0] == "avengers+" || args[0] == "avenger+" || args[0] == "avenge+"){
-const avengerscounterimage2 = client.channels.get('706507015911899207')
-const channelToCheckText = client.channels.get('706507049063940156')
+const avengerscounterimage2 = client.channels.cache.get('706507015911899207')
+const channelToCheckText = client.channels.cache.get('706507049063940156')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 const messages2 = await avengerscounterimage2.fetchMessages({ limit: 1 });
 const counteravengers22 = messages2.first().attachments.first()
@@ -2639,7 +2639,7 @@ message.channel.send(embed);
 }
 function function2() {
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BX1:BZ",
   }, (err, res) => {
@@ -2662,7 +2662,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "bkt" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!P1:R",
   }, (err, res) => {
@@ -2678,7 +2678,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "bkt" || args[0] == "minn-tech" || args[0] == "technerva"){
-const bktcounterimage = client.channels.get('700322361966067812')
+const bktcounterimage = client.channels.cache.get('700322361966067812')
 bktcounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterbkt = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -2690,7 +2690,7 @@ embed2.setImage(counterbkt.url)
 message.channel.send(embed2);
 })
 function functionbktstats() {
-  sheets.spreadsheets.values.get({
+  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!P1:R",
   }, (err, res) => {
@@ -2708,8 +2708,8 @@ function functionbktstats() {
 }
 setTimeout(functionbktstats, 3000);
 } else if(args[0] == "bkt+"){
-const bktcounterimage2 = client.channels.get('700322361966067812')
-const channelToCheckText = client.channels.get('700322417003986978')
+const bktcounterimage2 = client.channels.cache.get('700322361966067812')
+const channelToCheckText = client.channels.cache.get('700322417003986978')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 const messages3 = await bktcounterimage2.fetchMessages({ limit: 1 });
 const counterbkt22 = messages3.first().attachments.first()
@@ -2734,7 +2734,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!P1:R",
   }, (err, res) => {
@@ -2758,7 +2758,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "bo" && args[1] === "stats"){
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CD1:CF",
   }, (err, res) => {
@@ -2774,7 +2774,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "bo" || args[0] == "blackorder" || args[0] == "black" && args[1] == "order"){
-const avengerscounterimage = client.channels.get('727645962138550422')
+const avengerscounterimage = client.channels.cache.get('727645962138550422')
 avengerscounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counteravengers = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -2786,7 +2786,7 @@ embed2.setImage(counteravengers.url)
 message.channel.send(embed2);
 })
 function functionavengersstats() {
-sheets.spreadsheets.values.get({
+sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CD1:CF",
   }, (err, res) => {
@@ -2804,8 +2804,8 @@ sheets.spreadsheets.values.get({
 }
 setTimeout(functionavengersstats, 3000);
 } else if(args[0] == "bo+" || args[0] == "blackorder+" || args[0] == "black" && args[1] == "order+"){
-const avengerscounterimage2 = client.channels.get('727645962138550422')
-const channelToCheckText = client.channels.get('727646011291598940')
+const avengerscounterimage2 = client.channels.cache.get('727645962138550422')
+const channelToCheckText = client.channels.cache.get('727646011291598940')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 const messages2 = await avengerscounterimage2.fetchMessages({ limit: 1 });
 const counteravengers22 = messages2.first().attachments.first()
@@ -2831,7 +2831,7 @@ message.channel.send(embed);
 }
 function function2() {
 //stats
-sheets.spreadsheets.values.get({
+sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CD1:CF",
   }, (err, res) => {
@@ -2854,7 +2854,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "brawlers" && args[1] === "stats" || args[0] == "brawler" && args[1] === "stats"|| args[0] == "brawl" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!S1:U",
   }, (err, res) => {
@@ -2870,7 +2870,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "brawlers" || args[0] == "brawler" || args[0] == "brawl"){
-const brawlerscounterimage = client.channels.get('666340239903686659')
+const brawlerscounterimage = client.channels.cache.get('666340239903686659')
 brawlerscounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterbrawlers = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -2882,7 +2882,7 @@ embed2.setImage(counterbrawlers.url)
 message.channel.send(embed2);
 })
 function functionbrawlerstats() {
-  	  sheets.spreadsheets.values.get({
+  	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!S1:U",
   }, (err, res) => {
@@ -2900,9 +2900,9 @@ function functionbrawlerstats() {
 }
 setTimeout(functionbrawlerstats, 3000);
 } else if(args[0] == "brawlers+" || args[0] == "brawler+" || args[0] == "brawl+"){
-const brawlerscounterimage2 = client.channels.get('666340239903686659')
+const brawlerscounterimage2 = client.channels.cache.get('666340239903686659')
 
-const channelToCheckText = client.channels.get('666317820656615435')
+const channelToCheckText = client.channels.cache.get('666317820656615435')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await brawlerscounterimage2.fetchMessages({ limit: 1 });
@@ -2928,7 +2928,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!S1:U",
   }, (err, res) => {
@@ -2951,7 +2951,7 @@ setTimeout(function3, 4000);
 
 }  else if(args[0] == "ogbh" || args[0] == "ogbh" && args[1] === "stats"){
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!J1:L",
   }, (err, res) => {
@@ -2968,7 +2968,7 @@ setTimeout(function3, 4000);
   });
 }  else if(args[0] == "bh" || args[0] == "bh" && args[1] === "stats" || args[0] == "brotherhood"){
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!M1:O",
   }, (err, res) => {
@@ -2985,7 +2985,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "captainmarvel" && args[1] === "stats" || args[0] == "cm" && args[1] === "stats" || args[0] == "captain" && args[1] === "stats" || args[0] == "marvel"  && args[1] === "stats" || args[0] == "captain" && args[1] === "marvel" && args[2] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!V1:X",
   }, (err, res) => {
@@ -3001,7 +3001,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "captainmarvel" || args[0] == "cm" || args[0] == "capmarv"){
-const cptnmarvelcounterimage = client.channels.get('700487765518843938')
+const cptnmarvelcounterimage = client.channels.cache.get('700487765518843938')
 cptnmarvelcounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const countercptnmarvel = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -3013,7 +3013,7 @@ embed2.setImage(countercptnmarvel.url)
 message.channel.send(embed2);
 })
 function functioncptnmarvelstats() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!V1:X",
   }, (err, res) => {
@@ -3031,9 +3031,9 @@ function functioncptnmarvelstats() {
 }
 setTimeout(functioncptnmarvelstats, 3000);
 } else if(args[0] == "captainmarvel+" || args[0] == "cm+" || args[0] == "capmarv++"){
-const cptnmarvelcounterimage2 = client.channels.get('700487765518843938')
+const cptnmarvelcounterimage2 = client.channels.cache.get('700487765518843938')
 
-const channelToCheckText = client.channels.get('700487792999792700')
+const channelToCheckText = client.channels.cache.get('700487792999792700')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await cptnmarvelcounterimage2.fetchMessages({ limit: 1 });
@@ -3059,7 +3059,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!V1:X",
   }, (err, res) => {
@@ -3083,7 +3083,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "defenders" && args[1] === "stats" || args[0] == "punfenders" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!Y1:AA",
   }, (err, res) => {
@@ -3099,7 +3099,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "defenders" || args[0] == "punfenders" || args[0] == "def"){
-const defenderscounterimage = client.channels.get('700322862535278683')
+const defenderscounterimage = client.channels.cache.get('700322862535278683')
 defenderscounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterdefenders = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -3111,7 +3111,7 @@ embed2.setImage(counterdefenders.url)
 message.channel.send(embed2);
 })
 function functiondefendersstats() {
-  sheets.spreadsheets.values.get({
+  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!Y1:AA",
   }, (err, res) => {
@@ -3129,9 +3129,9 @@ function functiondefendersstats() {
 }
 setTimeout(functiondefendersstats, 3000);
 } else if(args[0] == "defenders+" || args[0] == "punfenders+"){
-const defenderscounterimage2 = client.channels.get('700322862535278683')
+const defenderscounterimage2 = client.channels.cache.get('700322862535278683')
 
-const channelToCheckText = client.channels.get('700322892541591633')
+const channelToCheckText = client.channels.cache.get('700322892541591633')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await defenderscounterimage2.fetchMessages({ limit: 1 });
@@ -3156,7 +3156,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!Y1:AA",
   }, (err, res) => {
@@ -3180,7 +3180,7 @@ setTimeout(function3, 4000);
 
 }  else if(args[0] == "f4" && args[1] === "stats" || args[0] == "fantastic" && args[1] === "four" && args[2] === "stats"){
 //stats
-  	sheets.spreadsheets.values.get({
+  	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!DB1:DD",
   }, (err, res) => {
@@ -3196,7 +3196,7 @@ setTimeout(function3, 4000);
     }
   });
   function functionf44stats() {
-sheets.spreadsheets.values.get({
+sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AB1:AD",
   }, (err, res) => {
@@ -3214,7 +3214,7 @@ sheets.spreadsheets.values.get({
 }
 setTimeout(functionf44stats, 2000);
 }  else if(args[0] == "f4" || args[0] == "fantastic" && args[1] === "four"){
-const defenderscounterimage = client.channels.get('800444078113292298')
+const defenderscounterimage = client.channels.cache.get('800444078113292298')
 defenderscounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterdefenders = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -3226,7 +3226,7 @@ embed2.setImage(counterdefenders.url)
 message.channel.send(embed2);
 })
 function functiondefendersstats() {
-	  	sheets.spreadsheets.values.get({
+	  	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!DB1:DD",
   }, (err, res) => {
@@ -3244,7 +3244,7 @@ function functiondefendersstats() {
 }
 setTimeout(functiondefendersstats, 3000);
   function functionf44stats() {
-sheets.spreadsheets.values.get({
+sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AB1:AD",
   }, (err, res) => {
@@ -3262,9 +3262,9 @@ sheets.spreadsheets.values.get({
 }
 setTimeout(functionf44stats, 6000);
 } else if(args[0] == "f4+" || args[0] == "fantastic" && args[1] === "four+"){
-const defenderscounterimage2 = client.channels.get('800444078113292298')
+const defenderscounterimage2 = client.channels.cache.get('800444078113292298')
 
-const channelToCheckText = client.channels.get('800444030352752650')
+const channelToCheckText = client.channels.cache.get('800444030352752650')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await defenderscounterimage2.fetchMessages({ limit: 1 });
@@ -3289,7 +3289,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  	sheets.spreadsheets.values.get({
+	  	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!DB1:DD",
   }, (err, res) => {
@@ -3306,7 +3306,7 @@ function function2() {
   });
 }
 function function4() {
-sheets.spreadsheets.values.get({
+sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AB1:AD",
   }, (err, res) => {
@@ -3330,7 +3330,7 @@ setTimeout(function3, 8000);
 
 } else if(args[0] == "gotg" && args[1] === "stats" || args[0] == "guardians" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AE1:AG",
   }, (err, res) => {
@@ -3346,7 +3346,7 @@ setTimeout(function3, 8000);
     }
   });
 } else if(args[0] == "gotg" || args[0] == "guardians"){
-const gotgcounterimage = client.channels.get('700323244305022976')
+const gotgcounterimage = client.channels.cache.get('700323244305022976')
 gotgcounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const countergotg = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -3358,7 +3358,7 @@ embed2.setImage(countergotg.url)
 message.channel.send(embed2);
 })
 function functiongotgstats() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AE1:AG",
   }, (err, res) => {
@@ -3376,9 +3376,9 @@ function functiongotgstats() {
 }
 setTimeout(functiongotgstats, 3000);
 } else if(args[0] == "gotg+" || args[0] == "guardians+"){
-const gotgcounterimage2 = client.channels.get('700323244305022976')
+const gotgcounterimage2 = client.channels.cache.get('700323244305022976')
 
-const channelToCheckText = client.channels.get('700323286621487124')
+const channelToCheckText = client.channels.cache.get('700323286621487124')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await gotgcounterimage2.fetchMessages({ limit: 1 });
@@ -3404,7 +3404,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AE1:AG",
   }, (err, res) => {
@@ -3428,7 +3428,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "hydra" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AH1:AJ",
   }, (err, res) => {
@@ -3444,7 +3444,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "hydra"){
-const hydracounterimage = client.channels.get('698203936061915206')
+const hydracounterimage = client.channels.cache.get('698203936061915206')
 hydracounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterhydra = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -3456,7 +3456,7 @@ embed2.setImage(counterhydra.url)
 message.channel.send(embed2);
 })
 function functionhydrastats() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AH1:AJ",
   }, (err, res) => {
@@ -3474,8 +3474,8 @@ function functionhydrastats() {
 }
 setTimeout(functionhydrastats, 3000);
 } else if(args[0] == "hydra+"){
-const hydracounterimage2 = client.channels.get('698203936061915206')
-const channelToCheckText = client.channels.get('698224225516781638')
+const hydracounterimage2 = client.channels.cache.get('698203936061915206')
+const channelToCheckText = client.channels.cache.get('698224225516781638')
 
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 const messages2 = await hydracounterimage2.fetchMessages({ limit: 1 });
@@ -3502,7 +3502,7 @@ message.channel.send(embed);
 }
 function function2() {
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AH1:AJ",
   }, (err, res) => {
@@ -3525,7 +3525,7 @@ setTimeout(function3, 4000);
 
 }  else if(args[0] == "inhumans" || args[0] == "inhumans" && args[1] === "stats"){
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AK1:AM",
   }, (err, res) => {
@@ -3542,7 +3542,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "kreeronan" && args[1] === "stats" || args[0] == "kree" && args[1] === "ronan" && args[2] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AN1:AP",
   }, (err, res) => {
@@ -3558,7 +3558,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "kreeronan" || args[0] == "kree" && args[1] == "ronan"){
-const kreeronancounterimage = client.channels.get('700532345576620072')
+const kreeronancounterimage = client.channels.cache.get('700532345576620072')
 kreeronancounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterkreeronan = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -3570,7 +3570,7 @@ embed2.setImage(counterkreeronan.url)
 message.channel.send(embed2);
 })
 function functionkreeronanstats() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AN1:AP",
   }, (err, res) => {
@@ -3588,9 +3588,9 @@ function functionkreeronanstats() {
 }
 setTimeout(functionkreeronanstats, 3000);
 } else if(args[0] == "kreeronan+" || args[0] == "kree" && args[1] == "ronan+" || args[0] == "kree" && args[1] == "ronan" && args[2] == "+"){
-const kreeronancounterimage2 = client.channels.get('700532345576620072')
+const kreeronancounterimage2 = client.channels.cache.get('700532345576620072')
 
-const channelToCheckText = client.channels.get('700532370079481936')
+const channelToCheckText = client.channels.cache.get('700532370079481936')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await kreeronancounterimage2.fetchMessages({ limit: 1 });
@@ -3616,7 +3616,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AN1:AP",
   }, (err, res) => {
@@ -3640,7 +3640,7 @@ setTimeout(function3, 4000);
 
 }  else if(args[0] == "kreeultimus" || args[0] == "kreeultimus" && args[1] === "stats"){ 
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AQ1:AS",
   }, (err, res) => {
@@ -3657,7 +3657,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "emmarauders" && args[1] === "stats" || args[0] == "emmarauder" && args[1] === "stats" || args[0] == "emma" && args[1] === "stats" || args[0] == "emm" && args[1] === "stats" || args[0] == "emmauraders" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CM1:CO",
   }, (err, res) => {
@@ -3673,7 +3673,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "emmarauders" || args[0] == "emmarauder" || args[0] == "emma" || args[0] == "emm" || args[0] == "emmauraders"){
-const emmarauderscounterimage = client.channels.get('745980786036965478')
+const emmarauderscounterimage = client.channels.cache.get('745980786036965478')
 emmarauderscounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterkreeronan = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -3685,7 +3685,7 @@ embed2.setImage(counterkreeronan.url)
 message.channel.send(embed2);
 })
 function functionmaraudersstats() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CM1:CO",
   }, (err, res) => {
@@ -3703,9 +3703,9 @@ function functionmaraudersstats() {
 }
 setTimeout(functionmaraudersstats, 3000);
 } else if(args[0] == "emmarauders+" || args[0] == "emmarauder+" || args[0] == "emma+" || args[0] == "emm+" || args[0] == "emmauraders+"){
-const emmarauderscounterimage2 = client.channels.get('745980786036965478')
+const emmarauderscounterimage2 = client.channels.cache.get('745980786036965478')
 
-const channelToCheckText = client.channels.get('745980827208515665')
+const channelToCheckText = client.channels.cache.get('745980827208515665')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await emmarauderscounterimage2.fetchMessages({ limit: 1 });
@@ -3731,7 +3731,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CM1:CO",
   }, (err, res) => {
@@ -3755,7 +3755,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "marauders" && args[1] === "stats" || args[0] == "marauder" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AT1:AV",
   }, (err, res) => {
@@ -3771,7 +3771,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "marauders" || args[0] == "marauder"){
-const marauderscounterimage = client.channels.get('698224640199491654')
+const marauderscounterimage = client.channels.cache.get('698224640199491654')
 marauderscounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterkreeronan = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -3783,7 +3783,7 @@ embed2.setImage(counterkreeronan.url)
 message.channel.send(embed2);
 })
 function functionmaraudersstats() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AT1:AV",
   }, (err, res) => {
@@ -3801,9 +3801,9 @@ function functionmaraudersstats() {
 }
 setTimeout(functionmaraudersstats, 3000);
 } else if(args[0] == "marauders+" || args[0] == "marauder+"){
-const marauderscounterimage2 = client.channels.get('698224640199491654')
+const marauderscounterimage2 = client.channels.cache.get('698224640199491654')
 
-const channelToCheckText = client.channels.get('698224678900203520')
+const channelToCheckText = client.channels.cache.get('698224678900203520')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await marauderscounterimage2.fetchMessages({ limit: 1 });
@@ -3829,7 +3829,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AT1:AV",
   }, (err, res) => {
@@ -3853,7 +3853,7 @@ setTimeout(function3, 4000);
 
 }  else if(args[0] == "maraudertron" || args[0] == "maraudertron" && args[1] === "stats"){
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AW1:AY",
   }, (err, res) => {
@@ -3870,7 +3870,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "mercenary" && args[1] === "stats" || args[0] == "merc" && args[1] === "stats" || args[0] == "mercs" && args[1] === "stats" || args[0] == "mercenaries" && args[1] === "stats"){
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CA1:CC",
   }, (err, res) => {
@@ -3886,7 +3886,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "mercenary" || args[0] == "merc" || args[0] == "mercs" || args[0] == "mercenaries" || args[0] == "merce" || args[0] == "mercy" || args[0] == "merck"){
-const merccounterimage = client.channels.get('709838173630496899')
+const merccounterimage = client.channels.cache.get('709838173630496899')
 merccounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const countermerc = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -3898,7 +3898,7 @@ embed2.setImage(countermerc.url)
 message.channel.send(embed2);
 })	
 function functionmercstats() {
-	 	  sheets.spreadsheets.values.get({
+	 	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CA1:CC",
   }, (err, res) => {
@@ -3916,9 +3916,9 @@ function functionmercstats() {
 }
 setTimeout(functionmercstats, 3000);
 } else if(args[0] == "mercenary+" || args[0] === "mercs+" || args[0] === "merc+" || args[0] === "mercen+" || args[0] === "mer+" || args[0] === "mercenaries+"){
-const merccounterimage2 = client.channels.get('709838173630496899')
+const merccounterimage2 = client.channels.cache.get('709838173630496899')
 
-const channelToCheckText = client.channels.get('709838208459866283')
+const channelToCheckText = client.channels.cache.get('709838208459866283')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await merccounterimage2.fetchMessages({ limit: 1 });
@@ -3945,7 +3945,7 @@ message.channel.send(embed);
 }
 function function2() {
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CA1:CC",
   }, (err, res) => {
@@ -3967,7 +3967,7 @@ function2();
 setTimeout(function3, 4000);
 }  else if(args[0] == "pa" || args[0] == "pa" && args[1] === "stats"){
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!AZ1:BB",
   }, (err, res) => {
@@ -3984,7 +3984,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "shield" && args[1] === "stats" || args[0] === "coulson" && args[1] === "stats" || args[0] === "colson" && args[1] === "stats" || args[0] === "coulsen" && args[1] === "stats" || args[0] === "colsen" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BF1:BH",
   }, (err, res) => {
@@ -4000,7 +4000,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "shield" || args[0] === "coulson" || args[0] === "colson" || args[0] === "coulsen" || args[0] === "colsen"){
-const shieldcounterimage = client.channels.get('666340284962963524')
+const shieldcounterimage = client.channels.cache.get('666340284962963524')
 shieldcounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const countershield = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -4012,7 +4012,7 @@ embed2.setImage(countershield.url)
 message.channel.send(embed2);
 })	
 function functionshieldstats() {
-	 	  sheets.spreadsheets.values.get({
+	 	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BF1:BH",
   }, (err, res) => {
@@ -4030,9 +4030,9 @@ function functionshieldstats() {
 }
 setTimeout(functionshieldstats, 3000);
 } else if(args[0] == "shield+" || args[0] === "coulson+" || args[0] === "colson+" || args[0] === "coulsen+" || args[0] === "colsen+"){
-const shieldcounterimage2 = client.channels.get('666340284962963524')
+const shieldcounterimage2 = client.channels.cache.get('666340284962963524')
 
-const channelToCheckText = client.channels.get('666318788140072981')
+const channelToCheckText = client.channels.cache.get('666318788140072981')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await shieldcounterimage2.fetchMessages({ limit: 1 });
@@ -4059,7 +4059,7 @@ message.channel.send(embed);
 }
 function function2() {
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BF1:BH",
   }, (err, res) => {
@@ -4082,7 +4082,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "oc6" && args[1] === "stats" || args[0] == "ock6" && args[1] === "stats" || args[0] == "drock" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!DE1:DG",
   }, (err, res) => {
@@ -4098,7 +4098,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "oc6" || args[0] == "ock6" || args[0] == "drock"){
-const s6counterimage = client.channels.get('800481422074839061')
+const s6counterimage = client.channels.cache.get('800481422074839061')
 s6counterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counters6 = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -4110,7 +4110,7 @@ embed2.setImage(counters6.url)
 message.channel.send(embed2);
 })
 function functions6stats() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!DE1:DG",
   }, (err, res) => {
@@ -4128,9 +4128,9 @@ function functions6stats() {
 }
 setTimeout(functions6stats, 3000);	
 } else if(args[0] == "oc6+" || args[0] == "ock6+" || args[0] == "drock+"){
-const s6counterimage2 = client.channels.get('800481422074839061')
+const s6counterimage2 = client.channels.cache.get('800481422074839061')
 
-const channelToCheckText = client.channels.get('800481338271858698')
+const channelToCheckText = client.channels.cache.get('800481338271858698')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await s6counterimage2.fetchMessages({ limit: 1 });
@@ -4157,7 +4157,7 @@ message.channel.send(embed);
 }
 function function2() {
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!DE1:DG",
   }, (err, res) => {
@@ -4180,7 +4180,7 @@ setTimeout(function3, 4000);
 	
 } else if(args[0] == "s6" && args[1] === "stats" || args[0] == "sinister6" && args[1] === "stats" || args[0] == "sinistersix" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BC1:BE",
   }, (err, res) => {
@@ -4196,7 +4196,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "s6" || args[0] == "sinister6" || args[0] == "sinistersix"){
-const s6counterimage = client.channels.get('666340318102421504')
+const s6counterimage = client.channels.cache.get('666340318102421504')
 s6counterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counters6 = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -4208,7 +4208,7 @@ embed2.setImage(counters6.url)
 message.channel.send(embed2);
 })
 function functions6stats() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BC1:BE",
   }, (err, res) => {
@@ -4226,9 +4226,9 @@ function functions6stats() {
 }
 setTimeout(functions6stats, 3000);	
 } else if(args[0] == "s6+" || args[0] == "sinister6+" || args[0] == "sinistersix+"){
-const s6counterimage2 = client.channels.get('666340318102421504')
+const s6counterimage2 = client.channels.cache.get('666340318102421504')
 
-const channelToCheckText = client.channels.get('666319009465237524')
+const channelToCheckText = client.channels.cache.get('666319009465237524')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await s6counterimage2.fetchMessages({ limit: 1 });
@@ -4255,7 +4255,7 @@ message.channel.send(embed);
 }
 function function2() {
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BC1:BE",
   }, (err, res) => {
@@ -4278,7 +4278,7 @@ setTimeout(function3, 4000);
 	
 } else if(args[0] == "supernatural" && args[1] === "stats" || args[0] === "supernaturals" && args[1] === "stats" || args[0] == "super" && args[1] == "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BI1:BK",
   }, (err, res) => {
@@ -4294,7 +4294,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "supernatural" || args[0] == "supernaturals" || args[0] == "super"){
-const supernaturalcounterimage = client.channels.get('700533212358901760')
+const supernaturalcounterimage = client.channels.cache.get('700533212358901760')
 supernaturalcounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const countersupernatural = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -4306,7 +4306,7 @@ embed2.setImage(countersupernatural.url)
 message.channel.send(embed2);
 })
 function functionsupernaturalstats() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BI1:BK",
   }, (err, res) => {
@@ -4324,9 +4324,9 @@ function functionsupernaturalstats() {
 }
 setTimeout(functionsupernaturalstats, 3000);	
 } else if(args[0] == "supernatural+" || args[0] == "supernaturals+" || args[0] == "super+"){
-const supernaturalcounterimage2 = client.channels.get('700533212358901760')
+const supernaturalcounterimage2 = client.channels.cache.get('700533212358901760')
 
-const channelToCheckText = client.channels.get('700533244046606336')
+const channelToCheckText = client.channels.cache.get('700533244046606336')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await supernaturalcounterimage2.fetchMessages({ limit: 1 });
@@ -4352,7 +4352,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BI1:BK",
   }, (err, res) => {
@@ -4376,7 +4376,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "symbiote" && args[1] === "stats" || args[0] === "symbiotes" && args[1] === "stats" || args[0] == "sym" && args[1] == "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BL1:BN",
   }, (err, res) => {
@@ -4392,7 +4392,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "symbiote" || args[0] == "symbiotes" || args[0] == "sym"){
-const symbiotecounterimage = client.channels.get('700535722498588682')
+const symbiotecounterimage = client.channels.cache.get('700535722498588682')
 symbiotecounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const countersymbiote = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -4404,7 +4404,7 @@ embed2.setImage(countersymbiote.url)
 message.channel.send(embed2);
 })
 function functionsymbiotestats() {
-  sheets.spreadsheets.values.get({
+  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BL1:BN",
   }, (err, res) => {
@@ -4422,9 +4422,9 @@ function functionsymbiotestats() {
 }
 setTimeout(functionsymbiotestats, 3000);
 } else if(args[0] == "symbiote+" || args[0] == "symbiotes+" || args[0] == "sym+"){
-const symbiotecounterimage2 = client.channels.get('700535722498588682')
+const symbiotecounterimage2 = client.channels.cache.get('700535722498588682')
 
-const channelToCheckText = client.channels.get('700535765448392754')
+const channelToCheckText = client.channels.cache.get('700535765448392754')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await symbiotecounterimage2.fetchMessages({ limit: 1 });
@@ -4450,7 +4450,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BL1:BN",
   }, (err, res) => {
@@ -4474,7 +4474,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "ultron" && args[1] === "stats" || args[0] == "ult" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BO1:BQ",
   }, (err, res) => {
@@ -4490,7 +4490,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "ultron" || args[0] == "ult"){
-const ultroncounterimage = client.channels.get('698225013723234396')
+const ultroncounterimage = client.channels.cache.get('698225013723234396')
 ultroncounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterultron = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -4502,7 +4502,7 @@ embed2.setImage(counterultron.url)
 message.channel.send(embed2);
 })	
 function functionultronstats() {
-  sheets.spreadsheets.values.get({
+  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BO1:BQ",
   }, (err, res) => {
@@ -4520,8 +4520,8 @@ function functionultronstats() {
 }
 setTimeout(functionultronstats, 3000);
 } else if(args[0] == "ultron+" || args[0] == "ult+"){
-const ultroncounterimage2 = client.channels.get('698225013723234396')
-const channelToCheckText = client.channels.get('698225045499019284')
+const ultroncounterimage2 = client.channels.cache.get('698225013723234396')
+const channelToCheckText = client.channels.cache.get('698225045499019284')
 
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 const messages2 = await ultroncounterimage2.fetchMessages({ limit: 1 });
@@ -4547,7 +4547,7 @@ message.channel.send(embed);
 }
 function function2() {
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BO1:BQ",
   }, (err, res) => {
@@ -4570,7 +4570,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "wakanda" && args[1] === "stats" || args[0] == "wakandan" && args[1] === "stats" || args[0] == "wakandans" && args[1] === "stats"){
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BR1:BT",
   }, (err, res) => {
@@ -4586,7 +4586,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "wakanda" || args[0] == "wakandan" || args[0] == "wakandans"){
-const wakandacounterimage = client.channels.get('700323525348818994')
+const wakandacounterimage = client.channels.cache.get('700323525348818994')
 wakandacounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterwakanda = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -4598,7 +4598,7 @@ embed2.setImage(counterwakanda.url)
 message.channel.send(embed2);
 })
 function functionwakandastats() {
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BR1:BT",
   }, (err, res) => {
@@ -4616,9 +4616,9 @@ function functionwakandastats() {
 }
 setTimeout(functionwakandastats, 3000);
 } else if(args[0] == "wakanda+" || args[0] == "wakandan+" || args[0] == "wakandans+" ){
-const wakandacounterimage2 = client.channels.get('700323525348818994')
+const wakandacounterimage2 = client.channels.cache.get('700323525348818994')
 
-const channelToCheckText = client.channels.get('700323563231641670')
+const channelToCheckText = client.channels.cache.get('700323563231641670')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await wakandacounterimage2.fetchMessages({ limit: 1 });
@@ -4644,7 +4644,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BR1:BT",
   }, (err, res) => {
@@ -4668,7 +4668,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "xmen" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BU1:BW",
   }, (err, res) => {
@@ -4684,7 +4684,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "xmen" || args[0] == "X-men"){
-const xmencounterimage = client.channels.get('700535062361276476')
+const xmencounterimage = client.channels.cache.get('700535062361276476')
 xmencounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterxmen = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -4696,7 +4696,7 @@ embed2.setImage(counterxmen.url)
 message.channel.send(embed2);
 })
 function functionxmenstats() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BU1:BW",
   }, (err, res) => {
@@ -4714,9 +4714,9 @@ function functionxmenstats() {
 }
 setTimeout(functionxmenstats, 3000);
 } else if(args[0] == "xmen+"){
-const xmencounterimage2 = client.channels.get('700535062361276476')
+const xmencounterimage2 = client.channels.cache.get('700535062361276476')
 
-const channelToCheckText = client.channels.get('700535081290301490')
+const channelToCheckText = client.channels.cache.get('700535081290301490')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await xmencounterimage2.fetchMessages({ limit: 1 });
@@ -4741,7 +4741,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!BU1:BW",
   }, (err, res) => {
@@ -4765,7 +4765,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "xforce" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CG1:CI",
   }, (err, res) => {
@@ -4781,7 +4781,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "xforce"){
-const xmencounterimage = client.channels.get('728586453872934984')
+const xmencounterimage = client.channels.cache.get('728586453872934984')
 xmencounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterxmen = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -4793,7 +4793,7 @@ embed2.setImage(counterxmen.url)
 message.channel.send(embed2);
 })
 function functionxmenstats() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CG1:CI",
   }, (err, res) => {
@@ -4811,9 +4811,9 @@ function functionxmenstats() {
 }
 setTimeout(functionxmenstats, 3000);
 } else if(args[0] == "xforce+"){
-const xmencounterimage2 = client.channels.get('728586453872934984')
+const xmencounterimage2 = client.channels.cache.get('728586453872934984')
 
-const channelToCheckText = client.channels.get('728586499737649203')
+const channelToCheckText = client.channels.cache.get('728586499737649203')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await xmencounterimage2.fetchMessages({ limit: 1 });
@@ -4838,7 +4838,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CG1:CI",
   }, (err, res) => {
@@ -4862,7 +4862,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "ya" && args[1] === "stats" || args[0] == "youngavengers" && args[1] === "stats" || args[0] == "young" && args[1] === "avengers" && args[2] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CJ1:CL",
   }, (err, res) => {
@@ -4878,7 +4878,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "ya" || args[0] == "young" || args[0] == "youngavengers" || args[0] == "young" && args[1] === "avengers" || args[0] == "yavengers"){
-const yacounterimage = client.channels.get('745982808287215616')
+const yacounterimage = client.channels.cache.get('745982808287215616')
 yacounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterya = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -4890,7 +4890,7 @@ embed2.setImage(counterya.url)
 message.channel.send(embed2);
 })
 function functionxmenstats() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CJ1:CL",
   }, (err, res) => {
@@ -4908,9 +4908,9 @@ function functionxmenstats() {
 }
 setTimeout(functionxmenstats, 3000);
 } else if(args[0] == "ya+" || args[0] == "young+" || args[0] == "youngavengers+" || args[0] == "young" && args[1] === "avengers+"){
-const yacounterimage2 = client.channels.get('745982808287215616')
+const yacounterimage2 = client.channels.cache.get('745982808287215616')
 
-const channelToCheckText = client.channels.get('745982913459257394')
+const channelToCheckText = client.channels.cache.get('745982913459257394')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await yacounterimage2.fetchMessages({ limit: 1 });
@@ -4935,7 +4935,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CJ1:CL",
   }, (err, res) => {
@@ -4958,7 +4958,7 @@ function2();
 setTimeout(function3, 4000);
 } else if(args[0] == "pym" && args[1] === "stats" || args[0] == "pymtech" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CP1:CR",
   }, (err, res) => {
@@ -4974,7 +4974,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "pym" || args[0] == "pymtech"){
-const xmencounterimage = client.channels.get('800172168578990080')
+const xmencounterimage = client.channels.cache.get('800172168578990080')
 xmencounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterxmen = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -4986,7 +4986,7 @@ embed2.setImage(counterxmen.url)
 message.channel.send(embed2);
 })
 function functionxmenstats() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CP1:CR",
   }, (err, res) => {
@@ -5004,9 +5004,9 @@ function functionxmenstats() {
 }
 setTimeout(functionxmenstats, 3000);
 } else if(args[0] == "pym+" || args[0] == "pymtech+"){
-const xmencounterimage2 = client.channels.get('800172168578990080')
+const xmencounterimage2 = client.channels.cache.get('800172168578990080')
 
-const channelToCheckText = client.channels.get('800172156691677230')
+const channelToCheckText = client.channels.cache.get('800172156691677230')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await xmencounterimage2.fetchMessages({ limit: 1 });
@@ -5031,7 +5031,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CP1:CR",
   }, (err, res) => {
@@ -5055,7 +5055,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "skill" || args[0] == "skillitary" || args[0] == "skillitary" && args[1] === "stats" || args[0] == "skill" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CS1:CU",
   }, (err, res) => {
@@ -5072,7 +5072,7 @@ setTimeout(function3, 4000);
   });
 } else if(args[0] == "oc6" && args[1] === "stats" || args[0] == "ock6" && args[1] === "stats" || args[0] == "drock" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!DE1:DG",
   }, (err, res) => {
@@ -5088,7 +5088,7 @@ setTimeout(function3, 4000);
     }
   });
 } else if(args[0] == "oc6" || args[0] == "ock6" || args[0] == "drock"){
-const xmencounterimage = client.channels.get('800481422074839061')
+const xmencounterimage = client.channels.cache.get('800481422074839061')
 xmencounterimage.fetchMessages({ limit: 1 }).then(messages => {
 const counterxmen = messages.first().attachments.first()
 const Attachment = require('discord.js').Attachment;
@@ -5100,7 +5100,7 @@ embed2.setImage(counterxmen.url)
 message.channel.send(embed2);
 })
 function functionxmenstats() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!DE1:DG",
   }, (err, res) => {
@@ -5118,9 +5118,9 @@ function functionxmenstats() {
 }
 setTimeout(functionxmenstats, 3000);
 } else if(args[0] == "oc6+" || args[0] == "ock6+" || args[0] == "drock+"){
-const xmencounterimage2 = client.channels.get('800481422074839061')
+const xmencounterimage2 = client.channels.cache.get('800481422074839061')
 
-const channelToCheckText = client.channels.get('800481338271858698')
+const channelToCheckText = client.channels.cache.get('800481338271858698')
 const messages1 = await channelToCheckText.fetchMessages({ limit: 1 });
 
 const messages3 = await xmencounterimage2.fetchMessages({ limit: 1 });
@@ -5145,7 +5145,7 @@ embed.setDescription(Text)
 message.channel.send(embed);
 }
 function function2() {
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!DE1:DG",
   }, (err, res) => {
@@ -5169,7 +5169,7 @@ setTimeout(function3, 4000);
 
 } else if(args[0] == "baronzemo" && args[1] === "stats" || args[0] == "zemo" && args[1] === "stats"){
 //stats
-	  sheets.spreadsheets.values.get({
+	  sheets.spreadsheets.values.cache.get({
     spreadsheetId: '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw',
     range: "ControlPanel!CV1:CX",
   }, (err, res) => {
@@ -5201,7 +5201,7 @@ if(command === 'read') { //TB-bot-testing   bot-spamTB                          
 if (message.channel.id === '606119830516400162' || message.channel.id === '673261006918516741') {
 if(args[0] === "stats"){
 //stats
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.cache.get({
     spreadsheetId: '14vw4cnEBNd4lpMaVO2ym5I08WI24K4YmU4rOWNzEPIQ',
     range: "Strikes!B200:I",
   }, (err, res) => {
@@ -5511,7 +5511,7 @@ if (args[0] === "asgardians" && args[2] === "asgardians" || args[0] === "asgardi
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -5546,7 +5546,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -5590,7 +5590,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -5625,7 +5625,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -5669,7 +5669,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -5704,7 +5704,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -5748,7 +5748,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -5783,7 +5783,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -5827,7 +5827,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -5862,7 +5862,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -5906,7 +5906,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -5941,7 +5941,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -5985,7 +5985,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -6020,7 +6020,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -6064,7 +6064,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -6099,7 +6099,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -6143,7 +6143,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -6178,7 +6178,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -6222,7 +6222,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -6257,7 +6257,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -6301,7 +6301,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -6336,7 +6336,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -6380,7 +6380,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -6415,7 +6415,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -6459,7 +6459,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -6494,7 +6494,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -6538,7 +6538,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -6573,7 +6573,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -6617,7 +6617,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -6652,7 +6652,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -6696,7 +6696,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -6731,7 +6731,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -6775,7 +6775,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -6810,7 +6810,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -6854,7 +6854,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -6889,7 +6889,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -6933,7 +6933,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -6968,7 +6968,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -7012,7 +7012,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -7047,7 +7047,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -7091,7 +7091,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -7126,7 +7126,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -7170,7 +7170,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -7205,7 +7205,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -7249,7 +7249,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -7284,7 +7284,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -7328,7 +7328,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -7363,7 +7363,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -7407,7 +7407,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -7442,7 +7442,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -7486,7 +7486,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -7521,7 +7521,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -7565,7 +7565,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -7600,7 +7600,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -7644,7 +7644,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -7679,7 +7679,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -7723,7 +7723,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -7758,7 +7758,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -7802,7 +7802,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -7837,7 +7837,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -7881,7 +7881,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -7916,7 +7916,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -7960,7 +7960,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -7995,7 +7995,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -8039,7 +8039,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -8074,7 +8074,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -8118,7 +8118,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -8153,7 +8153,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -8197,7 +8197,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -8232,7 +8232,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -8276,7 +8276,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -8311,7 +8311,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -8355,7 +8355,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -8390,7 +8390,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -8434,7 +8434,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -8469,7 +8469,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -8513,7 +8513,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -8548,7 +8548,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -8592,7 +8592,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -8627,7 +8627,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -8671,7 +8671,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -8706,7 +8706,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -8750,7 +8750,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -8785,7 +8785,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -8829,7 +8829,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -8864,7 +8864,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -8908,7 +8908,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -8943,7 +8943,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -8987,7 +8987,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -9022,7 +9022,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -9066,7 +9066,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -9101,7 +9101,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -9145,7 +9145,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -9180,7 +9180,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -9224,7 +9224,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -9259,7 +9259,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -9303,7 +9303,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -9338,7 +9338,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -9382,7 +9382,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -9417,7 +9417,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -9461,7 +9461,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -9496,7 +9496,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -9540,7 +9540,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -9575,7 +9575,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -9619,7 +9619,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -9654,7 +9654,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -9698,7 +9698,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -9733,7 +9733,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -9777,7 +9777,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -9812,7 +9812,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -9856,7 +9856,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -9891,7 +9891,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -9935,7 +9935,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -9970,7 +9970,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -10014,7 +10014,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -10049,7 +10049,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -10093,7 +10093,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -10128,7 +10128,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -10172,7 +10172,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -10207,7 +10207,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -10251,7 +10251,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -10286,7 +10286,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -10330,7 +10330,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -10365,7 +10365,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -10409,7 +10409,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -10444,7 +10444,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -10488,7 +10488,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -10523,7 +10523,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -10567,7 +10567,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -10602,7 +10602,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -10646,7 +10646,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -10681,7 +10681,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -10725,7 +10725,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -10760,7 +10760,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -10804,7 +10804,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -10839,7 +10839,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -10883,7 +10883,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -10918,7 +10918,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -10962,7 +10962,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -10997,7 +10997,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -11041,7 +11041,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -11076,7 +11076,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -11120,7 +11120,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -11155,7 +11155,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -11199,7 +11199,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -11234,7 +11234,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -11278,7 +11278,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -11313,7 +11313,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -11357,7 +11357,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -11392,7 +11392,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -11436,7 +11436,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -11471,7 +11471,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -11515,7 +11515,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -11550,7 +11550,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -11594,7 +11594,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -11629,7 +11629,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -11673,7 +11673,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -11708,7 +11708,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -11752,7 +11752,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -11787,7 +11787,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -11831,7 +11831,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -11866,7 +11866,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -11910,7 +11910,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -11945,7 +11945,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -11989,7 +11989,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -12024,7 +12024,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -12068,7 +12068,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -12103,7 +12103,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -12147,7 +12147,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -12182,7 +12182,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -12226,7 +12226,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -12261,7 +12261,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -12305,7 +12305,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -12340,7 +12340,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -12384,7 +12384,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -12419,7 +12419,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -12463,7 +12463,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -12498,7 +12498,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -12542,7 +12542,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -12577,7 +12577,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -12621,7 +12621,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -12656,7 +12656,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -12700,7 +12700,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -12735,7 +12735,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -12779,7 +12779,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -12814,7 +12814,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -12858,7 +12858,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -12893,7 +12893,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -12937,7 +12937,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -12972,7 +12972,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -13016,7 +13016,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -13051,7 +13051,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -13095,7 +13095,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -13130,7 +13130,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -13174,7 +13174,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -13209,7 +13209,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -13253,7 +13253,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -13288,7 +13288,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -13332,7 +13332,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -13367,7 +13367,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -13411,7 +13411,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -13446,7 +13446,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -13490,7 +13490,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -13525,7 +13525,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -13569,7 +13569,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -13604,7 +13604,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -13648,7 +13648,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -13683,7 +13683,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -13727,7 +13727,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -13762,7 +13762,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -13806,7 +13806,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -13841,7 +13841,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -13885,7 +13885,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -13920,7 +13920,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -13964,7 +13964,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -13999,7 +13999,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -14043,7 +14043,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -14078,7 +14078,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -14122,7 +14122,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -14157,7 +14157,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -14201,7 +14201,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -14236,7 +14236,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -14280,7 +14280,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -14315,7 +14315,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -14359,7 +14359,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -14394,7 +14394,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -14438,7 +14438,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -14473,7 +14473,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -14517,7 +14517,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -14552,7 +14552,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -14596,7 +14596,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -14631,7 +14631,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -14675,7 +14675,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -14710,7 +14710,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -14754,7 +14754,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -14789,7 +14789,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -14833,7 +14833,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -14868,7 +14868,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -14912,7 +14912,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -14947,7 +14947,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -14991,7 +14991,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -15026,7 +15026,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -15070,7 +15070,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -15105,7 +15105,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -15149,7 +15149,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -15184,7 +15184,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -15228,7 +15228,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -15263,7 +15263,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -15307,7 +15307,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -15342,7 +15342,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -15386,7 +15386,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -15421,7 +15421,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -15465,7 +15465,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -15500,7 +15500,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -15544,7 +15544,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -15579,7 +15579,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -15623,7 +15623,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -15658,7 +15658,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -15702,7 +15702,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -15737,7 +15737,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -15781,7 +15781,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -15816,7 +15816,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -15860,7 +15860,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -15895,7 +15895,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -15939,7 +15939,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -15974,7 +15974,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -16018,7 +16018,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -16053,7 +16053,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -16097,7 +16097,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -16132,7 +16132,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -16176,7 +16176,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -16211,7 +16211,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -16255,7 +16255,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -16290,7 +16290,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -16334,7 +16334,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -16369,7 +16369,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -16413,7 +16413,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -16448,7 +16448,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -16492,7 +16492,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -16527,7 +16527,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -16571,7 +16571,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -16606,7 +16606,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -16650,7 +16650,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -16685,7 +16685,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -16729,7 +16729,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -16764,7 +16764,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -16808,7 +16808,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -16843,7 +16843,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -16887,7 +16887,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -16922,7 +16922,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -16966,7 +16966,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -17001,7 +17001,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -17045,7 +17045,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -17080,7 +17080,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -17124,7 +17124,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -17159,7 +17159,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -17203,7 +17203,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -17238,7 +17238,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -17282,7 +17282,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -17317,7 +17317,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -17361,7 +17361,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -17396,7 +17396,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -17440,7 +17440,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -17475,7 +17475,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -17519,7 +17519,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -17554,7 +17554,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -17598,7 +17598,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -17633,7 +17633,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -17677,7 +17677,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -17712,7 +17712,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -17756,7 +17756,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -17791,7 +17791,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -17835,7 +17835,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -17870,7 +17870,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -17914,7 +17914,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -17949,7 +17949,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -17993,7 +17993,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -18028,7 +18028,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -18072,7 +18072,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -18107,7 +18107,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -18151,7 +18151,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -18186,7 +18186,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -18230,7 +18230,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -18265,7 +18265,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -18309,7 +18309,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -18344,7 +18344,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -18388,7 +18388,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -18423,7 +18423,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -18467,7 +18467,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -18502,7 +18502,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -18546,7 +18546,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -18581,7 +18581,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -18625,7 +18625,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -18660,7 +18660,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -18704,7 +18704,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -18739,7 +18739,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -18783,7 +18783,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -18818,7 +18818,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -18862,7 +18862,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -18897,7 +18897,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -18941,7 +18941,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -18976,7 +18976,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -19020,7 +19020,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -19055,7 +19055,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -19099,7 +19099,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -19134,7 +19134,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -19178,7 +19178,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -19213,7 +19213,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -19257,7 +19257,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -19292,7 +19292,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -19336,7 +19336,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -19371,7 +19371,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -19415,7 +19415,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -19450,7 +19450,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -19494,7 +19494,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -19529,7 +19529,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -19573,7 +19573,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -19608,7 +19608,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -19652,7 +19652,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -19687,7 +19687,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -19731,7 +19731,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -19766,7 +19766,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -19810,7 +19810,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -19845,7 +19845,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -19889,7 +19889,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -19924,7 +19924,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -19968,7 +19968,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -20003,7 +20003,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -20047,7 +20047,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -20082,7 +20082,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -20126,7 +20126,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -20161,7 +20161,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -20205,7 +20205,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -20240,7 +20240,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -20284,7 +20284,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -20319,7 +20319,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -20363,7 +20363,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -20398,7 +20398,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -20442,7 +20442,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -20477,7 +20477,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -20521,7 +20521,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -20556,7 +20556,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -20600,7 +20600,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -20635,7 +20635,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -20679,7 +20679,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -20714,7 +20714,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -20758,7 +20758,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -20793,7 +20793,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -20837,7 +20837,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -20872,7 +20872,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -20916,7 +20916,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -20951,7 +20951,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -20995,7 +20995,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -21030,7 +21030,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -21074,7 +21074,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -21109,7 +21109,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -21153,7 +21153,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -21188,7 +21188,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -21232,7 +21232,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -21267,7 +21267,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -21311,7 +21311,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -21346,7 +21346,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -21390,7 +21390,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -21425,7 +21425,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -21469,7 +21469,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -21504,7 +21504,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -21548,7 +21548,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -21583,7 +21583,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -21627,7 +21627,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -21662,7 +21662,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -21706,7 +21706,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -21741,7 +21741,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -21785,7 +21785,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -21820,7 +21820,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -21864,7 +21864,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -21899,7 +21899,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -21943,7 +21943,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -21978,7 +21978,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -22022,7 +22022,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -22057,7 +22057,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -22101,7 +22101,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -22136,7 +22136,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -22180,7 +22180,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -22215,7 +22215,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -22259,7 +22259,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -22294,7 +22294,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -22338,7 +22338,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -22373,7 +22373,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -22417,7 +22417,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -22452,7 +22452,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -22496,7 +22496,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -22531,7 +22531,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -22575,7 +22575,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -22610,7 +22610,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -22654,7 +22654,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -22689,7 +22689,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -22733,7 +22733,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -22768,7 +22768,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -22812,7 +22812,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -22847,7 +22847,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -22891,7 +22891,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -22926,7 +22926,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -22970,7 +22970,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -23005,7 +23005,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -23049,7 +23049,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -23084,7 +23084,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -23128,7 +23128,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -23163,7 +23163,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -23207,7 +23207,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -23242,7 +23242,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -23286,7 +23286,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -23321,7 +23321,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -23365,7 +23365,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -23400,7 +23400,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -23444,7 +23444,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -23479,7 +23479,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -23523,7 +23523,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -23558,7 +23558,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -23602,7 +23602,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -23637,7 +23637,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -23681,7 +23681,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -23716,7 +23716,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -23760,7 +23760,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -23795,7 +23795,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -23839,7 +23839,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -23874,7 +23874,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -23918,7 +23918,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -23953,7 +23953,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -23997,7 +23997,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -24032,7 +24032,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -24076,7 +24076,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -24111,7 +24111,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -24155,7 +24155,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -24190,7 +24190,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -24234,7 +24234,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -24269,7 +24269,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -24313,7 +24313,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -24348,7 +24348,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -24392,7 +24392,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -24427,7 +24427,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -24471,7 +24471,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -24506,7 +24506,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -24550,7 +24550,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -24585,7 +24585,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -24629,7 +24629,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -24664,7 +24664,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -24708,7 +24708,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -24743,7 +24743,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -24787,7 +24787,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -24822,7 +24822,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -24866,7 +24866,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -24901,7 +24901,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -24945,7 +24945,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -24980,7 +24980,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -25024,7 +25024,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -25059,7 +25059,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -25103,7 +25103,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -25138,7 +25138,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -25182,7 +25182,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -25217,7 +25217,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -25261,7 +25261,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -25296,7 +25296,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -25340,7 +25340,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -25375,7 +25375,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -25419,7 +25419,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -25454,7 +25454,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -25498,7 +25498,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -25533,7 +25533,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -25577,7 +25577,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -25612,7 +25612,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -25656,7 +25656,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -25691,7 +25691,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -25735,7 +25735,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -25770,7 +25770,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -25814,7 +25814,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -25849,7 +25849,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -25893,7 +25893,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -25928,7 +25928,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -25972,7 +25972,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -26007,7 +26007,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -26051,7 +26051,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -26086,7 +26086,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -26130,7 +26130,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -26165,7 +26165,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -26209,7 +26209,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -26244,7 +26244,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -26288,7 +26288,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -26323,7 +26323,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -26367,7 +26367,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -26402,7 +26402,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -26446,7 +26446,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -26481,7 +26481,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -26525,7 +26525,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -26560,7 +26560,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -26604,7 +26604,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -26639,7 +26639,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -26683,7 +26683,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -26718,7 +26718,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -26762,7 +26762,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -26797,7 +26797,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -26841,7 +26841,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -26876,7 +26876,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -26920,7 +26920,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -26955,7 +26955,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -26999,7 +26999,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -27034,7 +27034,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -27078,7 +27078,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -27113,7 +27113,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -27157,7 +27157,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -27192,7 +27192,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -27236,7 +27236,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -27271,7 +27271,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -27315,7 +27315,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -27350,7 +27350,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -27394,7 +27394,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -27429,7 +27429,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -27473,7 +27473,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -27508,7 +27508,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -27552,7 +27552,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -27587,7 +27587,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -27631,7 +27631,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -27666,7 +27666,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -27710,7 +27710,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -27745,7 +27745,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -27789,7 +27789,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -27824,7 +27824,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -27868,7 +27868,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -27903,7 +27903,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -27947,7 +27947,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -27982,7 +27982,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -28026,7 +28026,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -28061,7 +28061,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -28105,7 +28105,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -28140,7 +28140,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -28184,7 +28184,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -28219,7 +28219,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -28263,7 +28263,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -28298,7 +28298,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -28342,7 +28342,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -28377,7 +28377,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -28421,7 +28421,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -28456,7 +28456,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -28500,7 +28500,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -28535,7 +28535,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -28579,7 +28579,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -28614,7 +28614,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -28658,7 +28658,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -28693,7 +28693,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -28737,7 +28737,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -28772,7 +28772,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -28816,7 +28816,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -28851,7 +28851,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -28895,7 +28895,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -28930,7 +28930,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -28974,7 +28974,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -29009,7 +29009,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -29053,7 +29053,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -29088,7 +29088,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -29132,7 +29132,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -29167,7 +29167,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -29211,7 +29211,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -29246,7 +29246,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -29290,7 +29290,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -29325,7 +29325,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -29369,7 +29369,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -29404,7 +29404,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -29448,7 +29448,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -29483,7 +29483,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -29527,7 +29527,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -29562,7 +29562,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -29606,7 +29606,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -29641,7 +29641,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -29685,7 +29685,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -29720,7 +29720,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -29764,7 +29764,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -29799,7 +29799,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -29843,7 +29843,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -29878,7 +29878,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -29922,7 +29922,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -29957,7 +29957,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -30001,7 +30001,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -30036,7 +30036,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -30080,7 +30080,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -30115,7 +30115,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -30159,7 +30159,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -30194,7 +30194,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -30238,7 +30238,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -30273,7 +30273,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -30317,7 +30317,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -30352,7 +30352,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -30396,7 +30396,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -30431,7 +30431,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -30475,7 +30475,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -30510,7 +30510,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -30554,7 +30554,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -30589,7 +30589,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -30633,7 +30633,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -30668,7 +30668,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -30712,7 +30712,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -30747,7 +30747,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -30791,7 +30791,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -30826,7 +30826,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -30870,7 +30870,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -30905,7 +30905,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -30949,7 +30949,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -30984,7 +30984,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -31028,7 +31028,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -31063,7 +31063,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -31107,7 +31107,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -31142,7 +31142,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -31186,7 +31186,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -31221,7 +31221,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -31265,7 +31265,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -31300,7 +31300,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -31344,7 +31344,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -31379,7 +31379,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -31423,7 +31423,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -31458,7 +31458,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -31502,7 +31502,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -31537,7 +31537,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -31581,7 +31581,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -31616,7 +31616,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -31660,7 +31660,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -31695,7 +31695,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -31739,7 +31739,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -31774,7 +31774,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -31818,7 +31818,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -31853,7 +31853,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -31897,7 +31897,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -31932,7 +31932,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -31976,7 +31976,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -32011,7 +32011,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -32055,7 +32055,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -32090,7 +32090,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -32134,7 +32134,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -32169,7 +32169,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -32213,7 +32213,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -32248,7 +32248,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -32292,7 +32292,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -32327,7 +32327,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -32371,7 +32371,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -32406,7 +32406,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -32450,7 +32450,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -32485,7 +32485,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -32529,7 +32529,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -32564,7 +32564,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -32608,7 +32608,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -32643,7 +32643,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -32687,7 +32687,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -32722,7 +32722,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -32766,7 +32766,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -32801,7 +32801,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -32845,7 +32845,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -32880,7 +32880,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -32924,7 +32924,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -32959,7 +32959,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -33003,7 +33003,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -33038,7 +33038,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -33082,7 +33082,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -33117,7 +33117,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -33161,7 +33161,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -33196,7 +33196,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -33240,7 +33240,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -33275,7 +33275,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -33319,7 +33319,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -33354,7 +33354,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -33398,7 +33398,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -33433,7 +33433,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -33477,7 +33477,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -33512,7 +33512,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -33556,7 +33556,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -33591,7 +33591,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -33635,7 +33635,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -33670,7 +33670,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -33714,7 +33714,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -33749,7 +33749,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -33793,7 +33793,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -33828,7 +33828,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -33872,7 +33872,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -33907,7 +33907,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -33951,7 +33951,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -33986,7 +33986,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -34030,7 +34030,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -34065,7 +34065,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -34109,7 +34109,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -34144,7 +34144,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -34188,7 +34188,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -34223,7 +34223,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -34267,7 +34267,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -34302,7 +34302,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -34346,7 +34346,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -34381,7 +34381,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -34425,7 +34425,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -34460,7 +34460,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -34504,7 +34504,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -34539,7 +34539,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -34583,7 +34583,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -34618,7 +34618,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -34662,7 +34662,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -34697,7 +34697,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -34741,7 +34741,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -34776,7 +34776,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -34820,7 +34820,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -34855,7 +34855,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -34899,7 +34899,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -34934,7 +34934,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -34978,7 +34978,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -35013,7 +35013,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -35057,7 +35057,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -35092,7 +35092,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -35136,7 +35136,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -35171,7 +35171,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -35215,7 +35215,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -35250,7 +35250,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -35294,7 +35294,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -35329,7 +35329,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -35373,7 +35373,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -35408,7 +35408,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -35452,7 +35452,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -35487,7 +35487,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -35531,7 +35531,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -35566,7 +35566,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -35610,7 +35610,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -35645,7 +35645,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -35689,7 +35689,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -35724,7 +35724,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -35768,7 +35768,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -35803,7 +35803,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -35847,7 +35847,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -35882,7 +35882,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -35926,7 +35926,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -35961,7 +35961,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -36005,7 +36005,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -36040,7 +36040,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -36084,7 +36084,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -36119,7 +36119,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -36163,7 +36163,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -36198,7 +36198,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -36242,7 +36242,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -36277,7 +36277,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -36321,7 +36321,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -36356,7 +36356,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -36400,7 +36400,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -36435,7 +36435,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -36479,7 +36479,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -36514,7 +36514,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -36558,7 +36558,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -36593,7 +36593,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -36637,7 +36637,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -36672,7 +36672,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -36716,7 +36716,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -36751,7 +36751,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -36795,7 +36795,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -36830,7 +36830,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -36874,7 +36874,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -36909,7 +36909,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -36953,7 +36953,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -36988,7 +36988,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -37032,7 +37032,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -37067,7 +37067,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -37111,7 +37111,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -37146,7 +37146,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -37190,7 +37190,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -37225,7 +37225,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -37269,7 +37269,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -37304,7 +37304,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -37348,7 +37348,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -37383,7 +37383,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -37427,7 +37427,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -37462,7 +37462,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -37506,7 +37506,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -37541,7 +37541,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -37585,7 +37585,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -37620,7 +37620,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -37664,7 +37664,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -37699,7 +37699,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -37743,7 +37743,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -37778,7 +37778,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -37822,7 +37822,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -37857,7 +37857,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -37901,7 +37901,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -37936,7 +37936,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -37980,7 +37980,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -38015,7 +38015,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -38059,7 +38059,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -38094,7 +38094,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -38138,7 +38138,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -38173,7 +38173,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -38217,7 +38217,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -38252,7 +38252,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -38296,7 +38296,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -38331,7 +38331,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -38375,7 +38375,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -38410,7 +38410,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -38454,7 +38454,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -38489,7 +38489,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -38533,7 +38533,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -38568,7 +38568,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -38612,7 +38612,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -38647,7 +38647,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -38691,7 +38691,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -38726,7 +38726,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -38770,7 +38770,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -38805,7 +38805,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -38849,7 +38849,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -38884,7 +38884,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -38928,7 +38928,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -38963,7 +38963,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -39007,7 +39007,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -39042,7 +39042,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -39086,7 +39086,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -39121,7 +39121,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -39165,7 +39165,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -39200,7 +39200,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -39244,7 +39244,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -39279,7 +39279,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -39323,7 +39323,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -39358,7 +39358,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -39402,7 +39402,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -39437,7 +39437,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -39481,7 +39481,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -39516,7 +39516,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -39560,7 +39560,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -39595,7 +39595,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -39639,7 +39639,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -39674,7 +39674,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -39718,7 +39718,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -39753,7 +39753,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -39797,7 +39797,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -39832,7 +39832,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -39876,7 +39876,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -39911,7 +39911,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -39955,7 +39955,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -39990,7 +39990,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -40034,7 +40034,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -40069,7 +40069,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -40113,7 +40113,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -40148,7 +40148,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -40192,7 +40192,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -40227,7 +40227,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -40271,7 +40271,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -40306,7 +40306,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -40350,7 +40350,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -40385,7 +40385,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -40429,7 +40429,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -40464,7 +40464,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -40508,7 +40508,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -40543,7 +40543,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -40586,7 +40586,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -40621,7 +40621,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -40665,7 +40665,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -40700,7 +40700,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -40744,7 +40744,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -40779,7 +40779,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -40823,7 +40823,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -40858,7 +40858,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -40902,7 +40902,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -40937,7 +40937,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -40981,7 +40981,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -41016,7 +41016,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -41060,7 +41060,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -41095,7 +41095,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -41139,7 +41139,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -41174,7 +41174,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -41218,7 +41218,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -41253,7 +41253,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -41297,7 +41297,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -41332,7 +41332,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -41376,7 +41376,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -41411,7 +41411,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -41455,7 +41455,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -41490,7 +41490,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -41534,7 +41534,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -41569,7 +41569,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -41613,7 +41613,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -41648,7 +41648,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -41692,7 +41692,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -41727,7 +41727,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -41771,7 +41771,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -41806,7 +41806,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -41850,7 +41850,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -41885,7 +41885,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -41929,7 +41929,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -41964,7 +41964,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -42008,7 +42008,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -42043,7 +42043,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -42087,7 +42087,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -42122,7 +42122,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -42166,7 +42166,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -42201,7 +42201,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -42245,7 +42245,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -42280,7 +42280,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -42324,7 +42324,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -42359,7 +42359,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -42403,7 +42403,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -42438,7 +42438,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -42482,7 +42482,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -42517,7 +42517,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -42561,7 +42561,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -42596,7 +42596,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -42640,7 +42640,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -42675,7 +42675,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -42719,7 +42719,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -42754,7 +42754,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -42798,7 +42798,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -42833,7 +42833,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -42877,7 +42877,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -42912,7 +42912,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -42956,7 +42956,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -42991,7 +42991,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -43035,7 +43035,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -43070,7 +43070,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -43114,7 +43114,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -43149,7 +43149,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -43193,7 +43193,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -43228,7 +43228,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -43272,7 +43272,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -43307,7 +43307,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -43351,7 +43351,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -43386,7 +43386,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -43430,7 +43430,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -43465,7 +43465,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -43509,7 +43509,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -43544,7 +43544,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -43588,7 +43588,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -43623,7 +43623,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -43667,7 +43667,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -43702,7 +43702,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -43746,7 +43746,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -43781,7 +43781,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -43825,7 +43825,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -43860,7 +43860,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -43904,7 +43904,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -43939,7 +43939,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -43983,7 +43983,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -44018,7 +44018,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -44062,7 +44062,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -44097,7 +44097,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -44141,7 +44141,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -44176,7 +44176,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -44220,7 +44220,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -44255,7 +44255,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -44299,7 +44299,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -44334,7 +44334,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -44378,7 +44378,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -44413,7 +44413,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -44457,7 +44457,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -44492,7 +44492,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -44536,7 +44536,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -44571,7 +44571,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -44615,7 +44615,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -44650,7 +44650,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -44694,7 +44694,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -44729,7 +44729,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -44773,7 +44773,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -44808,7 +44808,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -44852,7 +44852,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -44887,7 +44887,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -44931,7 +44931,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -44966,7 +44966,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -45010,7 +45010,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -45045,7 +45045,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -45089,7 +45089,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -45124,7 +45124,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -45168,7 +45168,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -45203,7 +45203,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -45247,7 +45247,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -45282,7 +45282,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -45326,7 +45326,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -45361,7 +45361,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -45405,7 +45405,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -45440,7 +45440,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -45484,7 +45484,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -45519,7 +45519,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -45563,7 +45563,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -45598,7 +45598,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -45642,7 +45642,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -45677,7 +45677,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -45721,7 +45721,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -45756,7 +45756,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -45800,7 +45800,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -45835,7 +45835,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -45879,7 +45879,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -45914,7 +45914,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -45958,7 +45958,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -45993,7 +45993,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -46037,7 +46037,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -46072,7 +46072,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -46116,7 +46116,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -46151,7 +46151,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -46195,7 +46195,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -46230,7 +46230,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -46274,7 +46274,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -46309,7 +46309,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -46353,7 +46353,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -46388,7 +46388,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -46432,7 +46432,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -46467,7 +46467,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -46511,7 +46511,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -46546,7 +46546,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -46590,7 +46590,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -46625,7 +46625,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -46669,7 +46669,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -46704,7 +46704,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -46748,7 +46748,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -46783,7 +46783,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -46827,7 +46827,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -46862,7 +46862,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -46906,7 +46906,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -46941,7 +46941,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -46985,7 +46985,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -47020,7 +47020,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -47064,7 +47064,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -47099,7 +47099,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -47143,7 +47143,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -47178,7 +47178,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -47222,7 +47222,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -47257,7 +47257,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -47301,7 +47301,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -47336,7 +47336,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -47380,7 +47380,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -47415,7 +47415,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -47459,7 +47459,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -47494,7 +47494,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -47538,7 +47538,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -47573,7 +47573,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -47617,7 +47617,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -47652,7 +47652,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -47696,7 +47696,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -47731,7 +47731,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -47775,7 +47775,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -47810,7 +47810,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -47854,7 +47854,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -47889,7 +47889,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -47933,7 +47933,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -47968,7 +47968,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -48012,7 +48012,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -48047,7 +48047,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -48091,7 +48091,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -48126,7 +48126,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -48170,7 +48170,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -48205,7 +48205,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -48249,7 +48249,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -48284,7 +48284,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -48328,7 +48328,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -48363,7 +48363,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -48407,7 +48407,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -48442,7 +48442,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -48486,7 +48486,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -48521,7 +48521,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -48565,7 +48565,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -48600,7 +48600,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -48644,7 +48644,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -48679,7 +48679,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -48723,7 +48723,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -48758,7 +48758,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -48802,7 +48802,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -48837,7 +48837,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -48881,7 +48881,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -48916,7 +48916,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -48960,7 +48960,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -48995,7 +48995,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -49039,7 +49039,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -49074,7 +49074,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -49118,7 +49118,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -49153,7 +49153,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -49197,7 +49197,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -49232,7 +49232,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -49276,7 +49276,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -49311,7 +49311,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -49355,7 +49355,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -49390,7 +49390,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -49434,7 +49434,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -49469,7 +49469,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -49513,7 +49513,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -49548,7 +49548,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -49592,7 +49592,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -49627,7 +49627,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -49671,7 +49671,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -49706,7 +49706,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -49750,7 +49750,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -49785,7 +49785,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -49829,7 +49829,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -49864,7 +49864,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -49908,7 +49908,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -49943,7 +49943,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -49987,7 +49987,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -50022,7 +50022,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -50066,7 +50066,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -50101,7 +50101,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -50145,7 +50145,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -50180,7 +50180,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -50224,7 +50224,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -50259,7 +50259,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -50303,7 +50303,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -50338,7 +50338,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -50382,7 +50382,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -50417,7 +50417,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -50461,7 +50461,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -50496,7 +50496,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -50540,7 +50540,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -50575,7 +50575,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -50619,7 +50619,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -50654,7 +50654,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -50698,7 +50698,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -50733,7 +50733,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -50777,7 +50777,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -50812,7 +50812,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -50856,7 +50856,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -50891,7 +50891,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -50935,7 +50935,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -50970,7 +50970,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -51014,7 +51014,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -51049,7 +51049,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -51093,7 +51093,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -51128,7 +51128,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -51172,7 +51172,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -51207,7 +51207,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -51251,7 +51251,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -51286,7 +51286,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -51330,7 +51330,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -51365,7 +51365,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -51409,7 +51409,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -51444,7 +51444,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -51488,7 +51488,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -51523,7 +51523,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -51567,7 +51567,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -51602,7 +51602,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -51646,7 +51646,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -51681,7 +51681,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -51725,7 +51725,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -51760,7 +51760,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -51804,7 +51804,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -51839,7 +51839,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -51883,7 +51883,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -51918,7 +51918,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -51962,7 +51962,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -51997,7 +51997,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -52041,7 +52041,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -52076,7 +52076,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -52120,7 +52120,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -52155,7 +52155,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -52199,7 +52199,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -52234,7 +52234,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -52278,7 +52278,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -52313,7 +52313,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -52357,7 +52357,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -52392,7 +52392,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -52436,7 +52436,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -52471,7 +52471,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -52515,7 +52515,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -52550,7 +52550,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -52594,7 +52594,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -52629,7 +52629,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -52673,7 +52673,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -52708,7 +52708,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -52752,7 +52752,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -52787,7 +52787,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -52831,7 +52831,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -52866,7 +52866,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -52910,7 +52910,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -52945,7 +52945,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -52989,7 +52989,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -53024,7 +53024,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -53068,7 +53068,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -53103,7 +53103,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -53147,7 +53147,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -53182,7 +53182,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -53226,7 +53226,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -53261,7 +53261,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -53305,7 +53305,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -53340,7 +53340,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -53384,7 +53384,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -53419,7 +53419,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -53463,7 +53463,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -53498,7 +53498,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -53542,7 +53542,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -53577,7 +53577,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -53621,7 +53621,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -53656,7 +53656,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -53700,7 +53700,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -53735,7 +53735,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -53779,7 +53779,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -53814,7 +53814,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -53858,7 +53858,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -53893,7 +53893,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -53937,7 +53937,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -53972,7 +53972,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -54016,7 +54016,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -54051,7 +54051,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -54095,7 +54095,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -54130,7 +54130,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -54174,7 +54174,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -54209,7 +54209,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -54253,7 +54253,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -54288,7 +54288,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -54332,7 +54332,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -54367,7 +54367,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -54411,7 +54411,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -54446,7 +54446,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -54490,7 +54490,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -54525,7 +54525,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -54569,7 +54569,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -54604,7 +54604,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -54648,7 +54648,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -54683,7 +54683,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -54727,7 +54727,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -54762,7 +54762,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -54806,7 +54806,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -54841,7 +54841,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -54885,7 +54885,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -54920,7 +54920,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -54964,7 +54964,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -54999,7 +54999,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -55043,7 +55043,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -55078,7 +55078,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -55122,7 +55122,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -55157,7 +55157,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -55201,7 +55201,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -55236,7 +55236,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -55280,7 +55280,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -55315,7 +55315,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -55359,7 +55359,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -55394,7 +55394,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -55438,7 +55438,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -55473,7 +55473,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -55517,7 +55517,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -55552,7 +55552,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -55596,7 +55596,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -55631,7 +55631,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -55675,7 +55675,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -55710,7 +55710,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -55754,7 +55754,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -55789,7 +55789,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -55833,7 +55833,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -55868,7 +55868,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -55912,7 +55912,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -55947,7 +55947,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -55991,7 +55991,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -56026,7 +56026,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -56070,7 +56070,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -56105,7 +56105,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -56149,7 +56149,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -56184,7 +56184,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -56228,7 +56228,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -56263,7 +56263,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -56307,7 +56307,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -56342,7 +56342,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -56386,7 +56386,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -56421,7 +56421,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -56465,7 +56465,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -56500,7 +56500,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -56544,7 +56544,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -56579,7 +56579,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -56623,7 +56623,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -56658,7 +56658,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -56702,7 +56702,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -56737,7 +56737,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -56781,7 +56781,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -56816,7 +56816,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -56860,7 +56860,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -56895,7 +56895,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -56939,7 +56939,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -56974,7 +56974,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -57018,7 +57018,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -57053,7 +57053,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -57097,7 +57097,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -57132,7 +57132,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -57176,7 +57176,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -57211,7 +57211,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -57255,7 +57255,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -57290,7 +57290,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -57334,7 +57334,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -57369,7 +57369,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -57413,7 +57413,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -57448,7 +57448,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -57492,7 +57492,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -57527,7 +57527,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -57571,7 +57571,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -57606,7 +57606,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -57650,7 +57650,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -57685,7 +57685,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -57729,7 +57729,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -57764,7 +57764,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -57808,7 +57808,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -57843,7 +57843,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -57887,7 +57887,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -57922,7 +57922,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -57966,7 +57966,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -58001,7 +58001,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -58045,7 +58045,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -58080,7 +58080,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -58124,7 +58124,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -58159,7 +58159,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -58203,7 +58203,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -58238,7 +58238,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -58282,7 +58282,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -58317,7 +58317,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -58361,7 +58361,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -58396,7 +58396,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -58440,7 +58440,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -58475,7 +58475,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -58519,7 +58519,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -58554,7 +58554,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -58598,7 +58598,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -58633,7 +58633,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -58677,7 +58677,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -58712,7 +58712,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -58756,7 +58756,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -58791,7 +58791,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -58835,7 +58835,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -58870,7 +58870,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -58914,7 +58914,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -58949,7 +58949,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -58993,7 +58993,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -59028,7 +59028,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -59072,7 +59072,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -59107,7 +59107,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -59151,7 +59151,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -59186,7 +59186,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -59230,7 +59230,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -59265,7 +59265,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -59309,7 +59309,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -59344,7 +59344,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -59388,7 +59388,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -59423,7 +59423,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -59467,7 +59467,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -59502,7 +59502,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -59546,7 +59546,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -59581,7 +59581,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -59625,7 +59625,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -59660,7 +59660,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -59704,7 +59704,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -59739,7 +59739,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -59783,7 +59783,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -59818,7 +59818,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -59862,7 +59862,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -59897,7 +59897,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -59941,7 +59941,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -59976,7 +59976,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -60020,7 +60020,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -60055,7 +60055,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -60099,7 +60099,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -60134,7 +60134,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -60178,7 +60178,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -60213,7 +60213,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -60257,7 +60257,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -60292,7 +60292,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -60336,7 +60336,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -60371,7 +60371,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -60415,7 +60415,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -60450,7 +60450,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -60494,7 +60494,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -60529,7 +60529,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -60573,7 +60573,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -60608,7 +60608,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -60652,7 +60652,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -60687,7 +60687,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -60731,7 +60731,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -60766,7 +60766,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -60810,7 +60810,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -60845,7 +60845,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -60889,7 +60889,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -60924,7 +60924,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -60968,7 +60968,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -61003,7 +61003,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -61047,7 +61047,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -61082,7 +61082,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -61126,7 +61126,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -61161,7 +61161,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -61205,7 +61205,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -61240,7 +61240,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -61284,7 +61284,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -61319,7 +61319,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -61363,7 +61363,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -61398,7 +61398,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -61442,7 +61442,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -61477,7 +61477,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -61521,7 +61521,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -61556,7 +61556,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -61600,7 +61600,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -61635,7 +61635,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -61679,7 +61679,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -61714,7 +61714,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -61758,7 +61758,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -61793,7 +61793,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -61837,7 +61837,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -61872,7 +61872,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -61916,7 +61916,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -61951,7 +61951,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -61995,7 +61995,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -62030,7 +62030,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -62074,7 +62074,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -62109,7 +62109,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -62153,7 +62153,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -62188,7 +62188,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -62232,7 +62232,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -62267,7 +62267,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -62311,7 +62311,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -62346,7 +62346,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -62390,7 +62390,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -62425,7 +62425,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -62469,7 +62469,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -62504,7 +62504,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -62548,7 +62548,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -62583,7 +62583,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -62627,7 +62627,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -62662,7 +62662,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -62706,7 +62706,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -62741,7 +62741,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -62785,7 +62785,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -62820,7 +62820,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -62864,7 +62864,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -62899,7 +62899,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -62943,7 +62943,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -62978,7 +62978,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -63022,7 +63022,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -63057,7 +63057,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -63101,7 +63101,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -63136,7 +63136,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -63180,7 +63180,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -63215,7 +63215,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -63259,7 +63259,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -63294,7 +63294,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -63338,7 +63338,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -63373,7 +63373,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -63417,7 +63417,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -63452,7 +63452,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -63496,7 +63496,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -63531,7 +63531,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -63575,7 +63575,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -63610,7 +63610,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -63654,7 +63654,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -63689,7 +63689,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -63733,7 +63733,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -63768,7 +63768,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -63812,7 +63812,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -63847,7 +63847,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -63891,7 +63891,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -63926,7 +63926,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -63970,7 +63970,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -64005,7 +64005,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -64049,7 +64049,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -64084,7 +64084,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -64128,7 +64128,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -64163,7 +64163,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -64207,7 +64207,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -64242,7 +64242,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -64286,7 +64286,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -64321,7 +64321,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -64365,7 +64365,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -64400,7 +64400,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -64444,7 +64444,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -64479,7 +64479,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -64523,7 +64523,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -64558,7 +64558,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -64602,7 +64602,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -64637,7 +64637,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -64681,7 +64681,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -64716,7 +64716,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -64760,7 +64760,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -64795,7 +64795,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -64839,7 +64839,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -64874,7 +64874,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -64918,7 +64918,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -64953,7 +64953,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -64997,7 +64997,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -65032,7 +65032,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -65076,7 +65076,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -65111,7 +65111,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -65155,7 +65155,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BF:BF`
@@ -65190,7 +65190,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BG:BG`
@@ -65234,7 +65234,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -65269,7 +65269,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -65313,7 +65313,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -65348,7 +65348,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -65392,7 +65392,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -65427,7 +65427,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -65471,7 +65471,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -65506,7 +65506,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -65550,7 +65550,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -65585,7 +65585,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -65629,7 +65629,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -65664,7 +65664,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -65708,7 +65708,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -65743,7 +65743,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -65787,7 +65787,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -65822,7 +65822,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -65866,7 +65866,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -65901,7 +65901,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -65945,7 +65945,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -65980,7 +65980,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -66024,7 +66024,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -66059,7 +66059,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -66103,7 +66103,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -66138,7 +66138,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -66182,7 +66182,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -66217,7 +66217,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -66261,7 +66261,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -66296,7 +66296,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -66340,7 +66340,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -66375,7 +66375,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -66419,7 +66419,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -66454,7 +66454,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -66498,7 +66498,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -66533,7 +66533,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -66577,7 +66577,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -66612,7 +66612,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -66656,7 +66656,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "SinisterSix";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AN:AN`
@@ -66691,7 +66691,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AO:AO`
@@ -66735,7 +66735,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -66770,7 +66770,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -66814,7 +66814,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -66849,7 +66849,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -66893,7 +66893,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -66928,7 +66928,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -66972,7 +66972,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -67007,7 +67007,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -67051,7 +67051,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -67086,7 +67086,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -67130,7 +67130,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -67165,7 +67165,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -67209,7 +67209,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -67244,7 +67244,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -67288,7 +67288,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -67323,7 +67323,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -67367,7 +67367,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -67402,7 +67402,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -67446,7 +67446,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -67481,7 +67481,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -67525,7 +67525,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -67560,7 +67560,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -67604,7 +67604,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -67639,7 +67639,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -67683,7 +67683,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -67718,7 +67718,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -67762,7 +67762,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -67797,7 +67797,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -67841,7 +67841,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -67876,7 +67876,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -67920,7 +67920,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -67955,7 +67955,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -67999,7 +67999,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -68034,7 +68034,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -68078,7 +68078,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -68113,7 +68113,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -68157,7 +68157,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -68192,7 +68192,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -68236,7 +68236,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -68271,7 +68271,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -68315,7 +68315,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -68350,7 +68350,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -68394,7 +68394,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -68429,7 +68429,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -68473,7 +68473,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -68508,7 +68508,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -68552,7 +68552,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -68587,7 +68587,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -68631,7 +68631,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -68666,7 +68666,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -68710,7 +68710,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -68745,7 +68745,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -68789,7 +68789,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -68824,7 +68824,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -68868,7 +68868,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -68903,7 +68903,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -68947,7 +68947,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -68982,7 +68982,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -69026,7 +69026,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -69061,7 +69061,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -69105,7 +69105,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BF:BF`
@@ -69140,7 +69140,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BG:BG`
@@ -69184,7 +69184,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -69219,7 +69219,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -69263,7 +69263,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -69298,7 +69298,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -69342,7 +69342,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -69377,7 +69377,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -69421,7 +69421,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -69456,7 +69456,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -69500,7 +69500,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -69535,7 +69535,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -69579,7 +69579,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -69614,7 +69614,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -69658,7 +69658,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -69693,7 +69693,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -69737,7 +69737,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -69772,7 +69772,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -69816,7 +69816,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XForce";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -69851,7 +69851,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -69895,7 +69895,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -69930,7 +69930,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -69974,7 +69974,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -70009,7 +70009,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -70053,7 +70053,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -70088,7 +70088,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -70132,7 +70132,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -70167,7 +70167,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -70211,7 +70211,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -70246,7 +70246,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -70290,7 +70290,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -70325,7 +70325,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -70369,7 +70369,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -70404,7 +70404,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -70448,7 +70448,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -70483,7 +70483,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -70527,7 +70527,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -70562,7 +70562,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -70606,7 +70606,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -70641,7 +70641,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -70685,7 +70685,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -70720,7 +70720,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -70764,7 +70764,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -70799,7 +70799,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -70843,7 +70843,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -70878,7 +70878,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -70922,7 +70922,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BF:BF`
@@ -70957,7 +70957,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BG:BG`
@@ -71001,7 +71001,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -71036,7 +71036,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -71080,7 +71080,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -71115,7 +71115,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -71159,7 +71159,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -71194,7 +71194,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -71238,7 +71238,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -71273,7 +71273,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -71317,7 +71317,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -71352,7 +71352,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -71396,7 +71396,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -71431,7 +71431,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -71475,7 +71475,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -71510,7 +71510,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -71554,7 +71554,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -71589,7 +71589,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -71633,7 +71633,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AZ:AZ`
@@ -71668,7 +71668,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BA:BA`
@@ -71712,7 +71712,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -71747,7 +71747,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -71791,7 +71791,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -71826,7 +71826,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -71870,7 +71870,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -71905,7 +71905,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -71949,7 +71949,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -71984,7 +71984,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -72028,7 +72028,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -72063,7 +72063,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -72107,7 +72107,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -72142,7 +72142,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -72186,7 +72186,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -72221,7 +72221,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -72265,7 +72265,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -72300,7 +72300,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -72344,7 +72344,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -72379,7 +72379,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -72423,7 +72423,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -72458,7 +72458,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -72502,7 +72502,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -72537,7 +72537,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -72581,7 +72581,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -72616,7 +72616,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -72660,7 +72660,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -72695,7 +72695,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -72739,7 +72739,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -72774,7 +72774,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -72818,7 +72818,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -72853,7 +72853,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -72897,7 +72897,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -72932,7 +72932,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -72976,7 +72976,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -73011,7 +73011,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -73055,7 +73055,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -73090,7 +73090,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -73134,7 +73134,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -73169,7 +73169,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -73213,7 +73213,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -73248,7 +73248,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -73292,7 +73292,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -73327,7 +73327,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -73371,7 +73371,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -73406,7 +73406,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -73450,7 +73450,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -73485,7 +73485,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -73529,7 +73529,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -73564,7 +73564,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -73608,7 +73608,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -73643,7 +73643,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -73687,7 +73687,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -73722,7 +73722,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -73766,7 +73766,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -73801,7 +73801,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -73845,7 +73845,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -73880,7 +73880,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -73924,7 +73924,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -73959,7 +73959,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -74003,7 +74003,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -74038,7 +74038,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -74082,7 +74082,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -74117,7 +74117,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -74161,7 +74161,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -74196,7 +74196,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -74240,7 +74240,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -74275,7 +74275,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -74319,7 +74319,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -74354,7 +74354,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -74398,7 +74398,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -74433,7 +74433,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -74477,7 +74477,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -74512,7 +74512,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -74556,7 +74556,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -74591,7 +74591,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -74635,7 +74635,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -74670,7 +74670,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -74714,7 +74714,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -74749,7 +74749,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -74793,7 +74793,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -74828,7 +74828,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -74872,7 +74872,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -74907,7 +74907,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -74951,7 +74951,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -74986,7 +74986,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -75030,7 +75030,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -75065,7 +75065,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -75109,7 +75109,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -75144,7 +75144,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -75188,7 +75188,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -75223,7 +75223,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -75267,7 +75267,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -75302,7 +75302,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -75346,7 +75346,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -75381,7 +75381,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -75425,7 +75425,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -75460,7 +75460,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -75504,7 +75504,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -75539,7 +75539,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -75583,7 +75583,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -75618,7 +75618,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -75662,7 +75662,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -75697,7 +75697,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -75741,7 +75741,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -75776,7 +75776,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -75820,7 +75820,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -75855,7 +75855,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -75899,7 +75899,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -75934,7 +75934,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -75978,7 +75978,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -76013,7 +76013,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -76057,7 +76057,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -76092,7 +76092,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -76136,7 +76136,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -76171,7 +76171,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -76215,7 +76215,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -76250,7 +76250,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -76294,7 +76294,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -76329,7 +76329,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -76373,7 +76373,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -76408,7 +76408,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -76452,7 +76452,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -76487,7 +76487,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -76531,7 +76531,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -76566,7 +76566,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -76610,7 +76610,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -76645,7 +76645,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -76690,7 +76690,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -76725,7 +76725,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -76769,7 +76769,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -76804,7 +76804,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -76848,7 +76848,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -76883,7 +76883,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -76927,7 +76927,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -76962,7 +76962,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -77006,7 +77006,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -77041,7 +77041,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -77085,7 +77085,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -77120,7 +77120,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -77164,7 +77164,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -77199,7 +77199,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -77243,7 +77243,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -77278,7 +77278,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -77322,7 +77322,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -77357,7 +77357,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -77401,7 +77401,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -77436,7 +77436,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -77480,7 +77480,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -77515,7 +77515,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -77559,7 +77559,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -77594,7 +77594,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -77638,7 +77638,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -77673,7 +77673,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -77717,7 +77717,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -77752,7 +77752,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -77796,7 +77796,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -77831,7 +77831,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -77875,7 +77875,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -77910,7 +77910,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -77954,7 +77954,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -77989,7 +77989,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -78033,7 +78033,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -78068,7 +78068,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -78112,7 +78112,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -78147,7 +78147,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -78191,7 +78191,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -78226,7 +78226,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -78270,7 +78270,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -78305,7 +78305,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -78349,7 +78349,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -78384,7 +78384,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -78428,7 +78428,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -78463,7 +78463,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -78507,7 +78507,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -78542,7 +78542,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -78586,7 +78586,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -78621,7 +78621,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -78665,7 +78665,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -78700,7 +78700,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -78743,7 +78743,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -78778,7 +78778,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -78822,7 +78822,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -78857,7 +78857,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -78901,7 +78901,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -78936,7 +78936,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -78980,7 +78980,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -79015,7 +79015,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -79059,7 +79059,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -79094,7 +79094,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -79138,7 +79138,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -79173,7 +79173,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -79217,7 +79217,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -79252,7 +79252,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -79296,7 +79296,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -79331,7 +79331,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -79375,7 +79375,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -79410,7 +79410,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -79454,7 +79454,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -79489,7 +79489,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -79533,7 +79533,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -79568,7 +79568,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -79612,7 +79612,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -79647,7 +79647,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -79691,7 +79691,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -79726,7 +79726,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -79770,7 +79770,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -79805,7 +79805,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -79849,7 +79849,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -79884,7 +79884,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -79928,7 +79928,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -79963,7 +79963,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -80007,7 +80007,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -80042,7 +80042,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -80086,7 +80086,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -80121,7 +80121,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -80165,7 +80165,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -80200,7 +80200,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -80244,7 +80244,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BF:BF`
@@ -80279,7 +80279,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BG:BG`
@@ -80323,7 +80323,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -80358,7 +80358,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -80402,7 +80402,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -80437,7 +80437,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -80481,7 +80481,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -80516,7 +80516,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -80560,7 +80560,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -80595,7 +80595,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -80639,7 +80639,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -80674,7 +80674,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -80718,7 +80718,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -80753,7 +80753,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -80797,7 +80797,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -80832,7 +80832,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -80876,7 +80876,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -80911,7 +80911,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -80955,7 +80955,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -80990,7 +80990,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -81034,7 +81034,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -81069,7 +81069,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -81113,7 +81113,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -81148,7 +81148,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -81192,7 +81192,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -81227,7 +81227,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -81271,7 +81271,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -81306,7 +81306,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -81350,7 +81350,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -81385,7 +81385,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -81430,7 +81430,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -81465,7 +81465,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -81509,7 +81509,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -81544,7 +81544,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -81588,7 +81588,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -81623,7 +81623,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -81667,7 +81667,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -81702,7 +81702,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -81746,7 +81746,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -81781,7 +81781,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -81825,7 +81825,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -81860,7 +81860,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -81904,7 +81904,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -81939,7 +81939,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -81983,7 +81983,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -82018,7 +82018,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -82062,7 +82062,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -82097,7 +82097,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -82141,7 +82141,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -82176,7 +82176,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -82220,7 +82220,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -82255,7 +82255,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -82299,7 +82299,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -82334,7 +82334,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -82378,7 +82378,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -82413,7 +82413,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -82457,7 +82457,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -82492,7 +82492,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -82536,7 +82536,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -82571,7 +82571,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -82615,7 +82615,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -82650,7 +82650,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -82694,7 +82694,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -82729,7 +82729,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -82773,7 +82773,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -82808,7 +82808,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -82852,7 +82852,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -82887,7 +82887,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -82931,7 +82931,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -82966,7 +82966,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -83010,7 +83010,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -83045,7 +83045,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -83089,7 +83089,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -83124,7 +83124,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -83168,7 +83168,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -83203,7 +83203,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -83247,7 +83247,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -83282,7 +83282,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -83326,7 +83326,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -83361,7 +83361,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -83405,7 +83405,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -83440,7 +83440,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -83483,7 +83483,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -83518,7 +83518,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -83562,7 +83562,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -83597,7 +83597,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -83641,7 +83641,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -83676,7 +83676,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -83720,7 +83720,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -83755,7 +83755,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -83799,7 +83799,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -83834,7 +83834,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -83878,7 +83878,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -83913,7 +83913,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -83957,7 +83957,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -83992,7 +83992,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -84036,7 +84036,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -84071,7 +84071,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -84115,7 +84115,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -84150,7 +84150,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -84194,7 +84194,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -84229,7 +84229,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -84273,7 +84273,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -84308,7 +84308,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -84352,7 +84352,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -84387,7 +84387,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -84431,7 +84431,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -84466,7 +84466,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -84510,7 +84510,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -84545,7 +84545,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -84589,7 +84589,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -84624,7 +84624,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -84668,7 +84668,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -84703,7 +84703,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -84747,7 +84747,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -84782,7 +84782,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -84826,7 +84826,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -84861,7 +84861,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -84905,7 +84905,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -84940,7 +84940,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -84984,7 +84984,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BF:BF`
@@ -85019,7 +85019,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BG:BG`
@@ -85063,7 +85063,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -85098,7 +85098,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -85142,7 +85142,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -85177,7 +85177,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -85221,7 +85221,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -85256,7 +85256,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -85300,7 +85300,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -85335,7 +85335,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -85379,7 +85379,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -85414,7 +85414,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -85458,7 +85458,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -85493,7 +85493,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -85537,7 +85537,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -85572,7 +85572,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -85616,7 +85616,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -85651,7 +85651,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -85695,7 +85695,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -85730,7 +85730,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -85774,7 +85774,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BN:BN`
@@ -85809,7 +85809,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BO:BO`
@@ -85853,7 +85853,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BR:BR`
@@ -85888,7 +85888,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BS:BS`
@@ -85932,7 +85932,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -85967,7 +85967,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -86011,7 +86011,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -86046,7 +86046,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -86090,7 +86090,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -86125,7 +86125,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -86169,7 +86169,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -86204,7 +86204,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -86248,7 +86248,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -86283,7 +86283,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -86327,7 +86327,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -86362,7 +86362,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -86406,7 +86406,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -86441,7 +86441,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -86485,7 +86485,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -86520,7 +86520,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -86564,7 +86564,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -86599,7 +86599,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -86643,7 +86643,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -86678,7 +86678,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -86722,7 +86722,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -86757,7 +86757,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -86801,7 +86801,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -86836,7 +86836,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -86880,7 +86880,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -86915,7 +86915,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -86959,7 +86959,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -86994,7 +86994,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -87038,7 +87038,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -87073,7 +87073,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -87117,7 +87117,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -87152,7 +87152,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -87196,7 +87196,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -87231,7 +87231,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -87275,7 +87275,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -87310,7 +87310,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -87354,7 +87354,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -87389,7 +87389,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -87433,7 +87433,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BF:BF`
@@ -87468,7 +87468,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BG:BG`
@@ -87512,7 +87512,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -87547,7 +87547,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -87591,7 +87591,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -87626,7 +87626,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -87670,7 +87670,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -87705,7 +87705,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -87749,7 +87749,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -87784,7 +87784,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -87828,7 +87828,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -87863,7 +87863,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -87907,7 +87907,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -87942,7 +87942,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -87986,7 +87986,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -88021,7 +88021,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -88065,7 +88065,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -88100,7 +88100,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -88144,7 +88144,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -88179,7 +88179,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -88223,7 +88223,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -88258,7 +88258,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -88302,7 +88302,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -88337,7 +88337,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -88381,7 +88381,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -88416,7 +88416,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -88460,7 +88460,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -88495,7 +88495,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -88539,7 +88539,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -88574,7 +88574,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -88619,7 +88619,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -88654,7 +88654,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -88698,7 +88698,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -88733,7 +88733,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -88777,7 +88777,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -88812,7 +88812,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -88856,7 +88856,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -88891,7 +88891,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -88935,7 +88935,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -88970,7 +88970,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -89014,7 +89014,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -89049,7 +89049,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -89093,7 +89093,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -89128,7 +89128,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -89172,7 +89172,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -89207,7 +89207,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -89251,7 +89251,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -89286,7 +89286,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -89330,7 +89330,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -89365,7 +89365,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -89409,7 +89409,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -89444,7 +89444,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -89488,7 +89488,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -89523,7 +89523,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -89567,7 +89567,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -89602,7 +89602,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -89646,7 +89646,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -89681,7 +89681,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -89725,7 +89725,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -89760,7 +89760,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -89804,7 +89804,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -89839,7 +89839,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -89883,7 +89883,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -89918,7 +89918,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -89962,7 +89962,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -89997,7 +89997,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -90041,7 +90041,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -90076,7 +90076,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -90120,7 +90120,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -90155,7 +90155,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -90199,7 +90199,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -90234,7 +90234,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -90278,7 +90278,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -90313,7 +90313,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -90357,7 +90357,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -90392,7 +90392,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -90436,7 +90436,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -90471,7 +90471,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -90515,7 +90515,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -90550,7 +90550,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -90594,7 +90594,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -90629,7 +90629,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -90672,7 +90672,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -90707,7 +90707,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -90751,7 +90751,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -90786,7 +90786,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -90830,7 +90830,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -90865,7 +90865,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -90909,7 +90909,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -90944,7 +90944,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -90988,7 +90988,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -91023,7 +91023,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -91067,7 +91067,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -91102,7 +91102,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -91146,7 +91146,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -91181,7 +91181,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -91225,7 +91225,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -91260,7 +91260,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -91304,7 +91304,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -91339,7 +91339,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -91383,7 +91383,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -91418,7 +91418,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -91462,7 +91462,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -91497,7 +91497,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -91541,7 +91541,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -91576,7 +91576,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -91620,7 +91620,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -91655,7 +91655,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -91699,7 +91699,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -91734,7 +91734,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -91778,7 +91778,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -91813,7 +91813,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -91857,7 +91857,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -91892,7 +91892,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -91936,7 +91936,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -91971,7 +91971,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -92015,7 +92015,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -92050,7 +92050,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -92094,7 +92094,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -92129,7 +92129,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -92173,7 +92173,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BF:BF`
@@ -92208,7 +92208,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BG:BG`
@@ -92252,7 +92252,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -92287,7 +92287,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -92331,7 +92331,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -92366,7 +92366,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -92410,7 +92410,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -92445,7 +92445,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -92489,7 +92489,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -92524,7 +92524,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -92568,7 +92568,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -92603,7 +92603,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -92647,7 +92647,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -92682,7 +92682,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -92726,7 +92726,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -92761,7 +92761,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -92805,7 +92805,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -92840,7 +92840,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -92884,7 +92884,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -92919,7 +92919,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -92963,7 +92963,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -92998,7 +92998,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -93042,7 +93042,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -93077,7 +93077,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -93121,7 +93121,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -93156,7 +93156,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -93200,7 +93200,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -93235,7 +93235,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -93279,7 +93279,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -93314,7 +93314,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -93358,7 +93358,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -93393,7 +93393,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -93438,7 +93438,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -93473,7 +93473,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -93517,7 +93517,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -93552,7 +93552,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -93596,7 +93596,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -93631,7 +93631,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -93675,7 +93675,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -93710,7 +93710,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -93754,7 +93754,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -93789,7 +93789,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -93833,7 +93833,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -93868,7 +93868,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -93912,7 +93912,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -93947,7 +93947,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -93991,7 +93991,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -94026,7 +94026,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -94070,7 +94070,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -94105,7 +94105,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -94149,7 +94149,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -94184,7 +94184,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -94228,7 +94228,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -94263,7 +94263,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -94307,7 +94307,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -94342,7 +94342,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -94386,7 +94386,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -94421,7 +94421,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -94465,7 +94465,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -94500,7 +94500,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -94544,7 +94544,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -94579,7 +94579,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -94623,7 +94623,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -94658,7 +94658,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -94702,7 +94702,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -94737,7 +94737,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -94781,7 +94781,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -94816,7 +94816,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -94860,7 +94860,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -94895,7 +94895,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -94939,7 +94939,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -94974,7 +94974,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -95018,7 +95018,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -95053,7 +95053,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -95097,7 +95097,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -95132,7 +95132,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -95176,7 +95176,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -95211,7 +95211,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -95255,7 +95255,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -95290,7 +95290,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -95334,7 +95334,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -95369,7 +95369,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -95413,7 +95413,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -95448,7 +95448,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -95491,7 +95491,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -95526,7 +95526,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -95569,7 +95569,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -95604,7 +95604,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -95648,7 +95648,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -95683,7 +95683,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -95727,7 +95727,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -95762,7 +95762,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -95806,7 +95806,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -95841,7 +95841,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -95885,7 +95885,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -95920,7 +95920,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -95964,7 +95964,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -95999,7 +95999,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -96043,7 +96043,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -96078,7 +96078,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -96122,7 +96122,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -96157,7 +96157,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -96201,7 +96201,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -96236,7 +96236,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -96280,7 +96280,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -96315,7 +96315,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -96359,7 +96359,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -96394,7 +96394,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -96438,7 +96438,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -96473,7 +96473,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -96517,7 +96517,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -96552,7 +96552,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -96596,7 +96596,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -96631,7 +96631,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -96675,7 +96675,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -96710,7 +96710,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -96754,7 +96754,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -96789,7 +96789,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -96833,7 +96833,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -96868,7 +96868,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -96912,7 +96912,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -96947,7 +96947,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -96991,7 +96991,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -97026,7 +97026,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -97070,7 +97070,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BF:BF`
@@ -97105,7 +97105,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BG:BG`
@@ -97149,7 +97149,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -97184,7 +97184,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -97228,7 +97228,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -97263,7 +97263,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -97307,7 +97307,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -97342,7 +97342,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -97386,7 +97386,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -97421,7 +97421,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -97465,7 +97465,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -97500,7 +97500,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -97544,7 +97544,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -97579,7 +97579,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -97623,7 +97623,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -97658,7 +97658,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -97702,7 +97702,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -97737,7 +97737,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -97781,7 +97781,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -97816,7 +97816,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -97860,7 +97860,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -97895,7 +97895,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -97939,7 +97939,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -97974,7 +97974,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -98018,7 +98018,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -98053,7 +98053,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -98097,7 +98097,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -98132,7 +98132,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -98176,7 +98176,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -98211,7 +98211,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -98256,7 +98256,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -98291,7 +98291,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -98335,7 +98335,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -98370,7 +98370,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -98414,7 +98414,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -98449,7 +98449,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -98493,7 +98493,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -98528,7 +98528,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -98572,7 +98572,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -98607,7 +98607,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -98651,7 +98651,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -98686,7 +98686,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -98730,7 +98730,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -98765,7 +98765,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -98809,7 +98809,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -98844,7 +98844,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -98888,7 +98888,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -98923,7 +98923,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -98967,7 +98967,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -99002,7 +99002,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -99046,7 +99046,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -99081,7 +99081,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -99125,7 +99125,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -99160,7 +99160,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -99204,7 +99204,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -99239,7 +99239,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -99283,7 +99283,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -99318,7 +99318,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -99362,7 +99362,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -99397,7 +99397,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -99441,7 +99441,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -99476,7 +99476,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -99520,7 +99520,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -99555,7 +99555,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -99599,7 +99599,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -99634,7 +99634,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -99678,7 +99678,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -99713,7 +99713,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -99757,7 +99757,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -99792,7 +99792,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -99836,7 +99836,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -99871,7 +99871,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -99915,7 +99915,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -99950,7 +99950,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -99994,7 +99994,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -100029,7 +100029,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -100073,7 +100073,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -100108,7 +100108,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -100152,7 +100152,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -100187,7 +100187,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -100231,7 +100231,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -100266,7 +100266,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -100310,7 +100310,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -100345,7 +100345,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -100388,7 +100388,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -100423,7 +100423,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -100466,7 +100466,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -100501,7 +100501,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -100545,7 +100545,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -100580,7 +100580,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -100623,7 +100623,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BV:BV`
@@ -100658,7 +100658,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BW:BW`
@@ -100701,7 +100701,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -100736,7 +100736,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -100780,7 +100780,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -100815,7 +100815,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -100859,7 +100859,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -100894,7 +100894,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -100938,7 +100938,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -100973,7 +100973,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -101017,7 +101017,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -101052,7 +101052,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -101096,7 +101096,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -101131,7 +101131,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -101175,7 +101175,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -101210,7 +101210,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -101254,7 +101254,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -101289,7 +101289,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -101333,7 +101333,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -101368,7 +101368,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -101412,7 +101412,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -101447,7 +101447,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -101491,7 +101491,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -101526,7 +101526,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -101570,7 +101570,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -101605,7 +101605,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -101649,7 +101649,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -101684,7 +101684,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -101728,7 +101728,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -101763,7 +101763,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -101807,7 +101807,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -101842,7 +101842,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -101886,7 +101886,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -101921,7 +101921,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -101965,7 +101965,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -102000,7 +102000,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -102044,7 +102044,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -102079,7 +102079,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -102123,7 +102123,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -102158,7 +102158,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -102202,7 +102202,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BF:BF`
@@ -102237,7 +102237,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BG:BG`
@@ -102281,7 +102281,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -102316,7 +102316,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -102360,7 +102360,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -102395,7 +102395,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -102439,7 +102439,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -102474,7 +102474,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -102518,7 +102518,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -102553,7 +102553,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -102597,7 +102597,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -102632,7 +102632,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -102676,7 +102676,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -102711,7 +102711,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -102755,7 +102755,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -102790,7 +102790,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -102834,7 +102834,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -102869,7 +102869,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -102913,7 +102913,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -102948,7 +102948,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -102992,7 +102992,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -103027,7 +103027,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -103071,7 +103071,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -103106,7 +103106,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -103150,7 +103150,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -103185,7 +103185,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -103229,7 +103229,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -103264,7 +103264,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -103308,7 +103308,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -103343,7 +103343,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -103387,7 +103387,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -103422,7 +103422,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -103466,7 +103466,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -103501,7 +103501,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -103545,7 +103545,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -103580,7 +103580,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -103624,7 +103624,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -103659,7 +103659,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -103703,7 +103703,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -103738,7 +103738,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -103782,7 +103782,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -103817,7 +103817,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -103861,7 +103861,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -103896,7 +103896,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -103940,7 +103940,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -103975,7 +103975,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -104019,7 +104019,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -104054,7 +104054,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -104098,7 +104098,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -104133,7 +104133,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -104177,7 +104177,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -104212,7 +104212,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -104256,7 +104256,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -104291,7 +104291,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -104335,7 +104335,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -104370,7 +104370,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -104414,7 +104414,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -104449,7 +104449,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -104493,7 +104493,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -104528,7 +104528,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -104572,7 +104572,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -104607,7 +104607,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -104651,7 +104651,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -104686,7 +104686,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -104730,7 +104730,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -104765,7 +104765,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -104809,7 +104809,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -104844,7 +104844,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -104888,7 +104888,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -104923,7 +104923,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -104967,7 +104967,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -105002,7 +105002,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -105046,7 +105046,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -105081,7 +105081,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -105125,7 +105125,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -105160,7 +105160,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -105204,7 +105204,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -105239,7 +105239,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -105283,7 +105283,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -105318,7 +105318,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -105362,7 +105362,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -105397,7 +105397,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -105441,7 +105441,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -105476,7 +105476,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -105519,7 +105519,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -105554,7 +105554,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -105597,7 +105597,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -105632,7 +105632,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -105675,7 +105675,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -105710,7 +105710,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -105753,7 +105753,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CD:CD`
@@ -105788,7 +105788,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CE:CE`
@@ -105831,7 +105831,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BD:BD`
@@ -105866,7 +105866,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BE:BE`
@@ -105909,7 +105909,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!F:F`
@@ -105944,7 +105944,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!G:G`
@@ -105987,7 +105987,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!H:H`
@@ -106022,7 +106022,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!I:I`
@@ -106066,7 +106066,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!D:D`
@@ -106101,7 +106101,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!E:E`
@@ -106145,7 +106145,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!J:J`
@@ -106180,7 +106180,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!K:K`
@@ -106224,7 +106224,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!L:L`
@@ -106259,7 +106259,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!M:M`
@@ -106303,7 +106303,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!N:N`
@@ -106338,7 +106338,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!O:O`
@@ -106382,7 +106382,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BH:BH`
@@ -106417,7 +106417,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BI:BI`
@@ -106461,7 +106461,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!P:P`
@@ -106496,7 +106496,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Q:Q`
@@ -106540,7 +106540,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!R:R`
@@ -106575,7 +106575,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!S:S`
@@ -106619,7 +106619,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!T:T`
@@ -106654,7 +106654,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!U:U`
@@ -106698,7 +106698,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!V:V`
@@ -106733,7 +106733,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!W:W`
@@ -106777,7 +106777,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!X:X`
@@ -106812,7 +106812,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Y:Y`
@@ -106856,7 +106856,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!Z:Z`
@@ -106891,7 +106891,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AA:AA`
@@ -106935,7 +106935,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AB:AB`
@@ -106970,7 +106970,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AC:AC`
@@ -107014,7 +107014,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AD:AD`
@@ -107049,7 +107049,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AE:AE`
@@ -107093,7 +107093,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AF:AF`
@@ -107128,7 +107128,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AG:AG`
@@ -107172,7 +107172,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AH:AH`
@@ -107207,7 +107207,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AI:AI`
@@ -107251,7 +107251,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AJ:AJ`
@@ -107286,7 +107286,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AK:AK`
@@ -107330,7 +107330,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BF:BF`
@@ -107365,7 +107365,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BG:BG`
@@ -107409,7 +107409,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AL:AL`
@@ -107444,7 +107444,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AM:AM`
@@ -107488,7 +107488,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BJ:BJ`
@@ -107523,7 +107523,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BK:BK`
@@ -107567,7 +107567,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BL:BL`
@@ -107602,7 +107602,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BM:BM`
@@ -107646,7 +107646,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AP:AP`
@@ -107681,7 +107681,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AQ:AQ`
@@ -107725,7 +107725,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AR:AR`
@@ -107760,7 +107760,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AS:AS`
@@ -107804,7 +107804,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AT:AT`
@@ -107839,7 +107839,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AU:AU`
@@ -107883,7 +107883,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AV:AV`
@@ -107918,7 +107918,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AW:AW`
@@ -107962,7 +107962,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AX:AX`
@@ -107997,7 +107997,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!AY:AY`
@@ -108041,7 +108041,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BP:BP`
@@ -108076,7 +108076,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BQ:BQ`
@@ -108120,7 +108120,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BT:BT`
@@ -108155,7 +108155,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BU:BU`
@@ -108199,7 +108199,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -108234,7 +108234,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -108278,7 +108278,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -108313,7 +108313,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -108357,7 +108357,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -108392,7 +108392,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -108436,7 +108436,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -108471,7 +108471,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -108515,7 +108515,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -108550,7 +108550,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -108594,7 +108594,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -108629,7 +108629,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -108673,7 +108673,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -108708,7 +108708,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -108752,7 +108752,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -108787,7 +108787,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -108831,7 +108831,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -108866,7 +108866,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -108910,7 +108910,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -108945,7 +108945,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -108989,7 +108989,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -109024,7 +109024,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -109068,7 +109068,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -109103,7 +109103,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -109147,7 +109147,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFourSheHulk";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -109182,7 +109182,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -109226,7 +109226,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -109261,7 +109261,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -109304,7 +109304,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -109339,7 +109339,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -109382,7 +109382,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -109417,7 +109417,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -109460,7 +109460,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -109495,7 +109495,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -109538,7 +109538,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Skillitary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -109573,7 +109573,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -109616,7 +109616,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ock6";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -109651,7 +109651,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -109694,7 +109694,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Zemo";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CB:CB`
@@ -109729,7 +109729,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CC:CC`
@@ -109772,7 +109772,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -109807,7 +109807,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -109851,7 +109851,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -109886,7 +109886,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -109930,7 +109930,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -109965,7 +109965,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -110009,7 +110009,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -110044,7 +110044,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -110088,7 +110088,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -110123,7 +110123,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -110167,7 +110167,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -110202,7 +110202,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -110246,7 +110246,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -110281,7 +110281,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -110325,7 +110325,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -110360,7 +110360,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -110404,7 +110404,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -110439,7 +110439,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -110483,7 +110483,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -110518,7 +110518,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -110562,7 +110562,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -110597,7 +110597,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -110641,7 +110641,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -110676,7 +110676,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -110720,7 +110720,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -110755,7 +110755,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -110799,7 +110799,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -110834,7 +110834,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -110878,7 +110878,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -110913,7 +110913,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -110957,7 +110957,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -110992,7 +110992,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -111036,7 +111036,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -111071,7 +111071,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -111115,7 +111115,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -111150,7 +111150,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -111193,7 +111193,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BX:BX`
@@ -111228,7 +111228,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!BY:BY`
@@ -111271,7 +111271,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -111306,7 +111306,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -111350,7 +111350,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -111385,7 +111385,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -111429,7 +111429,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -111464,7 +111464,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -111508,7 +111508,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -111543,7 +111543,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -111587,7 +111587,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -111622,7 +111622,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -111666,7 +111666,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -111701,7 +111701,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -111745,7 +111745,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -111780,7 +111780,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -111824,7 +111824,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -111859,7 +111859,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -111903,7 +111903,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -111938,7 +111938,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -111982,7 +111982,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -112017,7 +112017,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -112061,7 +112061,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -112096,7 +112096,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -112140,7 +112140,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -112175,7 +112175,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -112219,7 +112219,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -112254,7 +112254,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -112298,7 +112298,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -112333,7 +112333,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -112377,7 +112377,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -112412,7 +112412,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -112456,7 +112456,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -112491,7 +112491,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -112535,7 +112535,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -112570,7 +112570,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -112614,7 +112614,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -112649,7 +112649,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -112693,7 +112693,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -112728,7 +112728,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -112772,7 +112772,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -112807,7 +112807,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -112850,7 +112850,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -112885,7 +112885,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -112929,7 +112929,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -112964,7 +112964,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -113008,7 +113008,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -113043,7 +113043,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -113087,7 +113087,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -113122,7 +113122,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -113166,7 +113166,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -113201,7 +113201,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -113245,7 +113245,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -113280,7 +113280,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -113324,7 +113324,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -113359,7 +113359,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -113403,7 +113403,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -113438,7 +113438,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -113482,7 +113482,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -113517,7 +113517,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -113561,7 +113561,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -113596,7 +113596,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -113640,7 +113640,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -113675,7 +113675,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -113718,7 +113718,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CF:CF`
@@ -113753,7 +113753,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CG:CG`
@@ -113796,7 +113796,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Avengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -113831,7 +113831,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -113875,7 +113875,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Aim";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -113910,7 +113910,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -113954,7 +113954,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Asgardians";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -113989,7 +113989,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -114033,7 +114033,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "AimTron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -114068,7 +114068,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -114112,7 +114112,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "ogBH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -114147,7 +114147,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -114191,7 +114191,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BH";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -114226,7 +114226,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -114270,7 +114270,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BKT";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -114305,7 +114305,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -114349,7 +114349,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "BlackOrder";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -114384,7 +114384,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -114428,7 +114428,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Brawlers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -114463,7 +114463,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -114507,7 +114507,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CaptainMarvel";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -114542,7 +114542,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -114586,7 +114586,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Defenders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -114621,7 +114621,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -114665,7 +114665,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "FantasticFour";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -114700,7 +114700,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -114744,7 +114744,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "GuardiansOfTheGalaxy";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -114779,7 +114779,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -114823,7 +114823,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Hydra";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -114858,7 +114858,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -114902,7 +114902,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Inhumans";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -114937,7 +114937,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -114981,7 +114981,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeRonan";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -115016,7 +115016,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -115060,7 +115060,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "KreeUltimus";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -115095,7 +115095,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -115139,7 +115139,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Mercenary";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -115174,7 +115174,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -115218,7 +115218,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Marauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -115253,7 +115253,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -115297,7 +115297,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -115332,7 +115332,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -115375,7 +115375,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Maraudertron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -115410,7 +115410,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -115454,7 +115454,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor1";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -115489,7 +115489,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -115533,7 +115533,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "PowerArmor2";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -115568,7 +115568,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -115612,7 +115612,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Emmarauders";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -115647,7 +115647,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -115691,7 +115691,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "CoulsonSHIELD";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -115726,7 +115726,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -115770,7 +115770,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Supernaturals";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -115805,7 +115805,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -115849,7 +115849,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Symbiote";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -115884,7 +115884,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -115928,7 +115928,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Ultron";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -115963,7 +115963,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -116007,7 +116007,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Wakanda";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -116042,7 +116042,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -116086,7 +116086,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "XMen";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -116121,7 +116121,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -116165,7 +116165,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "YoungAvengers";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -116200,7 +116200,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -116243,7 +116243,7 @@ const exampleEmbed = new Discord.RichEmbed()
 message.channel.bulkDelete(1)
 const mySpreadSheetId = '1NrS1Uw3cg_UkYul5bYHiYAjKeopBU_aYXh2NRuLIXGw';
 const sheetName = "Pymtech";
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CH:CH`
@@ -116278,7 +116278,7 @@ sheets.spreadsheets.values.get(
     );
   }
 );
-sheets.spreadsheets.values.get(
+sheets.spreadsheets.values.cache.get(
   {
 	spreadsheetId: mySpreadSheetId,
     range: `${sheetName}!CI:CI`
@@ -116344,7 +116344,7 @@ message.channel.send("Please add in the following order: [teamname] [power] [tea
 	.setDescription("Teamname not recognized. Please make sure spelling and/or teamname is correct.\nPlease check <#693575175622361218> for a list of available teams.")
 	message.channel.send(exampleEmbed);
 } else if(args[1].length == 3 || args[3].length == 3) {
-const reviewchannel = client.channels.get('701432148774617148')
+const reviewchannel = client.channels.cache.get('701432148774617148')
 const messages1 = await message.channel.fetchMessages({ limit: 1 });
 const embed = new Discord.RichEmbed()
 const Text = messages1.first().content;
