@@ -603,7 +603,7 @@ mentionedUser.roles.remove(TB3).catch(console.error);
 message.channel.send("" + mentionedUser + " Is already in TB2")
 } else if(mentionedUser.roles.cache.find(r => r.name === "recruit")){ // GIVE TB2 WHILST HAVING RECRUIT ROLE
 mentionedUser.roles.add(TB2).catch(console.error);
-message.channel.send("You've just added " + mentionedUser + " to the TB2 family ♥️")
+message.channel.send("You've just added " + mentionedUser.displayName + " to the TB2 family ♥️")
 mentionedUser.roles.remove(recruit).catch(console.error);
 } else {
 message.channel.send("Error: mentionedUser does not have a role of recruit/TB1/TB2/TB3.")
@@ -613,16 +613,16 @@ if (args[0] === "tb3") {
 if(mentionedUser.roles.cache.has(TB2.id)) { //GIVE TB3 REMOVE TB2
 mentionedUser.removeRoles(rolelist).catch(console.error);
 mentionedUser.roles.add(TB3).catch(console.error);
-message.channel.send("TB2 Removed from " + mentionedUser + " + TB3 Added.")
+message.channel.send("TB2 Removed from " + mentionedUser.displayName  + " + TB3 Added.")
 mentionedUser.roles.remove(TB2).catch(console.error);
 } else if(mentionedUser.roles.cache.has(TB1.id)) { //GIVE TB3 REMOVE TB1
 mentionedUser.removeRoles(rolelist).catch(console.error);
 mentionedUser.roles.add(TB3).catch(console.error);
-message.channel.send("TB1 Removed from " + mentionedUser + " + TB3 Added.")
+message.channel.send("TB1 Removed from " + mentionedUser.displayName  + " + TB3 Added.")
 mentionedUser.roles.remove(TB1).catch(console.error);
 } else if(mentionedUser.roles.cache.find(r => r.name === "recruit")){ // GIVE TB3 WHILST HAVING RECRUIT ROLE
 mentionedUser.roles.add(TB3).catch(console.error);
-message.channel.send("You've just added " + mentionedUser + " to the TB3 family ♥️")
+message.channel.send("You've just added " + mentionedUser.displayName  + " to the TB3 family ♥️")
 mentionedUser.roles.remove(recruit).catch(console.error);
 } else {
 message.channel.send("Error: mentionedUser does not have a role of recruit/TB1/TB2/TB3.")
