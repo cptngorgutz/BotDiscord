@@ -1268,75 +1268,97 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid alpha 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid alpha 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid alpha 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
-	// TB1 EVENT ROOM #2
 	message.channel.bulkDelete(1)
+// TB1 EVENT ROOM #2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid alpha 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid alpha 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid alpha 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 	
 }
@@ -1347,74 +1369,97 @@ if (message.channel.id === '656207417033359371') { //TB2 EVENTROOM1
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid alpha 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid alpha 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid alpha 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 if (message.channel.id === '656216714723459116') { //TB2 EVENTROOM2
-message.channel.bulkDelete(1)
+	message.channel.bulkDelete(1)
+// TB2 EVENT ROOM #2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid alpha 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid alpha 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid alpha 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 if (message.channel.id === '656232194137784333') { //TB3 EVENTROOM1
@@ -1424,74 +1469,97 @@ if (message.channel.id === '656232194137784333') { //TB3 EVENTROOM1
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid alpha 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid alpha 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid alpha 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 if (message.channel.id === '656232345371672577') { //TB3 EVENTROOM2
-message.channel.bulkDelete(1)
+	message.channel.bulkDelete(1)
+// TB3 EVENT ROOM #2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-alpha")).catch(console.error);
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid alpha 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid alpha 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid alpha 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 }
@@ -1500,233 +1568,302 @@ if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 //***********************************TB1 BETA 4 HERE****************************
 //*****************************************************************************
 	message.channel.bulkDelete(1)
-//TB1 EVENT ROOM #1
+// TB1 EVENT ROOM #1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid beta 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid beta 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid beta 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
 	message.channel.bulkDelete(1)
+// TB1 EVENT ROOM #2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid beta 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid beta 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid beta 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 if (message.channel.id === '656207417033359371') { //TB2 EVENTROOM1
 	message.channel.bulkDelete(1)
-//TB2 EVENT ROOM #1
+// TB2 EVENT ROOM #1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid beta 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid beta 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid beta 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 if (message.channel.id === '656216714723459116') { //TB2 EVENTROOM2
 	message.channel.bulkDelete(1)
+// TB2 EVENT ROOM #2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid beta 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid beta 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid beta 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 if (message.channel.id === '656232194137784333') { //TB3 EVENTROOM1
-message.channel.bulkDelete(1)
-//TB3 EVENT ROOM #1
+	message.channel.bulkDelete(1)
+// TB3 EVENT ROOM #1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid beta 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid beta 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid beta 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 if (message.channel.id === '656232345371672577') { //TB3 EVENTROOM2
-message.channel.bulkDelete(1)
+	message.channel.bulkDelete(1)
+// TB3 EVENT ROOM #2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-beta")).catch(console.error);
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid beta 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid beta 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid beta 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 }
@@ -1734,78 +1871,101 @@ if(args[0] === "gamma" && args[1] === "4"){
 if (message.channel.id === '656230420265828363') { //TB1 EVENTROOM1
 	message.channel.bulkDelete(1)
 // TB1 EVENT ROOM #1
-	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch();
-	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
-	collected.forEach(message => {
-	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
-	};
-	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
-	};
-	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
-	};
-	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
-	};
-	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
-	};
-	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
-	};
-	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
-	};
-	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
-	};
-	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
-	};
-	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid gamma 4')).catch();;
-	};
-	if (message.attachments.size > 0) message.delete(5000).catch();;
-	  })});
-}
-if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
-	message.channel.bulkDelete(1)
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid gamma 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
+	  })});
+}
+if (message.channel.id === '656230665221701682') { //TB1 EVENTROOM2
+	message.channel.bulkDelete(1)
+// TB1 EVENT ROOM #2
+	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
+	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
+	collected.forEach(message => {
+	if (message.content.includes('╔'))  {
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
+	};
+	if (message.content.includes('Lane 1 '))  {
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
+	};
+	if (message.content.includes('Lane 2 '))  {
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
+	};
+	if (message.content.includes('Lane 3 '))  {
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
+	};
+	if (message.content.includes('Lane 4 '))  {
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
+	};
+	if (message.content.includes('Lane 5 '))  {
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
+	};
+	if (message.content.includes('Lane 6 '))  {
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
+	};
+	if (message.content.includes('Lane 7 '))  {
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
+	};
+	if (message.content.includes('Lane 8 '))  {
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
+	};
+	if (message.content.includes('To claim a lane:'))  {												   
+	//message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid gamma 4'));
+	};
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 if (message.channel.id === '656207417033359371') {
@@ -1815,151 +1975,197 @@ if (message.channel.id === '656207417033359371') {
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid gamma 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 if (message.channel.id === '656216714723459116') {
-message.channel.bulkDelete(1)
+	message.channel.bulkDelete(1)
+// TB2 EVENT ROOM #2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid gamma 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }	
 if (message.channel.id === '656232194137784333') {
-message.channel.bulkDelete(1)
+	message.channel.bulkDelete(1)
 // TB3 EVENT ROOM #1
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid gamma 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 if (message.channel.id === '656232345371672577') {
-message.channel.bulkDelete(1)
+	message.channel.bulkDelete(1)
+// TB3 EVENT ROOM #2
 	message.channel.setName('awaiting-rename').then(() => message.guild.channels.cache.find(c => c.name === 'awaiting-rename').setName("raid-claim-gamma")).catch(console.error);
 	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
+	//message.delete(510000).then(() => message.channel.send('!raid gamma 4'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid gamma 4'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 }
@@ -2044,112 +2250,141 @@ if (message.channel.id === '634155222490415104') { //TB1 U7ROOM
 message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid ultimus 7'));
+	//message.delete(510000).then(() => message.channel.send('!raid ultimus 7'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid ultimus 7'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
-if (message.channel.id === '634155347736526848') {
-message.channel.bulkDelete(1)
-//TB1 U7 ROOM
-	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
+if (message.channel.id === '634155347736526848') { //TB2 U7ROOM
+message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid ultimus 7'));
+	//message.delete(510000).then(() => message.channel.send('!raid ultimus 7'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid ultimus 7'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
-if (message.channel.id === '646322699869880340') {
-message.channel.bulkDelete(1)
-//TB3 U7 ROOM
-	message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
+if (message.channel.id === '646322699869880340') { //TB3 U7ROOM
+message.channel.messages.fetch({limit: 45}).then(collected => { //collected is a Collection
 	collected.forEach(message => {
 	if (message.content.includes('╔'))  {
-	message.delete(480000).catch();
+	//message.delete(480000).catch();
+	message.delete({ timeout: 480000 }).catch();
 	};
 	if (message.content.includes('Lane 1 '))  {
-	message.delete(420000).catch();
+	//message.delete(420000).catch();
+	message.delete({ timeout: 420000 }).catch();
 	};
 	if (message.content.includes('Lane 2 '))  {
-	message.delete(360000).catch();
+	//message.delete(360000).catch();
+	message.delete({ timeout: 360000 }).catch();
 	};
 	if (message.content.includes('Lane 3 '))  {
-	message.delete(320000).catch();
+	//message.delete(320000).catch();
+	message.delete({ timeout: 320000 }).catch();
 	};
 	if (message.content.includes('Lane 4 '))  {
-	message.delete(240000).catch();
+	//message.delete(240000).catch();
+	message.delete({ timeout: 240000 }).catch();
 	};
 	if (message.content.includes('Lane 5 '))  {
-	message.delete(180000).catch();
+	//message.delete(180000).catch();
+	message.delete({ timeout: 180000 }).catch();
 	};
 	if (message.content.includes('Lane 6 '))  {
-	message.delete(120000).catch();
+	//message.delete(120000).catch();
+	message.delete({ timeout: 120000 }).catch();
 	};
 	if (message.content.includes('Lane 7 '))  {
-	message.delete(60000).catch();
+	//message.delete(60000).catch();
+	message.delete({ timeout: 60000 }).catch();
 	};
 	if (message.content.includes('Lane 8 '))  {
-	message.delete(30000).catch();
+	//message.delete(30000).catch();
+	message.delete({ timeout: 30000 }).catch();
 	};
 	if (message.content.includes('To claim a lane:'))  {												   
-	message.delete(510000).then(() => message.channel.send('!raid ultimus 7'));
+	//message.delete(510000).then(() => message.channel.send('!raid ultimus 7'));
+	message.delete({ timeout: 510000 }).then(() => message.channel.send('!raid ultimus 7'));
 	};
-	if (message.attachments.size > 0) message.delete(5000);
+	//if (message.attachments.size > 0) message.delete(5000);
+	if (message.attachments.size > 0) message.delete({ timeout: 5000 });
 	  })});
 }
 }
