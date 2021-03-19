@@ -181,6 +181,17 @@ if(command === 'miniuniques' || command === 'mini' && args[0] === "uniques" || c
     console.error(err)
     })
 }
+if(command === 'g15mini' || command === 't15mini' || command === '15' && args[0] === "mini" && args[1] === "unique" || command === 'g15' && args[0] === "unique" || command === 'micro' && args[0] === "unique") {
+    const channelToCheck = client.channels.cache.get('822552013086523472')
+    channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
+    const lastMessage = messages.first().attachments.first()
+	const Attachment = require('discord.js').Attachment;
+	const attachment = new Discord.MessageAttachment(lastMessage.url)
+	message.channel.send(attachment);
+    }).catch(err => {
+    console.error(err)
+    })
+}
 if(command === 'notifications') { //SELF ASSIGNED ROLES
 message.channel.bulkDelete(1)
 const notify = message.guild.roles.cache.find(r => r.name === "notifications");
