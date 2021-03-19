@@ -181,7 +181,7 @@ if(command === 'miniuniques' || command === 'mini' && args[0] === "uniques" || c
     console.error(err)
     })
 }
-if(command === 'g15mini' || command === 't15mini' || command === '15' && args[0] === "mini" && args[1] === "unique" || command === 'g15' && args[0] === "unique" || command === 'micro' && args[0] === "unique") {
+if(command === 'g15mini' || command === 't15mini' || command === '15' && args[0] === "mini" && args[1] === "unique" || command === 'g15' && args[0] === "unique" || command === 'micro' && args[0] === "unique" || command === 'microuniques' || command === 'g15unique' || command === 'g15uniques' || command === 'g15' || command === 'mikrouniques' || command === 'uniques15') {
     const channelToCheck = client.channels.cache.get('822552013086523472')
     channelToCheck.messages.fetch({ limit: 1 }).then(messages => {
     const lastMessage = messages.first().attachments.first()
