@@ -1266,6 +1266,49 @@ message.channel.send("You dont have permission to use this command.")
 	message.channel.send("Command cannot be used here.")
 }
 }
+if(args[0] === "doom" && args[1] === "4"){
+	  824744584433106944
+if (message.channel.id === '824744011410833468' || message.channel.id === '824744394820157480' || message.channel.id === '656207417033359371') {
+if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.has(TB2captains.id) || message.member.roles.cache.has(TB3captains.id) || message.member.roles.cache.has(BEYONDER.id)) {
+//                             TB1  ROOM                       				  TB2  ROOM                                        TB3 ROOM
+message.channel.bulkDelete(100)
+    message.channel.send('```To claim a lane: \n Put an 👌 emoji on the lane of choice.```');
+	message.channel.send({ files:[('.C:\Users\Jamie\discord-greeter-bot', './images/Doom.png')] });
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 1 ║  \n ╚═══════════════╝ ```")
+    message.channel.send("Lane 1 - Blue")
+	message.channel.send("Lane 2 - Yellow") 
+	message.channel.send("Lane 3 - Red")  
+	message.channel.send("Lane 4 - Green")  
+	message.channel.send("Lane 5 - Purple")  
+	message.channel.send("Lane 6 - White")  
+	message.channel.send("Lane 7 - Teal")
+	message.channel.send("Lane 8 - Orange")	  
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 2 ║  \n ╚═══════════════╝ ```")
+    message.channel.send("Lane 1 - Blue")
+	message.channel.send("Lane 2 - Yellow") 
+	message.channel.send("Lane 3 - Red")  
+	message.channel.send("Lane 4 - Green")  
+	message.channel.send("Lane 5 - Purple")  
+	message.channel.send("Lane 6 - White")  
+	message.channel.send("Lane 7 - Teal")
+	message.channel.send("Lane 8 - Orange")	  	
+	message.channel.send("``` ╔═══════════════╗ \n ║ Strike Team 3 ║  \n ╚═══════════════╝ ```")
+    message.channel.send("Lane 1 - Blue")
+	message.channel.send("Lane 2 - Yellow") 
+	message.channel.send("Lane 3 - Red")  
+	message.channel.send("Lane 4 - Green")  
+	message.channel.send("Lane 5 - Purple")  
+	message.channel.send("Lane 6 - White")  
+	message.channel.send("Lane 7 - Teal")
+	message.channel.send("Lane 8 - Orange")	  		
+} else {
+message.channel.send("You dont have permission to use this command.")
+}
+} else {
+	message.channel.send("Command cannot be used here.")
+}
+}
+
 }
 
 //RAID REFRESH GREEK/ULTIMUS 6 & 7
