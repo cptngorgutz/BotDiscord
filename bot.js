@@ -1267,8 +1267,7 @@ message.channel.send("You dont have permission to use this command.")
 }
 }
 if(args[0] === "doom" && args[1] === "4"){
-	  824744584433106944
-if (message.channel.id === '824744011410833468' || message.channel.id === '824744394820157480' || message.channel.id === '656207417033359371') {
+if (message.channel.id === '824744011410833468' || message.channel.id === '824744394820157480' || message.channel.id === '824744584433106944') {
 if(message.member.roles.cache.has(TB1captains.id) || message.member.roles.cache.has(TB2captains.id) || message.member.roles.cache.has(TB3captains.id) || message.member.roles.cache.has(BEYONDER.id)) {
 //                             TB1  ROOM                       				  TB2  ROOM                                        TB3 ROOM
 message.channel.bulkDelete(100)
